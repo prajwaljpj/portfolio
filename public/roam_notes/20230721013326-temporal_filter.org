@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       fd7e0012-c261-42c5-ba72-735b81f69423
+:END:
+#+title: temporal filter
+A temporal filter in a depth camera is a technique used to reduce noise and improve the quality of depth measurements by leveraging information from multiple frames over time.
+
+Depth cameras capture depth information by emitting infrared (IR) light and measuring the time it takes for the light to bounce back from objects in the scene. However, due to various factors like photon noise, sensor noise, and interference, the depth measurements can be noisy and inaccurate.
+
+A temporal filter collects depth measurements from multiple consecutive frames and applies various techniques to refine the depth data. Here are some common methods used in a temporal filter:
+
+1. Temporal averaging: This technique calculates an average depth value for each pixel across multiple frames. By considering the history of depth measurements, it helps to smooth out noise and improve the accuracy of the depth data.
+
+2. Motion compensation: Depth cameras can capture scenes with dynamic objects and camera movement. To handle these situations, a temporal filter uses motion compensation techniques to align the depth measurements. By compensating for the camera or object movement, it reduces artifacts and considers only the static parts of the scene for filtering.
+
+3. Depth change detection: Depth information from consecutive frames can be analyzed to detect significant changes in depth values. This method helps identify moving objects or regions with changing depths. By excluding such areas or applying specific filtering techniques for moving objects, the filter can enhance the accuracy of the overall depth data.
+
+4. Adaptive filtering: To handle different levels of noise in various parts of the scene, a temporal filter may apply adaptive or spatially varying filtering. This technique adjusts the filter strength depending on the local depth gradient or the confidence of depth measurements. It helps preserve edges and fine details while effectively reducing noise in smooth regions.
+
+Overall, the temporal filter in a depth camera combines information from multiple frames to refine depth measurements, reduce noise, and enhance the quality of the captured 3D information. It plays a crucial role in applications like 3D reconstruction, virtual reality, robotics, and human-computer interaction, where accurate depth data is essential.

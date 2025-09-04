@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1f06ff48-84ff-4242-9e51-190ee76c39fc
+:END:
+#+title: emacs
+
+* Introduction
+Emacs is a highly customizable, extensible and free text editor
+* Packages
+- [[id:4aa1f2ab-014e-473d-897f-99def275b1ed][Org]]

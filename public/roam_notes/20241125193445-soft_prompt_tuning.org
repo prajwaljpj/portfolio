@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       dbf76f0f-4f7f-46d4-a90e-4ec543988f54
+:END:
+#+title: Soft prompt tuning
+#+filetags: :definition:LLM:
+
+Soft prompt tuning is a technique used in training large language models (LLMs) that involves optimizing a set of continuous embeddings (soft prompts) rather than modifying the entire model's weights. This approach focuses on learning a small number of parameters that can effectively influence the model's behavior for specific tasks without extensive retraining.
+
+*** Key Details:
+
+1. *Prompt as Input*: In traditional prompt-based approaches, we often use discrete tokens as prompts (e.g., "Translate English to French:"). In soft prompt tuning, the prompts are represented as continuous vectors, which can be fine-tuned for particular tasks.
+
+2. *Training Efficiency*: Soft prompt tuning requires significantly fewer parameters to be adjusted compared to full model fine-tuning. This makes it computationally efficient and less prone to overfitting, especially when labeled training data is scarce.
+
+3. *Embedding Layer*: The learned soft prompts are effectively inserted into the embedding layer of the model. They can prepend or modify the input sequence in a way that guides the model's predictions for the desired tasks.
+
+4. *Performance*: Soft prompts can achieve performance on par with traditional fine-tuning methods while requiring less computational resources. They also allow for flexibility—multiple sets of soft prompts can be learned for different tasks using the same base model.
+
+*** Example:
+
+Imagine a scenario where we want to use a large language model for sentiment analysis. Instead of fine-tuning the entire model, we can create a soft prompt like this:
+
+1. *Initial Setup*: We initialize a vector (soft prompt) representing sentiment analysis context.
+
+2. *Input Formation*: For input sentences, we prepend the soft prompt vector to the sentence. For instance, the model receives input in the form: =[soft_prompt_embedding] "The movie was fantastic!"=.
+
+3. *Training*: During the training phase, we adjust the soft prompt embeddings based on the model's predictions and the true labels (e.g., positive, negative).
+
+4. *Inference*: Once trained, we can use the soft prompt vector with any sentence to get predictions on sentiment, benefiting from the learned task-specific biases without altering the base model.
+
+This approach makes soft prompt tuning a powerful and efficient strategy for adapting large language models to various downstream tasks.

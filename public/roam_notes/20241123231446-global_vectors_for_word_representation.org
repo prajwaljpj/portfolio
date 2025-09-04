@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       a3d16bc6-98d3-4499-9338-7bcbeaf16e13
+:ROAM_ALIASES: GLoVe
+:END:
+#+title: Global Vectors for Word Representation
+
+Vectors for word representation are a way of encoding words as mathematical objects, specifically as points in a high-dimensional space. This representation allows for the capture of semantic meanings and relationships between words.
+
+*** Basic Concept
+
+1. *Vector Representation*: Each word is represented as a vector (a list of numbers). The dimensions of this vector space are determined by the model used to create the embeddings. Common dimensions are 50, 100, 200, or even 300.
+
+2. *Semantic Similarity*: Words that have similar meanings are represented by vectors that are close together in the vector space. For example, the words "king" and "queen" might be represented by two vectors that are close to each other.
+
+3. *Operations on Vectors*: You can perform mathematical operations on these vectors to find relationships. For example, you can explore analogies like "king - man + woman ≈ queen".
+
+*** Common Models for Word Vectors
+
+1. *Word2Vec*: A popular technique developed by Google that uses either:
+   - *Skip-gram*: Predicts context words from a target word.
+   - *CBOW (Continuous Bag of Words)*: Predicts a target word from context words.
+
+   *Example*: Given the sentence "the cat sits on the mat", a skip-gram model would learn to predict the surrounding words for "cat".
+
+2. *GloVe (Global Vectors for Word Representation)*: Developed by Stanford, GloVe generates word vectors by looking at word co-occurrence probabilities in a large corpus.
+
+   *Example*: If the word "apple" frequently appears with "fruit", "pie", and "juice", its vector will be close to those of "fruit", "pie", and "juice".
+
+3. *FastText*: An extension of Word2Vec that considers sub-word information. It breaks words into n-grams, making it effective for handling out-of-vocabulary words, especially in morphologically rich languages.
+
+   *Example*: For the word "unhappiness", FastText might analyze "un", "hap", "ness" as sub-word units, allowing it to relate to words like "happy" or "sad".
+
+*** Visualization
+
+Word vectors can be visualized using techniques like t-SNE or PCA, which reduce the dimensions to 2D or 3D. This helps in intuitively understanding word relationships.
+
+*** Example
+
+Here is a simplified 2D representation for a few words:
+
+- *"king"*: (0.5, 0.8)
+- *"queen"*: (0.6, 0.9)
+- *"man"*: (0.3, 0.4)
+- *"woman"*: (0.4, 0.5)
+
+Using vector operations:
+- *Analogy*: =vector("king") - vector("man") + vector("woman") ≈ vector("queen")=
+
+*** References
+
+1. Mikolov, T., et al. (2013). "Efficient Estimation of Word Representations in Vector Space." arXiv preprint arXiv:1301.3781.
+2. Pennington, J., Socher, R., & Manning, C. D. (2014). "GloVe: Global Vectors for Word Representation." Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP).
+3. Bojanowski, P., et al. (2017). "Enriching Word Vectors with Subword Information." Transactions of the Association for Computational Linguistics, 5, 135-146.
+
+*** Conclusion
+
+Word vectors provide a powerful way to represent words in a continuous space where semantic relationships are maintained, enabling various natural language processing applications such as information retrieval, sentiment analysis, and machine translation.

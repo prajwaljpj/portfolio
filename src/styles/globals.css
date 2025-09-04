@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+/* Custom styles for code block language badges */
+pre[data-lang] {
+  position: relative;
+  padding-top: 2.5em; /* Add space for the badge */
+}
+
+pre[data-lang]::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #4a5568; /* gray-700 */
+  color: #e2e8f0; /* gray-300 */
+  font-size: 0.8rem;
+  font-family: monospace;
+  padding: 0.25em 0.5em;
+  border-radius: 0 0 0 0.25em;
+  text-transform: uppercase;
+}
+
+/* Dark mode styles for the badge */
+.dark pre[data-lang]::before {
+  background-color: #2d3748; /* gray-800 */
+  color: #a0aec0; /* gray-400 */
 }

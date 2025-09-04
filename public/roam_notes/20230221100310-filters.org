@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       29b2b1ab-6294-4a04-83b3-c259b118a906
+:END:
+#+title: Filters
+
+* Speckle Filter
+* temporal Filter
+* Spatial Filter
+* Downsampling

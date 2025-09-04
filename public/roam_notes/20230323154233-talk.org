@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       223b0b56-d40f-4a63-88b8-557921f1a44b
+:END:
+#+title: Alim Karimi - Remote Sensing
+
+* HSI - Alim Karimi
+** Object detection
+- Augmentation techniques. Check the review paper first paper. There is mention of augmentation (did not answer properly)
+[file:/Users/prajwaljpj/Library/CloudStorage/Dropbox/org/images/papers_in_HSI_domain.jpeg][Papers in Remote Sensing Domain]]

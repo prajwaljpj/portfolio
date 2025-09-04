@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       f8b06bc1-5df0-48b7-b71c-108a91e84d6e
+:END:
+#+title: Variance
+
+Variance in machine learning refers to the model's sensitivity to fluctuations in the training data. High variance means the model captures noise in the training set, leading to [[id:5e88eee3-0c35-46f9-a45e-716b9211bab0][overfitting]] and poor generalization to new data.
+
+*Example:*
+
+Imagine a dataset of houses with features like size and price.
+
+- *High Variance:* A complex model (like a high-degree polynomial regression) fits the training data very closely, creating a wiggly line that passes through all data points. It performs well on the training set but poorly on new data due to [[id:5e88eee3-0c35-46f9-a45e-716b9211bab0][overfitting]].
+
+- *Low Variance:* A simpler model (like linear regression) captures the general trend of the relationship without adhering too closely to every data point. It may miss some detail but generalizes better to unseen data.
+
+Balancing variance and bias (the error due to overly simplistic models) is key to building effective models, often illustrated by the [[id:1d8522c9-b39a-480b-89c5-6c0e40fa2a6e][bias-variance tradeoff]].

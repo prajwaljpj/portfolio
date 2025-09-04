@@ -1,0 +1,142 @@
+:PROPERTIES:
+:ID:       6869b305-ecc2-4afb-acfe-979dfaf461c7
+:END:
+#+title: Hard and Soft Alignment
+
+In transformers, *alignment* refers to how the model correlates input and output sequences, especially in tasks like translation or summarization.
+
+*** Hard vs. Soft Alignment
+
+- *Hard Alignment*:
+  - This type of alignment uses discrete mappings between input and output tokens. For instance, each output token is directly linked to a specific input token.
+  - Example: In translating "The cat sat on the mat" to French ("Le chat s'est assis sur le tapis"), the word "The" might align directly with "Le".
+
+- *Soft Alignment*:
+  - Instead of a strict mapping, soft alignment utilizes a distribution across input tokens for each output token. This means each output token can attend to multiple input tokens with varying degrees of importance.
+  - Example: For the same translation, the French word "s'est" may derive information from both "sat" and "on", depending on the context.
+
+*** Example in Python using Attention Mechanism
+
+To illustrate this, we can create a simple example using a soft attention mechanism with PyTorch.
+
+#+begin_src python
+import torch
+import torch.nn.functional as F
+
+# Example input and output tokens as embeddings (random for illustration)
+input_seq = torch.randn(1, 5, 10)  # 5 input tokens, embedding size 10
+output_seq = torch.randn(1, 3, 10)  # 3 output tokens, embedding size 10
+
+# Calculate attention scores (dot product)
+attention_scores = torch.bmm(output_seq, input_seq.transpose(1, 2))  # (3, 5)
+# Softmax to normalize and get attention weights
+attention_weights = F.softmax(attention_scores, dim=-1)
+
+# Example to demonstrate soft alignment; printing attention weights
+for i in range(attention_weights.size(1)):  # Iterate through output tokens
+    print(f"Output token {i + 1} attention weights: {attention_weights[0, i].tolist()}")
+#+end_src
+
+
+#+begin_src python
+import torch
+import torch.nn.functional as F
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Example input and output tokens as embeddings (random for illustration)
+input_seq = torch.randn(1, 5, 10)  # 5 input tokens, embedding size 10
+output_seq = torch.randn(1, 3, 10)  # 3 output tokens, embedding size 10
+
+# Calculate attention scores (dot product)
+attention_scores = torch.bmm(output_seq, input_seq.transpose(1, 2))  # (1, 3, 5)
+# Softmax to normalize and get attention weights
+attention_weights = F.softmax(attention_scores, dim=-1).squeeze(0)  # (3, 5)
+
+# Visualization of soft alignment using seaborn
+plt.figure(figsize=(10, 6))
+sns.heatmap(attention_weights.cpu().numpy(), annot=True, cmap='viridis',
+            xticklabels=[f'Input {i+1}' for i in range(input_seq.size(1))],
+            yticklabels=[f'Output {i+1}' for i in range(output_seq.size(1))])
+plt.title('Attention Weights (Soft Alignment)')
+plt.xlabel('Input Tokens')
+plt.ylabel('Output Tokens')
+plt.show()
+
+# Hard alignment can be visualized by taking argmax of attention weights
+hard_alignment = torch.argmax(attention_weights, dim=-1)
+
+# Printing hard alignments
+print("Hard alignments (output token to input token):")
+for i in range(hard_alignment.size(0)):
+    print(f"Output token {i + 1} aligned to Input token {hard_alignment[i].item() + 1}")
+#+end_src
+
+Hard Alignment
+#+begin_src python
+import torch
+import torch.nn.functional as F
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Example input and output tokens as embeddings (random for illustration)
+input_seq = torch.randn(1, 5, 10)  # 5 input tokens, embedding size 10
+output_seq = torch.randn(1, 3, 10)  # 3 output tokens, embedding size 10
+
+# Calculate attention scores (dot product)
+attention_scores = torch.bmm(output_seq, input_seq.transpose(1, 2))  # (1, 3, 5)
+# Softmax to normalize and get attention weights
+attention_weights = F.softmax(attention_scores, dim=-1).squeeze(0)  # (3, 5)
+
+# Visualization of soft alignment using seaborn
+plt.figure(figsize=(10, 6))
+sns.heatmap(attention_weights.cpu().numpy(), annot=True, cmap='viridis',
+            xticklabels=[f'Input {i + 1}' for i in range(input_seq.size(1))],
+            yticklabels=[f'Output {i + 1}' for i in range(output_seq.size(1))])
+plt.title('Attention Weights (Soft Alignment)')
+plt.xlabel('Input Tokens')
+plt.ylabel('Output Tokens')
+plt.show()
+
+# Hard alignment can be visualized by taking argmax of attention weights
+hard_alignment = torch.argmax(attention_weights, dim=-1)
+
+# Printing hard alignments
+print("Hard alignments (output token to input token):")
+for i in range(hard_alignment.size(0)):
+    print(f"Output token {i + 1} aligned to Input token {hard_alignment[i].item() + 1}")
+#+end_src
+
+Soft Alignment
+#+begin_src python
+import torch
+import torch.nn.functional as F
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Example input and output tokens as embeddings (random for illustration)
+input_seq = torch.randn(1, 5, 10)  # 5 input tokens, embedding size 10
+output_seq = torch.randn(1, 3, 10)  # 3 output tokens, embedding size 10
+
+# Calculate attention scores (dot product)
+attention_scores = torch.bmm(output_seq, input_seq.transpose(1, 2))  # (1, 3, 5)
+# Softmax to normalize and get attention weights
+attention_weights = F.softmax(attention_scores, dim=-1).squeeze(0)  # (3, 5)
+
+# Visualization of soft alignment using seaborn
+plt.figure(figsize=(10, 6))
+sns.heatmap(attention_weights.cpu().numpy(), annot=True, cmap='viridis',
+            xticklabels=[f'Input {i+1}' for i in range(input_seq.size(1))],
+            yticklabels=[f'Output {i+1}' for i in range(output_seq.size(1))])
+plt.title('Attention Weights (Soft Alignment)')
+plt.xlabel('Input Tokens')
+plt.ylabel('Output Tokens')
+plt.show()
+#+end_src
+*** Explanation of the Code:
+1. *Input and Output*: We create two random tensors to simulate input and output word embeddings.
+2. *Attention Scores*: We compute attention scores using a batch matrix multiplication (dot product).
+3. *Softmax*: Transform scores into probabilities with softmax, representing the attention weights (soft alignment).
+4. *Display*: The attention weights indicate which input tokens each output token is most aligned with.
+
+This code provides a basic implementation of soft alignment in a transformer-like architecture, allowing you to observe which tokens are influencing each other during inference.

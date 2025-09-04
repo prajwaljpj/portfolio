@@ -1,0 +1,89 @@
+:PROPERTIES:
+:ID:       2b4383b2-7341-4cf2-a1d1-2747c1548ab5
+:END:
+#+title: Text Embeddings
+
+*** What are Text Embeddings?
+
+Text embeddings are numerical representations of text that capture semantic meaning in a way that machines can process. These embeddings transform words, phrases, or entire documents into continuous vector spaces. The idea is that similar texts will have similar embeddings, facilitating tasks such as classification, clustering, and recommendation.
+
+*** Scoring text embeddings
+- Huggingface's [[https://huggingface.co/spaces/mteb/leaderboard][Massive Text Embedding Benchmark]] (MTEB) scores various models on diverse tasks such as classification, clustering, retrieval, summarization, etc
+
+*** Mathematical Concept
+
+Text embeddings typically use techniques based on modern neural networks. Here are a few popular methods to create embeddings:
+
+1. *[[id:7a0dd215-4e03-49b7-93e3-d9b7a5df939b][Word2Vec]]*: Uses neural networks to model the relationship of words by predicting the context (Skip-gram model) or the word given the context (CBOW model).
+   - *Skip-gram*: Maximizes the probability of context words given a target word.
+     \[
+     J(\theta) = \frac{1}{T} \sum_{t=1}^{T} \sum_{-c \leq j \leq c, j \neq 0} \log P(w_{t+j} | w_t)
+     \]
+   - *CBOW*: Predicts the target word based on its context.
+     \[
+     J(\theta) = \frac{1}{T} \sum_{t=1}^{T} \log P(w_t | w_{t-c}, \ldots, w_{t+c})
+     \]
+
+2. *GloVe* ([[id:a3d16bc6-98d3-4499-9338-7bcbeaf16e13][Global Vectors for Word Representation]]): Constructs word vectors by factorizing the word co-occurrence matrix.
+   - The objective is to find vectors \(v_i\) and \(v_j\) for words \(i\) and \(j\) such that their dot product approximates the logarithm of the probability of their co-occurrence:
+     \[
+     J(i, j) = (v_i^T v_j + b_i + b_j - \log X_{ij})^2
+     \]
+
+3. *BERT* (Bidirectional Encoder Representations from Transformers): Uses a transformer model to generate contextualized embeddings.
+   - It utilizes masked language modeling, where some percentage of input tokens are masked, and the model learns to predict them based on the context provided by the other tokens.
+
+*** Python Example: Creating Text Embeddings
+
+Let's create text embeddings using the *=SentenceTransformers=* library which leverages models like BERT.
+
+1. First, install the required library:
+   #+begin_src bash
+   pip install sentence-transformers
+   #+end_src
+
+2. Use the following code to create text embeddings from sentences:
+
+#+begin_src python :results output :session learning
+from sentence_transformers import SentenceTransformer
+
+# Load a pre-trained model
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Sample texts
+texts = [
+    "I love natural language processing.",
+    "Text embeddings are useful for machine learning.",
+    "Emacs is a powerful text editor."
+]
+
+# Create embeddings
+embeddings = model.encode(texts)
+
+# Output the embeddings
+# emb = ""
+for i, text in enumerate(texts):
+    print(f"Text: {text}\nEmbedding: {embeddings[i][:5]}...\n")  # Show first 5 dimensions
+# print(emb)
+#+end_src
+
+#+RESULTS:
+: __PYTHON_EL_eval("try:\n    with open('/var/folders/sn/f478s3qj0871kqh6mf75b4dw0000gn/T/babel-q9uG42/python-sT9IEm') as f:\n        exec(compile(f.read(), f.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
+
+*** Explanation of the Code
+
+1. *Library Import*: We import the =SentenceTransformer= class from the =sentence-transformers= library.
+
+2. *Model Loading*: We load a pre-trained model; ='all-MiniLM-L6-v2'= is a smaller, efficient model.
+
+3. *Sample Texts*: We define a list of text strings for which we want to generate embeddings.
+
+4. *Generate Embeddings*:
+    - The =model.encode()= method is called with our list of texts.
+    - It returns a numpy array of embeddings.
+
+5. *Output*: We print out the embeddings for each text, displaying only the first 5 dimensions to keep it concise.
+
+*** Summary
+
+Text embeddings are crucial in transitioning from raw text to a usable form for machine learning tasks. The methods used to generate embeddings incorporate complex mathematical principles, making them powerful for capturing semantic relationships between text data. The above Python example demonstrates how to leverage a sophisticated pre-trained model to effortlessly obtain these embeddings.

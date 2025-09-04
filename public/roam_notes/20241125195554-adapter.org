@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       72f69d1a-877b-41ae-959a-3585c6eb0d96
+:END:
+#+title: adapter
+#+filetags: :LLM:definition:
+
+The adapter technique is a method used to [[id:93ea77e2-be22-4912-be2a-e327ee53998b][fine-tune]] pre-trained [[id:a7e25472-0dc7-4ab1-8471-51cebf47e006][transformer]] models by adding lightweight neural network layers known as adapters. Instead of training the entire model, which can be resource-intensive, adapters allow modifications to be made to a smaller subset of the model's parameters, making the fine-tuning process more efficient and faster.
+
+*** Key Concepts of the Adapter Technique:
+
+1. *Adapters*: These are small feed-forward neural networks that are inserted into the transformer architecture, typically after the attention layers and/or the feed-forward layers in each transformer block. They usually consist of two linear layers with a non-linear activation function in between (like ReLU).
+
+2. *Structure*:
+   - *Input Layer*: Takes the output from the previous layer.
+   - *Intermediate Layer*: A smaller bottleneck layer that reduces dimensionality.
+   - *Output Layer*: Maps back to the original dimensionality.
+
+   The general structure looks like this:
+   #+begin_src
+   Input -> Linear -> Activation -> Linear -> Add Residual Connection -> Output
+   #+end_src
+
+3. *Residual Connections*: After processing through the adapter, the output is added back to the original input (residual connection). This helps in retaining the original model's knowledge, allowing the adapters to specialize in the new task without losing the pre-trained capabilities.
+
+4. *Efficiency*:
+   - Only the parameters of the adapters are trained during fine-tuning, while the rest of the model remains fixed. This reduces computational cost and the amount of data needed for effective training.
+   - Adapters can be stacked in multiple layers within each transformer block, thus enabling model specialization for various tasks.
+
+5. *Usage*:
+   - Commonly used in scenario-specific tasks (like text classification, sentiment analysis) by stacking different adapters for different tasks.
+   - Multiple adapters can be trained concurrently and swapped in, allowing for multi-task learning efficiently.
+
+*** Benefits:
+- *Parameter Efficiency*: Greatly reduces the number of parameters to tune, compared to full fine-tuning.
+- *Task Specialization*: Allows a single model to perform multiple tasks effectively without losing pre-trained generalization capabilities.
+- *Modularity*: Makes it easier to adapt and swap models for different tasks.
+
+*** Summary:
+The adapter technique effectively enhances transformer models by adding small, trainable components (adapters) while leveraging most of the model's pre-trained weights. This stratifies the process of fine-tuning, making it more efficient and modular.

@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       8fdce2c8-5d4a-4bb7-a1e5-24a98e84a621
+:END:
+#+title: Ideas
+
+* Some ideas I come up with as I am doing literature survey
+** Improve Task aware model compression
+:PROPERTIES:
+:ID:       26dc5182-737e-4854-855c-7b00102603bf
+:END:
+- Using [[id:3917dd60-1390-45b1-8f8a-850194ccbdff][NeRV]] the video compression is a model compression,quantization,pruning problem. we can retrain the model with existing image buffer. and make a generalised model task aware, or more robust to that task.
+** NeRF for three cameras of three views.
+:PROPERTIES:
+:ID:       de23e439-bb45-4427-90f6-3c99c3e14006
+:END:
+- when the tray is present, we have a camera on the top, left and right. example diagram below:
+  _________________
+  ....... 📷 .....
+
+  📷             📷
+
+  \               /
+   \   Pile      /
+    \___________/
+** Translate neural radiance to video
+:PROPERTIES:
+:ID:       fa245386-9651-4657-8206-86dba19115ca
+:END:
+- Can we use multiple images of the same scene to generate sub frames inbetween for example use 1st and 10th frame and then generate the 5th.

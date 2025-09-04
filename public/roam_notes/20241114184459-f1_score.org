@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       276a4433-a404-456b-bbc9-7f5544275676
+:END:
+#+title: F1 Score
+
+The F1 Score is a measure of a model's accuracy that considers both [[id:d7c585eb-a3ae-45e5-956e-253987f3fdaf][precision]] and [[id:292e173b-42e6-4341-b37a-4e28035a66cc][recall]]. It is the harmonic mean of the two, providing a single score that balances the trade-off between them.
+
+- *[[id:d7c585eb-a3ae-45e5-956e-253987f3fdaf][Precision]]* = TP / (TP + FP)
+- *[[id:292e173b-42e6-4341-b37a-4e28035a66cc][Recall]]* = TP / (TP + FN)
+- *F1 Score* = 2 * (Precision * Recall) / (Precision + Recall)
+
+*Example:*
+Consider a binary classification problem with the following confusion matrix:
+
+|                | Predicted Positive | Predicted Negative |
+|----------------|---------------------|--------------------|
+| Actual Positive| 10 (TP)             | 2 (FN)             |
+| Actual Negative| 1 (FP)              | 7 (TN)             |
+
+- *Precision* = 10 / (10 + 1) = 0.909 (90.9%)
+- *Recall* = 10 / (10 + 2) = 0.833 (83.3%)
+- *F1 Score* = 2 * (0.909 * 0.833) / (0.909 + 0.833) ≈ 0.869 (86.9%)
+
+In this example, the F1 Score helps evaluate the model's performance by considering both false positives and false negatives, giving a more balanced view than accuracy alone.

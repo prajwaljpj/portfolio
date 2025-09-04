@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       ca85123a-a20b-40dd-b06d-c6e585f95b9d
+:END:
+#+title: Prompt Engineering
+
+Prompt engineering is the process of designing and refining input prompts to effectively guide language models (like GPT) toward generating desired responses. It involves understanding how to frame questions, provide context, or use specific formats to achieve better results.
+
+*** Mathematical Aspects
+While there isn't a formal mathematical framework for prompt engineering, it can involve concepts from:
+
+1. *Probability*: Understanding how various prompts influence the likelihood of certain responses.
+2. *Entropy*: Measuring the uncertainty in the model's predictions based on different prompts.
+3. *Optimization*: Iteratively refining prompts to minimize error or maximize relevance in the output.
+
+*** Python Example
+
+Here's a simple Python example using the =openai= library to illustrate prompt engineering:
+
+#+begin_src python
+import openai
+
+# Set your OpenAI API key
+openai.api_key = 'YOUR_API_KEY'
+
+def generate_response(prompt):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": prompt}]
+    )
+    return response.choices[0].message['content']
+
+# Example of prompt engineering
+prompt1 = "What are the benefits of regular exercise?"
+prompt2 = "List five benefits of regular exercise in bullet points."
+
+# Get responses
+response1 = generate_response(prompt1)
+response2 = generate_response(prompt2)
+
+print("Response 1:", response1)
+print("Response 2:", response2)
+#+end_src
+
+In this example, =prompt1= is a general prompt, while =prompt2= is more specific and structured, demonstrating how the formulation of the prompt can affect the output.

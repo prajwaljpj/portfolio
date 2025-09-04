@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       f92e0aa7-1eb5-4e5e-ab2a-9031ebe62b32
+:END:
+#+title: decimation filter
+A decimation filter is a type of signal processing filter used in depth cameras to reduce the amount of data or resolution in a depth map. Depth cameras, also known as depth sensors or range imaging cameras, capture three-dimensional information about the distance of objects from the camera.
+
+In order to generate a depth map, depth cameras emit infrared light or structured patterns and measure the time it takes for the light to bounce back from objects in the scene. This information is then used to calculate the distance between the camera and each object point.
+
+The resulting depth map often contains a large amount of data, especially in high-resolution cameras or in situations where fast depth sensing is required. However, transmitting and processing this data can be computationally expensive and may require significant memory resources. This is where a decimation filter comes into play.
+
+A decimation filter reduces the data size by discarding or averaging depth measurements in a controlled manner. It essentially downsamples the depth map to a lower resolution. This downsampling can be achieved through various techniques, such as subsampling, averaging, or nearest-neighbor interpolation.
+
+Subsampling involves selecting a subset of depth measurements and discarding the rest, thereby reducing the number of depth points in the depth map. This approach can be beneficial when the depth variations in the scene are relatively smooth, and retaining every depth point is unnecessary.
+
+Averaging, on the other hand, involves calculating the mean depth value in a group of neighboring pixels and replacing them with a single averaged value. This technique is useful for reducing noise or outliers in the depth map. It can help in situations where high precision is not required but a smoother representation of the scene is desired.
+
+Nearest-neighbor interpolation selects one depth value from a set of neighboring pixels and replicates it to fill the empty spaces. This technique is primarily used when the depth map needs to be resized, either upsampled or downsized, while maintaining the depth information.
+
+The choice of decimation technique depends on the application requirements. The trade-off between computational resources, memory usage, and the level of detail in the depth map needs to be carefully considered. Some depth cameras may offer different decimation options to provide flexibility to the user.
+
+In summary, a decimation filter in depth cameras is a signal processing filter used to reduce the amount of data or resolution in the depth map. It can help in reducing computational and memory requirements while still providing sufficient information for the intended application.

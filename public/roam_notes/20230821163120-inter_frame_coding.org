@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e
+:END:
+#+title: inter-frame coding
+#+ROAM_TAGS: inter-coding
+
+* Introduction
+Inter frame coding is the compression that takes place where the encoding scheme only keeps information that changes between frames.

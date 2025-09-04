@@ -13,6 +13,7 @@ const Header = () => {
             <li><Link href="#about" className="hover:text-gray-400 transition-colors dark:hover:text-gray-600">About</Link></li>
             <li><Link href="#experience" className="hover:text-gray-400 transition-colors dark:hover:text-gray-600">Experience</Link></li>
             <li><Link href="#projects" className="hover:text-gray-400 transition-colors dark:hover:text-gray-600">Projects</Link></li>
+            <li><Link href="/notes" className="hover:text-gray-400 transition-colors dark:hover:text-gray-600">Notes</Link></li>
             <li><Link href="#contact" className="hover:text-gray-400 transition-colors dark:hover:text-gray-600">Contact</Link></li>
           </ul>
           <ThemeToggle />

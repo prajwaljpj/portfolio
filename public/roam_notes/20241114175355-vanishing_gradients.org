@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       5f39b412-124f-4f98-b853-db98175a0fd4
+:END:
+#+title: Vanishing Gradients
+
+The vanishing gradient problem occurs in deep neural networks when gradients of the [[id:1258128e-6b29-414b-b1ff-f7d99fffcf4e][loss function]] become very small as they are backpropagated through layers. This leads to slow or ineffective learning, particularly in earlier layers of the network.
+
+*Example:*
+Consider a deep neural network using the sigmoid activation function. The gradient of the sigmoid function approaches zero as the input values move away from zero (either positive or negative). When a network has many layers, the gradients can decrease exponentially due to the product of many small gradients during backpropagation.
+
+For instance, if you have a network with three layers and the gradient at one layer is 0.1, at the next layer it's 0.05, and at the third layer it’s 0.0025, the gradients become smaller and smaller. By the time you reach the first layer, the gradient might be so small (e.g., 0.0000001) that it contributes negligibly to updating weights, leading to inefficient learning.
+
+Using activation functions like ReLU (Rectified Linear Unit) can help mitigate this issue as they do not saturate for positive inputs, allowing for more effective backpropagation of gradients.
+
+* How can we mitigate vanishing gradients?
+
+To mitigate vanishing gradients, you can:
+
+1. *Use Non-saturating Activation Functions*: Replace sigmoid or tanh with ReLU or its variants (e.g., Leaky ReLU, Parametric ReLU).
+
+2. *Weight Initialization*: Use techniques such as He initialization (for ReLU) or Xavier initialization (for tanh) to set initial weights, preventing gradients from being too small.
+
+3. *Batch Normalization*: Apply batch normalization to normalize activations, which helps maintain gradient flow through the network.
+
+4. *Skip Connections*: Implement architectures with skip connections (like ResNets) that bypass certain layers, allowing gradients to flow more easily.
+
+5. *Gradient Clipping*: Limit the magnitude of gradients during training to prevent them from becoming too small or exploding.
+
+6. *Use LSTM/GRU*: In recurrent networks, consider using long short-term memory (LSTM) or gated recurrent unit (GRU) architectures that are designed to combat vanishing gradients.
+
+By employing these techniques, you can improve the training of deep neural networks and reduce the impact of vanishing gradients.
+
+* Python example of vanishing gradient problem and how we mitigate it.
+
+Here's a concise Python example that demonstrates the vanishing gradient problem and a way to mitigate it using ReLU activation:
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Sigmoid activation and its derivative
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+def sigmoid_derivative(x):
+    return sigmoid(x) * (1 - sigmoid(x))
+
+# ReLU activation and its derivative
+def relu(x):
+    return np.maximum(0, x)
+
+def relu_derivative(x):
+    return np.where(x > 0, 1, 0)
+
+# Forward pass and backpropagation
+def forward_pass(X, weights, activation_func):
+    return activation_func(X.dot(weights))
+
+def backpropagate(X, y, weights, activation_derivative):
+    predictions = forward_pass(X, weights, relu)
+    error = predictions - y
+    gradients = activation_derivative(predictions) * error
+    weight_updates = X.T.dot(gradients) / X.shape[0]
+    return weight_updates
+
+# Generate sample data
+np.random.seed(0)
+X = np.random.rand(1000, 10)
+y = np.random.rand(1000, 1)
+
+# Initialize weights for sigmoid and ReLU
+weights_sigmoid = np.random.randn(10, 1) * 0.01
+weights_relu = np.random.randn(10, 1) * 0.01
+
+# Training for 100 epochs
+for epoch in range(100):
+    weights_sigmoid -= 0.01 * backpropagate(X, y, weights_sigmoid, sigmoid_derivative)
+    weights_relu -= 0.01 * backpropagate(X, y, weights_relu, relu_derivative)
+
+# Display results
+final_pred_sigmoid = forward_pass(X, weights_sigmoid, sigmoid)
+final_pred_relu = forward_pass(X, weights_relu, relu)
+
+plt.plot(y, label='True Values', alpha=0.5)
+plt.plot(final_pred_sigmoid, label='Sigmoid Predictions', alpha=0.5)
+plt.plot(final_pred_relu, label='ReLU Predictions', alpha=0.5)
+plt.legend()
+plt.show()
+#+end_src
+
+*** Explanation:
+1. *Activation Functions*: The example uses both sigmoid and ReLU. The sigmoid function can lead to vanishing gradients, particularly with deep networks.
+2. *Forward Pass & Backpropagation*: The model performs forward passes and backpropagation using the defined activation functions and their derivatives.
+3. *Weight Updates*: The model updates weights based on gradients derived from the output layer, illustrating how the ReLU helps maintain a healthier gradient flow.
+4. *Visualization*: Finally, the predictions for both activation functions are plotted against true values, allowing you to observe the effectiveness of the ReLU in training.
+
+By using ReLU instead of sigmoid, the problem of vanishing gradients can be mitigated effectively.

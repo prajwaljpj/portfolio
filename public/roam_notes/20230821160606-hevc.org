@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       1318dd77-4418-4132-a887-40ae59d1020b
+:END:
+#+title: HEVC
+#+ROAM_TAGS: gpt-ans
+
+HEVC stands for High Efficiency Video Coding, which is a video compression standard. It is also known as H.265, as it is the successor to the earlier H.264/MPEG-4 AVC (Advanced Video Coding) standard. HEVC was developed by the Joint Collaborative Team on Video Coding (JCT-VC), a joint effort of the International Telecommunication Union (ITU) and the International Organization for Standardization (ISO).
+
+HEVC provides improved video compression capabilities compared to its predecessor. It is designed to deliver higher video quality at lower bit rates, which means it allows for more efficient compression, resulting in smaller file sizes without compromising the visual quality of the video.
+
+The main advancements in HEVC are:
+
+1. Increased coding efficiency: HEVC uses more advanced compression techniques such as larger block sizes, improved motion compensation, and higher precision transform tools. These techniques help to capture and represent video content more accurately and efficiently.
+
+2. Support for higher resolutions and frame rates: HEVC supports video resolutions up to 8192x4320 pixels (8K) and frame rates up to 300 frames per second (fps). This enables the encoding and decoding of high-resolution and high-frame-rate videos.
+
+3. Enhanced support for parallel processing: HEVC is designed to take advantage of multi-core processors and hardware acceleration, allowing for faster encoding and decoding of video content.
+
+4. Flexible bit rate control: HEVC provides better control over bit rates, allowing the encoding process to adapt to varying network conditions or device capabilities. This means that HEVC-encoded videos can be efficiently streamed over the internet or viewed on different devices with varying bandwidth capabilities.
+
+Overall, HEVC offers a significant improvement in video compression efficiency, making it a popular choice for video streaming services, multimedia applications, and various video playback devices.

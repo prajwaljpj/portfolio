@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4e186440-b91c-46fd-b4f1-33ddc001a70e
+:END:
+#+title: spectral band
+Spectral bands are parts of the electromagnetic spectrum of specific wavelengths, which can be filtered by a standard filter.
+* Nuclear Physics
+Spectral bands are referred to the emission of polyatomic systems. Each spectral line corresponds to one level in the atom splits in the molecules.

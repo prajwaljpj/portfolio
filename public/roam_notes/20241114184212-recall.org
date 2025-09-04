@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       292e173b-42e6-4341-b37a-4e28035a66cc
+:END:
+#+title: Recall
+
+Recall refers to the ability to retrieve information from memory when needed. In the context of psychology and information retrieval, it is often measured as the percentage of relevant items retrieved from a larger set.
+
+*Example:* Suppose you studied a list of 20 vocabulary words for a test. If you can remember and write down 15 of those words when prompted, your recall would be 75% (15 out of 20).
+
+In a more technical context, in information retrieval systems (like search engines), recall is calculated as:
+
+\[ \text{Recall} = \frac{\text{Number of relevant documents retrieved}}{\text{Total number of relevant documents}} \]
+
+For instance, if there are 100 relevant documents in a database and your search retrieves 80 of them, your recall is 80%.

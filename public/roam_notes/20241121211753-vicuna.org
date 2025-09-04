@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       54d32d07-b79f-41a6-97bd-4ae70afc89a8
+:END:
+#+title: Vicuna
+
+[[https://arxiv.org/abs/2306.05685][Paper Source]]
+
+- 8 categories:
+  1. Writing
+  2. Roleplay
+  3. Extraction
+  4. Reasoning
+  5. Math
+  6. Coding
+  7. STEM
+  8. Humanities/Social Science
+- 10 questions for each category
+- Generate answers from 5 ChatBots
+  1. LLaMA
+  2. Alpaca
+  3. ChatGPT
+  4. Bard
+  5. Vicuna
+- Used GPT-4 to rate quality based on:
+  1. Relevance
+  2. Helpfulness
+  3. Accuracy
+  4. Detail
+- Results:
+  1. They found GPT-4 to provide consistent scores but could also give detailed explanation for those scores
+  2. Had higher agreement with humans (85%) than humans had among themselves (81%)
+  3. Concluded that GPT-4's evaluation aligns closely with human evaluators

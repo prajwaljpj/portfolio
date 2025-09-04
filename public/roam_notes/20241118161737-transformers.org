@@ -1,0 +1,81 @@
+:PROPERTIES:
+:ID:       a7e25472-0dc7-4ab1-8471-51cebf47e006
+:END:
+#+title: Transformers
+#+filetags: :LLM:definition:
+
+A transformer is a deep learning architecture developed by researchers at Google and based on the multi-head [[id:f30eb2c2-1358-4406-9279-a6ac348a04bf][attention mechanism]], proposed in the 2017 paper "Attention Is All You Need". Text is converted to numerical representations called [[id:6f17a9e2-0f32-441f-9e7d-b3df44add35f][tokens]], and each token is converted into a vector via lookup from a word embedding table.[1] At each layer, each token is then contextualized within the scope of the context window with other (unmasked) tokens via a parallel multi-head attention mechanism, allowing the signal for key tokens to be amplified and less important tokens to be diminished.
+
+
+* *Advantages:*
+
+1. *Parallelization*: Allows for parallel processing of sequences, significantly speeding up training.
+2. *Long-range Dependencies*: Effectively captures long-range dependencies in data using self-attention mechanisms.
+3. *Scalability*: Can scale to large models and datasets, facilitating the learning of complex patterns.
+4. *Flexibility*: Easily adaptable to various tasks such as translation, summarization, and image processing.
+5. *State-of-the-art Performance*: Has achieved high performance in many NLP and vision benchmarks.
+
+* *Disadvantages:*
+
+1. *Resource Intensive*: Requires substantial computational resources and memory, particularly for large models.
+2. *Complexity*: Can be complex to tune and understand compared to simpler architectures.
+3. *Data Hungry*: Generally requires large amounts of data to train effectively.
+4. *Overfitting*: Risk of overfitting, especially with small datasets due to the large number of parameters.
+5. *Interpretability*: Self-attention mechanisms can lead to decreased interpretability of the model's decisions.
+
+* Here’s a simple example using the Hugging Face =transformers= library in Python to perform text classification with a pre-trained model:
+
+#+begin_src python
+from transformers import pipeline
+
+# Load a pre-trained model specifically for sentiment analysis
+classifier = pipeline("sentiment-analysis")
+
+# Example text to classify
+text = "I love using Hugging Face Transformers!"
+
+# Classify the text
+result = classifier(text)
+
+# Print the result
+print(result)
+#+end_src
+
+Make sure to install the =transformers= library first via pip if you haven't done so:
+
+#+begin_src bash
+pip install transformers
+#+end_src
+
+* Transformer architecture in python
+#+begin_src python
+import torch
+import torch.nn as nn
+
+class Transformer(nn.Module):
+    def __init__(self, input_dim, model_dim, n_heads, n_layers, output_dim, dropout=0.1):
+        super(Transformer, self).__init__()
+        self.embedding = nn.Embedding(input_dim, model_dim)
+        self.positional_encoding = nn.Parameter(torch.zeros(1, model_dim))
+        self.encoder_layers = nn.ModuleList([
+            nn.TransformerEncoderLayer(model_dim, n_heads, dropout=dropout)
+            for _ in range(n_layers)
+        ])
+        self.transformer_encoder = nn.TransformerEncoder(
+            nn.Sequential(*self.encoder_layers),
+            num_layers=n_layers
+        )
+        self.fc_out = nn.Linear(model_dim, output_dim)
+
+    def forward(self, x):
+        x = self.embedding(x) + self.positional_encoding
+        x = x.permute(1, 0, 2)  # (seq_len, batch_size, model_dim)
+        x = self.transformer_encoder(x)
+        x = x.mean(dim=0)  # Global average pooling
+        return self.fc_out(x)
+
+# Example usage
+model = Transformer(input_dim=1000, model_dim=512, n_heads=8, n_layers=6, output_dim=10)
+input_tensor = torch.randint(0, 1000, (32, 50))  # Batch of 32 sequences of length 50
+output = model(input_tensor)
+#+end_src

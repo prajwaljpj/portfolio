@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       88a541e6-c3b0-4134-a603-474c805ffb3b
+:ROAM_ALIASES: sentence_transformers sentence-transformers
+:END:
+#+title: Sentence Transformers
+#+filetags: :python-example:library:LLM:
+
+Sentence Transformers is a framework for producing sentence embeddings, which are fixed-size vector representations of sentences that capture their semantic meaning. It builds on the Transformer architecture, particularly [[id:705c6c81-45a0-4b00-88b7-449890ec54fb][BERT]] (Bidirectional Encoder Representations from Transformers) and similar models, to generate embeddings suitable for tasks like semantic similarity, clustering, and retrieval.
+
+*** How It Works:
+1. *Model Architecture*: Sentence Transformers typically utilize pre-trained transformer models, fine-tuned for specific tasks. They use pooling methods (like mean pooling) to convert token embeddings from the transformer into a single sentence embedding.
+2. *Input Processing*: Sentences are tokenized using the same tokenizer as the base model, ensuring compatibility.
+3. *Embedding Generation*: The model produces embeddings that represent the semantic context of the sentences.
+
+*** Example in Python:
+
+You need to install the =sentence-transformers= library first:
+
+#+begin_src bash
+pip install sentence-transformers
+#+end_src
+
+Here’s a simple example of using Sentence Transformers to encode sentences:
+
+#+begin_src python
+from sentence_transformers import SentenceTransformer, util
+
+# Load a pre-trained Sentence Transformer model
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Define some sentences
+sentences = [
+    "I love to play soccer.",
+    "Football is my favorite sport.",
+    "I enjoy watching movies.",
+    "Soccer is a popular game worldwide."
+]
+
+# Encode the sentences into embeddings
+embeddings = model.encode(sentences)
+
+# Print the embeddings
+for sentence, embedding in zip(sentences, embeddings):
+    print(f"Sentence: \"{sentence}\"\nEmbedding: {embedding[:5]}...")  # Print first 5 dimensions of the embedding
+
+# Calculate similarity between the first and second sentences
+similarity = util.cos_sim(embeddings[0], embeddings[1])
+print(f"Similarity between the first and second sentences: {similarity.item()}")
+#+end_src
+
+*** Explanation of the Example:
+- A pre-trained model (=all-MiniLM-L6-v2=) is loaded, which is efficient and effective for many tasks.
+- Sentences are defined and encoded to produce high-dimensional vectors representing their meanings.
+- Cosine similarity between embeddings can be computed to determine how similar the sentences are semantically.
+
+This setup allows for various applications, such as finding semantically similar sentences or clustering related content.

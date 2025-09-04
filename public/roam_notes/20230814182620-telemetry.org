@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       67fdd00e-b992-4c28-b532-8a3a5180b003
+:END:
+#+title: telemetry
+
+* Introduction
+telemetry is the automatic measurement and transmission of data

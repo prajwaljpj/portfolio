@@ -1,0 +1,67 @@
+:PROPERTIES:
+:ID:       0f22bf6c-0c1d-4fc5-9839-adb1fa707afb
+:END:
+#+title: Entropy Encoding
+
+Entropy encoding is a data compression technique that takes advantage of the probability distribution of the data to represent it more efficiently. It assigns shorter codes to frequently occurring symbols or sequences of symbols and longer codes to less frequent ones. This results in a reduction of the number of bits required to represent the data, leading to a more compact representation and hence saving storage or transmission bandwidth. Popular entropy encoding algorithms include Huffman coding, arithmetic coding, and Golomb-Rice coding.
+
+Huffman coding is a text compression algorithm that assigns variable-length codes to each symbol in a given input text based on the frequency of their occurrence. The most frequent symbols are assigned the shortest codes, while the less frequent symbols are assigned longer codes. 
+
+The algorithm works by creating a binary tree of nodes based on the frequency of the symbols. The two least frequent symbols are grouped together and assigned a new frequency equal to the sum of their frequencies. This new combined node is then added back into the list of symbols, and the process is repeated until all nodes are grouped into one final node.
+
+Each left branch is assigned a binary digit of 0 and each right branch is assigned a binary digit of 1. The code for each symbol is then determined by traversing the tree from the root to the symbol and recording the path taken (0 for left, 1 for right).
+
+Huffman coding is an efficient algorithm as it produces a code with the shortest average length. This allows for faster data transmission, reduced storage requirements, and improved data retrieval.
+Sure, here is an example of Huffman coding:
+
+Suppose we have the following set of characters with their frequencies:
+
+| Character | Frequency |
+| --------- | --------- |
+| A | 5 |
+| B | 1 |
+| C | 2 |
+| D | 4 |
+
+First, we sort the characters by their frequencies in ascending order:
+
+| Character | Frequency |
+| --------- | --------- |
+| B | 1 |
+| C | 2 |
+| D | 4 |
+| A | 5 |
+
+Next, we combine the two characters with the lowest frequencies (B and C) and create a new node (BC) with a frequency of 3:
+
+| Character | Frequency |
+| --------- | --------- |
+| BC | 3 |
+| D | 4 |
+| A | 5 |
+
+We repeat this step with the two lowest frequency nodes (BC and D) and create a new node (BCD) with a frequency of 7:
+
+| Character | Frequency |
+| --------- | --------- |
+| BCD | 7 |
+| A | 5 |
+
+Finally, we combine all nodes (BCD and A) into a single root node:
+
+| Character | Frequency | Huffman Code |
+| --------- | --------- | ------------ |
+| BCD | 7 | 0 |
+| A | 5 | 1 |
+
+The Huffman code for each character is obtained by tracing the path from the root node to the corresponding leaf node: A = 1, BCD = 0.
+
+Therefore, the Huffman code for the original set of characters is:
+
+| Character | Frequency | Huffman Code |
+| --------- | --------- | ------------ |
+| A         |         5 |            1 |
+| B         |         1 |           00 |
+| C         |         2 |           01 |
+| D         |         4 |           10 |
+|           |           |              |

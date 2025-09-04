@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       19c8d3f9-130a-496c-ac71-0fdf84345be6
+:END:
+#+title: 3d geometry
+* Plane
+[[https://www.nagwa.com/en/explainers/373101390857/#:~:text=Definition%3A%20General%20Form%20of%20the,vector%20parallel%20to%20the%20plane.][Resource]]
+Equation of a plane \(ax + by + cz + d = 0\) where \(a, b, c\) are the components of the normal vector \(\mathbf{n} = (a, b, c)\) which is perpendicular to the plane or any vector parallel to the plane
+If \((x_{0}, y_{0}, z_{0})\) is a point that lies on the plane, then \(d=-(ax_{0} + by_{0} + cz_{0})\) and we can write the equation of the plane as \(ax+by+cz-(ax_{0}+by_{0}+cz_{0})=0\)
+* Cube

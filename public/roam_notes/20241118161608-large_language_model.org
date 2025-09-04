@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       3336d49f-db30-4b0e-a4eb-c69021a33d6c
+:END:
+#+title: Large Language Model
+
+* What is it?
+A large language model (LLM) is a type of computational model designed for natural language processing tasks such as language generation. As language models, LLMs acquire these abilities by learning statistical relationships from vast amounts of text during a self-supervised and semi-supervised training process.
+* What is it comprised of?
+Recent LLMs are comprised of decoder only [[id:a7e25472-0dc7-4ab1-8471-51cebf47e006][Transformer]] based architecture
+
+* Applications
+  - Text generation
+  - Machine translation
+  - Sentiment analysis
+  - Chatbots and conversational agents
+  - Content summarization
+  - Code generation
+  - Question answering
+  - Language understanding and classification

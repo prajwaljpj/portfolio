@@ -1,0 +1,77 @@
+:PROPERTIES:
+:ID:       e09861ea-b0ad-4c50-bb0d-19c05f3a2125
+:END:
+#+title: Adam optimizer
+
+The Adam optimizer (short for Adaptive Moment Estimation) is an algorithm for stochastic optimization that combines the benefits of two other extensions of stochastic gradient descent: AdaGrad and RMSProp. It adapts the learning rate for each parameter based on the first and second moments of the gradients.
+
+*** Key Concepts
+
+1. *First Moment (m)*: The exponentially weighted average of the gradients.
+   \[
+   m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t
+   \]
+
+2. *Second Moment (v)*: The exponentially weighted average of the squared gradients.
+   \[
+   v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2
+   \]
+
+3. *Bias Correction*: Since \( m \) and \( v \) are initialized as zero vectors, they are biased towards zero during the initial time steps. To counteract this, bias-corrected estimates are computed:
+   \[
+   \hat{m}_t = \frac{m_t}{1 - \beta_1^t}
+   \]
+   \[
+   \hat{v}_t = \frac{v_t}{1 - \beta_2^t}
+   \]
+
+4. *Parameter Update*: Finally, parameters are updated using the corrected moments:
+   \[
+   \theta_{t+1} = \theta_t - \frac{\alpha \hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}
+   \]
+   Here, \( \alpha \) is the learning rate, and \( \epsilon \) is a small constant to prevent division by zero.
+
+*** Hyperparameters
+- \( \beta_1 \): Exponential decay rate for the first moment (typically set to 0.9).
+- \( \beta_2 \): Exponential decay rate for the second moment (typically set to 0.999).
+- \( \epsilon \): A small constant added to improve numerical stability (often set to \( 10^{-8} \)).
+
+*** Python Example
+
+Here's an example of using the Adam optimizer with a simple neural network in PyTorch:
+
+#+begin_src python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Create a simple feedforward neural network
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc = nn.Linear(1, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
+# Create dataset
+x = torch.tensor([[1.0], [2.0], [3.0]], requires_grad=False)
+y = torch.tensor([[2.0], [4.0], [6.0]], requires_grad=False)
+
+# Initialize model, loss function, and optimizer
+model = SimpleNN()
+criterion = nn.MSELoss()
+optimizer = optim.Adam(model.parameters(), lr=0.01)
+
+# Training loop
+for epoch in range(100):
+    optimizer.zero_grad()  # Zero gradients
+    outputs = model(x)    # Forward pass
+    loss = criterion(outputs, y)   # Compute loss
+    loss.backward()       # Backward pass
+    optimizer.step()      # Update weights
+
+print("Trained model parameters:", model.fc.weight.data, model.fc.bias.data)
+#+end_src
+
+This code creates a simple linear neural network and trains it using the Adam optimizer to fit the data provided.

@@ -1,0 +1,240 @@
+:PROPERTIES:
+:ID:       c98a7326-fc4f-4c45-899b-8e00e60e6483
+:END:
+#+title: LLM System Design
+
+[[https://eugeneyan.com/writing/llm-patterns/][LLM System Design Resource]]
+
+[[file:~/Dropbox/org/roam/llm-patterns-og.png]]
+
+* Patterns for building LLM-based systems
+There are 7 key patterns:
+- Evals: performance measurement
+- RAG: to add external/recent knowledge
+- [[id:93ea77e2-be22-4912-be2a-e327ee53998b][Fine-tuning]]: To get better at specific tasks
+- Caching: reduce latency
+- Guardrails: Ensure output quality
+- Defensive UX: manage errors gracefully
+- User feedback: data flywheel
+
+- LLM internal parameters
+
+  1. *Number of Layers*: Determines the depth of the model.
+  2. *Hidden Size*: The dimensionality of the hidden layers.
+  3. *Number of Attention Heads*: Refers to the parallel attention mechanisms in the model.
+  4. *Feedforward Network Size*: The size of the feedforward layers between attention layers.
+  5. *Embedding Size*: Dimensionality of the input and output embeddings.
+  6. *Batch Size*: Number of samples processed at once during training.
+  7. *Learning Rate*: Controls how much to update models in response to the estimated error each time the model weights are updated.
+  8. *Dropout Rate*: A parameter used to prevent overfitting by randomly setting a fraction of the input units to zero during training.
+  9. *Sequence Length*: The maximum length of input sequences the model can handle.
+
+These parameters significantly influence the model's performance and capacity.
+
+- Some external parameters that can affect the performance of LLM-based systems include:
+
+  1. *Quality of Training Data*: The relevance, diversity, and accuracy of the datasets used for training.
+  2. *Data Distribution*: How representative the training data is of real-world scenarios.
+  3. *Domain-Specific Knowledge*: Incorporation of specialized knowledge or vocabularies relevant to specific fields.
+  4. *External APIs and Services*: Integration with third-party services for additional functionalities (e.g., fetching up-to-date information).
+  5. *User Interaction Patterns*: How users interact with the system, which can influence model performance through feedback loops.
+  6. *Regulatory and Ethical Guidelines*: Compliance with legal frameworks and ethical standards affecting content handling and generation.
+  7. *Computational Resources*: Availability of hardware (CPUs/GPUs) impacting model training and inference speed.
+  8. *Latency and Throughput Requirements*: Constraints on response time and the number of requests the system must handle simultaneously.
+
+These parameters can significantly shape the effectiveness and efficiency of an LLM system in real-world applications.
+
+- GPT parameters
+  1. *Temperature*: A value that controls the randomness of the model's output; higher temperatures lead to more creative and unexpected responses, while lower temperatures produce more predictable and consistent results.
+  2. *Frequency Penalty*: This penalty discourages the model from repeating words that have already appeared many times in the generated text, promoting greater variety in word choice.
+  3. *Presence Penalty*: This penalty applies a penalty to any word that has already been used once in the current output, even if it hasn't appeared frequently overall, further reducing repetition.
+
+* [[id:7f423f52-b952-47aa-9f97-f1a530af853f][Evals]]
+:PROPERTIES:
+:ID:       7be2913f-1ed7-4942-91e3-645cd2a09956
+:END:
+They enable us to measure how well the model performs and detect any [[id:541da77c-62ba-4651-85f8-bc324abc07c5][regressions]]. Some model evaluation benchmarks are:
+- MMLU
+- EleutheraAI Eval
+- HELM
+- AlpacaEval
+
+** How do we apply evals?
+- Start by collecting a set of task specific evaluations (i.e. prompt, context, expected output as references)
+- These evaluations will guide prompt engineering, model selection, fine-tuning, etc.
+- This can be incorporated and then quickly run evals again to measure improvements and regression.
+- _*In addition to evaluation datasets, we need good and useful metrics*_
+- These metrics distill performance changes into a single number thats comparable across eval runs. We can chose a metric that is easier to compute and interpret.
+
+** Which metric to use?
+- If we’re using an LLM for classification-like tasks (e.g., toxicity detection, document categorization) or extractive QA without dialogue, we can rely on standard classification metrics such as [[id:292e173b-42e6-4341-b37a-4e28035a66cc][recall]], [[id:d7c585eb-a3ae-45e5-956e-253987f3fdaf][precision]], [[id:7bf2d14a-73d0-4e8c-87d8-12b1d6d6b7c5][PRAUC]], etc.
+- If our task has no correct answer but we have references (e.g., machine translation, extractive summarization), we can rely on reference metrics based on matching ([[id:7bfa61aa-7f1e-4c27-9a69-03881f048b37][BLEU]], [[id:5b3513d2-47dc-4945-a022-426541fbc889][ROUGE]]) or semantic similarity ([[id:5f279d07-e629-43ca-a1e7-e5aa7b655d6c][BERTScore]], [[id:c2c2a982-3390-4cc3-b70c-ed78424f6a51][MoverScore]]).
+- These metrics wont work for more open ended tasks such as abstractive summarization, dialogue and other. But collecting human judgements can be slow and expensive. Therefore, we may opt to lean on automated evaluations via strong LLM.
+- While human judgements are also noisy because of the differing biases among annotators, LLM judgements tend to be less noisy.
+*** Different biases:
+    1. *Position Bias*: LLMs tend to favor the response in the first position. To mitigate this, we can evaluate the same pair of responses twice while swapping their order. If the same response is preferred in both orders, we mark it as a win; else, it’s a tie.
+    2. *Verbosity Bias*: LLMs tend to favor longer, wordier responses over more concise ones, even if the latter is clearer and of higher quality. A possible solution is to ensure that comparison responses are similar in length.
+    3. *Self-Enhancement Bias*: LLMs have a slight bias towards their own answers. [[https://arxiv.org/abs/2306.05685][GPT-4 favors itself with a 10% higher win rate while Claude-v1 favors itself with a 25% higher win rate]]. To counter this, don’t use the same LLM for evaluation tasks.
+/Note: Rather than asking LLM for a direct evaluation (eg., asking for a score), try giving it a reference and asking for a comparison. This reduces noise/
+- Sometimes the best evaluation is human evaluation as mentioned in the [[https://www.latent.space/p/mosaic-mpt-7b#details][Latent Space Podcast with MosiacML]].
+** Benchmark datasets
+Some of the few benchmark datasets are:
+- MMLU
+- BigBench
+- HumanEval
+
+* [[id:4e3ba750-1d16-4028-96ed-8432f14f57d4][Retrieval-Augmented Generation]] (RAG): To add Knowledge :ATTACH:
+:PROPERTIES:
+:ID:       f7d193cc-3542-45d6-82b9-4ff1caa9163e
+:END:
+
+[[attachment:_20241124_180920NVIDIA-RAG-diagram-scaled.jpg]]
+
+- RAG helps reduce hallucinations by grounding the model on the retrieved context, therefore increasing factuality
+- It is cheaper to keep retrieval indices up to date than to continuously pretrain LLM
+- It is also straightforward to update or remove data such as biased or toxic documents by updating the retrieval index
+- In short, RAG applies mature and simpler idea from the field of information retrieval to support LLM generation.
+** More about RAG ([[id:2b4383b2-7341-4cf2-a1d1-2747c1548ab5][Text Embeddings]]) :ATTACH:
+
+
+[[attachment:_20241124_190512rag.jpg]]
+
+
+- Text embeddings are *compressed, absrtract representations of text data* where text of varying length can be represented as a fixed size vector of numbers
+- A good text embedding is one that does well with downstream tasks, such as retrieving similar items.
+- Embeddings can also take other modalities (image, video, etc). [[id:e38dc05e-0b8c-4f67-9b6e-60f8319f1f82][CLIP]] is multimodal and embeds images and text in the same space, allowing us to find images and text in the same space
+- Can also embed products based on behavior (clicks, purchases) or [[https://eugeneyan.com/writing/search-query-matching/#self-supervised-techniques-no-need-for-labels][graph relationships]]
+- Retrieving relevant documents via [[id:00041fbf-1f1b-4214-9310-1b49955d8564][TF-IDF]] and providing them as context to a language model ([[id:705c6c81-45a0-4b00-88b7-449890ec54fb][BERT]]) improved performance on open domain tasks
+
+** Procedure
+During inference, they concatenate the input with the retrieved document. Then, the LLM generates $tokens_{i}$ based on the original input, the retrieved document, and the previous $i - 1$ tokens. For generation, they proposed two approaches that vary in how the retrieved passages are used to generate output.
+1. In the first approach, RAG-Sequence, the model uses the same document to generate the complete sequence. Thus, for $k$ retrieved documents, the generator produces an output for each document. Then, the probability of each output sequence is marginalized (sum the probability of each output sequence $k$ in and weigh it by the probability of each document being retrieved). Finally, the output sequence with the highest probability is selected.
+2. On the other hand, RAG-Token can generate each token based on a different document. Given $k$ retrieved documents, the generator produces a distribution for the next output token for each document before marginalizing (aggregating all the individual token distributions.). The process is then repeated for the next token. This means that, for each token generation, it can retrieve a different set of $k$ relevant documents based on the original input and previously generated tokens. Thus, documents can have different retrieval probabilities and contribute differently to the next generated token.
+** Other RAG techniques :ATTACH:
+- Fusion-in-Decoder (FiD) [[[https://arxiv.org/abs/2007.01282][source]]]
+  [[attachment:_20241124_191148fid.jpg]]
+- Retrieval-Enhanced Transformer (RETRO) [[[https://arxiv.org/abs/2112.04426][source]]]
+  [[attachment:_20241124_191220retro.jpg]]
+- Internet-augmented LMs [[[https://arxiv.org/abs/2203.05115][source]]]
+  [[attachment:_20241124_191456internet-llm.jpg]]
+** How to apply RAG
+- Hybrid retrieval (traditional search index + embedding-based search) works better than either alone.
+- Why not embedding-based search only? Falls short in some situations
+  1) Searching for a person or object’s name (e.g., Eugene, Kaptir 2.0)
+  2) Searching for an acronym or phrase (e.g., RAG, RLHF)
+  3) Searching for an ID (e.g., gpt-3.5-turbo, titan-xlarge-v1.01)
+- But keyword search has its limitations too. It only models simple word frequencies and doesn’t capture semantic or correlation information. Thus, it doesn’t deal well with synonyms or hypernyms (i.e., words that represent a generalization).
+- This is where combining it with semantic search is complementary.
+
+- With regards to embedding:
+  - The OG embedding approaches include [[id:7a0dd215-4e03-49b7-93e3-d9b7a5df939b][Word2vec]] and [[id:e1f26a50-9b9f-4c3f-b3cb-ca51c5d6b9e1][fastText]]. Another baseline is [[id:88a541e6-c3b0-4134-a603-474c805ffb3b][sentence-transformers]]
+  - FastText: FastText is an open-source, lightweight library that enables users to leverage pre-trained embeddings or train new embedding models. It comes with pre-trained embeddings for 157 languages and is extremely fast, even without a GPU.
+* Fine-tuning LLM
+:PROPERTIES:
+:ID:       4c0b0f1c-3b57-4d95-af26-48360244f080
+:END:
+Fine-tuning is the process of taking a pre-trained model (that has already been trained with a vast amount of data) and further refining it on a specific task. The intent is to harness the knowledge that the model has already acquired during its pre-training and apply it to a specific task, usually involving a smaller, task-specific, dataset.
+
+The term “fine-tuning” is used loosely and can refer to several concepts such as:
+
+- Continued pre-training: With domain-specific data, apply the same pre-training regime (next token prediction, masked language modeling) on the base model.
+- Instruction fine-tuning: The pre-trained (base) model is fine-tuned on examples of instruction-output pairs to follow instructions, answer questions, be waifu, etc.
+- Single-task fine-tuning: The pre-trained model is honed for a narrow and specific task such as toxicity detection or summarization, similar to BERT and T5.
+- [[id:b7730a00-10fc-44cd-ad54-05b549a0ee8f][Reinforcement learning with human feedback]] (RLHF): This combines instruction fine-tuning with reinforcement learning. It requires collecting human preferences (e.g., pairwise comparisons) which are then used to train a reward model. The reward model is then used to further fine-tune the instructed LLM via RL techniques such as proximal policy optimization (PPO).
+** Why fine-tune? :ATTACH:
+- Performance & control: improve performance of base model and even surpass it in some cases. Provides greater control over LLM behavior, resulting in a more robust system or product.
+- Modularization: Single task fine-tuning allows us to use an army of smaller models that specialize on their individual tasks. This proves to be useful for a series of tasks such as moderation, extraction, summarization, etc. Also, each model has focus on only a narrow set of tasks, we can get around the *[[id:2442391a-fd69-4a8d-b48e-0c8a8ff28c9d][alignemnt tax]], where fine-tuning a model on one task reduces performance on other tasks.*
+- Reduced dependencies: Finetuning and deployment of own models increases security by reducing legal concerns about proprietary data (PII, internal documents, and code) being exposed to external APIs. Also gets around 3rd party LLM constraints such as rate limiting, high costs, overly restrictive safety filters. Therefore, data is confined to our own network, and can scale throughput as needed.
+[[id:2442391a-fd69-4a8d-b48e-0c8a8ff28c9d][Alignment Tax]] leads to lower performance on certain critical tasks. InstructGPT (paper) found RPHF led to performance regression on Public NLP tasks SQuAD, HellaSwag, and WMT 2015 French to English. (A workaround is to have several smaller, specialized models that excel at narrow tasks.)
+
+Fine-tuning is similar to the concept concept of [[id:09576efd-771c-480c-9edd-b22efa5ffafd][transfer learning]]. Transfer Learning is a technique in machine learning in which knowledge learned from a task is re-used to boost performance on a related task -- Wikipedia.
+
+- [[https://arxiv.org/abs/1801.06][ULMFit]] is one of the earlier papers to apply transfer learning to text. more details in the paper.
+  [[attachment:_20241125_190145ulmfit.jpg]]
+
+- [[id:705c6c81-45a0-4b00-88b7-449890ec54fb][BERT]] encoder only ([[https://arxiv.org/abs/1810.04805][source]]) was pre-trained on masked language modeling and next sentence prediction on English Wikipedia and BooksCorpus. It was then fine-tuned on task-specific inputs and labels for single-sentence classification, sentence pair classification, single-sentence tagging, and question & answering.
+  [[attachment:_20241125_191405bert.jpg]]
+
+- [[https://arxiv.org/abs/2305.10435][Generative Pre-trained Transformers]] (GPT; decoder only) was first pre-trained on BooksCorpus via next token prediction. This was followed by single-task fine-tuning for tasks such as text classification, textual entailment, similarity, and Q&A. Interestingly, they found that including language modeling as an auxiliary objective helped the model generalize and converge faster during training.
+  [[attachment:_20241125_191503gpt.jpg]]
+
+- [[https://arxiv.org/abs/1910.10683][Text-to-Text Transfer Transformer (T5; encoder-decoder)]] was pre-trained on the Colossal Clean Crawled Corpus (C4), a cleaned version of the Common Crawl from April 2019. It employed the same denoising objective as BERT, namely masked language modeling. It was then fine-tuned on tasks such as text classification, abstractive summarization, Q&A, and machine translation.
+  [[attachment:_20241125_192550t5.jpg]]
+
+  But unlike ULMFIt, BERT, and GPT which used different classifier heads for downstream tasks, T5 represented downstream tasks as text-to-text only.
+
+- [[https://arxiv.org/abs/2203.02155][InstructGPT]] expanded this idea of single-task fine-tuning to instruction fine-tuning. The base model was GPT-3, pre-trained on internet data including Common Crawl, WebText, Books, and Wikipedia. It then applied supervised fine-tuning on demonstrations of desired behavior (instruction and output). Next, it trained a reward model on the dataset of comparisons. Finally, it optimized the instructed model against the reward model via PPO, with this last stage focusing more on alignment than specific task performance.
+  [[attachment:_20241125_193031instructgpt.jpg]]
+
+** Fine-tuning techniques
+- [[id:dbf76f0f-4f7f-46d4-a90e-4ec543988f54][Soft prompt tuning]] prepends a trainable tensor to the model’s input embeddings, essentially creating a soft prompt. Unlike discrete text prompts, soft prompts can be learned via backpropagation, meaning they can be fine-tuned to incorporate signals from any number of labeled examples.
+- Next, there’s [[id:bf75dde7-3981-408a-92bd-c09a24e1f0db][prefix tuning]]. Instead of adding a soft prompt to the model input, it prepends trainable parameters to the hidden states of all transformer blocks. During fine-tuning, the LM’s original parameters are kept frozen while the prefix parameters are updated. The [[https://arxiv.org/abs/2101.00190][paper]] showed that this achieved performance comparable to full fine-tuning despite requiring updates on just 0.1% of parameters. Moreover, in settings with limited data and involved extrapolation to new topics, it outperformed full fine-tuning. One hypothesis is that training fewer parameters helped reduce [[id:5e88eee3-0c35-46f9-a45e-716b9211bab0][overfitting]] on smaller target datasets.
+- There’s also the [[id:72f69d1a-877b-41ae-959a-3585c6eb0d96][adapter]] technique. This method adds fully connected network layers twice to each transformer block, after the attention layer and after the feed-forward network layer. On GLUE, it’s able to achieve within 0.4% of the performance of full fine-tuning by just adding 3.6% parameters per task.
+- [[id:1935b171-ce9f-48d6-9e3e-d14e71f0fc88][Low-Rank Adaptation]] (LoRA) is a technique where adapters are designed to be the product of two low-rank matrices. It was inspired by Aghajanyan et al. which showed that, when adapting to a specific task, pre-trained language models have a low intrinsic dimension and can still learn efficiently despite a random projection into a smaller subspace. Thus, LoRA hypothesized that weight updates during adaption also have low intrinsic rank. Similar to prefix tuning, they found that LoRA outperformed several baselines including full fine-tuning. Again, the hypothesis is that LoRA, thanks to its reduced rank, provides implicit regularization. In contrast, *full fine-tuning, which updates all weights, could be prone to [[id:5e88eee3-0c35-46f9-a45e-716b9211bab0][overfitting]]*.
+- [[id:41472758-9d91-457f-b71e-7df4e5ec7503][QLoRA]] (Quantized LoRA) is another approach where, instead of using a 16-bit model during fine-tuning, they used a 4-bit quantized model. It introduced several innovations such as 4-bit NormalFloat (to quantize models), double quantization (for additional memory savings), and paged optimizers (that prevent OOM errors by transferring data to CPU RAM when the GPU runs out of memory). As a result, QLoRA reduces the average memory requirements for fine-tuning a 65B model from > 780GB memory to a more manageable 48B without degrading runtime or predictive performance compared to a 16-bit fully fine-tuned baseline.
+
+** How to apply fine-tuning?
+First step is to collect demonstration data/labels. These could be for any task. Techniques for data collection include:
+- Via experts or crowd-sourced human annotators: While this is expensive and slow, it usually leads to higher-quality data with [[https://eugeneyan.com/writing/labeling-guidelines/][good guidelines]].
+- Via user feedback: This can be as simple as asking users to select attributes that describe a product, rating LLM responses with thumbs up or down (e.g., ChatGPT), or logging which images users choose to download (e.g., Midjourney).
+- Query larger open models with permissive licenses: With prompt engineering, we might be able to elicit reasonable demonstration data from a larger model (Falcon 40B Instruct) that can be used to fine-tune a smaller model.
+- Reuse open-source data: If your task can be framed as a natural language inference (NLI) task, we could fine-tune a model to perform NLI using [[https://cims.nyu.edu/~sbowman/multinli/][MNLI data]]. Then, we can continue fine-tuning the model on internal data to classify inputs as entailment, neutral, or contradiction.
+Next step is to define an evaluation metric.
+
+* Caching :ATTACH:
+:PROPERTIES:
+:ID:       350d847f-601a-4eef-9451-2408143870bb
+:END:
+
+[[attachment:_20241126_094405gptcache.jpg]]
+
+A cache is a *high-speed storage layer that stores a subset of data that’s accessed more frequently*. This lets us serve these requests faster via the cache instead of the data’s primary storage (e.g., search index, relational database). Overall, caching enables efficient reuse of previously fetched or computed data. (More about [[https://aws.amazon.com/caching/][caching]] and [[https://aws.amazon.com/caching/best-practices/][best practices]].)
+Example of caching - [[https://github.com/zilliztech/GPTCache][GPTCache]]
+
+** Procedure for caching
+When a new request is received:
+- *Embedding generator*: This embeds the request via various models such as OpenAI’s text-embedding-ada-002, FastText, Sentence Transformers, and more.
+- *Similarity evaluator*: This computes the similarity of the request via the vector store and then provides a distance metric. The vector store can either be local (FAISS, Hnswlib) or cloud-based. It can also compute similarity via a model.
+- *Cache storage*: If the request is similar, the cached response is fetched and served.
+- *LLM*: If the request isn’t similar enough, it gets passed to the LLM which then generates the result. Finally, the response is served and cached for future use.
+Redis also shared a [[https://www.youtube.com/live/9VgpXcfJYvw?feature=share&t=1517][similar example (YouTube)]], mentioning that some teams go as far as precomputing all the queries they anticipate receiving.
+** How to apply Caching
+- We should start with having a good understanding if user request patterns
+  - /Example:/ Imagine we get a request for a summary of “Mission Impossible 2” that’s semantically similar enough to “Mission Impossible 3”. If we’re looking up cache based on semantic similarity, we could serve the wrong response.
+- Consider if caching is effective for the usage pattern.
+  - If the usage pattern is uniformly random, the cache would need frequent updates.
+  - Therefore, the effort to keep the cache up-to-date could negate any benefit a cache has to offer.
+  - On the other hand, if the usage follows a power law where a small proportion of unique requests account for the majority of traffic (e.g., search queries, product views), then caching could be an effective strategy.
+- Beyond semantic similarity, we could also explore caching based on:
+  - *Item IDs:* This applies when we pre-compute summaries of product reviews or generate a summary for an entire movie trilogy.
+  - *Pairs of Item IDs:* Such as when we generate comparisons between two movies. While this appears to be $O(N^2)$, in practice, a small number of combinations drive the bulk of traffic, such as comparison between popular movies in a series or genre.
+  - *Constrained input:* Such as variables like movie genre, director, or lead actor. For example, if a user is looking for movies by a specific director, we could execute a structured query and run it through an LLM to frame the response more eloquently. Another example is generating code based on drop-down options—if the code has been verified to work, we can cache it for reliable reuse.
+- Caching does not have to occur on the fly
+
+* Guardrails
+:PROPERTIES:
+:ID:       b37abb66-a860-4aea-bb24-e3bd0c45c900
+:END:
+** What are guardrails?
+- First, they help ensure that model outputs are *reliable and consistent enough to use in production*. For example, we may require output to be in a specific JSON schema so that it’s machine-readable, or we need code generated to be executable. Guardrails can help with such syntactic validation.
+- Second, they provide an *additional layer of safety and maintain quality control over an LLM’s output*. For example, to verify if the content generated is appropriate for serving, we may want to check that the output isn’t harmful, verify it for factual accuracy, or ensure coherence with the context provided.
+
+
+* Generation Control
+- [[id:b628101b-b4e9-4ece-9467-4255851c6ba3][Temperature]] and [[id:8497575c-7733-44b0-8861-fb2afbd1a04a][Top-p Sampling]]
+- Prompt Engineering
+- Few-Shot Learning
+- In-context Learning
+- [[id:6facd405-fe26-43ad-85be-4bee6b28f48c][Chain-of-Thought]] Prompting
+  - Hallucination prevention
+
+* Optimization techniques and deployment
+Some of the optimization techniques are:
+- Quantization techniques (4-bit, 8-bit, 16-bit)
+- Model Distillation
+- Prompt Caching
+- Model merging
+- Inference optimization
+- Load Balancing
+- Latency Management
+- Cost Optimization

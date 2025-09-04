@@ -1,0 +1,77 @@
+:PROPERTIES:
+:ID:       c233ca94-38fa-49c5-a2ed-7c41ad1460af
+:END:
+#+title: Logistic Regression
+
+Logistic regression is a statistical method used for binary classification. It predicts the probability that a given input point belongs to a certain class by using a logistic function (sigmoid function). Unlike linear regression, which outputs continuous values, logistic regression outputs probabilities between 0 and 1.
+
+* Example:
+
+Suppose you want to predict whether a student will pass (1) or fail (0) an exam based on the number of hours studied.
+
+1. *Data Collection*: You gather data on several students, recording the hours studied and whether they passed or failed.
+   - Hours Studied: [1, 2, 3, 4, 5]
+   - Pass (1) / Fail (0): [0, 0, 0, 1, 1]
+
+2. *Model Training*: Using logistic regression, you fit a model to calculate the relationship between hours studied and the probability of passing the exam.
+
+3. *Prediction*: For a student who studied 3.5 hours, the model might output a probability of 0.75. This means there is a 75% chance that the student will pass the exam.
+
+4. *Decision Threshold*: If you use a threshold of 0.5, you would classify this student as likely to pass (1).
+
+* Equation:
+
+The logistic function used is:
+
+\[ P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X)}} \]
+
+Where:
+- \( P(Y=1|X) \) is the probability of class 1,
+- \( \beta_0 \) and \( \beta_1 \) are the coefficients learned during training,
+- \( X \) is the input variable (hours studied).
+
+Logistic regression is widely used for its interpretability and effectiveness in binary classification tasks.
+* Python example of logistic regression
+
+Here's a basic example of logistic regression in Python using the =scikit-learn= library:
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+
+# Sample data
+hours_studied = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)  # Reshape for sklearn
+pass_fail = np.array([0, 0, 0, 1, 1])  # Labels
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(hours_studied, pass_fail, test_size=0.2, random_state=0)
+
+# Create and fit the logistic regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Making predictions
+probabilities = model.predict_proba(X_test)[:, 1]  # Get probabilities for class 1
+predictions = model.predict(X_test)
+
+# Print results
+for i in range(len(X_test)):
+    print(f"Hours studied: {X_test[i][0]}, Predicted Probability of Passing: {probabilities[i]:.2f}, Prediction: {'Pass' if predictions[i] else 'Fail'}")
+
+# Optional: Plotting the decision boundary
+plt.scatter(hours_studied, pass_fail, color='blue', label='Data Points')
+x_range = np.linspace(0, 6, 100).reshape(-1, 1)
+pred_probs = model.predict_proba(x_range)[:, 1]
+
+plt.plot(x_range, pred_probs, color='red', label='Logistic Function')
+plt.axhline(0.5, color='green', linestyle='--')
+plt.xlabel('Hours Studied')
+plt.ylabel('Probability of Passing')
+plt.title('Logistic Regression Example')
+plt.legend()
+plt.show()
+#+end_src
+
+This example demonstrates data preparation, model training, prediction, and visualization of the logistic regression function and decision boundary.

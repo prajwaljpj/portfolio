@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       2b0eab57-ff4c-4705-b9a6-4fcdd5298eb7
+:END:
+#+title: High Efficiency Video Coding
+
+Also known as HEVC or H.265 MPEG-H Part 2.
+HEVC uses both integer DCT and discrete sine transform (DST) with varied block sizes between 4×4 and 32×32.
+The High Efficiency Image Format (HEIF) is based on HEVC.

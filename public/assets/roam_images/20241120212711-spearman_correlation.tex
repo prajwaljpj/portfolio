@@ -1,0 +1,117 @@
+% Created 2024-11-21 Thu 19:36
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Prajwal Rao}
+\date{\today}
+\title{Spearman correlation}
+\hypersetup{
+ pdfauthor={Prajwal Rao},
+ pdftitle={Spearman correlation},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.1 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\usepackage{biblatex}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+Spearman correlation measures the strength and direction of association between two ranked variables. It is a non-parametric measure, which means it does not assume a linear relationship or require the data to be normally distributed. Instead, it assesses how well the relationship between two variables can be described by a monotonic function.
+\subsubsection{Mathematical Explanation:}
+\label{sec:org4cfec65}
+
+\begin{enumerate}
+\item \textbf{Rank the Data}: Convert the data values of each variable to ranks.
+\item \textbf{Difference of Ranks}: For each pair of ranks, compute the difference \(d_i\) between the two ranks.
+\item \textbf{Square the Differences}: Compute \(d_i^2\) for each pair of ranks.
+\item \textbf{Sum of Squares}: Calculate the sum \(\sum d_i^2\).
+\item \textbf{Spearman's Correlation Coefficient} \(\rho\) is computed using the formula:
+
+\[
+   \rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+   \]
+
+where \(n\) is the number of paired ranks.
+\end{enumerate}
+\subsubsection{Python Example:}
+\label{sec:org37ff683}
+
+Here’s how to compute Spearman correlation using Python with the \texttt{scipy} library:
+
+\begin{verbatim}
+import numpy as np
+from scipy.stats import spearmanr
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [5, 6, 7, 8, 7]
+
+# Compute Spearman correlation
+correlation, p_value = spearmanr(x, y)
+
+print(f"Spearman correlation: {correlation}, p-value: {p_value}")
+\end{verbatim}
+\subsubsection{Output:}
+\label{sec:orgc14d131}
+This script will output the Spearman correlation coefficient and the p-value, indicating the strength and statistical significance of the correlation between the two variables.
+\section{For Images}
+\label{sec:org8f54237}
+Spearman correlation assesses the rank-order relationship between two variables. For images, this involves treating the pixel values as one-dimensional arrays and computing the Spearman correlation between them.
+\subsubsection{Steps:}
+\label{sec:org38e5bef}
+
+\begin{enumerate}
+\item \textbf{Flatten the Images:} Convert the images into 1D arrays.
+\item \textbf{Rank the Values:} Assign ranks to the pixel values in both arrays.
+\item \textbf{Calculate Spearman Correlation:} Use the formula:
+\[
+   \rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+   \]
+where \(d_i\) is the difference between the ranks of corresponding pixels, and \(n\) is the number of pixels.
+\end{enumerate}
+\subsubsection{Python Example:}
+\label{sec:org31e6003}
+
+You can use libraries like \texttt{numpy} and \texttt{scipy} to calculate the Spearman correlation.
+
+\begin{verbatim}
+import numpy as np
+from scipy.stats import spearmanr
+from PIL import Image
+
+# Load two images
+image1 = Image.open('image1.png').convert('L')  # Convert to grayscale
+image2 = Image.open('image2.png').convert('L')  # Convert to grayscale
+
+# Flatten the images to 1D arrays
+data1 = np.array(image1).flatten()
+data2 = np.array(image2).flatten()
+
+# Calculate Spearman correlation
+correlation, _ = spearmanr(data1, data2)
+
+print(f"Spearman correlation: {correlation}")
+\end{verbatim}
+\subsubsection{Explanation of Code:}
+\label{sec:orgbdab6b0}
+\begin{itemize}
+\item \textbf{Image Loading:} The images are loaded and converted to grayscale.
+\item \textbf{Flattening:} The pixel values are turned into 1D arrays using \texttt{.flatten()}.
+\item \textbf{Spearman Calculation:} The \texttt{spearmanr()} function from \texttt{scipy.stats} computes the correlation.
+\end{itemize}
+
+This method can effectively measure the monotonic relationship between the pixel intensity distributions of the two images.
+\end{document}

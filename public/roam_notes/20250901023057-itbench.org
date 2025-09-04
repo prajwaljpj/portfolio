@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       1e8e06c3-79e0-4320-a70c-355a75190bb7
+:END:
+#+title: ITBench
+#+filetags: :Agents:LLM:paper:
+
+* ITBench: Evaluating AI Agents across Diverse Real-World IT Automation Tasks
+- Link to paper: [[https://arxiv.org/pdf/2502.05352][ArXiv]]

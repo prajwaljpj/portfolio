@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       b6ed135e-ef0b-4124-b851-dfc41d6d3e65
+:END:
+#+title: AI design tips
+
+Here's what many companies overlooked in their AI implementation: 🔍
+
+1) Their entire data pipeline depends on a single AI provider 🥶
+2) No failover systems in place 🤌
+3) Missing status checks in their code 🥴
+4) Zero degradation handling 🫠
+5) No ability to DISABLE AI in any data pieline 🤯
+
+But it doesn't have to be this way. 💡
+
+As someone who's deeply rooted in AI systems across enterprises, here's your essential AI resilience checklist:
+✅ Multi-Provider Strategy
+Always integrate multiple AI providers (OpenAI, Anthropic, Cohere). When one goes down, your system stays up.
+✅ Graceful Degradation
+Your code should have optional AI features, not critical dependencies.
+✅ Health Checks
+Implement continuous AI service monitoring. Don't wait for your users to tell you something's wrong.
+✅ Fallback Systems

@@ -1,0 +1,88 @@
+:PROPERTIES:
+:ID:       4e3ba750-1d16-4028-96ed-8432f14f57d4
+:ROAM_ALIASES: RAG
+:END:
+#+title: Retrieval-Augmented Generation
+#+filetags: :LLM:python-example:definition:
+
+Retrieval-Augmented Generation (RAG) is a method that combines two powerful paradigms in natural language processing: retrieval and generation. The fundamental idea is to enhance a generative model's responses by incorporating relevant external information retrieved from a knowledge base or corpus.
+
+[[attachment:_20241124_180938NVIDIA-RAG-diagram-scaled.jpg]]
+
+*** RAG platforms
+- LangChain
+- ...
+*** Steps of RAG ([[https://blog.langchain.dev/tutorial-chatgpt-over-your-data/][source]])
+**** Data ingestion :ATTACH:
+
+[[attachment:_20241124_181549ingest.png]]
+
+- Load data sources
+- Chunk text
+- Embed text
+- Load Embeddings to [[id:c85d09c5-cfbd-4892-ab12-1cccad4acef3][vectorstore]]
+**** Querying of Data :ATTACH:
+
+[[attachment:_20241124_182030query.png]]
+
+- Combine chat history and new question into a single standalone question
+- Lookup relevant documents for the answer
+- Generate response
+
+
+*** Key Components of RAG
+
+1. *Retrieval Component*:
+   - This part of the system retrieves pertinent documents or passages from a large corpus or database based on the input query. Common techniques include using BM25, [[id:00041fbf-1f1b-4214-9310-1b49955d8564][TF-IDF]], or neural embeddings for semantic search to find the most relevant information.
+
+2. *Generative Component*:
+   - After retrieving relevant information, a generative model (often based on architectures like Transformer) processes both the original input and the retrieved documents to generate a coherent and contextually rich response.
+
+3. *Integration*:
+   - The output from the retrieval component is combined with the original prompt or question to create a more informed response. This integration allows the generative model to ground its output in factual, up-to-date information rather than relying solely on its training data.
+
+*** Advantages of RAG
+- *Factual Accuracy*: By actively retrieving relevant documents, RAG can provide factually accurate and contextually relevant information.
+- *Up-to-Date Information*: It can source the latest knowledge without requiring retraining of the generative model.
+- *Domain Specificity*: RAG can be adapted to specific domains by curating the knowledge base.
+
+*** Example Framework
+An example setup for RAG would involve using a retrieval system like Elasticsearch for document retrieval along with a generative model like T5 or GPT-3 for text generation.
+
+*** Short Python Example
+Here's an illustrative example using a mock code without any external libraries:
+
+#+begin_src python
+from transformers import pipeline
+
+# Initialize the retrieval and generation pipelines
+retriever = pipeline("document-retrieval")
+generator = pipeline("text-generation", model="gpt-2")
+
+def rag_response(query):
+    # Step 1: Retrieve relevant documents
+    documents = retriever(query)
+
+    # Step 2: Prepare the context for generation
+    context = "\n".join(doc['content'] for doc in documents)
+
+    # Step 3: Generate response using retrieved documents
+    prompt = f"Input: {query}\nContext: {context}\nResponse:"
+    response = generator(prompt, max_length=150)
+
+    return response[0]['generated_text']
+
+# Example usage
+query = "What are the benefits of retrieval augmented generation?"
+result = rag_response(query)
+
+print(result)
+#+end_src
+
+*** Explanation of the Example
+1. The =retriever= simulates document retrieval based on the input =query=.
+2. The relevant documents are concatenated to form a context.
+3. The =generator= creates a response combining the query and context.
+4. The resulting output provides an answer grounded in the retrieved information.
+
+Keep in mind that in actual implementations, you'd need appropriate libraries like =Haystack=, =Transformers=, or other NLP frameworks for document retrieval and text generation.

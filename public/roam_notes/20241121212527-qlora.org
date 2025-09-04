@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       41472758-9d91-457f-b71e-7df4e5ec7503
+:END:
+#+title: QLoRA
+
+[[https://arxiv.org/abs/2305.14314][Paper Source]]
+
+Use an LLM to evaluate another LLm's output. They used GPT-4 to rate the performance of various modelsagainst gpt-3.5-turbo and Vicuna Benchmark. GPT-4 was prompted to score both out of 10 and explain the ratings. They also measured performance via direct comparisons between models, simplifying the task to a three-class rating scheme that included ties.
+
+To validate the automated evaluation, they collected human judgments on the Vicuna benchmark. Using Mechanical Turk, they enlisted two annotators for comparisons to gpt-3.5-turbo, and three annotators for pairwise comparisons. They found that human and GPT-4 ranking of models were largely in agreement, with a [[id:75d4d845-b5fc-4eff-bd9b-a98e3a728ef5][Spearman rank correlation]] of 0.55 at the model level. This provides an additional data point suggesting that *LLM-based automated evals could be a cost-effective and reasonable alternative to human evals*.
+
+
+[[attachment:_20241126_093515qlora.jpg]]

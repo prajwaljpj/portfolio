@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       f111e7c5-2e7e-4c06-a977-fb174cdeb8d7
+:END:
+#+title: Mean Absolute Error
+
+Mean Absolute Error (MAE) is a metric that is used to measure the average difference between the actual and predicted values in a regression problem. It is calculated by taking the absolute difference between each predicted value and its corresponding actual value, and then finding the average of these differences.
+
+The formula for Mean Absolute Error is:
+
+MAE = (1/n) * Σ |actual - predicted|
+
+where n is the total number of observations, Σ represents the summation, and |x| denotes the absolute value of x.
+
+MAE provides a measure of how close the predicted values are to the actual values. It is easy to understand and interpret as it represents the average absolute error in the predicted values. Lower values of MAE indicate better accuracy and predictive performance.

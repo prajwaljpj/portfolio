@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       5f279d07-e629-43ca-a1e7-e5aa7b655d6c
+:END:
+#+title: BERTScore
+
+BERTScore is an embedding-based metric that uses cosine similarity to compare each token or n-gram in the generated output with the reference sentence. There are three components to BERTScore:
+
+[[id:292e173b-42e6-4341-b37a-4e28035a66cc][Recall]]: Average cosine similarity between each token in the reference and its closest match in the generated output.
+[[id:d7c585eb-a3ae-45e5-956e-253987f3fdaf][Precision]]: Average cosine similarity between each token in the generated output and its nearest match in the reference.
+[[id:276a4433-a404-456b-bbc9-7f5544275676][F1]]: Harmonic mean of recall and precision
+
+More specifically in the BERTScore context, the formulas for Recall, precision and F1 scores are:
+
+\[
+Recall_{BERT} = \frac{1}{|r|}\sum_{i\in r}\max{\overrightarrow{i}^{T}\overrightarrow{j}}
+\]
+\[
+Precision_{BERT} = \frac{1}{|p|}\sum_{j\in p}\max{\overrightarrow{i}^{T}\overrightarrow{j}}
+\]
+\[
+BERT_{score} = F_{BERT} = \frac{2 \cdot P_{BERT} \cdot R_{BERT}}{P_{BERT} + R_{BERT}}
+\]
+
+BERTScore is useful because it can account for synonyms and paraphrasing. Simpler metrics like [[id:7bfa61aa-7f1e-4c27-9a69-03881f048b37][BLEU]] and [[id:5b3513d2-47dc-4945-a022-426541fbc889][ROUGE]] can’t do this due to their reliance on exact matches. BERTScore has been shown to have better correlation for tasks such as image captioning and machine translation.

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b24a11a3-3079-4bb1-ae67-5858a1df97f2
+:END:
+#+title: AVIRIS
+* Hyperspectral Image dataset
+Airborne Visible / Infrared Imaging Spectrometer (AVIRIS)  hyperspectral sensor data (aviris.jpl.nasa.gov/) were acquired on June 12, 1992 over the Purdue University Agronomy farm northwest of West Lafayette and the surrounding area.

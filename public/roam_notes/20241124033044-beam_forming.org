@@ -1,0 +1,72 @@
+:PROPERTIES:
+:ID:       b27f380d-27b2-49b0-99e4-2be15a97a795
+:END:
+#+title: Beam forming
+
+Beamforming is a signal processing technique used to direct the transmission or reception of signals in specific directions by combining signals from multiple antennas or sensors. This method enhances the desired signal while suppressing interference and noise from other directions.
+
+*** Math Behind Beamforming
+
+1. *Array Geometry*: Consider an array of \( M \) antennas/sensors. Each antenna can be represented as receiving the signal:
+   \[
+   y_m(t) = s(t - \tau_m) + n_m(t)
+   \]
+   where \( s(t) \) is the desired signal, \( \tau_m \) is a time delay for the \( m \)-th antenna, and \( n_m(t) \) is noise.
+
+2. *Weight Vector*: Each antenna has a weight \( w_m \) that influences the signal:
+   \[
+   Y(t) = \sum_{m=1}^{M} w_m y_m(t)
+   \]
+   This approaches the desired direction by adjusting \( w_m \).
+
+3. *Beamforming Vector*: To steer the beam in a direction defined by an angle \( \theta \):
+   \[
+   w_m = e^{-j k d_m \sin(\theta)}
+   \]
+   where \( k \) is the wave number and \( d_m \) is the distance of the \( m \)-th antenna from a reference point.
+
+*** Python Example
+
+Here's a simple Python example using NumPy to compute the beamformed output:
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+M = 8  # Number of antennas
+theta = np.radians(30)  # Beam direction in radians
+d = 0.5  # Distance between antennas in wavelengths
+frequency = 1  # Frequency of the signal
+t = np.linspace(0, 1, 1000)  # Time vector
+s = np.sin(2 * np.pi * frequency * t)  # Desired signal
+
+# Calculate weights for beamforming
+w = np.array([np.exp(-1j * 2 * np.pi * d * m * np.sin(theta)) for m in range(M)])
+
+# Simulate received signals with noise
+n = np.random.normal(0, 0.1, (M, len(t)))  # Gaussian noise
+y = np.array([s * np.exp(1j * 2 * np.pi * d * m * np.sin(theta)) for m in range(M)]) + n
+
+# Apply weights
+Y = np.sum(w[:, np.newaxis] * y, axis=0)
+
+# Plot results
+plt.figure(figsize=(12, 6))
+plt.plot(t, np.real(Y), label='Beamformed Signal')
+plt.plot(t, s, label='Desired Signal', linestyle='--')
+plt.legend()
+plt.title('Beamforming Example')
+plt.xlabel('Time')
+plt.ylabel('Amplitude')
+plt.grid()
+plt.show()
+#+end_src
+
+*** Explanation of the Code
+
+- Antennas are simulated with a sinusoidal signal affected by Gaussian noise.
+- A beamforming weight vector is generated based on the desired angle.
+- The weighted signals from all antennas are summed to produce the beamformed output, which emphasizes the desired direction while minimizing noise.
+
+This example provides a basic understanding of beamforming mathematically and in practice using Python.

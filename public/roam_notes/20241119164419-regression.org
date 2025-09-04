@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       541da77c-62ba-4651-85f8-bc324abc07c5
+:END:
+#+title: Regression
+
+Regression is a statistical method used to model and analyze the relationships between variables. It aims to predict the value of a dependent variable based on one or more independent variables.
+
+*** Types of Regression
+1. *Linear Regression*: Models the relationship with a linear equation.
+   - *Simple Linear Regression*:
+     \[
+     y = \beta_0 + \beta_1 x + \epsilon
+     \]
+     Where:
+     - \(y\) = dependent variable
+     - \(x\) = independent variable
+     - \(\beta_0\) = y-intercept
+     - \(\beta_1\) = slope of the line
+     - \(\epsilon\) = error term
+
+   - *Multiple Linear Regression*:
+     \[
+     y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n + \epsilon
+     \]
+
+*** Mathematical Foundations
+- *Least Squares Method*: This technique minimizes the sum of the squares of the residuals (the differences between observed and predicted values).
+   \[
+   \text{Minimize } \sum (y_i - \hat{y}_i)^2
+   \]
+   where \(\hat{y}_i\) is the predicted value from the regression model.
+
+*** Estimation of Coefficients
+- The coefficients \(\beta\) are usually estimated using:
+   \[
+   \hat{\beta} = (X^TX)^{-1}X^Ty
+   \]
+   where \(X\) is the matrix of independent variables (including a column of ones for the intercept), and \(y\) is the vector of observed values.
+
+*** Assumptions of Linear Regression
+1. Linearity
+2. Independence
+3. [[id:2e9dddd3-d359-44f8-8768-dc7abc285edc][Homoscedasticity]] (constant variance of errors)
+4. Normality of errors
+
+Regression analysis helps understand relationships in data and make predictions.

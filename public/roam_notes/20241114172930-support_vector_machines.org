@@ -1,0 +1,107 @@
+:PROPERTIES:
+:ID:       a96569f1-4ebf-4fbc-af13-0f0e24a38a1c
+:END:
+#+title: Support Vector Machines
+
+Support Vector Machines (SVM) are supervised learning models used for classification and regression analysis. They work by finding the optimal hyperplane that separates data points of different classes in a high-dimensional space.
+
+*** Key Concepts:
+- *Hyperplane:* A decision boundary that separates different classes.
+- *Support Vectors:* Data points that are closest to the hyperplane, which influence its position and orientation.
+- *Margin:* The distance between the hyperplane and the nearest data point of each class; SVMs aim to maximize this margin.
+*** Math
+1. *Data Representation*: SVM operates in a feature space where each data point is represented as a vector. For two-dimensional data, a point is represented as (x₁, x₂).
+
+2. *Decision Hyperplane*: The goal of SVM is to find a hyperplane that best separates the classes. In an n-dimensional space, a hyperplane can be defined as:
+   \[
+   w \cdot x + b = 0
+   \]
+   where \(w\) is the weight vector (perpendicular to the hyperplane), \(x\) is the feature vector, and \(b\) is the bias (offset from the origin).
+
+3. *Margin Maximization*: SVM aims to maximize the margin—the distance between the hyperplane and the nearest data points (support vectors). The margin \(M\) can be expressed as:
+   \[
+   M = \frac{2}{\|w\|}
+   \]
+   To maximize this margin under the constraint that points of each class are correctly classified, we formulate the optimization problem.
+
+4. *Constraints*: For correct classification, the constraints can be written as:
+   \[y_i (w \cdot x_i + b) \geq 1 \quad \forall i
+   \]
+   where \(y_i\) is the label of the class (+1 or -1).
+
+5. *Optimization Problem*: The optimization problem becomes:
+   \[
+   \min \frac{1}{2} \|w\|^2
+   \]
+   subject to \(y_i (w \cdot x_i + b) \geq 1\). This can be solved using methods like Lagrange multipliers.
+
+6. *Soft Margin*: In cases where data is not linearly separable, SVM introduces slack variables \(ξ_i\) to allow some misclassification:
+   \[
+   y_i (w \cdot x_i + b) \geq 1 - ξ_i
+   \]
+   The optimization then balances maximizing the margin and minimizing the classification error.
+
+7. *Kernel Trick*: For non-linear classification, SVM uses kernel functions (like RBF, polynomial) to project data into higher dimensions where a hyperplane can separate the classes more effectively without explicitly transforming the data.
+
+In summary, SVM's effectiveness relies on its ability to find the optimal hyperplane that maximizes the margin while accounting for misclassifications through a robust optimization framework.
+*** Example in Python:
+
+Here’s a simple example using the =sklearn= library. We'll classify the Iris dataset.
+
+#+begin_src python :results graphics file output :file SVM.png
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.metrics import classification_report, confusion_matrix
+
+# Load the Iris dataset
+iris = datasets.load_iris()
+X = iris.data[:, :2]  # We only take the first two features for easy visualization
+y = iris.target
+
+# Split the dataset into a training set and a testing set
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create an SVM classifier
+clf = SVC(kernel='linear', decision_function_shape='ovr')  # Use 'ovr' for multi-class
+clf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = clf.predict(X_test)
+
+# Print the classification report and confusion matrix
+print(classification_report(y_test, y_pred))
+print(confusion_matrix(y_test, y_pred))
+
+# Plotting the decision boundaries for all classes
+xx, yy = np.meshgrid(np.linspace(X[:, 0].min()-1, X[:, 0].max()+1, 100),
+                     np.linspace(X[:, 1].min()-1, X[:, 1].max()+1, 100))
+Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])  # Predict class for the mesh grid
+Z = Z.reshape(xx.shape)
+
+plt.contourf(xx, yy, Z, alpha=0.8)
+plt.scatter(X_train[:, 0], X_train[:, 1], c=y_train, edgecolors='k', label='Train')
+plt.scatter(X_test[:, 0], X_test[:, 1], c=y_test, edgecolors='w', marker='*', label='Test')
+plt.title('SVM Decision Boundary')
+plt.xlabel('Feature 1')
+plt.ylabel('Feature 2')
+plt.legend()
+plt
+#+end_src
+
+#+RESULTS:
+[[file:SVM.png]]
+
+*** Explanation:
+1. *Load Data:* We use the Iris dataset, focusing on the first two features for visualization.
+2. *Split Data:* The dataset is divided into training and test sets.
+3. *Train SVM:* We create an SVM classifier with a linear kernel and fit it to the training data.
+4. *Predictions:* We predict the classes for the test set and evaluate the model.
+5. *Plotting:* Finally, we visualize the decision boundary and the data points.
+
+This code provides a clear demonstration of how SVM works for classification tasks. You can experiment with different kernels or datasets for further exploration.
+
+* Other concepts
+- [[id:f68f8b72-f241-4483-b789-6a9a9e1176f4][Kernel Trick]]

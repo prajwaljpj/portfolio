@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       3917dd60-1390-45b1-8f8a-850194ccbdff
+:ROAM_ALIASES: "Huffman Coding"
+:END:
+#+title: NeRV
+
+* [[file:papers/neural_representation/NeRV.pdf][NeRV - Neural Representation for Videos]]
+** Encoding-decoding of neural networks
+- It is fast $25x$ to $70x$ while encoding and $38x$ to $132x$ while decoding.
+- Better Video quality
+- Given a sequence frame, NeRV produces an RGB image. This is used for compression and also denoising use cases.
+- Compression techniques include (H.264, HEVC).
+- The code is available through [[https://github.com/haochen-rye/NeRV.git][this link]].
+** Thought process
+- Can we represent a video signal as a function of time?
+- Can we find an RGB state for every time-stamp. This is possible.
+- Instead of considering video as a sequence of frames, their method takes video as a unified neural network, with all the information embedded within its architecture and parameters.
+- NeRV takes spatio-temporal coordinates as inputs and produces its RGB representations
+** Advantages of using neural representation
+- Fast decoding speeds, encoding is slow (why?)
+- NeRV uses MLP and ConvNets.
+- NeRV outputs whole image, whereas pixel-wise represenattaions output RGB value of each pixel. Fast decoding because pixel based representation have to sample $T * H * W$ for each video while NeRv has to sample only $T$. Useful for higher resolution videos.
+** Contributions
+- Novel Image-wise implicit representations for videos
+- Improved encoding and decosing speeds.
+- video compression -> model compression
+- Video denoising
+** Related work
+- Implicit Neural rep
+  - Mapping coordinates to its corresponding value; drawback, it is slow, each coordinate has to be mapped. (maybe more memory consumption too?)
+  - Used for 3D Vision tasks. Proves to work well. Example Read [[file:papers/neural_representation/NERF.pdf][NERF paper]].
+- Video Compression to model compression
+  - This method can redefine video compression frameworks to a model compression, pruning problem.
+    - #TODO Idea: [[id:26dc5182-737e-4854-855c-7b00102603bf][Improve Task aware model compression]]
+** Working
+- Model architecture is shown in ref:fig:architecture
+  #+NAME: fig:architecture
+  #+CAPTION: Architecture Diagram
+  [[nerv-architecture.png]]
+*** Input Embedding
+- Each video $\{v_{t}\}_{t=1}^{T} \in R^{T \times H \times W \times 3}$ is represented by a function $f_{\theta}: \mathbb{R} \to \mathbb{R}^{H \times W \times 3}$.
+- The input embedding is mapped high embedding space from the inputs. The neural network can better fit data with high frequency variations. _[[id:ad46a4dd-a61e-41be-991f-53d4c8770fad][Positional Encoding]] is used in NeRV_.
+- Positional encoding function $\Gamma\left( t\right)$ = A sequence of Sin Cos theta. where $\theta = b^{0..l}\pi t$
+*** Network architecture:
+  - Stack NeRV blocks following the MLP layers; pixels at different locations can share convolutional kernels #TODO what does this mean?
+  - Super-resolution network inspiration: the [[id:bbc81a0d-726f-49f5-9b33-a6dd175b8543][PixelShuffling]] Technique is used
+*** Loss Objective
+  - Combination of [[id:1581ecac-4714-483a-bf8b-47c41d2cec41][L1]] and [[id:c8ae9ae7-7cd1-4c2f-b70d-9540bc803295][SSIM]] loss used.
+    $L = \frac{1}{T} \sum_{t=1}^{T} \alpha ||f_{\theta}(t) - v_{t}||_{1} + (1-\alpha)(1-SSIM(f_{\theta}(t), v_{t}))$
+** Compression
+- Four components:
+  1. Video Overfit
+  2. [[id:77a0e91e-73b8-43f3-adb4-ed43cd98249a][Model Pruning]] - set weight below threshold as 0
+  3. [[id:73a9326d-92b9-4c8c-b65b-d9da1410515c][Model Quantization]] - Rounding and scaling
+  4. Weight Encoding - [[id:0f22bf6c-0c1d-4fc5-9839-adb1fa707afb][Entropy Encoding]] - huffman Coding is used. Reduces the model size by 10 percent
+** Experimentation
+- dataset - "Bug Buck Bunny" sequence from scikit-learn
+- [[id:e09861ea-b0ad-4c50-bb0d-19c05f3a2125][Adam optimizer]]
+- [[id:d42d95d4-5926-4069-8e11-0a80f8595da8][Cosine annealing]] learning rate is used
+** Ablation study
+- Useful for not repeating experiments. They have already tested a lot of combinations.

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       c37f0cb8-b51c-4edb-81e4-bba749e514d7
+:END:
+#+title: Multiview coding
+
+source: [[https://en.wikipedia.org/wiki/Multiview_Video_Coding][wiki]]
+
+Multi view Video Coding (MVC, also known as MVC 3D) is a stereoscopic video coding standard for video compression that allows for the efficient encoding of video sequences captured simultaneously from multiple camera angles in a single video stream. It uses the 2D plus Delta method and is an amendment to the H.264 (MPEG-4 AVC) video compression standard, developed jointly by MPEG and VCEG, with contributions from a number of companies, primarily Panasonic and LG Electronics.

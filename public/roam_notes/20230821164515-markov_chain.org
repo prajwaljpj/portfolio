@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       bba17c71-d84c-43e7-81a4-60cecfa3e3e1
+:END:
+#+title: Markov chain
+
+Markov chain is a mathematical system that represents transitions and states of nodes according to certain probabilistic rules. [[https://brilliant.org/wiki/markov-chains/#:~:text=A%20Markov%20chain%20is%20a,possible%20future%20states%20are%20fixed.][read more here]] on brilliant

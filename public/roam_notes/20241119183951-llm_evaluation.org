@@ -1,0 +1,66 @@
+:PROPERTIES:
+:ID:       7f423f52-b952-47aa-9f97-f1a530af853f
+:END:
+#+title: LLM Evaluation
+
+
+Examples of LLM evaluation metrics include:
+
+1. *Benchmarks*: Standard datasets like GLUE, SuperGLUE, and SQuAD for language understanding.
+2. *Human Evaluation*: Feedback on output quality based on coherence, relevance, and creativity.
+3. *Task-Specific Metrics*: Measures like ROUGE for summarization, BLEU for translation, and F1 score for question answering.
+4. *Robustness Tests*: Evaluating performance against adversarial inputs or out-of-distribution examples.
+5. *Interpretability Assessments*: Understanding and explaining model decisions.
+6. *Ethical Evaluations*: Assessing outputs for bias or harmful content.
+
+These metrics help assess the capabilities and limitations of language models.
+
+* Evaluation Benchmarks
+Evaluation benchmarks for [[id:3336d49f-db30-4b0e-a4eb-c69021a33d6c][Large Language Models (LLMs)]] are standardized tests designed to measure their performance across a range of tasks and capabilities. Here are some prominent benchmarks:
+
+1. *GLUE and SuperGLUE*:
+   - *GLUE (General Language Understanding Evaluation)*: A collection of nine natural language understanding (NLU) tasks that assess models on various language capabilities, including sentiment analysis, question answering, and textual entailment.
+   - *SuperGLUE*: An advancement over GLUE, this benchmark includes a more challenging set of tasks and has better-designed tests for more nuanced understanding. It consists of tasks like reading comprehension and linguistic acceptability.
+
+2. *SQuAD (Stanford Question Answering Dataset)*:
+   - SQuAD is focused on question-answering. It has two versions: SQuAD1.1 (extractive) where models select answers from a given context, and SQuAD2.0 (added unanswerable questions) which also includes questions that cannot be answered from the context, requiring better comprehension and reasoning.
+
+3. *MS MARCO (Microsoft MAchine Reading COmprehension)*:
+   - This dataset is designed for passage ranking and question answering tasks. It contains a large number of queries with human-annotated answers, focusing on the ability to retrieve relevant information from large texts.
+
+4. *TREC (Text REtrieval Conference)*:
+   - Primarily used for evaluating the performance of information retrieval systems, TREC datasets assess tasks like question classification and passage retrieval, providing a range of difficulty levels.
+
+5. *HellaSwag*:
+   - A benchmark for commonsense reasoning, HellaSwag tests a model's ability to choose the most plausible continuation of a given sentence from a list of options, requiring an understanding of everyday situations.
+
+6. *Winograd Schema Challenge*:
+   - This benchmark evaluates a model's ability to resolve ambiguous pronouns, testing the model's comprehension of context and common sense reasoning, which is crucial for understanding natural language.
+
+7. *LAMBADA*:
+   - Focused on the ability to predict the final word of sentences from a vast array of texts, the LAMBADA dataset evaluates the model’s contextual understanding and ability to apply world knowledge.
+
+8. *BLEU and ROUGE*:
+   - While not benchmarks in the traditional sense, these are evaluation metrics used to assess the quality of machine-generated text compared to human-written text, particularly in translation and summarization tasks.
+
+*** Evaluation Factors
+
+1. *Accuracy/Error Rate*: Measure how often the model’s predictions are correct.
+2. *F1 Score*: Combines precision and recall, particularly useful in tasks with imbalanced classes.
+3. *Human Evaluation*: Involves human judges rating responses for quality and coherence.
+4. *Robustness*: Testing performance under various perturbations or adversarial conditions.
+
+These benchmarks provide insights into the capabilities of LLMs in understanding and generating human-like text across diverse tasks. They help to compare different models and improve the development of AI systems.
+
+* Some common evaluation metrics
+1. [[id:7bfa61aa-7f1e-4c27-9a69-03881f048b37][BLEU]]: Precision based metric. Commonly used in machine translation.
+2. [[id:5b3513d2-47dc-4945-a022-426541fbc889][ROUGE]]: Recall oriented. Commonly used in automated summarization tasks
+3. [[id:5f279d07-e629-43ca-a1e7-e5aa7b655d6c][BERTScore]]: Uses both precision and recall to compute the BERT F1 score. Better than BLEU and ROUGE (they rely on exact match) for image captioning and machine translation tasks.
+4. [[id:c2c2a982-3390-4cc3-b70c-ed78424f6a51][MoverScore]]: Unlike BERTScore, which is based on one-to-one matching ([[id:6869b305-ecc2-4afb-acfe-979dfaf461c7][hard alignment]]) of tokens, MoverScore allows for many-to-one matching ([[id:6869b305-ecc2-4afb-acfe-979dfaf461c7][soft alignment]])
+
+* Use LLM for evaluation??
+Beyond conventional evals such as those mentioned above, *an emerging trend is to use a strong LLM as a reference-free metric to evaluate generations from other LLMs*. This means we may not need human judgments or gold references for evaluation.
+
+1. [[id:c5e92229-ad39-4815-ae36-8be0335cf9bc][G-Eval]]: Use LLMs chain of thought and form filling to evaluate LLMs output. Score between 1 to 5
+2. [[id:54d32d07-b79f-41a6-97bd-4ae70afc89a8][Vicuna]]: Use GPT-4 to evaluate five chatbots for each different categories
+3. [[id:41472758-9d91-457f-b71e-7df4e5ec7503][QLoRA]]: Use GPT-4 to evaluate other LLMs. They found that LLM based automated evaluations could be a better cost-effective alternative to human evaluations

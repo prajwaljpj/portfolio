@@ -1,0 +1,75 @@
+:PROPERTIES:
+:ID:       1d8522c9-b39a-480b-89c5-6c0e40fa2a6e
+:END:
+#+title: Bias Variance Tradeoff
+
+The bias-variance tradeoff refers to the balance between two types of errors in a machine learning model: bias error and variance error.
+
+- *[[id:aded448a-7bab-43a8-985f-02425d1a99a0][Bias]]* is the error due to overly simplistic assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs ([[id:76d4caa8-ac46-47f0-b10a-869f5766e70e][underfitting]]).
+
+- *[[id:f8b06bc1-5df0-48b7-b71c-108a91e84d6e][Variance]]* is the error due to excessive sensitivity to fluctuations in the training dataset. High variance can cause noise in the training data to be modeled ([[id:5e88eee3-0c35-46f9-a45e-716b9211bab0][overfitting]]).
+
+The *tradeoff* is that *decreasing bias typically increases variance and vice versa*, so the goal is to find a model that adequately balances both.
+
+*** Python Example
+
+Here's a simple illustration using a polynomial regression approach with =numpy= and =matplotlib=:
+
+#+begin_src python :results graphics file output :file bias-var-tradeoff.png
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+matplotlib.rcParams['figure.dpi'] = 300
+
+# Generate some sample data
+np.random.seed(0)
+X = 2 - 3 * np.random.rand(100)
+y = X**2 + np.random.randn(100) * 0.5
+
+# Create train and test splits
+X_train, X_test, y_train, y_test = train_test_split(X.reshape(-1, 1), y, test_size=0.2)
+
+# Function to evaluate model with different polynomial degrees
+def plot_bias_variance_tradeoff(degrees):
+    fig, ax = plt.subplots(len(degrees), figsize=(10, 10))
+
+    for idx, degree in enumerate(degrees):
+        poly_features = PolynomialFeatures(degree=degree)
+        X_poly_train = poly_features.fit_transform(X_train)
+        X_poly_test = poly_features.transform(X_test)
+
+        # Fit the model
+        model = LinearRegression()
+        model.fit(X_poly_train, y_train)
+
+        # Predictions
+        y_train_pred = model.predict(X_poly_train)
+        y_test_pred = model.predict(X_poly_test)
+
+        # Plotting
+        # plt.subplot(len(degrees), 1, idx+1)
+        ax[idx].scatter(X, y, color='blue', label='Data')
+        ax[idx].scatter(X_train, y_train_pred, color='red', label='Train predictions')
+        ax[idx].scatter(X_test, y_test_pred, color='green', label='Test predictions')
+        ax[idx].set_title(f'Polynomial Degree: {degree}')
+        ax[idx].legend()
+        # plt.savefig(f"bias-var-tradeoff-{degree}deg.png")
+    return fig
+
+# Test different polynomial degrees
+degs = [1, 2, 15]
+plot_bias_variance_tradeoff(degs)
+#+end_src
+
+#+RESULTS:
+[[file:bias-var-tradeoff.png]]
+
+*** Explanation
+1. *Degree 1 (Linear)*: High bias, low variance – simplistic model; underfitting.
+2. *Degree 2 (Quadratic)*: Balanced bias and variance – fits data well.
+3. *Degree 15*: Low bias, high variance – complex model; overfitting.
+
+By observing how the predictions change with the degree of the polynomial, you can visualize the bias-variance tradeoff in action.

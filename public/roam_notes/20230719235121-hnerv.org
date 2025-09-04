@@ -1,0 +1,107 @@
+:PROPERTIES:
+:ID:       5fe2e988-a5ef-4a52-8eda-ecfc7513bb50
+:END:
+#+title: HNeRV
+
+Paper can be found at [[https://arxiv.org/pdf/2304.02633.pdf][arxiv]]. Please read [[id:3917dd60-1390-45b1-8f8a-850194ccbdff][NeRV]] paper before this
+* Abstract
+- Related to NeRV where a positional index is given as input and video frames are reconstructed
+- HNeRV (Hybrid Neural Representation for Videos) where a learnable encoder generates content-adaptive embeddings, which act as the decoder input
+- HNeRV also ensures model parameters are evenly distributed across entire network such that higher laters near the output have more capacity to store high-resolution content and video details
+- HNeRV also used on downstream tasks - video compression and video inpainting
+* Introduction
+- Traditional video codecs such as H.264 and HEVC rely on manual designed encoder decoder architecture along with [[id:4de864ba-e5e8-484f-9413-7c40c242b556][discrete cosine transform]].
+- There have been many attempts to replace components of compression pipelines with neural networks, but:
+  - _Pros_: rate-distortion performance
+  - _Cons_: Computational costs, complex pipelines
+- Implicit neural representation has become popular $\rightarrow$ simplicity, compactness, efficiency
+- Visual data compression [[id:27120758-d3c7-4406-a6df-863ce5ccc343][COIN]] for image compression; [[id:3917dd60-1390-45b1-8f8a-850194ccbdff][NeRV]] for video comprssion.
+- [[id:3917dd60-1390-45b1-8f8a-850194ccbdff][NeRV]]
+  - Given frame index $t$ as input, reconstructs video frame from temporal embeddings
+  - Uses fixed positional encoding function and a learnable decoder
+- E-NeRV
+  - Takes temporal embedding and spatial embedding to reconstruct video frames
+- Both NeRV and E-NeRV are content-agnostic; Uses only temporal and/or spatial embeddings and does not depend on the content of the frame
+- Therefore, we need to store only model weights and basic metadata (i.e. number of frames)
+- Disadvantages:
+  - Content agnostic; there are no meaningful way to interpolate between frames.
+  - [[id:ad46a4dd-a61e-41be-991f-53d4c8770fad][Positional Encoding]]: used by fully implicit model provides no visual prior and limits the regression capacity (since all info have to be learned and stored in the decoder)
+- This paper proposes a learnable encoder
+  - Stores videos in two parts: /content-adaptive/ frame embedding; and learned neural decoder
+  - HNeRV block that is introduced which increases kernel size and channel width at later stages
+  - This block boosts the convergence speed by $16 \times$ and also spreads the parameters of the decoder evenly over the entire network therefore improving the reconstruction quality
+  - Better internal generalization (ability to encode and decode frames not seen during training)
+- HNeRV does not depend on the sequential order of frames. Therefore, frames parallely decoded
+- HNeRV also shows promise in video restoration tasks
+* Related work
+** Neural representation
+- Image reconstruction, shape regression, and 3D view synthesis
+- NeRV proposes image wise implicit representation
+- The architecture is presented in ref:fig:architecture
+  #+NAME: fig:architecture
+  #+CAPTION: Architecture Diagram
+  [[~/Dropbox/org/images/hnerv-stages.png]]
+** Video Compression
+- Recent deeplearning techniques proposed replace the whole compression pipeline, but, borrow principle from traditional handcrafted approaches
+- Slow speeds
+** Model Compression
+- NeRV formulates video compression as a model compression problem. which is diverse.
+- HNeRV uses only weight pruning, and weight quantization. Uses entropy encoding for lossless compression after pruning and quantization
+- Other model compression techniques can be used to further reduce size
+** Video Inpainting and Internal Learning
+- Object removal and attempting to recreate missing regions of images
+- Other techniques rely on training on large datasets, but their method uses zero shot fully internal approach
+- Expliot recurrence of information within a single domain, like within an image, or within a video ([[id:c76921af-9251-4f38-ac4d-fa45e6cfd28a][Deep image prior]] for video)
+* Method
+** HNeRV Overview
+- They use [[id:7d12afea-96b4-4a49-af9c-7bd63897a327][ConvNeXt]] block for encoder and novel HNeRV block for the decoder.
+*** Hybrid neural represenatation
+- Video representation can be divided into two parts: explicit methods and implicit methods
+  - _Explicit_: use autoencoders to encode decode all videos and store content explicitly as latent embeddings
+  - _Implicit_: use learnable decoders to represent video
+- This paper combines both explicit and implicit methods; Learnable decoder stores video-specific content implicitly, learnable embeddings explicitly store frame specific information
+*** Model Architecture
+- Similar to [[id:3917dd60-1390-45b1-8f8a-850194ccbdff][NeRV]], three layers: conv(learnable), pixel shuffle, activation
+- Kernal size $K$ increases from $1$ (stage 1) to $3$ (Stage 2) to $K_{max}=5$ for later stages
+- Channel width ($C$) reduced by reduction factor $r$ ($1.2$, etc)
+- Output sizes of various stages with embedding dimension $d$ and channel reduction $r$
+- Frame embeddings: $1 \times 1$ conv layer ($c_{1}$ to $d$); image prediction: $3 \times 3$ conv layer ($c_{2}/r^{4}$ to $3$)
+*** Loss function
+- Loss objective $L=Loss(x, p)$, where $x$: input frame; $p$: HNeRV prediction; $Loss$ can be [[id:1581ecac-4714-483a-bf8b-47c41d2cec41][L1 Loss]], L2, or [[id:c8ae9ae7-7cd1-4c2f-b70d-9540bc803295][SSIM Loss]].
+*** Total size
+- Total size is $TotalSize=EmbedSize+DecoderSize$
+* Downstream task
+*** Video compression
+- Model conpression and embedding quantization
+- Global unstructured pruning, model quantization, and weight entropy encoding for model compression
+- for quantization vector $\mu$ where
+\begin{equation}
+\mu_{i} = Round \left(\frac{\mu_{i} - \mu_{min}}{scale}\right) * scale + \mu_{min}
+\end{equation}
+- Where
+ \begin{equation}
+ scale = \frac{\mu_{max} - \mu_{min}}{2^{b}-1}
+ \end{equation}
+- the vector element $\mu_{i}$, and $Round$ is a func that rounds to closest integer, $b$ is the quantization bit length
+*** Video inpainting
+- Loss is computed over only non-masked pixels
+  \begin{equation}
+  L_{inpainting} = (1 - M) * Loss(x, p)
+  \end{equation}
+- where $M$ is the mask matrix where distorted pixels are $1$ and others are $0$
+* Experiments
+** Dataset and Implementation
+- Big Buck Bunny, UVG, DAVIS
+- Adam optimizer with $\beta=(0.9, 0.999)$, weight decay $0$, learning rate $0.001$, cosine learning rate decay
+- Batch size 2 and L2 loss as reconstruction loss function
+- For evaluation they use PSNR and [[id:c8ae9ae7-7cd1-4c2f-b70d-9540bc803295][SSIM Loss]] to evaluate reconstruction, bits per pixel(bpp) for compression, and pixel per pixel(ppp) for model compactness
+*** Big Buck Bunny
+- 132 frames, $720 \times 1280$ which is center-cropped to $640 \times 1280$ for embedding
+*** UVG
+- 7 videos, $1080 \times 1920$ center-cropped to $960 \times 1920$; fps $120$; time $5s$ or $2.5s$
+- Beauty, Bosphorus, HoneyBee, Jockey, ReadySetGo, ShakeNDry, YachtRide
+*** DAVIS
+- 10 videos, $1080 \times 1920$ center-cropped to $960 \times 1920$, $50$ - $200$ frames
+- bike-packing, blackswan, bmx-trees, breakdance, camel, car-round, car-shadow, cows, dance-twirl, dog
+** Results
+- HNeRV outperforms both [[id:3917dd60-1390-45b1-8f8a-850194ccbdff][NeRV]] and E-NeRV.

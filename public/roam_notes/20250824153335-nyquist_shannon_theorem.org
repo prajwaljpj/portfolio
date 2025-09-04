@@ -1,0 +1,89 @@
+:PROPERTIES:
+:ID:       d0c27860-0f4c-41b0-93e7-cd2c3ee34f0c
+:END:
+#+title: Nyquist Shannon Theorem
+
+
+
+The Nyquist-Shannon Sampling Theorem is a fundamental principle in the field of signal processing and communication systems. It states that a continuous signal can be completely represented in its samples and fully reconstructed if it is sampled at a rate that is more than twice its highest frequency component. This rate is known as the Nyquist rate.
+
+*** Theorem Statement
+If a signal \( x(t) \) contains no frequencies higher than \( f_{max} \) Hertz, it can be completely reconstructed from its samples \( x[n] \) taken at a sampling frequency \( f_s \) if:
+\[
+f_s > 2f_{max}
+\]
+where:
+- \( f_s \) is the sampling frequency,
+- \( f_{max} \) is the maximum frequency present in the signal.
+
+*** Mathematical Explanation
+Below are the steps that lead to the theorem:
+
+1. *Sampling*: The continuous signal \( x(t) \) is sampled at intervals \( T = \frac{1}{f_s} \):
+   \[
+   x[n] = x(nT) = x\left(\frac{n}{f_s}\right) \quad \text{for } n = 0, 1, 2, \ldots
+   \]
+
+2. *Reconstruction*: The sampled signal can be reconstructed using the sinc function:
+   \[
+   x(t) = \sum_{n=-\infty}^{\infty} x[n] \, \text{sinc}\left(f_s(t - nT)\right)
+   \]
+   where \( \text{sinc}(x) = \frac{\sin(\pi x)}{\pi x} \).
+
+3. *Aliasing*: If the sampling frequency is less than or equal to twice the maximum frequency \( (f_s \leq 2f_{max}) \), aliasing occurs, meaning different signals become indistinguishable when sampled.
+
+*** Example
+Consider a signal \( x(t) = \sin(2\pi f t) \) where \( f = 1 \) Hz.
+- *Maximum Frequency (\( f_{max} \))*: \( 1 \) Hz
+- *Nyquist Rate (\( f_s \))*: Must be greater than \( 2 \times 1 = 2 \) Hz.
+
+1. *Sample at \( f_s = 4 \) Hz*: Samples at \( n = 0, 1, 2, 3 \):
+   - Sampled values: \( x[0] = 0, x[1] = 1, x[2] = 0, x[3] = -1 \)
+
+2. *Reconstruction*: You can reconstruct the original sine wave from these samples.
+
+*** Python Code Example
+Here's a simple Python implementation for sampling and reconstructing a sine wave:
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+f = 1.0  # frequency of the sine wave
+Fs = 4.0  # sampling frequency
+t_continuous = np.linspace(0, 2, 1000)  # continuous time from 0 to 2 seconds
+x_continuous = np.sin(2 * np.pi * f * t_continuous)  # continuous sine wave
+
+# Sampled values
+n_samples = np.arange(0, 2, 1/Fs)
+x_samples = np.sin(2 * np.pi * f * n_samples)
+
+# Reconstruction using sinc interpolation
+def sinc(x):
+    return np.sinc(x / np.pi)
+
+def reconstruct(x_samples, n_samples, t):
+    x_reconstructed = np.zeros_like(t)
+    for n in range(len(x_samples)):
+        x_reconstructed += x_samples[n] * sinc(f * (t - n_samples[n]))
+    return x_reconstructed
+
+# Reconstructed signal
+x_reconstructed = reconstruct(x_samples, n_samples, t_continuous)
+
+# Plot
+plt.figure(figsize=(10, 6))
+plt.plot(t_continuous, x_continuous, label='Continuous signal', color='blue')
+plt.stem(n_samples, x_samples, linefmt='r-', markerfmt='ro', basefmt=' ', label='Samples', use_line_collection=True)
+plt.plot(t_continuous, x_reconstructed, label='Reconstructed signal', color='green', linestyle='--')
+plt.title('Nyquist-Shannon Sampling Theorem')
+plt.xlabel('Time (s)')
+plt.ylabel('Amplitude')
+plt.legend()
+plt.grid()
+plt.show()
+#+end_src
+
+*** Conclusion
+The Nyquist-Shannon theorem assures that proper sampling enables exact representation and recovery of a signal. By adhering to the conditions of sampling above the Nyquist rate, engineers can design effective systems for audio, video, and communications.

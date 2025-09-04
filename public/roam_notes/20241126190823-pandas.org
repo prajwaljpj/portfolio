@@ -1,0 +1,170 @@
+:PROPERTIES:
+:ID:       0c03755a-298f-4445-8b1d-595e4a306de5
+:END:
+#+title: Pandas
+#+PROPERTY: header-args:python :session learning :results value
+
+Pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real-world data analysis in Python. Additionally, it has the broader goal of becoming the most powerful and flexible open source data analysis/manipulation tool available in any language. It is already well on its way toward this goal.
+
+* Some pandas Examples ([[https://pandas.pydata.org/docs/user_guide/10min.html][source]])
+** Starting Pandas
+#+begin_src python
+import pandas as pd
+import numpy as np
+from tabulate import tabulate
+def tab(df):
+   return tabulate(df, headers='keys', tablefmt='orgtbl')
+pd.__version__
+
+#+end_src
+
+#+RESULTS:
+: 2.2.3
+
+** Creating an object (pandas series)
+#+begin_src python
+s = pd.Series([1, 3, 5])
+s
+#+end_src
+
+#+RESULTS:
+: 0    1
+: 1    3
+: 2    5
+: dtype: int64
+
+
+- Date range
+  #+begin_src python
+dates = pd.date_range("20130101", periods=6)
+dates
+  # return pd.DataFrame(np.array([[1,2,3],[4,5,6]]),
+                        # columns=['a','b','c'])
+  #+end_src
+
+  #+RESULTS:
+  : DatetimeIndex(['2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04',
+  :                '2013-01-05', '2013-01-06'],
+  :               dtype='datetime64[ns]', freq='D')
+
+
+- sample df
+  #+begin_src python
+df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list("ABCD"))
+df
+  #+end_src
+
+  #+RESULTS:
+  :                    A         B         C         D
+  : 2013-01-01 -0.041217  0.038929  0.410070  0.605891
+  : 2013-01-02 -0.352929 -0.656429 -0.028012  0.897572
+  : 2013-01-03  1.279898 -0.802526  1.703942  0.090935
+  : 2013-01-04  2.550633 -1.062937 -2.958047 -0.489903
+  : 2013-01-05  0.426313  0.694192  0.606538 -0.459452
+  : 2013-01-06  1.488960 -0.250743  0.055338  0.136797
+
+- sample df2
+  #+begin_src python
+df2 = pd.DataFrame(
+    {
+        "A": 1.0,
+        "B": pd.Timestamp("20130102"),
+        "C": pd.Series(1, index=list(range(4)), dtype="float32"),
+        "D": np.array([3] * 4, dtype="int32"),
+        "E": pd.Categorical(["test", "train", "test", "train"]),
+        "F": "foo",
+    }
+)
+df2.to_markdown()
+  #+end_src
+
+  #+RESULTS:
+  : |    |   A | B                   |   C |   D | E     | F   |
+  : |---:|----:|:--------------------|----:|----:|:------|:----|
+  : |  0 |   1 | 2013-01-02 00:00:00 |   1 |   3 | test  | foo |
+  : |  1 |   1 | 2013-01-02 00:00:00 |   1 |   3 | train | foo |
+  : |  2 |   1 | 2013-01-02 00:00:00 |   1 |   3 | test  | foo |
+  : |  3 |   1 | 2013-01-02 00:00:00 |   1 |   3 | train | foo |
+
+- types
+  #+begin_src python
+df2.dtypes
+  #+end_src
+
+  #+RESULTS:
+  : A          float64
+  : B    datetime64[s]
+  : C          float32
+  : D            int32
+  : E         category
+  : F           object
+  : dtype: object
+
+- head
+  #+begin_src python
+df.head()
+  #+end_src
+
+  #+RESULTS:
+  :                    A         B         C         D
+  : 2013-01-01 -0.041217  0.038929  0.410070  0.605891
+  : 2013-01-02 -0.352929 -0.656429 -0.028012  0.897572
+  : 2013-01-03  1.279898 -0.802526  1.703942  0.090935
+  : 2013-01-04  2.550633 -1.062937 -2.958047 -0.489903
+  : 2013-01-05  0.426313  0.694192  0.606538 -0.459452
+
+- tail
+  #+begin_src python
+df.tail(3)
+  #+end_src
+
+  #+RESULTS:
+  :                    A         B         C         D
+  : 2013-01-04  2.550633 -1.062937 -2.958047 -0.489903
+  : 2013-01-05  0.426313  0.694192  0.606538 -0.459452
+  : 2013-01-06  1.488960 -0.250743  0.055338  0.136797
+
+- describe
+  #+begin_src python
+df.describe()
+  #+end_src
+
+  #+RESULTS:
+  :               A         B         C         D
+  : count  6.000000  6.000000  6.000000  6.000000
+  : mean   0.891943 -0.339919 -0.035028  0.130307
+  : std    1.085863  0.641530  1.561153  0.556587
+  : min   -0.352929 -1.062937 -2.958047 -0.489903
+  : 25%    0.075665 -0.766002 -0.007174 -0.321855
+  : 50%    0.853105 -0.453586  0.232704  0.113866
+  : 75%    1.436695 -0.033489  0.557421  0.488617
+  : max    2.550633  0.694192  1.703942  0.897572
+
+- Sorting by index
+  #+begin_src python
+df.sort_index(axis=1, ascending=False)
+
+  #+end_src
+
+  #+RESULTS:
+  :                    D         C         B         A
+  : 2013-01-01  0.605891  0.410070  0.038929 -0.041217
+  : 2013-01-02  0.897572 -0.028012 -0.656429 -0.352929
+  : 2013-01-03  0.090935  1.703942 -0.802526  1.279898
+  : 2013-01-04 -0.489903 -2.958047 -1.062937  2.550633
+  : 2013-01-05 -0.459452  0.606538  0.694192  0.426313
+  : 2013-01-06  0.136797  0.055338 -0.250743  1.488960
+
+- Sorting by values
+  #+begin_src python
+df.sort_values(by="B")
+  #+end_src
+
+  #+RESULTS:
+  :                    A         B         C         D
+  : 2013-01-04  2.550633 -1.062937 -2.958047 -0.489903
+  : 2013-01-03  1.279898 -0.802526  1.703942  0.090935
+  : 2013-01-02 -0.352929 -0.656429 -0.028012  0.897572
+  : 2013-01-06  1.488960 -0.250743  0.055338  0.136797
+  : 2013-01-01 -0.041217  0.038929  0.410070  0.605891
+  : 2013-01-05  0.426313  0.694192  0.606538 -0.459452

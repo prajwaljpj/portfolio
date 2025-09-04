@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       8f12389e-932b-4aeb-90f5-d5153b9e7ea9
+:END:
+#+title: K Nearest Neighbors
+
+The K Nearest Neighbors (KNN) algorithm is a simple, non-parametric method used for classification and regression. It relies on the notion of proximity, assuming that similar instances are located close to each other in the feature space. Here’s a brief explanation, including some mathematical concepts:
+
+*** Mathematical Explanation:
+
+1. *Distance Metric*: The most common distance metrics used are:
+   - *Euclidean Distance*: For two points \( p = (p_1, p_2, \ldots, p_n) \) and \( q = (q_1, q_2, \ldots, q_n) \):
+     \[
+     d(p, q) = \sqrt{\sum_{i=1}^{n}(p_i - q_i)^2}
+     \]
+   - Other metrics include Manhattan, Minkowski, etc.
+
+2. *Algorithm Steps*:
+   - *Choose* the number of neighbors, \( K \).
+   - *Calculate* the distance between the input sample \( x \) and all training samples.
+   - *Sort* the distances and determine the \( K \) nearest neighbors.
+   - For classification, *vote* among the neighbors (the class with the most votes is chosen).
+   - For regression, *average* the values of the \( K \) nearest neighbors.
+
+*** Python Example:
+
+Here is a simple Python implementation of KNN using =scikit-learn=:
+
+#+begin_src python
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+data = load_iris()
+X = data.data  # Features
+y = data.target  # Target classes
+
+# Split the dataset into a training and testing set
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create KNN classifier
+K = 3
+knn = KNeighborsClassifier(n_neighbors=K)
+
+# Fit the model
+knn.fit(X_train, y_train)
+
+# Make predictions
+y_pred = knn.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy * 100:.2f}%")
+#+end_src
+
+*** Summary:
+- KNN is simple yet effective for many classification tasks.
+- Proximity and distance metrics are the core concepts driving the algorithm.
+- The example above demonstrates how to use KNN with the Iris dataset in Python.

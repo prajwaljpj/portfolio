@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       1935b171-ce9f-48d6-9e3e-d14e71f0fc88
+:ROAM_ALIASES: LoRA
+:END:
+#+title: Low-Rank Adaptation
+#+filetags: :paper:
+
+[[https://arxiv.org/abs/2106.09685][Paper Source]]
+
+
+[[attachment:_20241126_093017lora.jpg]]
+
+They only train A and B. Similar to prefix tuning, they found that LoRA outperformed several baselines including full fine-tuning

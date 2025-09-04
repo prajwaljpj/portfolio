@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       d8ea55b0-091e-4acf-a7e3-d9b923ce2d90
+:END:
+#+title: Ipython
+
+* Tricks
+- Use *?*  for help/documentation. For example:
+  #+begin_src python
+import numpy as np
+np.c_?
+  #+end_src

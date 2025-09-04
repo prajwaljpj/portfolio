@@ -1,0 +1,108 @@
+:PROPERTIES:
+:ID:       705c6c81-45a0-4b00-88b7-449890ec54fb
+:END:
+#+title: BERT
+#+filetags: :LLM:paper:
+
+*** BERT Paper Overview
+
+*Title:* BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+*Authors:* Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova
+*Published:* 2018
+
+**** Key Concepts
+
+1. *Bidirectional Context:* BERT (Bidirectional Encoder Representations from Transformers) uses a bidirectional approach to learn context from both left and right surroundings of a word, unlike previous models that are directional.
+
+2. *Transformers:* BERT is built on the Transformer architecture, introduced in the paper "Attention is All You Need". The core components are multi-head self-attention mechanisms and feed-forward neural networks.
+
+3. *Masked Language Model (MLM):* To train the model, 15% of the input tokens are randomly masked, and the model learns to predict these masked words based on their context.
+
+4. *Next Sentence Prediction (NSP):* Additionally, BERT is trained to predict if two sentences appear sequentially, helping it understand relationships between sentence pairs.
+
+*** Mathematical Formulation
+
+1. *Input Representation:* Each token in the input is represented as a sum of three embeddings:
+   - Token embedding: Represents the initial token.
+   - Segment embedding: Distinguishes between sentences (A or B).
+   - Position embedding: Provides position information (since transformers have no recurrence).
+
+   The input representation is:
+   \[
+   \text{Embedding}(x_i) = \text{TokenEmb}(x_i) + \text{SegmentEmb}(A \text{ or } B) + \text{PosEmb}(i)
+   \]
+
+2. *Self-Attention Calculation:*
+   A self-attention mechanism computes three vectors for each input token:
+   - Query vector \( Q \)
+   - Key vector \( K \)
+   - Value vector \( V \)
+
+   Attention scores are computed as:
+   \[
+   \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+   \]
+   where \( d_k \) is the dimension of the key vectors.
+
+3. *Multi-Head Attention:* This involves multiple attention heads to capture various aspects of relationships:
+   \[
+   \text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W^O
+   \]
+   where each head \( i \) is computed as:
+   \[
+   \text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
+   \]
+
+4. *Feed-Forward Neural Networks:* After self-attention, the output is passed through a feed-forward network:
+   \[
+   \text{FFN}(x) = \text{ReLU}(xW_1 + b_1)W_2 + b_2
+   \]
+
+5. *Loss Function:* For MLM, the loss is computed for masked tokens:
+   \[
+   \text{Loss} = -\frac{1}{N}\sum_{i=1}^{N}\log P(x_i | x_{mask})
+   \]
+
+*** Python Implementation Example
+
+You can use the =transformers= library from Hugging Face to implement BERT easily. Here’s a simple code example to fine-tune BERT for a classification task:
+
+#+begin_src python
+from transformers import BertTokenizer, BertForSequenceClassification
+from transformers import Trainer, TrainingArguments
+import torch
+
+# Load the BERT tokenizer and model
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+model = BertForSequenceClassification.from_pretrained("bert-base-uncased")
+
+# Example data
+texts = ["Hello, how are you?", "I am doing great!"]
+labels = torch.tensor([0, 1])  # 0: negative, 1: positive
+
+# Tokenization
+encodings = tokenizer(texts, padding=True, truncation=True, return_tensors="pt")
+
+# Training arguments
+training_args = TrainingArguments(
+    output_dir='./results',
+    num_train_epochs=3,
+    per_device_train_batch_size=2,
+    logging_dir='./logs',
+)
+
+# Trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=encodings,
+    compute_metrics=None
+)
+
+# Training
+trainer.train()
+#+end_src
+
+*** Conclusion
+
+BERT revolutionizes NLP by enabling powerful understanding through bidirectional context and leveraging pre-training for a variety of tasks. The math behind it focuses on embeddings and attention mechanisms that allow for rich representations of language. The example illustrates how to quickly get started with BERT using the =transformers= library.

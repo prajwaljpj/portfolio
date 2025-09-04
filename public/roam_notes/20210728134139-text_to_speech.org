@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       dd973fb6-d8a1-4c83-866c-cf4497663a69
+:END:
+    #+title: Text to Speech
+
+* [[id:44f22ebc-1bb8-456e-8a30-406e688e1714][Parametric TTS]]
+** Festvox, festival, espeak, flite
+* [[id:0519d579-6318-4d07-a8db-21d5f0aeadaa][Neural TTS]]
+** Forward Tacotron
+** MelGAN
+** HifiGAN

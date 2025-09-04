@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       6f17a9e2-0f32-441f-9e7d-b3df44add35f
+:END:
+#+title: tokens
+
+Tokenization is the process of breaking down text into smaller units, called tokens. These tokens can be words, phrases, symbols, or other meaningful elements. Tokenization is often the first step in natural language processing (NLP) and text analysis.
+
+*** Examples:
+
+1. *Word Tokenization*:
+   - Input: "Hello, world!"
+   - Tokens: ["Hello", ",", "world", "!"]
+
+2. *Sentence Tokenization*:
+   - Input: "Hello, world! How are you?"
+   - Tokens: ["Hello, world!", "How are you?"]
+
+3. *Character Tokenization*:
+   - Input: "abc"
+   - Tokens: ["a", "b", "c"]
+
+Tokenization helps in analyzing and processing text for various applications like sentiment analysis, machine learning, or information retrieval.

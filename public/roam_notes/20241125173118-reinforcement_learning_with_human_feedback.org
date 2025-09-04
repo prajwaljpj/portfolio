@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID:       b7730a00-10fc-44cd-ad54-05b549a0ee8f
+:ROAM_ALIASES: RLHF
+:END:
+#+title: Reinforcement learning with human feedback
+#+filetags: :LLM:
+
+Reinforcement Learning with Human Feedback (RLHF) is a method that enhances traditional reinforcement learning (RL) by incorporating human evaluations or preferences into the learning process. This approach is especially useful in complex environments where reward signals may be sparse or difficult to define explicitly, allowing the model to learn effectively from human guidance.
+
+*** Key Concepts of RLHF:
+
+1. *Reinforcement Learning Basics*:
+   - In standard RL, an agent learns to make decisions by receiving rewards or penalties from the environment based on its actions. The goal is to maximize cumulative rewards.
+
+2. *Human Feedback*:
+   - In RLHF, human feedback is used to modify the reward signal. This can be in the form of:
+     - *Rankings*: Humans can rank different actions or outputs produced by the agent.
+     - *Binary Feedback*: Humans indicate whether a specific action is acceptable or preferable.
+     - *Direct Reward Shaping*: Humans assign rewards based on observed behavior.
+
+3. *Integration of Feedback*:
+   - Human feedback is usually collected in a supervised manner (e.g., through demonstrations) or via preference learning (e.g., humans prefer action A over action B).
+   - The agent uses this information to update its policy or value function, effectively tailoring its actions to align with human values.
+
+4. *Training Loop*:
+   - The training process typically involves:
+     1. The agent takes actions in the environment.
+     2. Human evaluators provide feedback on some of those actions.
+     3. The agent updates its policy based on this feedback.
+
+*** Example Implementation:
+
+An example use case for RLHF might be training a conversational agent to align its responses with human preferences.
+
+**** Step-by-Step Implementation:
+
+1. *Environment and Agent Setup*: Create a conversational environment where an agent can respond to queries.
+
+2. *Data Collection*:
+   - Have human raters review agent responses and provide feedback about which responses are preferable.
+
+3. *Reward Model Training*:
+   - Use the collected human feedback to train a reward model. This model can predict the quality of responses based on human preferences.
+
+4. *Policy Update Using Proximal Policy Optimization (PPO)*:
+   - Implement a standard RL algorithm like PPO.
+   - Use the trained reward model to provide feedback to the agent in the form of rewards during its exploration of the environment.
+
+5. *Iterative Training*:
+   - Continue the loop of generating responses, collecting human feedback, updating the reward model, and retraining the agent.
+
+Here is a pseudocode illustration of this process:
+
+#+begin_src python
+# Pseudocode for RLHF
+initialize agent, environment, reward_model
+
+for episode in range(num_episodes):
+    state = environment.reset()
+    done = False
+
+    while not done:
+        action = agent.select_action(state)
+        next_state, reward, done = environment.step(action)
+
+        # Collect human feedback
+        if collect_human_feedback:
+            feedback = get_human_feedback(action, next_state)
+            reward = reward_model.update(feedback, action)
+
+        agent.update_policy(state, action, reward, next_state)
+        state = next_state
+
+# Train reward model from human feedback
+reward_model.train(human_feedback_data)
+#+end_src
+
+*** Conclusion:
+RLHF provides a powerful framework to align the agent's behavior with human expectations, making it particularly valuable in applications like robotics, dialogue systems, and content generation. By integrating human feedback into the training loop, RLHF can improve learning efficiency and the quality of agent behavior.

@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       3748cffc-1579-4ab7-832d-636909caf8c4
+:END:
+#+title: longest common subsequence
+
+The longest common subsequence (LCS) in the context of LLM evaluation refers to the longest sequence of tokens that appears in the same relative order in both a model's output and a reference text, though not necessarily consecutively.
+
+*** Example:
+
+*Reference Text:* "The cat sat on the mat."
+
+*Model Output:* "The cat is sitting on the mat."
+
+*LCS:* "The cat on the mat"
+
+*** Explanation:
+In this example, the LCS consists of the tokens "The," "cat," "on," and "the mat," as they appear in both sentences in the same order, even though some words in the model's output ("is sitting") are not part of the LCS. The LCS is useful in evaluating the quality of generated text, as it captures the preservation of important content and structure between the output and the reference.

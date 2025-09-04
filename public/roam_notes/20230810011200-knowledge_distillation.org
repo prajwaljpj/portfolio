@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       20f38ca9-72c3-4762-abbb-8cf9f90e0db5
+:END:
+#+title: knowledge distillation
+
+* Introduction
+In knowledge distillation, a large, complex model is trained on a large dataset in knowledge distillation. When this model can generalize and perform well on unseen data, the knowledge is transferred to a smaller network. The larger model is known as the teacher model, and the smaller network is known as the student network.

@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       5b3513d2-47dc-4945-a022-426541fbc889
+:ROAM_ALIASES: ROUGE
+:END:
+#+title: Recall oriented understudy for gisting evaluation
+
+In contrast to [[id:7bfa61aa-7f1e-4c27-9a69-03881f048b37][BLEU]], ROUGE is recall-oriented. It counts the number of words in the reference that also occur in the output. It’s typically used to assess automatic summarization tasks.
+
+There are several ROUGE variants. ROUGE-N is most similar to BLEU in that it also counts the number of matching n-grams between the output and the reference.
+
+\[
+ROUGE-N = \frac{\sum_{s_{r}\in references}\sum_{n-gram\in s_{r}}Count_{match}(n-gram)}{\sum_{s_{r}\in references}\sum_{n-gram\in s_{r}}Count(n-gram)}
+\]
+
+Other variants include:
+
+1. ROUGE-L: This measures the [[id:3748cffc-1579-4ab7-832d-636909caf8c4][longest common subsequence (LCS)]] between the output and the reference. It considers sentence-level structure similarity and zeros in on the longest series of co-occurring in-sequence n-grams.
+2. ROUGE-S: This measures the skip-bigram between the output and reference. [[id:7225de6c-ac61-456c-b69a-a260d35d8c91][Skip-bigrams]] are pairs of words that maintain their sentence order regardless of the words that might be sandwiched between them.

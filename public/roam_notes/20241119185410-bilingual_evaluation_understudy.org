@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       7bfa61aa-7f1e-4c27-9a69-03881f048b37
+:ROAM_ALIASES: BLEU
+:END:
+#+title: Bilingual Evaluation Understudy
+
+BLEU (Bilingual Evaluation Understudy) is a precision-based metric: It counts the number of n-grams in the generated output that also show up in the reference, and then divides it by the total number of words in the output. It’s predominantly used in machine translation and remains a popular metric due to its cost-effectiveness.
+
+First, precision for various values of $n$ is computed:
+\[
+precision_{n} = \frac{\sum_{p\in output}\sum_{n-gram\in p}Count_{clip}(n-gram)}{\sum_{p\in output}\sum_{n-gram\in p}Count(n-gram)}
+\]
+
+$Count_{clip}(n-gram)$ is clipped by the maximum number of times an n-gram appears in any corresponding reference sentence.
+\[
+Count_{clip}(n-gram) = \min(\text{matched n-gram count}, \max(\text{n-gram count in r}))
+\]
+Once we’ve computed precision at various , a final BLEU-N score is computed as the geometric mean of all the scores.
+
+However, since precision relies solely on n-grams and doesn’t consider the length of the generated output, an output containing just one unigram of a common word (like a stop word) would achieve perfect precision. This can be misleading and encourage outputs that contain fewer words to increase BLEU scores. To counter this, a brevity penalty is added to penalize excessively short sentences.
+
+\[
+BP = \begin{cases}
+1, & \text{if} |p| > |r| \\
+e^{1-\frac{|r|}{|p|}}, & \text{otherwise}
+\end{cases}
+\]
+
+The final formula is
+\[
+BLEU-N = BP \cdot \exp\left(\sum_{n=1}^{N} W_{n}\log{\text{precision}_{n}}\right)
+\]

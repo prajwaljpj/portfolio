@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       1581ecac-4714-483a-bf8b-47c41d2cec41
+:END:
+#+title: L1 Loss
+
+L1 loss is defined by sum of the absolute differences between true values and predicted values.
+The equation is:
+$L1 Loss Function = \sum_{i=1}^{n} |y_{true} - y_{predicted}|$
+
+L1 loss is a mathematical measure used in machine learning to evaluate the accuracy of a model's predictions by calculating the absolute differences between the predicted and actual values. It is also called mean absolute error (MAE).
+
+L1 loss is calculated by taking the sum of the absolute differences between predicted and actual values and dividing by the total number of observations. 
+
+L1 loss is a popular loss function in regression problems where the goal is to minimize the difference between the predicted and actual values. It has a linear derivative which makes optimization easier compared to other loss functions such as L2 loss. In addition, L1 loss is more robust to outliers than L2 loss since the absolute differences do not amplify large errors as much as squared differences in L2 loss.
+
+The L1 loss formula in LaTeX is:
+
+$L_1(X, Y) = \frac{1}{n}\sum_{i=1}^{n} |x_i-y_i|$ 
+
+where $n$ is the number of observations in the dataset, $x_i$ and $y_i$ are the predicted and actual values for observation $i$, respectively, and $| \cdot |$ denotes absolute value.

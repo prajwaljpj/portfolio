@@ -1,0 +1,67 @@
+:PROPERTIES:
+:ID:       95fca8e7-de01-4056-8682-1ba683dc2a88
+:END:
+#+title: Gradient Descent
+
+Gradient descent is an optimization algorithm used in machine learning to minimize a [[id:1258128e-6b29-414b-b1ff-f7d99fffcf4e][loss function]] by iteratively adjusting model parameters. The core idea is to calculate the gradient (the partial derivatives) of the loss function concerning the parameters and then update the parameters in the opposite direction of the gradient, scaled by a learning rate.
+
+*** Steps of Gradient Descent:
+1. *Initialize parameters* randomly.
+2. *Calculate the loss* with the current parameters.
+3. *Compute the gradient* of the loss function.
+4. *Update parameters* using the gradient.
+5. Repeat until convergence (the loss difference is below a threshold or a set number of iterations is reached).
+
+*** Example in Python
+
+Here’s a simple Python example demonstrating gradient descent for linear regression.
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate dummy data
+# random has rand and randn. rand generates numbers from uniform distrobution (0-1) whereas randn generates numbers from a normal distribution (mean=0, std=1)
+np.random.seed(42)
+X = 2 * np.random.rand(100, 1)  # Features
+y = 4 + 3 * X + np.random.randn(100, 1)  # Labels with noise
+
+# Hyperparameters
+learning_rate = 0.1
+n_iterations = 1000
+m = len(X)  # Number of samples
+
+# Initialize parameters
+theta = np.random.randn(2, 1)  # Randomly initialize weights
+
+# Adding x0 = 1 to each instance (to account for the bias term)
+# so c_ basically concatenates to the left and then adds a dimension. to look for more documentation check ipthon hack[[id:d8ea55b0-091e-4acf-a7e3-d9b923ce2d90][Ipython]]s
+X_b = np.c_[np.ones((m, 1)), X]
+
+# Gradient Descent
+for iteration in range(n_iterations):
+    gradients = 2/m * X_b.T.dot(X_b.dot(theta) - y)  # Calculate the gradient
+    theta -= learning_rate * gradients  # Update parameters
+
+# Results
+print("Estimated parameters (theta):")
+print(theta)
+
+# Plotting
+plt.scatter(X, y)
+plt.plot(X, X_b.dot(theta), color='red', label='Predicted')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.legend()
+plt.title('Linear Regression using Gradient Descent')
+plt.show()
+#+end_src
+
+*** Explanation of Code:
+- *Data Creation*: Generates random linear data with some noise.
+- *Hyperparameters*: Sets learning rate and the number of iterations.
+- *Initialization*: Initializes the model parameters (weights) randomly.
+- *Gradient Descent Loop*: Calculates gradients and updates the parameters.
+- *Result*: Prints the estimated parameters and plots the data alongside the fitted line.
+
+This is a basic example to demonstrate gradient descent's working in linear regression.

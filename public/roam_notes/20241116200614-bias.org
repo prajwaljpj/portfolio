@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       aded448a-7bab-43a8-985f-02425d1a99a0
+:END:
+#+title: Bias
+
+Bias in machine learning refers to the tendency of a model to consistently learn the wrong pattern or underestimate the complexity of the data due to overly simplistic assumptions. It can lead to underfitting, where a model fails to capture the underlying trend of the data.
+
+*Example:*
+Consider a dataset of housing prices with features like size, location, and number of bedrooms. If a linear regression model is used to predict prices but only includes size as a feature, it might ignore how location and the number of bedrooms affect prices. This model would likely exhibit high bias because it oversimplifies the relationship between features and the target variable, resulting in poor predictions.

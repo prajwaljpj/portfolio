@@ -1,0 +1,71 @@
+:PROPERTIES:
+:ID:       93ea77e2-be22-4912-be2a-e327ee53998b
+:END:
+#+title: finetuning
+
+* Introduction
+Using a pretrained model trained on a large dataset, we take our own dataset and train the last few layers of the model
+
+Fine-tuning is a transfer learning technique where a pre-trained model is further trained on a smaller, specific dataset to adapt it to a particular task. This typically involves adjusting the weights of the model based on the new data while leveraging the knowledge it learned during pre-training.
+
+*** Mathematical Concept:
+In fine-tuning, the process involves the following steps:
+
+1. *Loss Function*: A loss function is defined based on the specific task, such as Cross-Entropy Loss for classification:
+   \[
+   L(y, \hat{y}) = - \sum_{i} y_i \log(\hat{y}_i)
+   \]
+   where \(y\) is the true label and \(\hat{y}\) is the predicted probability.
+
+2. *Gradient Descent*: The model is updated using gradient descent:
+   \[
+   \theta_{\text{new}} = \theta_{\text{old}} - \eta \nabla L
+   \]
+   where \(\theta\) represents model parameters, \(\eta\) is the learning rate, and \(\nabla L\) is the gradient of the loss function.
+
+*** Example in Python:
+Here’s a simple example using TensorFlow/Keras to fine-tune a pre-trained model (like MobileNet) on a new dataset:
+
+#+begin_src python
+import tensorflow as tf
+from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
+from tensorflow.keras.models import Model
+
+# Load pre-trained MobileNetV2 model + higher level layers
+base_model = MobileNetV2(weights='imagenet', include_top=False)
+
+# Freeze the base model layers
+for layer in base_model.layers:
+    layer.trainable = False
+
+# Add custom layers on top
+x = base_model.output
+x = GlobalAveragePooling2D()(x)
+x = Dense(128, activation='relu')(x)
+predictions = Dense(num_classes, activation='softmax')(x)
+
+# Create the new model
+model = Model(inputs=base_model.input, outputs=predictions)
+
+# Compile the model
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+# Data preparation
+train_datagen = ImageDataGenerator(rescale=1./255)
+train_generator = train_datagen.flow_from_directory('data/train', target_size=(224, 224), batch_size=32, class_mode='categorical')
+
+# Fine-tuning the model
+model.fit(train_generator, epochs=10)
+
+# Optional: Unfreeze some layers and continue training
+for layer in base_model.layers[-10:]:  # Unfreeze the last 10 layers
+    layer.trainable = True
+
+# Compile again and continue training
+model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.00001), loss='categorical_crossentropy', metrics=['accuracy'])
+model.fit(train_generator, epochs=10)
+#+end_src
+
+This code demonstrates how to fine-tune a pre-trained MobileNetV2 model on a new dataset by adding layers specific to your task, freezing some parts of the model, and gradually unfreezing layers for further optimization.

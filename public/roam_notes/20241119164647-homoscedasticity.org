@@ -1,0 +1,60 @@
+:PROPERTIES:
+:ID:       2e9dddd3-d359-44f8-8768-dc7abc285edc
+:END:
+#+title: Homoscedasticity
+
+Homoscedasticity refers to the property of a dataset whose variance is constant across all levels of an independent variable. In regression analysis, it means that the residuals (the differences between observed and predicted values) have constant variance, regardless of the value of the independent variable.
+
+*** Mathematical Explanation
+In mathematical terms, if \( Y \) is the dependent variable, \( X \) is the independent variable, and we're predicting \( Y \) using a linear model:
+
+\[ Y = \beta_0 + \beta_1 X + \epsilon \]
+
+where \( \epsilon \) is the error term. Homoscedasticity implies:
+
+\[ \text{Var}(\epsilon | X) = \sigma^2 \]
+
+for all values of \( X \). This means the variance of the error term \( \epsilon \) remains constant across different values of \( X \).
+
+*** Example in Python
+Here's a simple example using Python with the =statsmodels= and =numpy= libraries to illustrate diagnosing homoscedasticity.
+
+#+begin_src python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+
+# Create a synthetic dataset
+np.random.seed(0)
+X = np.linspace(0, 10, 100)
+# Generate a linear relationship with constant variance noise
+Y = 2.5 * X + np.random.normal(scale=1.0, size=X.shape)
+
+# Fit a linear regression model
+X_with_const = sm.add_constant(X)
+model = sm.OLS(Y, X_with_const).fit()
+
+# Get the residuals
+residuals = model.resid
+
+# Plot the residuals
+plt.scatter(X, residuals)
+plt.axhline(0, color='red', linestyle='--')
+plt.xlabel('X')
+plt.ylabel('Residuals')
+plt.title('Residuals vs. Fitted Values')
+plt.show()
+
+# Check for homoscedasticity with statsmodels
+from statsmodels.stats.diagnostic import het_breuschpagan
+bp_test = het_breuschpagan(residuals, X_with_const)
+labels = ['LM Statistic', 'LM-Test p-value', 'F-Statistic', 'F-Test p-value']
+print(dict(zip(labels, bp_test)))
+#+end_src
+
+*** Explanation:
+1. *Data Creation*: We create synthetic data with a linear trend.
+2. *Model Fitting*: A linear regression model is fitted to this data.
+3. *Residual Analysis*: Residuals are plotted against the independent variable \( X \). If the spread of residuals is roughly constant, the data shows homoscedasticity.
+4. *Breusch-Pagan Test*: A statistical test is performed to formally test for homoscedasticity, giving the LM statistic and p-values. A high p-value suggests that the null hypothesis (homoscedasticity) cannot be rejected.

@@ -1,0 +1,69 @@
+:PROPERTIES:
+:ID:       00041fbf-1f1b-4214-9310-1b49955d8564
+:ROAM_ALIASES: TF-IDF
+:END:
+#+title: Term Frequence-Inverse Document Frequency
+
+TF-IDF stands for Term Frequency-Inverse Document Frequency. It's a numerical statistic used to indicate the importance of a word in a document relative to a collection of documents (the corpus). It's commonly used in information retrieval and text mining.
+
+*** Math Behind TF-IDF
+
+1. *Term Frequency (TF)*: Measures how frequently a term occurs in a document. It’s defined as:
+   \[
+   \text{TF}(t, d) = \frac{\text{Number of times term } t \text{ appears in document } d}{\text{Total number of terms in document } d}
+   \]
+
+2. *Inverse Document Frequency (IDF)*: Measures how important a term is across the entire corpus. It's defined as:
+   \[
+   \text{IDF}(t) = \log\left(\frac{N}{\text{Number of documents containing term } t}\right)
+   \]
+   where \(N\) is the total number of documents in the corpus.
+
+3. *TF-IDF Score*:
+   \[
+   \text{TF-IDF}(t, d) = \text{TF}(t, d) \times \text{IDF}(t)
+   \]
+
+*** Python Example
+
+You can compute TF-IDF using libraries like =sklearn=. Here's a simple example:
+
+#+begin_src python :results output
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Sample documents
+documents = [
+    "I love programming in Python.",
+    "Python is great for data analysis.",
+    "I enjoy learning new programming languages."
+]
+
+# Create a TfidfVectorizer
+vectorizer = TfidfVectorizer()
+
+# Fit and transform the documents
+tfidf_matrix = vectorizer.fit_transform(documents)
+
+# Get the feature names
+feature_names = vectorizer.get_feature_names_out()
+
+# Convert to a dense array
+dense = tfidf_matrix.todense()
+
+# Convert to a DataFrame for better visualization
+import pandas as pd
+df = pd.DataFrame(dense, columns=feature_names)
+
+print(df)
+#+end_src
+
+#+RESULTS:
+
+*** Visual Summary
+
+1. *Documents*: A collection of text.
+2. *TF Calculation*: Count occurrences of a term in a document.
+3. *IDF Calculation*: Evaluate the term's rarity across documents.
+4. *TF-IDF Output*: A matrix showing the importance of terms in each document.
+
+This provides a clear representation of how terms are weighted across different documents in the corpus.

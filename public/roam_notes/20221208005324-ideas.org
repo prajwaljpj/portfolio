@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       c61832a1-43fe-483f-b38c-417e45d9a0a8
+:END:
+#+title: Duck
+Hough transform

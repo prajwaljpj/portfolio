@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5c8cf4e7-219a-4cc5-8d92-a69d80156f82
+:END:
+#+title: machine-to-machine
+
+* Introduction
+Machine-to-machine or M2M is a any technology that enables networked devices to communicate information and perform actions automatically. one of the widely known machine-to-machine communication is [[id:67fdd00e-b992-4c28-b532-8a3a5180b003][telemetry]] used for transmitting operational data.
+* Types
+M2M can be either wired or wireless
