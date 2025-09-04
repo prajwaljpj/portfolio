@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+
+# SWC cache
+.swc/
+
+# Environment variables
+.*.env
+/.env

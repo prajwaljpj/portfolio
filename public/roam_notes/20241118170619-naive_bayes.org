@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID:       15607721-dfd4-4519-8e06-2204c1f3d3e1
+:END:
+#+title: Naive Bayes
+
+** Naive Bayes Algorithm Explanation
+
+Naive Bayes is a probabilistic machine learning algorithm based on Bayes' Theorem. It is called "naive" because it assumes that the presence of a feature in a class is independent of the presence of any other feature. This assumption simplifies the computation significantly.
+
+*** Bayes' Theorem
+
+The formula for Bayes' Theorem is:
+
+\[
+P(C | X) = \frac{P(X | C) \cdot P(C)}{P(X)}
+\]
+
+Where:
+- \( P(C | X) \) is the posterior probability: the probability of class \( C \) given the feature \( X \).
+- \( P(X | C) \) is the likelihood: the probability of feature \( X \) given class \( C \).
+- \( P(C) \) is the prior probability of class \( C \).
+- \( P(X) \) is the prior probability of feature \( X \).
+
+In the context of multiple features (let's say features \( X_1, X_2, \ldots, X_n \)), Naive Bayes simplifies the computation:
+
+\[
+P(C | X_1, X_2, \ldots, X_n) \propto P(C) \cdot \prod_{i=1}^{n} P(X_i | C)
+\]
+
+** Types of Naive Bayes
+
+1. *Gaussian Naive Bayes:* Assumes continuous features follow a normal distribution.
+2. *Multinomial Naive Bayes:* Used for discrete counts (like word counts in text classification).
+3. *Bernoulli Naive Bayes:* Assumes binary/boolean features.
+
+** Python Example: Gaussian Naive Bayes
+
+Let's implement a simple Gaussian Naive Bayes classifier using the =sklearn= library to classify Iris flowers based on their features.
+
+#+begin_src python
+import numpy as np
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
+
+# Load the Iris dataset
+iris = datasets.load_iris()
+X = iris.data  # Feature matrix
+y = iris.target  # Labels
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create a Gaussian Naive Bayes model
+model = GaussianNB()
+
+# Fit the model on the training data
+model.fit(X_train, y_train)
+
+# Make predictions on the test data
+y_pred = model.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy:.2f}')
+#+end_src
+
+** Explanation of the Python Code
+
+1. *Import Libraries:* We use =numpy=, =sklearn.datasets= for loading the dataset, and model and metrics from =sklearn=.
+2. *Load Dataset:* The Iris dataset is a classic dataset for classification tasks.
+3. *Split Data:* We split our data into a training set and a testing set.
+4. *Model Creation:* We create a Gaussian Naive Bayes classifier instance.
+5. *Training:* We fit the model with the training data.
+6. *Prediction:* The model predicts classes for the test dataset.
+7. *Evaluate Performance:* We compute the accuracy of the predictions.
+
+This code demonstrates the Naive Bayes algorithm in a straightforward classification task.

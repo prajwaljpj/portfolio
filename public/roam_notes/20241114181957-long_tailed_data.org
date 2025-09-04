@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       40355a82-b9ab-4e0c-b241-6250a9e98fb2
+:END:
+#+title: Long Tailed Data
+
+Long-tailed data refers to a distribution where a large number of occurrences are found in a relatively small number of items (the "head"), while many other items exist with very few occurrences (the "tail"). This creates a long tail of infrequent items.
+
+*Example:*
+
+In a book sales dataset, a few bestsellers (the head) sell thousands of copies, while many niche books (the tail) sell only a few copies each. This results in a distribution where most sales come from a small number of titles, yet there is a large variety of titles with low sales.

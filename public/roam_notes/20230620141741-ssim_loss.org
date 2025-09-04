@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       c8ae9ae7-7cd1-4c2f-b70d-9540bc803295
+:END:
+#+title: SSIM Loss
+
+SSIM loss or Structural Similarity Index is defined by the percepual metric to measure similarity of two images. Windowed calculation
+SSIM (or Structural Similarity Index) loss is a popular image quality metric commonly used in computer vision and image processing. The SSIM loss measures the structural similarity between two images by comparing their luminance, contrast, and structural (or texture) information. The SSIM loss is often used as a loss function in machine learning algorithms for image restoration, super-resolution, and generative models to optimize the model's output for better image quality. It is a performance measure used to quantify the similarity between two images, which can be used to compare image quality before and after processing.$$ two variables to stabilize the division with weak denominator
+The SSIM loss formula is:
+
+$\mathrm{SSIM}(x, y) = \frac{(2\mu_x\mu_y + C_1)(2\sigma_{xy} + C_2)}{(\mu_x^2+\mu_y^2+C_1)(\sigma_x^2+\sigma_y^2+C_2)}$
+
+where
+- $\mu_x$ and $\mu_y$ are the means of $x$ and $y$ respectively
+- $\sigma_x$ and $\sigma_y$ are the standard deviations of $x$ and $y$ respectively
+- $\sigma_{xy}$ is the covariance between $x$ and $y$
+- $C_1$ and $C_2$ are small constants to avoid zero division and numerical instability. For example, commonly used values are $C_1 = (0.01L)^2$ and $C_2 = (0.03L)^2$ where $L$ is the dynamic range of the pixel values.

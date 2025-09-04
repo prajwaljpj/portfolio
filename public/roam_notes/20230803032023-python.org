@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       27243154-7e0f-4c8f-9121-744350768fbc
+:END:
+#+title: python
+
+* Introduction
+- Programming language
+- Different versions have many changes
+- currently using python3.9
+* Libraries
+- [[id:408af1cc-58f7-4e57-a711-c5f085d69ea1][MongoDB]]
+- Depthai
+- [[id:0c03755a-298f-4445-8b1d-595e4a306de5][Pandas]]

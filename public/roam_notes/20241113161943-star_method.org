@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       b625874f-2e0e-4f63-ab56-4b0f5540cc3b
+:END:
+#+title: STAR Method
+
+The STAR method is a structured approach to answering behavioral interview questions by discussing the specific Situation, Task, Action, and Result of the situation you are describing.
+
+1. Situation: Describe the situation you were in or the task you needed to accomplish. This should be specific and provide enough detail for the interviewer to understand. This might be from a previous job, a volunteer experience, or any relevant event.
+
+2. Task: Describe the task you were responsible for in that situation. What kind of challenges did you face? What was your role? What was your target?
+
+3. Action: What actions did you take to address the situation? Remember to focus on what you did, not what your team or boss did.
+
+4. Result: What results did your actions lead to? This can be what you learned from the situation or how it improved a process, helped the company, or supported your professional growth.
+
+By using this method, it keeps your response focused and concise while also providing adequate detail about your skills and experience.

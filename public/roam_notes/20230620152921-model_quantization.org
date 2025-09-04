@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       73a9326d-92b9-4c8c-b65b-d9da1410515c
+:END:
+#+title: Model Quantization
+
+Model quantization is the process of reducing the precision of a neural network's weights and activations from 32-bit floating-point values to lower precision integer or fixed-point values. This reduces the memory footprint required to store the model and speeds up inference on hardware that supports these lower precision data types, such as mobile devices and embedded systems. Quantization can also improve model efficiency and accuracy by reducing overfitting and encouraging learning of more robust features.

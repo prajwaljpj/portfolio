@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       408af1cc-58f7-4e57-a711-c5f085d69ea1
+:END:
+#+title: MongoDB
+
+* Introduction
+- database management system.
+- uses gridFS for saving binary data such as images
+- other libraries in use are bson binary to store numpy arrays

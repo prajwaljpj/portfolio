@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       f3b10261-19f6-4f86-8227-71351fc0c19e
+:END:
+#+title: Calibration
+
+* DepthAI
+** Intrinsics
+#+begin_src python
+import depthai as dai
+if COLOR:
+    camRgb = pipeline.create(dai.node.ColorCamera)
+    camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
+    camRgb.setIspScale(1, 3)
+    camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.RGB)
+    camRgb.initialControl.setManualFocus(130)
+    stereo.setDepthAlign(dai.CameraBoardSocket.RGB)
+    camRgb.isp.link(xout_colorize.input)
+
+with dai.Device(pipeline) as device:
+    calibData = device.readCalibration()
+    if COLOR:
+        w, h = camRgb.getIspSize()
+        intrinsics = calibData.getCameraIntrinsics(dai.CameraBoardSocket.RGB, dai.Size2f(w, h))
+    else:
+        w, h = monoRight.getResolutionSize()
+        intrinsics = calibData.getCameraIntrinsics(dai.CameraBoardSocket.Right, dai.Size2f(w, h))
+#+end_src

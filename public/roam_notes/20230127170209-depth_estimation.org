@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       6b04ba7c-b917-477e-b405-27de98d34adc
+:END:
+#+title: Depth Estimation
+
+* Disparity matrix
+- the disparity($D$) is measured using $n_{1} - n_{2} = x_{l} - x_{r}$ and $Z = \frac{f}{d} \times \frac{T}{D}$
+* Filters Implementations on OAK-D
+** OAK-D implementation - Uses DepthAI
+  #+begin_src python
+import depthai as dai
+pipeline = dai.Pipeline()
+stereo = pipeline.createStereoDepth()
+config = stereo.initialConfig.get()
+config.postProcessing.speckleFilter.enable = False
+config.postProcessing.speckleFilter.speckleRange = 50
+config.postProcessing.temporalFilter.enable = True
+config.postProcessing.spatialFilter.enable = True
+config.postProcessing.spatialFilter.holeFillingRadius = 2
+config.postProcessing.spatialFilter.numIterations = 1
+config.postProcessing.thresholdFilter.minRange = 400
+config.postProcessing.thresholdFilter.maxRange = 200000
+config.postProcessing.decimationFilter.decimationFactor = 1
+  #+end_src

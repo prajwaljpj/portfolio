@@ -1,0 +1,84 @@
+:PROPERTIES:
+:ID:       75d4d845-b5fc-4eff-bd9b-a98e3a728ef5
+:END:
+#+title: Spearman correlation
+
+Spearman correlation measures the strength and direction of association between two ranked variables. It is a non-parametric measure, which means it does not assume a linear relationship or require the data to be normally distributed. Instead, it assesses how well the relationship between two variables can be described by a monotonic function.
+
+*** Mathematical Explanation:
+
+1. *Rank the Data*: Convert the data values of each variable to ranks.
+2. *Difference of Ranks*: For each pair of ranks, compute the difference \( d_i \) between the two ranks.
+3. *Square the Differences*: Compute \( d_i^2 \) for each pair of ranks.
+4. *Sum of Squares*: Calculate the sum \( \sum d_i^2 \).
+5. *Spearman's Correlation Coefficient* \( \rho \) is computed using the formula:
+
+   \[
+   \rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+   \]
+
+   where \( n \) is the number of paired ranks.
+
+*** Python Example:
+
+Here’s how to compute Spearman correlation using Python with the =scipy= library:
+
+#+begin_src python
+import numpy as np
+from scipy.stats import spearmanr
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [5, 6, 7, 8, 7]
+
+# Compute Spearman correlation
+correlation, p_value = spearmanr(x, y)
+
+print(f"Spearman correlation: {correlation}, p-value: {p_value}")
+#+end_src
+
+*** Output:
+This script will output the Spearman correlation coefficient and the p-value, indicating the strength and statistical significance of the correlation between the two variables.
+
+* For Images
+Spearman correlation assesses the rank-order relationship between two variables. For images, this involves treating the pixel values as one-dimensional arrays and computing the Spearman correlation between them.
+
+*** Steps:
+
+1. *Flatten the Images:* Convert the images into 1D arrays.
+2. *Rank the Values:* Assign ranks to the pixel values in both arrays.
+3. *Calculate Spearman Correlation:* Use the formula:
+   \[
+   \rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+   \]
+   where \(d_i\) is the difference between the ranks of corresponding pixels, and \(n\) is the number of pixels.
+
+*** Python Example:
+
+You can use libraries like =numpy= and =scipy= to calculate the Spearman correlation.
+
+#+begin_src python
+import numpy as np
+from scipy.stats import spearmanr
+from PIL import Image
+
+# Load two images
+image1 = Image.open('image1.png').convert('L')  # Convert to grayscale
+image2 = Image.open('image2.png').convert('L')  # Convert to grayscale
+
+# Flatten the images to 1D arrays
+data1 = np.array(image1).flatten()
+data2 = np.array(image2).flatten()
+
+# Calculate Spearman correlation
+correlation, _ = spearmanr(data1, data2)
+
+print(f"Spearman correlation: {correlation}")
+#+end_src
+
+*** Explanation of Code:
+- *Image Loading:* The images are loaded and converted to grayscale.
+- *Flattening:* The pixel values are turned into 1D arrays using =.flatten()=.
+- *Spearman Calculation:* The =spearmanr()= function from =scipy.stats= computes the correlation.
+
+This method can effectively measure the monotonic relationship between the pixel intensity distributions of the two images.

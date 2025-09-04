@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       77a0e91e-73b8-43f3-adb4-ed43cd98249a
+:END:
+#+title: Model Pruning
+
+Model pruning is a technique used in machine learning to improve the efficiency and performance of a machine learning model. It involves the process of removing unnecessary or redundant features, connections, or nodes from a model that do not contribute much towards the final output. 
+
+Pruning is usually done in two stages: 
+
+1. Structural pruning: It involves pruning the architecture of the model by removing entire subnetworks, such as layers in a neural network. These subnetworks are usually selected based on their insignificant contributions to the model's performance.
+
+2. Weight pruning: It involves pruning the individual weights (parameters) of the model. Less important weights are set to zero, resulting in a sparse model that takes up less memory and requires fewer computations.
+
+Model pruning can help reduce the complexity of a model, making it easier to deploy and less expensive to run. It can also reduce the risk of overfitting and improve the model's generalization performance. However, it requires careful consideration of which features, connections, or nodes to prune to avoid adversely affecting the model's accuracy.

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       3a79fe34-0625-4f21-8ec7-f9ecc1adfe3a
+:END:
+#+title: diffraction grating
+
+#TODO

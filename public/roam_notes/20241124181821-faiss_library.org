@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       d221a813-ea39-465d-bc5c-0ff1d04740e6
+:END:
+#+title: Faiss library
+#+filetags: :library:

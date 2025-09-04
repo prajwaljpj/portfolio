@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       b99a4f11-3238-4920-b0ac-f9dbc39200d3
+:END:
+#+title: Dairybarn
+Subpixel Depth has worked with the data and can be found here. [[https://purdue.app.box.com/folder/196715541685][02_28_2023 Data with dubpixel depth]]
+* Using Depth Camera
+** [[id:6b04ba7c-b917-477e-b405-27de98d34adc][Depth Estimation]]
+** PointCloud
+** Mesh Generation
+** Volume Estimation
+* Using [[id:eecb0d7a-038a-458e-bc1f-fb6f476c32bf][Hyperspectral Imaging]]

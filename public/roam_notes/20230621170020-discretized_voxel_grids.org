@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       69860a13-1206-4b0f-9a75-78533cdde787
+:END:
+#+title: discretized voxel grids
+
+Discrete voxel grids are a set of 3D cuboidal elements that are regularly spaced and arranged in a grid structure. Each voxel represents a small volume element in 3D space and can be assigned a value or attribute, such as color, density, or material type. Discrete voxel grids are commonly used in computer graphics, medical imaging, geological modeling, and other scientific applications to represent and manipulate 3D data. The resolution of the grid determines the level of detail or accuracy in the representation of the underlying object or phenomenon.

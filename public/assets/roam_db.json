@@ -1,0 +1,4879 @@
+{
+  "files": [
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20250901023057-itbench.org",
+      "title": "ITBench",
+      "hash": "b862ae2a08ad8dc25dffc43a839a3a565f6d59f7",
+      "atime": "(26808 44173 761399 298000)",
+      "mtime": "(26805 26758 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20250901022738-article_notes.org",
+      "title": "Article notes",
+      "hash": "8b4c8b178426365ec92c9624ed022ec69d181af6",
+      "atime": "(26808 44173 761399 298000)",
+      "mtime": "(26805 26964 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20250824153335-nyquist_shannon_theorem.org",
+      "title": "Nyquist Shannon Theorem",
+      "hash": "9eb186aa2430ffc410c3377adf01a350c2c50625",
+      "atime": "(26808 44173 740399 219000)",
+      "mtime": "(26795 37974 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20250823160951-fourier_transform_ft.org",
+      "title": "Fourier Transform (FT)",
+      "hash": "ea4564860decaec76f457a05cc4c4068d0d17849",
+      "atime": "(26808 44173 740399 219000)",
+      "mtime": "(26795 34466 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20250822004512-hidden_markov_models_hmm.org",
+      "title": "Hidden Markov Models (HMM)",
+      "hash": "c6421a607cb422e68ede4fa95ac8d10d090db865",
+      "atime": "(26808 44173 740399 219000)",
+      "mtime": "(26794 14619 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241211233612-ai_design_tips.org",
+      "title": "AI design tips",
+      "hash": "f89a58e3567ec293c99148a30ced0b2ecfd4ab19",
+      "atime": "(26808 44173 741399 222000)",
+      "mtime": "(26458 30296 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241126190823-pandas.org",
+      "title": "Pandas",
+      "hash": "e654cd7c6e3875157552d23e239a98eb57be2aec",
+      "atime": "(26808 44173 741399 222000)",
+      "mtime": "(26439 40652 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241126190113-hard_attention.org",
+      "title": "Hard Attention",
+      "hash": "7c0674aa0ab35c82380fa6b0dfdde9615d2753b6",
+      "atime": "(26808 44173 760399 294000)",
+      "mtime": "(26805 26096 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241126185931-soft_attention.org",
+      "title": "Soft Attention",
+      "hash": "a6ce70b738f4e9cf34b77d8332df314f29e57307",
+      "atime": "(26808 44173 759399 291000)",
+      "mtime": "(26805 26027 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241126182148-top_p_sampling.org",
+      "title": "Top-p Sampling",
+      "hash": "003f4e8f0b52d6e74a576a616c4f5d241688c190",
+      "atime": "(26808 44173 760399 294000)",
+      "mtime": "(26805 26116 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241126181948-temperature.org",
+      "title": "Temperature",
+      "hash": "0666570bc05ce3b845274df2e95a46a1f8a40e98",
+      "atime": "(26808 44173 760399 294000)",
+      "mtime": "(26805 26063 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241126092936-low_rank_adaptation.org",
+      "title": "Low-Rank Adaptation",
+      "hash": "bacb98ce7b0c34eec1e7c48950a779d23d22197b",
+      "atime": "(26808 44173 741399 222000)",
+      "mtime": "(26437 56272 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241125195554-adapter.org",
+      "title": "adapter",
+      "hash": "77cbd4e0966bfb38438b8a9752da362645771d8d",
+      "atime": "(26808 44173 760399 294000)",
+      "mtime": "(26805 26038 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241125193612-prefix_tuning.org",
+      "title": "prefix tuning",
+      "hash": "913649472d7dd4063c53caf22d076eaa47cd5217",
+      "atime": "(26808 44173 741399 222000)",
+      "mtime": "(26437 6436 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241125193445-soft_prompt_tuning.org",
+      "title": "Soft prompt tuning",
+      "hash": "c2622f45aec7b7fb3c5539fe89f8106e79a71205",
+      "atime": "(26808 44173 760399 294000)",
+      "mtime": "(26805 26053 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241125185604-transfer_learning.org",
+      "title": "transfer learning",
+      "hash": "077006675e9e46f8d512efd611b05966d2b76f0b",
+      "atime": "(26808 44173 741399 222000)",
+      "mtime": "(26437 3791 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241125174659-alignment_tax.org",
+      "title": "Alignment Tax",
+      "hash": "b18257a8799f5ab5bdf05e428b55ced3ef1b5a02",
+      "atime": "(26808 44173 760399 294000)",
+      "mtime": "(26805 26073 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241125173118-reinforcement_learning_with_human_feedback.org",
+      "title": "Reinforcement learning with human feedback",
+      "hash": "b0979d2d8d71ce415c92fd05787d063a55763d82",
+      "atime": "(26808 44173 761399 298000)",
+      "mtime": "(26805 26143 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124192348-sentence_transformers.org",
+      "title": "Sentence Transformers",
+      "hash": "f1c9ea5a24f64e212d77d3f32cd93fb313604fc0",
+      "atime": "(26808 44173 761399 298000)",
+      "mtime": "(26805 26153 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124192056-fasttext.org",
+      "title": "fastText",
+      "hash": "41879ce5cf6e5c379f7f7bf75348cfbf1dc00500",
+      "atime": "(26808 44173 741399 222000)",
+      "mtime": "(26435 49993 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124181821-faiss_library.org",
+      "title": "Faiss library",
+      "hash": "5e5e235a787f89ea7dcc8123aa540b94f8fd9d0a",
+      "atime": "(26808 44173 741399 222000)",
+      "mtime": "(26435 46177 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124181625-vectorstore.org",
+      "title": "vectorstore",
+      "hash": "807642bd1f406e6d7346c77d55c214e01a4d3f5d",
+      "atime": "(26808 44173 761399 298000)",
+      "mtime": "(26805 26179 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124173302-term_frequence_inverse_document_frequency.org",
+      "title": "Term Frequence-Inverse Document Frequency",
+      "hash": "b2239a7185492097589c971f607f385755bccae1",
+      "atime": "(26808 44173 742399 226000)",
+      "mtime": "(26435 44123 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124173119-bert.org",
+      "title": "BERT",
+      "hash": "c9587de982aff777df7b60d06b5c9c125d20fa04",
+      "atime": "(26808 44173 759399 291000)",
+      "mtime": "(26805 25643 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124172428-learning_transferable_visual_models_from_natural_language_supervision.org",
+      "title": "Learning Transferable Visual Models from Natural Language Supervision",
+      "hash": "aa4668aebc24607846fa751877b712e68dd0e302",
+      "atime": "(26808 44173 742399 226000)",
+      "mtime": "(26435 42994 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124035410-speech_quality_evaluation_metrics.org",
+      "title": "Speech quality evaluation metrics",
+      "hash": "d824fd85fffefcac7ebcb20ab0d094d190a18eec",
+      "atime": "(26808 44173 742399 226000)",
+      "mtime": "(26434 60384 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124033837-plp_features.org",
+      "title": "PLP Features",
+      "hash": "bc46cfe1efada5227f5a76579d4371ddd486460e",
+      "atime": "(26808 44173 742399 226000)",
+      "mtime": "(26434 59809 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241124033044-beam_forming.org",
+      "title": "Beam forming",
+      "hash": "b5ca7b9bdf5830c9da167d26366f08312808a9ba",
+      "atime": "(26808 44173 742399 226000)",
+      "mtime": "(26434 58706 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241123231446-global_vectors_for_word_representation.org",
+      "title": "Global Vectors for Word Representation",
+      "hash": "0030c2a22506935a22530d3bbebe8c9e1b2b28ad",
+      "atime": "(26808 44173 742399 226000)",
+      "mtime": "(26434 44496 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241123225127-word2vec.org",
+      "title": "Word2Vec",
+      "hash": "73cf0c800f20f8ea83b0b8730d6d862cf087c259",
+      "atime": "(26808 44173 761399 298000)",
+      "mtime": "(26805 26163 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241123224953-text_embeddings.org",
+      "title": "Text Embeddings",
+      "hash": "abf9befd163bb09b87679ba26157302f2414778e",
+      "atime": "(26808 44173 742399 226000)",
+      "mtime": "(26435 42687 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241122203017-retrieval_augmented_generation.org",
+      "title": "Retrieval-Augmented Generation",
+      "hash": "87e05cb2ecc00f2fe0d35cf676517cf3667ba96e",
+      "atime": "(26808 44173 760399 294000)",
+      "mtime": "(26805 26105 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241122194944-prauc.org",
+      "title": "Precision-Recall Area Under the Curve",
+      "hash": "8267adf637f4e69e142d47b023581ced55001e7d",
+      "atime": "(26808 44173 742399 226000)",
+      "mtime": "(26433 10006 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241121212527-qlora.org",
+      "title": "QLoRA",
+      "hash": "fd72e34576465c9876254b4cfb18d6d902934b00",
+      "atime": "(26808 44173 743399 230000)",
+      "mtime": "(26437 56486 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241121211753-vicuna.org",
+      "title": "Vicuna",
+      "hash": "395327e631a72910421dd5c547f9c7214ed1db3e",
+      "atime": "(26808 44173 743399 230000)",
+      "mtime": "(26431 60246 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241121192911-weights_initialization.org",
+      "title": "Weights initialization",
+      "hash": "03627d33bc54c1e69099415f2e04392d5eac6f8c",
+      "atime": "(26808 44173 743399 230000)",
+      "mtime": "(26431 53526 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241120213129-correlation_metrics.org",
+      "title": "Correlation Metrics",
+      "hash": "818897d2912ee217c18ce8faad98bbd126035516",
+      "atime": "(26808 44173 743399 230000)",
+      "mtime": "(26430 40455 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241120212711-spearman_correlation.org",
+      "title": "Spearman correlation",
+      "hash": "80e18b53d0289b4a845ac1c4019c5424f9ac5b03",
+      "atime": "(26808 44173 743399 230000)",
+      "mtime": "(26430 39693 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241120211141-chain_of_though.org",
+      "title": "Chain-of-Thought",
+      "hash": "0479d0ef170b599b13de3c868495a4279e11cdad",
+      "atime": "(26808 44173 743399 230000)",
+      "mtime": "(26434 54240 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241120211121-g_eval.org",
+      "title": "G-Eval",
+      "hash": "015f6c320ae7421875278e5484aba39f30a06f15",
+      "atime": "(26808 44173 743399 230000)",
+      "mtime": "(26430 40642 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241120143633-hard_and_soft_alignment.org",
+      "title": "Hard and Soft Alignment",
+      "hash": "69919495bf39434e33edc0100c4aadbdac265170",
+      "atime": "(26808 44173 744399 234000)",
+      "mtime": "(26430 15283 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241120135412-adam_optimizer.org",
+      "title": "Adam optimizer",
+      "hash": "edfcee1eb4a056c3d0fbad723c1eb00ddfc39297",
+      "atime": "(26808 44173 745399 238000)",
+      "mtime": "(26430 12477 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119193044-moverscore.org",
+      "title": "MoverScore",
+      "hash": "2347102c840b2663ec4543262fd4ccc44f082739",
+      "atime": "(26808 44173 745399 238000)",
+      "mtime": "(26430 37686 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119191942-bertscore.org",
+      "title": "BERTScore",
+      "hash": "510ad22510a5d74672ef242553fe53fec73345d6",
+      "atime": "(26808 44173 745399 238000)",
+      "mtime": "(26429 11479 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119191835-skip_bigrams.org",
+      "title": "Skip-bigrams",
+      "hash": "9f537b7c73318cfc639d721be7bef03232e3d1da",
+      "atime": "(26808 44173 745399 238000)",
+      "mtime": "(26429 11012 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119191608-longest_common_subsequence.org",
+      "title": "longest common subsequence",
+      "hash": "70355117f9a40074f5d02512646e3de985716680",
+      "atime": "(26808 44173 745399 238000)",
+      "mtime": "(26429 10943 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119191144-recall_oriented_understudy_for_gisting_evaluation.org",
+      "title": "Recall oriented understudy for gisting evaluation",
+      "hash": "1b3b64a0ebac01f0c0042a56f0ece1e728108b9c",
+      "atime": "(26808 44173 745399 238000)",
+      "mtime": "(26434 44582 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119185410-bilingual_evaluation_understudy.org",
+      "title": "Bilingual Evaluation Understudy",
+      "hash": "99424a3ec68cdbb1e9ffa4a1d082310fb23a6fa8",
+      "atime": "(26808 44173 746399 241000)",
+      "mtime": "(26434 44542 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119183951-llm_evaluation.org",
+      "title": "LLM Evaluation",
+      "hash": "042615f80e50e5a43c7cc27fe4d25b2bb215953c",
+      "atime": "(26808 44173 746399 241000)",
+      "mtime": "(26433 9412 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119164647-homoscedasticity.org",
+      "title": "Homoscedasticity",
+      "hash": "e67156e293409e0c6c130267ec3c7c808c68d6c1",
+      "atime": "(26808 44173 746399 241000)",
+      "mtime": "(26429 1927 569906 66000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119164419-regression.org",
+      "title": "Regression",
+      "hash": "2304b09a769cbd2605b3dafa27e69b57d9c0cabf",
+      "atime": "(26808 44173 746399 241000)",
+      "mtime": "(26429 1940 58938 453000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org",
+      "title": "LLM System Design",
+      "hash": "fd5f6f21e1f36dc21cc4687bd274f6db421f0f05",
+      "atime": "(26808 44173 746399 241000)",
+      "mtime": "(26438 22949 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118201626-kernel_trick.org",
+      "title": "Kernel Trick",
+      "hash": "c158482e1f76962c9d9aaa3328400c91f50e5a44",
+      "atime": "(26808 44173 747399 245000)",
+      "mtime": "(26427 59551 335654 688000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118201405-softmax.org",
+      "title": "Softmax",
+      "hash": "7aa1a3e05c7a43bc1d44904abd56f068eb58150f",
+      "atime": "(26808 44173 747399 245000)",
+      "mtime": "(26435 44440 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118174907-prompt_engineering.org",
+      "title": "Prompt Engineering",
+      "hash": "46f32a813cb122d26e69b04e8ab3cdc6055f6207",
+      "atime": "(26808 44173 747399 245000)",
+      "mtime": "(26427 50382 118535 169000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118171309-linear_regression.org",
+      "title": "Linear Regression",
+      "hash": "6cede8473db0c647c3b74366968ce792c5ebcc3c",
+      "atime": "(26808 44173 747399 245000)",
+      "mtime": "(26427 48291 775828 766000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118170619-naive_bayes.org",
+      "title": "Naive Bayes",
+      "hash": "9e2b5f7b1f1d250c56c6f0b4123dde858dd5a1ec",
+      "atime": "(26808 44173 747399 245000)",
+      "mtime": "(26427 47839 156793 435000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118170346-k_nearest_neighbors.org",
+      "title": "K Nearest Neighbors",
+      "hash": "09f07b8a3ea67498824e369c75680f91ae8f7ad8",
+      "atime": "(26808 44173 747399 245000)",
+      "mtime": "(26427 47697 954388 115000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118161841-tokens.org",
+      "title": "tokens",
+      "hash": "602bb9b7abc13a2ca80f7bedef0862649c2adb04",
+      "atime": "(26808 44173 748399 249000)",
+      "mtime": "(26427 44893 384140 571000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118161737-transformers.org",
+      "title": "Transformers",
+      "hash": "f5dd7f47f469c455e5577ce4405c021e33628d05",
+      "atime": "(26808 44173 759399 291000)",
+      "mtime": "(26805 26013 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241118161608-large_language_model.org",
+      "title": "Large Language Model",
+      "hash": "8ef0040c07750d5eb857a847ebeb6aa9724b8f86",
+      "atime": "(26808 44173 748399 249000)",
+      "mtime": "(26427 45311 867963 327000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241116200727-variance.org",
+      "title": "Variance",
+      "hash": "1fcf8b4683cc5e026921e5fb9c554040a4f0dbfb",
+      "atime": "(26808 44173 748399 249000)",
+      "mtime": "(26425 16944 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241116200614-bias.org",
+      "title": "Bias",
+      "hash": "28ba5bcc2e2b286c3cd2300f35b2e4b999272300",
+      "atime": "(26808 44173 748399 249000)",
+      "mtime": "(26425 16832 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114201545-ipython.org",
+      "title": "Ipython",
+      "hash": "fbcb64a7b58249ee687e7669bdd1e362822f6eee",
+      "atime": "(26808 44173 748399 249000)",
+      "mtime": "(26422 41348 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114193544-recurrent_neural_networks.org",
+      "title": "Recurrent Neural Networks",
+      "hash": "0a937679e144b08e0568b1e4df0525f1b084cca1",
+      "atime": "(26808 44173 748399 249000)",
+      "mtime": "(26422 38956 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114190017-model_loss.org",
+      "title": "Model Loss",
+      "hash": "6b1e11296ca4b7f13bd067dbaa47d6f81fdcd616",
+      "atime": "(26808 44173 748399 249000)",
+      "mtime": "(26422 37586 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114184459-f1_score.org",
+      "title": "F1 Score",
+      "hash": "2571c06a0876bfc59a105c5c8d664b05556f6075",
+      "atime": "(26808 44173 748399 249000)",
+      "mtime": "(26422 35766 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114184212-recall.org",
+      "title": "Recall",
+      "hash": "d28c2d34ce56296696357828f2e8434b272ef509",
+      "atime": "(26808 44173 749399 253000)",
+      "mtime": "(26422 35677 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114184008-precision.org",
+      "title": "Precision",
+      "hash": "531661da8e89fe39c839a7d2ee74e89611f7e434",
+      "atime": "(26808 44173 749399 253000)",
+      "mtime": "(26422 35520 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114183813-data_augmentation.org",
+      "title": "Data Augmentation",
+      "hash": "9e56ad1e1b9eba4d4e8d125b7b106e74df43bcd0",
+      "atime": "(26808 44173 749399 253000)",
+      "mtime": "(26422 35348 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114181957-long_tailed_data.org",
+      "title": "Long Tailed Data",
+      "hash": "0c4a68deda57a64856933b98a3ed5e681471cb0c",
+      "atime": "(26808 44173 749399 253000)",
+      "mtime": "(26422 34237 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114175355-vanishing_gradients.org",
+      "title": "Vanishing Gradients",
+      "hash": "4df804c8bfa42ee85eae3c4336b80e6e82ce0102",
+      "atime": "(26808 44173 749399 253000)",
+      "mtime": "(26427 45564 885690 462000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114174658-gradient_descent.org",
+      "title": "Gradient Descent",
+      "hash": "626f9752ddbb6b0ae3af00649c769e70a5df3d49",
+      "atime": "(26808 44173 749399 253000)",
+      "mtime": "(26422 41416 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114174603-area_under_the_curve.org",
+      "title": "Area Under the Curve",
+      "hash": "2b79093fa63d0059ee0b38182101651b523c130b",
+      "atime": "(26808 44173 750399 257000)",
+      "mtime": "(26422 35889 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114174452-roc_curve.org",
+      "title": "ROC curve",
+      "hash": "d87727579b477ffcd59f1a68a3d7c9644c51fd33",
+      "atime": "(26808 44173 750399 257000)",
+      "mtime": "(26422 35861 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114174313-attention_mechanism.org",
+      "title": "Attention Mechanism",
+      "hash": "077a89bb4fc30eacf97891cf01fb830d04cc766e",
+      "atime": "(26808 44173 750399 257000)",
+      "mtime": "(26438 25076 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114174020-causal_inference.org",
+      "title": "Causal Inference",
+      "hash": "380e8f3d23fa9d257fe2601100834e1a77bdb32f",
+      "atime": "(26808 44173 750399 257000)",
+      "mtime": "(26422 31992 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114173234-linearly_separable.org",
+      "title": "Linearly Separable",
+      "hash": "6b03981e11cfefa3c0692ff652d9d1c8dcbc0881",
+      "atime": "(26808 44173 750399 257000)",
+      "mtime": "(26422 31504 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114172930-support_vector_machines.org",
+      "title": "Support Vector Machines",
+      "hash": "128b4feff343d1b1084cc3f98093dc39f8183a5f",
+      "atime": "(26808 44173 750399 257000)",
+      "mtime": "(26427 59196 759432 189000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114171134-underfitting.org",
+      "title": "Underfitting",
+      "hash": "a8a5340eb72c118fd1f69256bd4e526a127881cc",
+      "atime": "(26808 44173 750399 257000)",
+      "mtime": "(26422 30153 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114170944-overfitting.org",
+      "title": "Overfitting",
+      "hash": "1f1ea8da0292fc3e0df3f0c7dbbed9fc8287d564",
+      "atime": "(26808 44173 750399 257000)",
+      "mtime": "(26422 30093 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114165317-bias_variance_tradeoff.org",
+      "title": "Bias Variance Tradeoff",
+      "hash": "2972897258d445c6c2de83f4b3e82f22771a7cee",
+      "atime": "(26808 44173 751399 260000)",
+      "mtime": "(26425 17116 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241114163331-convex_optimization.org",
+      "title": "Convex Optimization",
+      "hash": "a03180807dede2091eef399a09b36d09b88fe9d6",
+      "atime": "(26808 44173 751399 260000)",
+      "mtime": "(26425 12757 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241113222756-types_of_losses.org",
+      "title": "Types of Losses",
+      "hash": "5a85563ec39b876d2459883601d93d509329d9b9",
+      "atime": "(26808 44173 751399 260000)",
+      "mtime": "(26421 30423 235027 22000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241113222529-logistic_regression.org",
+      "title": "Logistic Regression",
+      "hash": "1e660f4b6b112d4b25946164b1c39bfd1d5b8023",
+      "atime": "(26808 44173 751399 260000)",
+      "mtime": "(26427 45661 617839 748000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20241113161943-star_method.org",
+      "title": "STAR Method",
+      "hash": "93683fcdc4c75b2b137905ef8bf7fde57b520440",
+      "atime": "(26808 44173 751399 260000)",
+      "mtime": "(26421 14189 860216 462000)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230917133810-mean_square_error.org",
+      "title": "Mean Square Error",
+      "hash": "f3f242fd4f45ae949d50ede61a6cd467f991784e",
+      "atime": "(26808 44173 751399 260000)",
+      "mtime": "(25863 14749 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230917133654-mean_absolute_error.org",
+      "title": "Mean Absolute Error",
+      "hash": "c5455a3dae208e378ae9dda78a1877214c8011d2",
+      "atime": "(26808 44173 751399 260000)",
+      "mtime": "(25863 14685 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230917123134-computer_vision_system_for_measuring_individual_cow_feed_intake_using_t_rgb_d_camera_and_deep_learning_algorithms.org",
+      "title": "Computer vision system for measuring individual cow feed intake using T RGB-D camera and deep learning algorithms",
+      "hash": "d5211378c09b6c1309f82e5145f09f500871710e",
+      "atime": "(26808 44173 752399 264000)",
+      "mtime": "(25864 33419 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230821164515-markov_chain.org",
+      "title": "Markov chain",
+      "hash": "6c93b2fc6a506c57c1267c764983f5c542117910",
+      "atime": "(26808 44173 752399 264000)",
+      "mtime": "(25827 52551 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230821163120-inter_frame_coding.org",
+      "title": "inter-frame coding",
+      "hash": "246271e5c2853def4bc6889d7dd522cf120115f8",
+      "atime": "(26808 44173 752399 264000)",
+      "mtime": "(25827 51831 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230821162951-intra_coding.org",
+      "title": "intra-coding",
+      "hash": "6340ca78b24d6da9295932b94d810d891375aa9d",
+      "atime": "(26808 44173 752399 264000)",
+      "mtime": "(25827 51598 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230821160850-vvc.org",
+      "title": "VVC",
+      "hash": "368a7642a4885db631403e4fc4603f3f36dccdfc",
+      "atime": "(26808 44173 752399 264000)",
+      "mtime": "(25827 50310 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230821160606-hevc.org",
+      "title": "HEVC",
+      "hash": "ad657b3d533f4be66e07ab5aec56fb05292dc728",
+      "atime": "(26808 44173 752399 264000)",
+      "mtime": "(25827 50332 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230816125440-learned_scalable_video_coding_for_humans_and_machines.org",
+      "title": "Learned Scalable Video Coding for Humans and Machines",
+      "hash": "03c507a07de317469fd7a078fbe6ab036cd9c9b3",
+      "atime": "(26808 44173 753399 268000)",
+      "mtime": "(25830 8595 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230814182620-telemetry.org",
+      "title": "telemetry",
+      "hash": "57bcbef7173fdc67f8b64fc97275508be6ad1ac3",
+      "atime": "(26808 44173 753399 268000)",
+      "mtime": "(25818 43587 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230814135321-machine_to_machine.org",
+      "title": "machine-to-machine",
+      "hash": "9a2cb63588ac0bba76b4420d9256ce7093d22f4a",
+      "atime": "(26808 44173 753399 268000)",
+      "mtime": "(25818 49589 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230810011240-finetuning.org",
+      "title": "finetuning",
+      "hash": "df55e176313d9052567e806328322997c263af9d",
+      "atime": "(26808 44173 753399 268000)",
+      "mtime": "(26430 11898 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230810011200-knowledge_distillation.org",
+      "title": "knowledge distillation",
+      "hash": "14b4280050a66a7882818966900ad83dae979e3f",
+      "atime": "(26808 44173 753399 268000)",
+      "mtime": "(25812 29120 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230808130922-org.org",
+      "title": "Org",
+      "hash": "90dcaee2471ae7b6a33897adeb1ffc33286f673f",
+      "atime": "(26808 44173 753399 268000)",
+      "mtime": "(25810 30591 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230808130752-emacs.org",
+      "title": "emacs",
+      "hash": "d05276d2e95960471d5ccad1de888d914bdfcf21",
+      "atime": "(26808 44173 753399 268000)",
+      "mtime": "(25810 30593 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230808112948-convnext.org",
+      "title": "ConvNeXt",
+      "hash": "343a0a1c345ad83095367deb8b416ef0f70db8df",
+      "atime": "(26808 44173 754399 272000)",
+      "mtime": "(25810 24515 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230808023602-deep_image_prior.org",
+      "title": "Deep image prior",
+      "hash": "47bc7b25597f5356873e3b007656e858f92d685e",
+      "atime": "(26808 44173 754399 272000)",
+      "mtime": "(25809 58022 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230807185522-coin.org",
+      "title": "COIN",
+      "hash": "583cdbaa32056a5dc3c26bcb259f294e0b5e9575",
+      "atime": "(26808 44173 754399 272000)",
+      "mtime": "(25809 30365 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230803032142-mongodb.org",
+      "title": "MongoDB",
+      "hash": "e3079b821df87e8cd28f1bc05619f1f404450b87",
+      "atime": "(26808 44173 754399 272000)",
+      "mtime": "(25803 22097 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230803032023-python.org",
+      "title": "python",
+      "hash": "52e96b52a6ca439085c324586c55bb08f9f98d01",
+      "atime": "(26808 44173 754399 272000)",
+      "mtime": "(26438 26733 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230721013453-decimation_filter.org",
+      "title": "decimation filter",
+      "hash": "6508d00c64c143804c48b3641c8dd2a190e1cb7e",
+      "atime": "(26808 44173 754399 272000)",
+      "mtime": "(25786 6429 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230721013415-threshold_filter.org",
+      "title": "threshold filter",
+      "hash": "f3cbf43b0a15028194fe9b0f1201495a22f8ffd3",
+      "atime": "(26808 44173 754399 272000)",
+      "mtime": "(25786 6386 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230721013326-temporal_filter.org",
+      "title": "temporal filter",
+      "hash": "ed5ac2bd24f006837159156c2e519139dcbacbd6",
+      "atime": "(26808 44173 754399 272000)",
+      "mtime": "(25786 6350 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230721013237-spatial_filter.org",
+      "title": "spatial filter",
+      "hash": "b20f74032ae7571d502e2b7b29d6c7e764a5fd0e",
+      "atime": "(26808 44173 755399 276000)",
+      "mtime": "(25786 6302 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230720012249-discrete_cosine_transform.org",
+      "title": "discrete cosine transform",
+      "hash": "662e856b462adaf3989e5cdb081a65f0b677235f",
+      "atime": "(26808 44173 755399 276000)",
+      "mtime": "(25784 50812 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230719235121-hnerv.org",
+      "title": "HNeRV",
+      "hash": "6f7d6170eef8665fec882ecd02ed7f35aa89241a",
+      "atime": "(26808 44173 755399 276000)",
+      "mtime": "(25813 30568 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230705212831-stratified_sampling.org",
+      "title": "stratified sampling",
+      "hash": "76d6c6ace7aaeba4d936e06375d9a8bc80383d66",
+      "atime": "(26808 44173 755399 276000)",
+      "mtime": "(25766 6373 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230621170020-discretized_voxel_grids.org",
+      "title": "discretized voxel grids",
+      "hash": "8914e9c38133a2851b00a95cf29d40c32d478bff",
+      "atime": "(26808 44173 755399 276000)",
+      "mtime": "(25747 30677 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620180007-multiview_coding.org",
+      "title": "Multiview coding",
+      "hash": "38325bc8127c6196215385f9970a57579e82e348",
+      "atime": "(26808 44173 755399 276000)",
+      "mtime": "(25746 12211 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620171632-cosine_annealing.org",
+      "title": "Cosine annealing",
+      "hash": "da097ecce69e304c27bcc956f65dac408d8bda33",
+      "atime": "(26808 44173 755399 276000)",
+      "mtime": "(25746 9538 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620161027-entropy_encoding.org",
+      "title": "Entropy Encoding",
+      "hash": "2f2e6c440836d94e0e7624d47d6ed3ab69a46eeb",
+      "atime": "(26808 44173 756399 279000)",
+      "mtime": "(25746 5669 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620153838-model_pruning.org",
+      "title": "Model Pruning",
+      "hash": "12478c3806bddb5b3fd422f453a69f4a7b0c138c",
+      "atime": "(26808 44173 756399 279000)",
+      "mtime": "(25746 3695 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620152921-model_quantization.org",
+      "title": "Model Quantization",
+      "hash": "c38ea1332a1b3a84fd86e95bae47e4967e3edf44",
+      "atime": "(26808 44173 756399 279000)",
+      "mtime": "(25746 3125 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620150305-positional_encoding.org",
+      "title": "Positional Encoding",
+      "hash": "cfbdb7602af43de5e126f43da0c057558fc01190",
+      "atime": "(26808 44173 756399 279000)",
+      "mtime": "(25746 1712 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620141741-ssim_loss.org",
+      "title": "SSIM Loss",
+      "hash": "ee9180204f258087fa8b948f0ce7a113b51fa6a2",
+      "atime": "(26808 44173 756399 279000)",
+      "mtime": "(25746 1078 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620141448-l1.org",
+      "title": "L1 Loss",
+      "hash": "0fbd6d42a2800ea90a8d4bb27df739e096ba201f",
+      "atime": "(26808 44173 756399 279000)",
+      "mtime": "(25746 1479 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230620114131-pixelshuffling.org",
+      "title": "PixelShuffling",
+      "hash": "f61850cbf6e2066eb326581043941b81de18ffb0",
+      "atime": "(26808 44173 756399 279000)",
+      "mtime": "(25745 55198 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org",
+      "title": "Ideas",
+      "hash": "1f87d162cd11ecf0b3aece2d6920c8994ea87b09",
+      "atime": "(26808 44173 756399 279000)",
+      "mtime": "(25766 23204 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230619155136-nerf.org",
+      "title": "NeRF",
+      "hash": "c2f0e511474f4e491ba1804d589513f0bcff7bc9",
+      "atime": "(26808 44173 757399 283000)",
+      "mtime": "(25766 24015 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230619154858-nerv.org",
+      "title": "NeRV",
+      "hash": "798b98cc99edb2dc7ebe94b0355e0516aee844a6",
+      "atime": "(26808 44173 757399 283000)",
+      "mtime": "(26430 12495 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230324194947-aviris.org",
+      "title": "AVIRIS",
+      "hash": "98d9d692ef5e4bb52a46fe319a247c7fb75020fe",
+      "atime": "(26808 44173 757399 283000)",
+      "mtime": "(25630 14192 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230323154233-talk.org",
+      "title": "Alim Karimi - Remote Sensing",
+      "hash": "893cf5a1199c076d9cc849cfa1de867a65a7b592",
+      "atime": "(26808 44173 757399 283000)",
+      "mtime": "(25790 5327 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230323043108-h265.org",
+      "title": "High Efficiency Video Coding",
+      "hash": "e0a4b70eeb8e412454df47181f9c17d7d4add95b",
+      "atime": "(26808 44173 757399 283000)",
+      "mtime": "(25628 3782 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230314135831-3d_geometry.org",
+      "title": "3d geometry",
+      "hash": "2c82ae1ab79bd3a0d1c3ee720bf6ecc29c411613",
+      "atime": "(26808 44173 757399 283000)",
+      "mtime": "(25616 48890 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230314040112-electromagnetic_spectrum.org",
+      "title": "electromagnetic spectrum",
+      "hash": "6c385b360123657af92bc8d9d6f61e90b1ef6fae",
+      "atime": "(26808 44173 757399 283000)",
+      "mtime": "(25616 10829 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230314012635-diffraction_grating.org",
+      "title": "diffraction grating",
+      "hash": "6f4b822289523f42579dfc2ab70507f3172bf2a3",
+      "atime": "(26808 44173 758399 287000)",
+      "mtime": "(25616 1433 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230313231231-spectral_band.org",
+      "title": "spectral band",
+      "hash": "cb951c0bce3b1dea3f5798ea78d6579f6b13f7f4",
+      "atime": "(26808 44173 758399 287000)",
+      "mtime": "(25616 777 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230313225632-hyperspectral.org",
+      "title": "Hyperspectral Imaging",
+      "hash": "6a4ff03353c7c87b0664f42739762830dcb25f63",
+      "atime": "(26808 44173 758399 287000)",
+      "mtime": "(25790 4894 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230221150340-caliberation.org",
+      "title": "Calibration",
+      "hash": "587067516b4a87118963823ef6d94ee3d84c81b5",
+      "atime": "(26808 44173 758399 287000)",
+      "mtime": "(25593 33488 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230221100310-filters.org",
+      "title": "Filters",
+      "hash": "a3a9d32dd2e45cce3dde1db158ccf6558b9b4d7a",
+      "atime": "(26808 44173 758399 287000)",
+      "mtime": "(25589 8732 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230127170209-depth_estimation.org",
+      "title": "Depth Estimation",
+      "hash": "2b5848765adc3c6a71fa1f024c0e0f4a47dd2d6b",
+      "atime": "(26808 44173 758399 287000)",
+      "mtime": "(25860 32718 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20230127170010-dairybarn.org",
+      "title": "Dairybarn",
+      "hash": "b0555e580b39ca0f24325c3bb0c526ba4e9d2786",
+      "atime": "(26808 44173 759399 291000)",
+      "mtime": "(25616 11022 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20221208005324-ideas.org",
+      "title": "Duck",
+      "hash": "084edb53536ac5a020028f0f4eba6c5cdb934b86",
+      "atime": "(26808 44173 759399 291000)",
+      "mtime": "(25489 31855 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20210728135037-neural_tts.org",
+      "title": "Neural TTS",
+      "hash": "8e5f587a6077174404e2c280ea139dc1ddf1db8f",
+      "atime": "(26808 44173 759399 291000)",
+      "mtime": "(24833 4950 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20210728135019-parametric_tts.org",
+      "title": "Parametric TTS",
+      "hash": "0c6d302bf3baf32b6ec7104e5c77c2418ac46779",
+      "atime": "(26808 44173 759399 291000)",
+      "mtime": "(24833 4933 0 0)"
+    },
+    {
+      "file": "/home/prajwaljpj/Dropbox/org/roam/20210728134139-text_to_speech.org",
+      "title": "Text to Speech",
+      "hash": "ce86d2a85eb4428341c660e729a9c2317beadb71",
+      "atime": "(26808 44173 759399 291000)",
+      "mtime": "(25489 60180 0 0)"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "1e8e06c3-79e0-4320-a70c-355a75190bb7",
+      "file": "/roam_notes/20250901023057-itbench.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "ITBench",
+      "properties": "((\"CATEGORY\" . \"20250901023057-itbench\") (\"ID\" . \"1e8e06c3-79e0-4320-a70c-355a75190bb7\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":Agents:LLM:paper:\" 1 7 (inherited t) 8 11 (inherited t) 12 17 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20250901023057-itbench.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "5622771a-9be1-4e5f-91fd-47a0693ef616",
+      "file": "/roam_notes/20250901022738-article_notes.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Article notes",
+      "properties": "((\"CATEGORY\" . \"20250901022738-article_notes\") (\"ID\" . \"5622771a-9be1-4e5f-91fd-47a0693ef616\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20250901022738-article_notes.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "d0c27860-0f4c-41b0-93e7-cd2c3ee34f0c",
+      "file": "/roam_notes/20250824153335-nyquist_shannon_theorem.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Nyquist Shannon Theorem",
+      "properties": "((\"CATEGORY\" . \"20250824153335-nyquist_shannon_theorem\") (\"ID\" . \"d0c27860-0f4c-41b0-93e7-cd2c3ee34f0c\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20250824153335-nyquist_shannon_theorem.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "26c864d9-e156-4011-ad51-e4c0adf688b6",
+      "file": "/roam_notes/20250823160951-fourier_transform_ft.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Fourier Transform (FT)",
+      "properties": "((\"CATEGORY\" . \"20250823160951-fourier_transform_ft\") (\"ID\" . \"26c864d9-e156-4011-ad51-e4c0adf688b6\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20250823160951-fourier_transform_ft.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "6c3cc58e-77ee-4b85-8dde-1026c2510865",
+      "file": "/roam_notes/20250822004512-hidden_markov_models_hmm.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Hidden Markov Models (HMM)",
+      "properties": "((\"CATEGORY\" . \"20250822004512-hidden_markov_models_hmm\") (\"ID\" . \"6c3cc58e-77ee-4b85-8dde-1026c2510865\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20250822004512-hidden_markov_models_hmm.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "b6ed135e-ef0b-4124-b851-dfc41d6d3e65",
+      "file": "/roam_notes/20241211233612-ai_design_tips.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "AI design tips",
+      "properties": "((\"CATEGORY\" . \"20241211233612-ai_design_tips\") (\"ID\" . \"b6ed135e-ef0b-4124-b851-dfc41d6d3e65\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241211233612-ai_design_tips.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "0c03755a-298f-4445-8b1d-595e4a306de5",
+      "file": "/roam_notes/20241126190823-pandas.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Pandas",
+      "properties": "((\"CATEGORY\" . \"20241126190823-pandas\") (\"ID\" . \"0c03755a-298f-4445-8b1d-595e4a306de5\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241126190823-pandas.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c6c4e1d4-6dc2-42c5-8213-c5118f8a7442",
+      "file": "/roam_notes/20241126190113-hard_attention.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Hard Attention",
+      "properties": "((\"CATEGORY\" . \"20241126190113-hard_attention\") (\"ID\" . \"c6c4e1d4-6dc2-42c5-8213-c5118f8a7442\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":definition:LLM:\" 1 11 (inherited t) 12 15 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241126190113-hard_attention.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "7db77a35-bd1c-4d78-9a0d-c746d1e613ec",
+      "file": "/roam_notes/20241126185931-soft_attention.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Soft Attention",
+      "properties": "((\"CATEGORY\" . \"20241126185931-soft_attention\") (\"ID\" . \"7db77a35-bd1c-4d78-9a0d-c746d1e613ec\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":definition:LLM:\" 1 11 (inherited t) 12 15 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241126185931-soft_attention.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "8497575c-7733-44b0-8861-fb2afbd1a04a",
+      "file": "/roam_notes/20241126182148-top_p_sampling.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Top-p Sampling",
+      "properties": "((\"CATEGORY\" . \"20241126182148-top_p_sampling\") (\"ROAM_ALIASES\" . \"\\\"Nucleus Sampling\\\"\") (\"ID\" . \"8497575c-7733-44b0-8861-fb2afbd1a04a\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":python-example:LLM:definition:\" 1 15 (inherited t) 16 19 (inherited t) 20 30 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241126182148-top_p_sampling.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "b628101b-b4e9-4ece-9467-4255851c6ba3",
+      "file": "/roam_notes/20241126181948-temperature.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Temperature",
+      "properties": "((\"CATEGORY\" . \"20241126181948-temperature\") (\"ID\" . \"b628101b-b4e9-4ece-9467-4255851c6ba3\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":python-example:definition:LLM:\" 1 15 (inherited t) 16 26 (inherited t) 27 30 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241126181948-temperature.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "1935b171-ce9f-48d6-9e3e-d14e71f0fc88",
+      "file": "/roam_notes/20241126092936-low_rank_adaptation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Low-Rank Adaptation",
+      "properties": "((\"CATEGORY\" . \"20241126092936-low_rank_adaptation\") (\"ROAM_ALIASES\" . \"LoRA\") (\"ID\" . \"1935b171-ce9f-48d6-9e3e-d14e71f0fc88\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":paper:\" 1 6 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241126092936-low_rank_adaptation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "72f69d1a-877b-41ae-959a-3585c6eb0d96",
+      "file": "/roam_notes/20241125195554-adapter.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "adapter",
+      "properties": "((\"CATEGORY\" . \"20241125195554-adapter\") (\"ID\" . \"72f69d1a-877b-41ae-959a-3585c6eb0d96\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":LLM:definition:\" 1 4 (inherited t) 5 15 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241125195554-adapter.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "bf75dde7-3981-408a-92bd-c09a24e1f0db",
+      "file": "/roam_notes/20241125193612-prefix_tuning.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "prefix tuning",
+      "properties": "((\"CATEGORY\" . \"20241125193612-prefix_tuning\") (\"ID\" . \"bf75dde7-3981-408a-92bd-c09a24e1f0db\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241125193612-prefix_tuning.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "dbf76f0f-4f7f-46d4-a90e-4ec543988f54",
+      "file": "/roam_notes/20241125193445-soft_prompt_tuning.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Soft prompt tuning",
+      "properties": "((\"CATEGORY\" . \"20241125193445-soft_prompt_tuning\") (\"ID\" . \"dbf76f0f-4f7f-46d4-a90e-4ec543988f54\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":definition:LLM:\" 1 11 (inherited t) 12 15 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241125193445-soft_prompt_tuning.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "09576efd-771c-480c-9edd-b22efa5ffafd",
+      "file": "/roam_notes/20241125185604-transfer_learning.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "transfer learning",
+      "properties": "((\"CATEGORY\" . \"20241125185604-transfer_learning\") (\"ID\" . \"09576efd-771c-480c-9edd-b22efa5ffafd\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241125185604-transfer_learning.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "2442391a-fd69-4a8d-b48e-0c8a8ff28c9d",
+      "file": "/roam_notes/20241125174659-alignment_tax.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Alignment Tax",
+      "properties": "((\"CATEGORY\" . \"20241125174659-alignment_tax\") (\"ID\" . \"2442391a-fd69-4a8d-b48e-0c8a8ff28c9d\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":LLM:definition:\" 1 4 (inherited t) 5 15 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241125174659-alignment_tax.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "b7730a00-10fc-44cd-ad54-05b549a0ee8f",
+      "file": "/roam_notes/20241125173118-reinforcement_learning_with_human_feedback.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Reinforcement learning with human feedback",
+      "properties": "((\"CATEGORY\" . \"20241125173118-reinforcement_learning_with_human_feedback\") (\"ROAM_ALIASES\" . \"RLHF\") (\"ID\" . \"b7730a00-10fc-44cd-ad54-05b549a0ee8f\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":LLM:\" 1 4 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241125173118-reinforcement_learning_with_human_feedback.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "88a541e6-c3b0-4134-a603-474c805ffb3b",
+      "file": "/roam_notes/20241124192348-sentence_transformers.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Sentence Transformers",
+      "properties": "((\"CATEGORY\" . \"20241124192348-sentence_transformers\") (\"ROAM_ALIASES\" . \"sentence_transformers sentence-transformers\") (\"ID\" . \"88a541e6-c3b0-4134-a603-474c805ffb3b\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":python-example:library:LLM:\" 1 15 (inherited t) 16 23 (inherited t) 24 27 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124192348-sentence_transformers.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "e1f26a50-9b9f-4c3f-b3cb-ca51c5d6b9e1",
+      "file": "/roam_notes/20241124192056-fasttext.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "fastText",
+      "properties": "((\"CATEGORY\" . \"20241124192056-fasttext\") (\"ID\" . \"e1f26a50-9b9f-4c3f-b3cb-ca51c5d6b9e1\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124192056-fasttext.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "d221a813-ea39-465d-bc5c-0ff1d04740e6",
+      "file": "/roam_notes/20241124181821-faiss_library.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Faiss library",
+      "properties": "((\"CATEGORY\" . \"20241124181821-faiss_library\") (\"ID\" . \"d221a813-ea39-465d-bc5c-0ff1d04740e6\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":library:\" 1 8 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124181821-faiss_library.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c85d09c5-cfbd-4892-ab12-1cccad4acef3",
+      "file": "/roam_notes/20241124181625-vectorstore.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "vectorstore",
+      "properties": "((\"CATEGORY\" . \"20241124181625-vectorstore\") (\"ID\" . \"c85d09c5-cfbd-4892-ab12-1cccad4acef3\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":python-example:definition:LLM:\" 1 15 (inherited t) 16 26 (inherited t) 27 30 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124181625-vectorstore.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "00041fbf-1f1b-4214-9310-1b49955d8564",
+      "file": "/roam_notes/20241124173302-term_frequence_inverse_document_frequency.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Term Frequence-Inverse Document Frequency",
+      "properties": "((\"CATEGORY\" . \"20241124173302-term_frequence_inverse_document_frequency\") (\"ROAM_ALIASES\" . \"TF-IDF\") (\"ID\" . \"00041fbf-1f1b-4214-9310-1b49955d8564\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124173302-term_frequence_inverse_document_frequency.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "705c6c81-45a0-4b00-88b7-449890ec54fb",
+      "file": "/roam_notes/20241124173119-bert.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "BERT",
+      "properties": "((\"CATEGORY\" . \"20241124173119-bert\") (\"ID\" . \"705c6c81-45a0-4b00-88b7-449890ec54fb\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":LLM:paper:\" 1 4 (inherited t) 5 10 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124173119-bert.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "e38dc05e-0b8c-4f67-9b6e-60f8319f1f82",
+      "file": "/roam_notes/20241124172428-learning_transferable_visual_models_from_natural_language_supervision.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Learning Transferable Visual Models from Natural Language Supervision",
+      "properties": "((\"CATEGORY\" . \"20241124172428-learning_transferable_visual_models_from_natural_language_supervision\") (\"ROAM_ALIASES\" . \"CLIP\") (\"ID\" . \"e38dc05e-0b8c-4f67-9b6e-60f8319f1f82\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":paper:\" 1 6 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124172428-learning_transferable_visual_models_from_natural_language_supervision.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "762b157e-4f57-4b98-b626-573e7e5914d0",
+      "file": "/roam_notes/20241124035410-speech_quality_evaluation_metrics.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Speech quality evaluation metrics",
+      "properties": "((\"CATEGORY\" . \"20241124035410-speech_quality_evaluation_metrics\") (\"ID\" . \"762b157e-4f57-4b98-b626-573e7e5914d0\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124035410-speech_quality_evaluation_metrics.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "d12598b7-21fc-4cee-8d39-7d68e48bb548",
+      "file": "/roam_notes/20241124033837-plp_features.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "PLP Features",
+      "properties": "((\"CATEGORY\" . \"20241124033837-plp_features\") (\"ID\" . \"d12598b7-21fc-4cee-8d39-7d68e48bb548\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124033837-plp_features.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "b27f380d-27b2-49b0-99e4-2be15a97a795",
+      "file": "/roam_notes/20241124033044-beam_forming.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Beam forming",
+      "properties": "((\"CATEGORY\" . \"20241124033044-beam_forming\") (\"ID\" . \"b27f380d-27b2-49b0-99e4-2be15a97a795\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241124033044-beam_forming.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "a3d16bc6-98d3-4499-9338-7bcbeaf16e13",
+      "file": "/roam_notes/20241123231446-global_vectors_for_word_representation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Global Vectors for Word Representation",
+      "properties": "((\"CATEGORY\" . \"20241123231446-global_vectors_for_word_representation\") (\"ROAM_ALIASES\" . \"GLoVe\") (\"ID\" . \"a3d16bc6-98d3-4499-9338-7bcbeaf16e13\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241123231446-global_vectors_for_word_representation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "file": "/roam_notes/20241123225127-word2vec.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Word2Vec",
+      "properties": "((\"CATEGORY\" . \"20241123225127-word2vec\") (\"ID\" . \"7a0dd215-4e03-49b7-93e3-d9b7a5df939b\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":paper:LLM:\" 1 6 (inherited t) 7 10 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241123225127-word2vec.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "2b4383b2-7341-4cf2-a1d1-2747c1548ab5",
+      "file": "/roam_notes/20241123224953-text_embeddings.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Text Embeddings",
+      "properties": "((\"CATEGORY\" . \"20241123224953-text_embeddings\") (\"ID\" . \"2b4383b2-7341-4cf2-a1d1-2747c1548ab5\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241123224953-text_embeddings.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "file": "/roam_notes/20241122203017-retrieval_augmented_generation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Retrieval-Augmented Generation",
+      "properties": "((\"CATEGORY\" . \"20241122203017-retrieval_augmented_generation\") (\"ROAM_ALIASES\" . \"RAG\") (\"ID\" . \"4e3ba750-1d16-4028-96ed-8432f14f57d4\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":LLM:python-example:definition:\" 1 4 (inherited t) 5 19 (inherited t) 20 30 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241122203017-retrieval_augmented_generation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "7bf2d14a-73d0-4e8c-87d8-12b1d6d6b7c5",
+      "file": "/roam_notes/20241122194944-prauc.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Precision-Recall Area Under the Curve",
+      "properties": "((\"CATEGORY\" . \"20241122194944-prauc\") (\"ID\" . \"7bf2d14a-73d0-4e8c-87d8-12b1d6d6b7c5\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241122194944-prauc.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "41472758-9d91-457f-b71e-7df4e5ec7503",
+      "file": "/roam_notes/20241121212527-qlora.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "QLoRA",
+      "properties": "((\"CATEGORY\" . \"20241121212527-qlora\") (\"ID\" . \"41472758-9d91-457f-b71e-7df4e5ec7503\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241121212527-qlora.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "54d32d07-b79f-41a6-97bd-4ae70afc89a8",
+      "file": "/roam_notes/20241121211753-vicuna.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Vicuna",
+      "properties": "((\"CATEGORY\" . \"20241121211753-vicuna\") (\"ID\" . \"54d32d07-b79f-41a6-97bd-4ae70afc89a8\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241121211753-vicuna.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "a72d0d57-157a-4eb1-82db-7843066cba48",
+      "file": "/roam_notes/20241121192911-weights_initialization.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Weights initialization",
+      "properties": "((\"CATEGORY\" . \"20241121192911-weights_initialization\") (\"ID\" . \"a72d0d57-157a-4eb1-82db-7843066cba48\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241121192911-weights_initialization.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "39027cbd-76b5-4024-ba32-1f67f66077dd",
+      "file": "/roam_notes/20241120213129-correlation_metrics.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Correlation Metrics",
+      "properties": "((\"CATEGORY\" . \"20241120213129-correlation_metrics\") (\"ID\" . \"39027cbd-76b5-4024-ba32-1f67f66077dd\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241120213129-correlation_metrics.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "75d4d845-b5fc-4eff-bd9b-a98e3a728ef5",
+      "file": "/roam_notes/20241120212711-spearman_correlation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Spearman correlation",
+      "properties": "((\"CATEGORY\" . \"20241120212711-spearman_correlation\") (\"ID\" . \"75d4d845-b5fc-4eff-bd9b-a98e3a728ef5\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241120212711-spearman_correlation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "6facd405-fe26-43ad-85be-4bee6b28f48c",
+      "file": "/roam_notes/20241120211141-chain_of_though.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Chain-of-Thought",
+      "properties": "((\"CATEGORY\" . \"20241120211141-chain_of_though\") (\"ID\" . \"6facd405-fe26-43ad-85be-4bee6b28f48c\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241120211141-chain_of_though.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c5e92229-ad39-4815-ae36-8be0335cf9bc",
+      "file": "/roam_notes/20241120211121-g_eval.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "G-Eval",
+      "properties": "((\"CATEGORY\" . \"20241120211121-g_eval\") (\"ID\" . \"c5e92229-ad39-4815-ae36-8be0335cf9bc\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241120211121-g_eval.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "6869b305-ecc2-4afb-acfe-979dfaf461c7",
+      "file": "/roam_notes/20241120143633-hard_and_soft_alignment.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Hard and Soft Alignment",
+      "properties": "((\"CATEGORY\" . \"20241120143633-hard_and_soft_alignment\") (\"ID\" . \"6869b305-ecc2-4afb-acfe-979dfaf461c7\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241120143633-hard_and_soft_alignment.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "e09861ea-b0ad-4c50-bb0d-19c05f3a2125",
+      "file": "/roam_notes/20241120135412-adam_optimizer.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Adam optimizer",
+      "properties": "((\"CATEGORY\" . \"20241120135412-adam_optimizer\") (\"ID\" . \"e09861ea-b0ad-4c50-bb0d-19c05f3a2125\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241120135412-adam_optimizer.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "file": "/roam_notes/20241119193044-moverscore.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "MoverScore",
+      "properties": "((\"CATEGORY\" . \"20241119193044-moverscore\") (\"ID\" . \"c2c2a982-3390-4cc3-b70c-ed78424f6a51\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119193044-moverscore.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "5f279d07-e629-43ca-a1e7-e5aa7b655d6c",
+      "file": "/roam_notes/20241119191942-bertscore.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "BERTScore",
+      "properties": "((\"CATEGORY\" . \"20241119191942-bertscore\") (\"ID\" . \"5f279d07-e629-43ca-a1e7-e5aa7b655d6c\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119191942-bertscore.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "7225de6c-ac61-456c-b69a-a260d35d8c91",
+      "file": "/roam_notes/20241119191835-skip_bigrams.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Skip-bigrams",
+      "properties": "((\"CATEGORY\" . \"20241119191835-skip_bigrams\") (\"ID\" . \"7225de6c-ac61-456c-b69a-a260d35d8c91\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119191835-skip_bigrams.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "3748cffc-1579-4ab7-832d-636909caf8c4",
+      "file": "/roam_notes/20241119191608-longest_common_subsequence.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "longest common subsequence",
+      "properties": "((\"CATEGORY\" . \"20241119191608-longest_common_subsequence\") (\"ID\" . \"3748cffc-1579-4ab7-832d-636909caf8c4\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119191608-longest_common_subsequence.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "file": "/roam_notes/20241119191144-recall_oriented_understudy_for_gisting_evaluation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Recall oriented understudy for gisting evaluation",
+      "properties": "((\"CATEGORY\" . \"20241119191144-recall_oriented_understudy_for_gisting_evaluation\") (\"ROAM_ALIASES\" . \"ROUGE\") (\"ID\" . \"5b3513d2-47dc-4945-a022-426541fbc889\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119191144-recall_oriented_understudy_for_gisting_evaluation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "7bfa61aa-7f1e-4c27-9a69-03881f048b37",
+      "file": "/roam_notes/20241119185410-bilingual_evaluation_understudy.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Bilingual Evaluation Understudy",
+      "properties": "((\"CATEGORY\" . \"20241119185410-bilingual_evaluation_understudy\") (\"ROAM_ALIASES\" . \"BLEU\") (\"ID\" . \"7bfa61aa-7f1e-4c27-9a69-03881f048b37\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119185410-bilingual_evaluation_understudy.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "file": "/roam_notes/20241119183951-llm_evaluation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "LLM Evaluation",
+      "properties": "((\"CATEGORY\" . \"20241119183951-llm_evaluation\") (\"ID\" . \"7f423f52-b952-47aa-9f97-f1a530af853f\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119183951-llm_evaluation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "2e9dddd3-d359-44f8-8768-dc7abc285edc",
+      "file": "/roam_notes/20241119164647-homoscedasticity.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Homoscedasticity",
+      "properties": "((\"CATEGORY\" . \"20241119164647-homoscedasticity\") (\"ID\" . \"2e9dddd3-d359-44f8-8768-dc7abc285edc\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119164647-homoscedasticity.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "541da77c-62ba-4651-85f8-bc324abc07c5",
+      "file": "/roam_notes/20241119164419-regression.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Regression",
+      "properties": "((\"CATEGORY\" . \"20241119164419-regression\") (\"ID\" . \"541da77c-62ba-4651-85f8-bc324abc07c5\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119164419-regression.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c98a7326-fc4f-4c45-899b-8e00e60e6483",
+      "file": "/roam_notes/20241119131603-llm_system_design.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "LLM System Design",
+      "properties": "((\"CATEGORY\" . \"20241119131603-llm_system_design\") (\"ID\" . \"c98a7326-fc4f-4c45-899b-8e00e60e6483\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "file": "/roam_notes/20241119131603-llm_system_design.org",
+      "level": 1,
+      "pos": 3326,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Evals",
+      "properties": "((\"CATEGORY\" . \"20241119131603-llm_system_design\") (\"ID\" . \"7be2913f-1ed7-4942-91e3-645cd2a09956\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"[[id:7f423f52-b952-47aa-9f97-f1a530af853f][Evals]]\"))",
+      "olp": null
+    },
+    {
+      "id": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "file": "/roam_notes/20241119131603-llm_system_design.org",
+      "level": 1,
+      "pos": 6590,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Retrieval-Augmented Generation (RAG): To add Knowledge",
+      "properties": "((\"CATEGORY\" . \"20241119131603-llm_system_design\") (\"ID\" . \"f7d193cc-3542-45d6-82b9-4ff1caa9163e\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . \":ATTACH:\") (\"TAGS\" . \":ATTACH:\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"[[id:4e3ba750-1d16-4028-96ed-8432f14f57d4][Retrieval-Augmented Generation]] (RAG): To add Knowledge\"))",
+      "olp": null
+    },
+    {
+      "id": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "file": "/roam_notes/20241119131603-llm_system_design.org",
+      "level": 1,
+      "pos": 11304,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Fine-tuning LLM",
+      "properties": "((\"CATEGORY\" . \"20241119131603-llm_system_design\") (\"ID\" . \"4c0b0f1c-3b57-4d95-af26-48360244f080\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"Fine-tuning LLM\"))",
+      "olp": null
+    },
+    {
+      "id": "350d847f-601a-4eef-9451-2408143870bb",
+      "file": "/roam_notes/20241119131603-llm_system_design.org",
+      "level": 1,
+      "pos": 20810,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Caching",
+      "properties": "((\"CATEGORY\" . \"20241119131603-llm_system_design\") (\"ID\" . \"350d847f-601a-4eef-9451-2408143870bb\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . \":ATTACH:\") (\"TAGS\" . \":ATTACH:\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"Caching\"))",
+      "olp": null
+    },
+    {
+      "id": "b37abb66-a860-4aea-bb24-e3bd0c45c900",
+      "file": "/roam_notes/20241119131603-llm_system_design.org",
+      "level": 1,
+      "pos": 24067,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Guardrails",
+      "properties": "((\"CATEGORY\" . \"20241119131603-llm_system_design\") (\"ID\" . \"b37abb66-a860-4aea-bb24-e3bd0c45c900\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"Guardrails\"))",
+      "olp": null
+    },
+    {
+      "id": "f68f8b72-f241-4483-b789-6a9a9e1176f4",
+      "file": "/roam_notes/20241118201626-kernel_trick.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Kernel Trick",
+      "properties": "((\"CATEGORY\" . \"20241118201626-kernel_trick\") (\"ID\" . \"f68f8b72-f241-4483-b789-6a9a9e1176f4\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118201626-kernel_trick.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "0b98eebb-0a83-4547-8181-680c73847dc2",
+      "file": "/roam_notes/20241118201405-softmax.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Softmax",
+      "properties": "((\"CATEGORY\" . \"20241118201405-softmax\") (\"ID\" . \"0b98eebb-0a83-4547-8181-680c73847dc2\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":definition:python-example:\" 1 11 (inherited t) 12 26 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118201405-softmax.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "ca85123a-a20b-40dd-b06d-c6e585f95b9d",
+      "file": "/roam_notes/20241118174907-prompt_engineering.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Prompt Engineering",
+      "properties": "((\"CATEGORY\" . \"20241118174907-prompt_engineering\") (\"ID\" . \"ca85123a-a20b-40dd-b06d-c6e585f95b9d\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118174907-prompt_engineering.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "92c25398-38b8-44d2-97bc-54f30e161fb7",
+      "file": "/roam_notes/20241118171309-linear_regression.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Linear Regression",
+      "properties": "((\"CATEGORY\" . \"20241118171309-linear_regression\") (\"ID\" . \"92c25398-38b8-44d2-97bc-54f30e161fb7\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118171309-linear_regression.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "15607721-dfd4-4519-8e06-2204c1f3d3e1",
+      "file": "/roam_notes/20241118170619-naive_bayes.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Naive Bayes",
+      "properties": "((\"CATEGORY\" . \"20241118170619-naive_bayes\") (\"ID\" . \"15607721-dfd4-4519-8e06-2204c1f3d3e1\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118170619-naive_bayes.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "8f12389e-932b-4aeb-90f5-d5153b9e7ea9",
+      "file": "/roam_notes/20241118170346-k_nearest_neighbors.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "K Nearest Neighbors",
+      "properties": "((\"CATEGORY\" . \"20241118170346-k_nearest_neighbors\") (\"ID\" . \"8f12389e-932b-4aeb-90f5-d5153b9e7ea9\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118170346-k_nearest_neighbors.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "6f17a9e2-0f32-441f-9e7d-b3df44add35f",
+      "file": "/roam_notes/20241118161841-tokens.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "tokens",
+      "properties": "((\"CATEGORY\" . \"20241118161841-tokens\") (\"ID\" . \"6f17a9e2-0f32-441f-9e7d-b3df44add35f\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118161841-tokens.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "a7e25472-0dc7-4ab1-8471-51cebf47e006",
+      "file": "/roam_notes/20241118161737-transformers.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Transformers",
+      "properties": "((\"CATEGORY\" . \"20241118161737-transformers\") (\"ID\" . \"a7e25472-0dc7-4ab1-8471-51cebf47e006\") (\"BLOCKED\" . \"\") (\"ALLTAGS\" . #(\":LLM:definition:\" 1 4 (inherited t) 5 15 (inherited t))) (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118161737-transformers.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "3336d49f-db30-4b0e-a4eb-c69021a33d6c",
+      "file": "/roam_notes/20241118161608-large_language_model.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Large Language Model",
+      "properties": "((\"CATEGORY\" . \"20241118161608-large_language_model\") (\"ID\" . \"3336d49f-db30-4b0e-a4eb-c69021a33d6c\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241118161608-large_language_model.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "f8b06bc1-5df0-48b7-b71c-108a91e84d6e",
+      "file": "/roam_notes/20241116200727-variance.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Variance",
+      "properties": "((\"CATEGORY\" . \"20241116200727-variance\") (\"ID\" . \"f8b06bc1-5df0-48b7-b71c-108a91e84d6e\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241116200727-variance.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "aded448a-7bab-43a8-985f-02425d1a99a0",
+      "file": "/roam_notes/20241116200614-bias.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Bias",
+      "properties": "((\"CATEGORY\" . \"20241116200614-bias\") (\"ID\" . \"aded448a-7bab-43a8-985f-02425d1a99a0\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241116200614-bias.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "d8ea55b0-091e-4acf-a7e3-d9b923ce2d90",
+      "file": "/roam_notes/20241114201545-ipython.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Ipython",
+      "properties": "((\"CATEGORY\" . \"20241114201545-ipython\") (\"ID\" . \"d8ea55b0-091e-4acf-a7e3-d9b923ce2d90\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114201545-ipython.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "bcb392a9-435c-4e1a-9db6-d4110592dfc3",
+      "file": "/roam_notes/20241114193544-recurrent_neural_networks.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Recurrent Neural Networks",
+      "properties": "((\"CATEGORY\" . \"20241114193544-recurrent_neural_networks\") (\"ID\" . \"bcb392a9-435c-4e1a-9db6-d4110592dfc3\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114193544-recurrent_neural_networks.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "1258128e-6b29-414b-b1ff-f7d99fffcf4e",
+      "file": "/roam_notes/20241114190017-model_loss.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Model Loss",
+      "properties": "((\"CATEGORY\" . \"20241114190017-model_loss\") (\"ID\" . \"1258128e-6b29-414b-b1ff-f7d99fffcf4e\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114190017-model_loss.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "276a4433-a404-456b-bbc9-7f5544275676",
+      "file": "/roam_notes/20241114184459-f1_score.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "F1 Score",
+      "properties": "((\"CATEGORY\" . \"20241114184459-f1_score\") (\"ID\" . \"276a4433-a404-456b-bbc9-7f5544275676\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114184459-f1_score.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "292e173b-42e6-4341-b37a-4e28035a66cc",
+      "file": "/roam_notes/20241114184212-recall.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Recall",
+      "properties": "((\"CATEGORY\" . \"20241114184212-recall\") (\"ID\" . \"292e173b-42e6-4341-b37a-4e28035a66cc\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114184212-recall.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "d7c585eb-a3ae-45e5-956e-253987f3fdaf",
+      "file": "/roam_notes/20241114184008-precision.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Precision",
+      "properties": "((\"CATEGORY\" . \"20241114184008-precision\") (\"ID\" . \"d7c585eb-a3ae-45e5-956e-253987f3fdaf\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114184008-precision.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "48b2f18d-07b2-49e5-a698-0fa6f8428f7e",
+      "file": "/roam_notes/20241114183813-data_augmentation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Data Augmentation",
+      "properties": "((\"CATEGORY\" . \"20241114183813-data_augmentation\") (\"ID\" . \"48b2f18d-07b2-49e5-a698-0fa6f8428f7e\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114183813-data_augmentation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "40355a82-b9ab-4e0c-b241-6250a9e98fb2",
+      "file": "/roam_notes/20241114181957-long_tailed_data.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Long Tailed Data",
+      "properties": "((\"CATEGORY\" . \"20241114181957-long_tailed_data\") (\"ID\" . \"40355a82-b9ab-4e0c-b241-6250a9e98fb2\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114181957-long_tailed_data.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "5f39b412-124f-4f98-b853-db98175a0fd4",
+      "file": "/roam_notes/20241114175355-vanishing_gradients.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Vanishing Gradients",
+      "properties": "((\"CATEGORY\" . \"20241114175355-vanishing_gradients\") (\"ID\" . \"5f39b412-124f-4f98-b853-db98175a0fd4\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114175355-vanishing_gradients.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "95fca8e7-de01-4056-8682-1ba683dc2a88",
+      "file": "/roam_notes/20241114174658-gradient_descent.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Gradient Descent",
+      "properties": "((\"CATEGORY\" . \"20241114174658-gradient_descent\") (\"ID\" . \"95fca8e7-de01-4056-8682-1ba683dc2a88\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114174658-gradient_descent.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "2b51432e-3811-4f9d-b61e-0fde393e78c5",
+      "file": "/roam_notes/20241114174603-area_under_the_curve.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Area Under the Curve",
+      "properties": "((\"CATEGORY\" . \"20241114174603-area_under_the_curve\") (\"ID\" . \"2b51432e-3811-4f9d-b61e-0fde393e78c5\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114174603-area_under_the_curve.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "dfbf116f-0b5c-4eb5-b364-e81beee8c92d",
+      "file": "/roam_notes/20241114174452-roc_curve.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "ROC curve",
+      "properties": "((\"CATEGORY\" . \"20241114174452-roc_curve\") (\"ID\" . \"dfbf116f-0b5c-4eb5-b364-e81beee8c92d\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114174452-roc_curve.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "f30eb2c2-1358-4406-9279-a6ac348a04bf",
+      "file": "/roam_notes/20241114174313-attention_mechanism.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Attention Mechanism",
+      "properties": "((\"CATEGORY\" . \"20241114174313-attention_mechanism\") (\"ID\" . \"f30eb2c2-1358-4406-9279-a6ac348a04bf\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114174313-attention_mechanism.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "98972da7-2026-4417-a7c8-bf0c37c76155",
+      "file": "/roam_notes/20241114174313-attention_mechanism.org",
+      "level": 3,
+      "pos": 2582,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Types of Attention:",
+      "properties": "((\"CATEGORY\" . \"20241114174313-attention_mechanism\") (\"ID\" . \"98972da7-2026-4417-a7c8-bf0c37c76155\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114174313-attention_mechanism.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"Types of Attention:\"))",
+      "olp": null
+    },
+    {
+      "id": "6147a933-8d2a-4ad2-afd2-5b86c6447942",
+      "file": "/roam_notes/20241114174020-causal_inference.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Causal Inference",
+      "properties": "((\"CATEGORY\" . \"20241114174020-causal_inference\") (\"ID\" . \"6147a933-8d2a-4ad2-afd2-5b86c6447942\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114174020-causal_inference.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "1b1b6e05-7b49-4956-8423-faf7af9a8aca",
+      "file": "/roam_notes/20241114173234-linearly_separable.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Linearly Separable",
+      "properties": "((\"CATEGORY\" . \"20241114173234-linearly_separable\") (\"ID\" . \"1b1b6e05-7b49-4956-8423-faf7af9a8aca\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114173234-linearly_separable.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "a96569f1-4ebf-4fbc-af13-0f0e24a38a1c",
+      "file": "/roam_notes/20241114172930-support_vector_machines.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Support Vector Machines",
+      "properties": "((\"CATEGORY\" . \"20241114172930-support_vector_machines\") (\"ID\" . \"a96569f1-4ebf-4fbc-af13-0f0e24a38a1c\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114172930-support_vector_machines.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "76d4caa8-ac46-47f0-b10a-869f5766e70e",
+      "file": "/roam_notes/20241114171134-underfitting.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Underfitting",
+      "properties": "((\"CATEGORY\" . \"20241114171134-underfitting\") (\"ID\" . \"76d4caa8-ac46-47f0-b10a-869f5766e70e\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114171134-underfitting.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "5e88eee3-0c35-46f9-a45e-716b9211bab0",
+      "file": "/roam_notes/20241114170944-overfitting.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Overfitting",
+      "properties": "((\"CATEGORY\" . \"20241114170944-overfitting\") (\"ID\" . \"5e88eee3-0c35-46f9-a45e-716b9211bab0\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114170944-overfitting.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "1d8522c9-b39a-480b-89c5-6c0e40fa2a6e",
+      "file": "/roam_notes/20241114165317-bias_variance_tradeoff.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Bias Variance Tradeoff",
+      "properties": "((\"CATEGORY\" . \"20241114165317-bias_variance_tradeoff\") (\"ID\" . \"1d8522c9-b39a-480b-89c5-6c0e40fa2a6e\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114165317-bias_variance_tradeoff.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "beb67fc9-8430-4b90-8532-d1100665cad5",
+      "file": "/roam_notes/20241114163331-convex_optimization.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Convex Optimization",
+      "properties": "((\"CATEGORY\" . \"20241114163331-convex_optimization\") (\"ID\" . \"beb67fc9-8430-4b90-8532-d1100665cad5\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241114163331-convex_optimization.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "e64935e5-27de-490e-9f2d-ad1b0f29dba3",
+      "file": "/roam_notes/20241113222756-types_of_losses.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Types of Losses",
+      "properties": "((\"CATEGORY\" . \"20241113222756-types_of_losses\") (\"ID\" . \"e64935e5-27de-490e-9f2d-ad1b0f29dba3\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241113222756-types_of_losses.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c233ca94-38fa-49c5-a2ed-7c41ad1460af",
+      "file": "/roam_notes/20241113222529-logistic_regression.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Logistic Regression",
+      "properties": "((\"CATEGORY\" . \"20241113222529-logistic_regression\") (\"ID\" . \"c233ca94-38fa-49c5-a2ed-7c41ad1460af\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241113222529-logistic_regression.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "b625874f-2e0e-4f63-ab56-4b0f5540cc3b",
+      "file": "/roam_notes/20241113161943-star_method.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "STAR Method",
+      "properties": "((\"CATEGORY\" . \"20241113161943-star_method\") (\"ID\" . \"b625874f-2e0e-4f63-ab56-4b0f5540cc3b\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20241113161943-star_method.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "cf72f762-147e-4e6b-ac4b-5453cd882b7d",
+      "file": "/roam_notes/20230917133810-mean_square_error.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Mean Square Error",
+      "properties": "((\"CATEGORY\" . \"20230917133810-mean_square_error\") (\"ID\" . \"cf72f762-147e-4e6b-ac4b-5453cd882b7d\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230917133810-mean_square_error.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "f111e7c5-2e7e-4c06-a977-fb174cdeb8d7",
+      "file": "/roam_notes/20230917133654-mean_absolute_error.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Mean Absolute Error",
+      "properties": "((\"CATEGORY\" . \"20230917133654-mean_absolute_error\") (\"ID\" . \"f111e7c5-2e7e-4c06-a977-fb174cdeb8d7\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230917133654-mean_absolute_error.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "dfa9aa4d-697d-48f9-8854-95f939e6ad92",
+      "file": "/roam_notes/20230917123134-computer_vision_system_for_measuring_individual_cow_feed_intake_using_t_rgb_d_camera_and_deep_learning_algorithms.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Computer vision system for measuring individual cow feed intake using T RGB-D camera and deep learning algorithms",
+      "properties": "((\"CATEGORY\" . \"20230917123134-computer_vision_system_for_measuring_individual_cow_feed_intake_using_t_rgb_d_camera_and_deep_learning_algorithms\") (\"ID\" . \"dfa9aa4d-697d-48f9-8854-95f939e6ad92\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230917123134-computer_vision_system_for_measuring_individual_cow_feed_intake_using_t_rgb_d_camera_and_deep_learning_algorithms.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "bba17c71-d84c-43e7-81a4-60cecfa3e3e1",
+      "file": "/roam_notes/20230821164515-markov_chain.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Markov chain",
+      "properties": "((\"CATEGORY\" . \"20230821164515-markov_chain\") (\"ID\" . \"bba17c71-d84c-43e7-81a4-60cecfa3e3e1\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230821164515-markov_chain.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e",
+      "file": "/roam_notes/20230821163120-inter_frame_coding.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "inter-frame coding",
+      "properties": "((\"CATEGORY\" . \"20230821163120-inter_frame_coding\") (\"ID\" . \"bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230821163120-inter_frame_coding.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "8c47dcc4-f2a5-4f81-bcd7-577307b58291",
+      "file": "/roam_notes/20230821162951-intra_coding.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "intra-coding",
+      "properties": "((\"CATEGORY\" . \"20230821162951-intra_coding\") (\"ID\" . \"8c47dcc4-f2a5-4f81-bcd7-577307b58291\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230821162951-intra_coding.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "4d0e7b83-b4a4-4967-b7d5-83c2a7dc0fe2",
+      "file": "/roam_notes/20230821160850-vvc.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "VVC",
+      "properties": "((\"CATEGORY\" . \"20230821160850-vvc\") (\"ID\" . \"4d0e7b83-b4a4-4967-b7d5-83c2a7dc0fe2\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230821160850-vvc.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "1318dd77-4418-4132-a887-40ae59d1020b",
+      "file": "/roam_notes/20230821160606-hevc.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "HEVC",
+      "properties": "((\"CATEGORY\" . \"20230821160606-hevc\") (\"ID\" . \"1318dd77-4418-4132-a887-40ae59d1020b\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230821160606-hevc.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "file": "/roam_notes/20230816125440-learned_scalable_video_coding_for_humans_and_machines.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Learned Scalable Video Coding for Humans and Machines",
+      "properties": "((\"CATEGORY\" . \"20230816125440-learned_scalable_video_coding_for_humans_and_machines\") (\"ID\" . \"fcc0720d-5988-4002-bb15-579d810ea9bb\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230816125440-learned_scalable_video_coding_for_humans_and_machines.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "67fdd00e-b992-4c28-b532-8a3a5180b003",
+      "file": "/roam_notes/20230814182620-telemetry.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "telemetry",
+      "properties": "((\"CATEGORY\" . \"20230814182620-telemetry\") (\"ID\" . \"67fdd00e-b992-4c28-b532-8a3a5180b003\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230814182620-telemetry.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "5c8cf4e7-219a-4cc5-8d92-a69d80156f82",
+      "file": "/roam_notes/20230814135321-machine_to_machine.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "machine-to-machine",
+      "properties": "((\"CATEGORY\" . \"20230814135321-machine_to_machine\") (\"ID\" . \"5c8cf4e7-219a-4cc5-8d92-a69d80156f82\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230814135321-machine_to_machine.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "93ea77e2-be22-4912-be2a-e327ee53998b",
+      "file": "/roam_notes/20230810011240-finetuning.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "finetuning",
+      "properties": "((\"CATEGORY\" . \"20230810011240-finetuning\") (\"ID\" . \"93ea77e2-be22-4912-be2a-e327ee53998b\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230810011240-finetuning.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "20f38ca9-72c3-4762-abbb-8cf9f90e0db5",
+      "file": "/roam_notes/20230810011200-knowledge_distillation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "knowledge distillation",
+      "properties": "((\"CATEGORY\" . \"20230810011200-knowledge_distillation\") (\"ID\" . \"20f38ca9-72c3-4762-abbb-8cf9f90e0db5\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230810011200-knowledge_distillation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "4aa1f2ab-014e-473d-897f-99def275b1ed",
+      "file": "/roam_notes/20230808130922-org.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Org",
+      "properties": "((\"CATEGORY\" . \"20230808130922-org\") (\"ID\" . \"4aa1f2ab-014e-473d-897f-99def275b1ed\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230808130922-org.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "1f06ff48-84ff-4242-9e51-190ee76c39fc",
+      "file": "/roam_notes/20230808130752-emacs.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "emacs",
+      "properties": "((\"CATEGORY\" . \"20230808130752-emacs\") (\"ID\" . \"1f06ff48-84ff-4242-9e51-190ee76c39fc\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230808130752-emacs.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "7d12afea-96b4-4a49-af9c-7bd63897a327",
+      "file": "/roam_notes/20230808112948-convnext.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "ConvNeXt",
+      "properties": "((\"CATEGORY\" . \"20230808112948-convnext\") (\"ID\" . \"7d12afea-96b4-4a49-af9c-7bd63897a327\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230808112948-convnext.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c76921af-9251-4f38-ac4d-fa45e6cfd28a",
+      "file": "/roam_notes/20230808023602-deep_image_prior.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Deep image prior",
+      "properties": "((\"CATEGORY\" . \"20230808023602-deep_image_prior\") (\"ID\" . \"c76921af-9251-4f38-ac4d-fa45e6cfd28a\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230808023602-deep_image_prior.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "27120758-d3c7-4406-a6df-863ce5ccc343",
+      "file": "/roam_notes/20230807185522-coin.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "COIN",
+      "properties": "((\"CATEGORY\" . \"20230807185522-coin\") (\"ID\" . \"27120758-d3c7-4406-a6df-863ce5ccc343\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230807185522-coin.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "408af1cc-58f7-4e57-a711-c5f085d69ea1",
+      "file": "/roam_notes/20230803032142-mongodb.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "MongoDB",
+      "properties": "((\"CATEGORY\" . \"20230803032142-mongodb\") (\"ID\" . \"408af1cc-58f7-4e57-a711-c5f085d69ea1\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230803032142-mongodb.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "27243154-7e0f-4c8f-9121-744350768fbc",
+      "file": "/roam_notes/20230803032023-python.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "python",
+      "properties": "((\"CATEGORY\" . \"20230803032023-python\") (\"ID\" . \"27243154-7e0f-4c8f-9121-744350768fbc\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230803032023-python.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "f92e0aa7-1eb5-4e5e-ab2a-9031ebe62b32",
+      "file": "/roam_notes/20230721013453-decimation_filter.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "decimation filter",
+      "properties": "((\"CATEGORY\" . \"20230721013453-decimation_filter\") (\"ID\" . \"f92e0aa7-1eb5-4e5e-ab2a-9031ebe62b32\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230721013453-decimation_filter.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "79b36b92-1ee6-4eee-8e3d-cd4ab9e40119",
+      "file": "/roam_notes/20230721013415-threshold_filter.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "threshold filter",
+      "properties": "((\"CATEGORY\" . \"20230721013415-threshold_filter\") (\"ID\" . \"79b36b92-1ee6-4eee-8e3d-cd4ab9e40119\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230721013415-threshold_filter.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "fd7e0012-c261-42c5-ba72-735b81f69423",
+      "file": "/roam_notes/20230721013326-temporal_filter.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "temporal filter",
+      "properties": "((\"CATEGORY\" . \"20230721013326-temporal_filter\") (\"ID\" . \"fd7e0012-c261-42c5-ba72-735b81f69423\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230721013326-temporal_filter.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "e8814ce2-d741-4d2d-8fe6-83570c2ac509",
+      "file": "/roam_notes/20230721013237-spatial_filter.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "spatial filter",
+      "properties": "((\"CATEGORY\" . \"20230721013237-spatial_filter\") (\"ID\" . \"e8814ce2-d741-4d2d-8fe6-83570c2ac509\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230721013237-spatial_filter.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "4de864ba-e5e8-484f-9413-7c40c242b556",
+      "file": "/roam_notes/20230720012249-discrete_cosine_transform.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "discrete cosine transform",
+      "properties": "((\"CATEGORY\" . \"20230720012249-discrete_cosine_transform\") (\"ID\" . \"4de864ba-e5e8-484f-9413-7c40c242b556\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230720012249-discrete_cosine_transform.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "file": "/roam_notes/20230719235121-hnerv.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "HNeRV",
+      "properties": "((\"CATEGORY\" . \"20230719235121-hnerv\") (\"ID\" . \"5fe2e988-a5ef-4a52-8eda-ecfc7513bb50\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230719235121-hnerv.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "68453cdb-c1fc-4b6b-9cff-fb2fa9b1baaa",
+      "file": "/roam_notes/20230705212831-stratified_sampling.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "stratified sampling",
+      "properties": "((\"CATEGORY\" . \"20230705212831-stratified_sampling\") (\"ID\" . \"68453cdb-c1fc-4b6b-9cff-fb2fa9b1baaa\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230705212831-stratified_sampling.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "69860a13-1206-4b0f-9a75-78533cdde787",
+      "file": "/roam_notes/20230621170020-discretized_voxel_grids.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "discretized voxel grids",
+      "properties": "((\"CATEGORY\" . \"20230621170020-discretized_voxel_grids\") (\"ID\" . \"69860a13-1206-4b0f-9a75-78533cdde787\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230621170020-discretized_voxel_grids.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c37f0cb8-b51c-4edb-81e4-bba749e514d7",
+      "file": "/roam_notes/20230620180007-multiview_coding.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Multiview coding",
+      "properties": "((\"CATEGORY\" . \"20230620180007-multiview_coding\") (\"ID\" . \"c37f0cb8-b51c-4edb-81e4-bba749e514d7\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620180007-multiview_coding.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "d42d95d4-5926-4069-8e11-0a80f8595da8",
+      "file": "/roam_notes/20230620171632-cosine_annealing.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Cosine annealing",
+      "properties": "((\"CATEGORY\" . \"20230620171632-cosine_annealing\") (\"ID\" . \"d42d95d4-5926-4069-8e11-0a80f8595da8\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620171632-cosine_annealing.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "0f22bf6c-0c1d-4fc5-9839-adb1fa707afb",
+      "file": "/roam_notes/20230620161027-entropy_encoding.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Entropy Encoding",
+      "properties": "((\"CATEGORY\" . \"20230620161027-entropy_encoding\") (\"ID\" . \"0f22bf6c-0c1d-4fc5-9839-adb1fa707afb\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620161027-entropy_encoding.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "77a0e91e-73b8-43f3-adb4-ed43cd98249a",
+      "file": "/roam_notes/20230620153838-model_pruning.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Model Pruning",
+      "properties": "((\"CATEGORY\" . \"20230620153838-model_pruning\") (\"ID\" . \"77a0e91e-73b8-43f3-adb4-ed43cd98249a\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620153838-model_pruning.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "73a9326d-92b9-4c8c-b65b-d9da1410515c",
+      "file": "/roam_notes/20230620152921-model_quantization.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Model Quantization",
+      "properties": "((\"CATEGORY\" . \"20230620152921-model_quantization\") (\"ID\" . \"73a9326d-92b9-4c8c-b65b-d9da1410515c\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620152921-model_quantization.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "ad46a4dd-a61e-41be-991f-53d4c8770fad",
+      "file": "/roam_notes/20230620150305-positional_encoding.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Positional Encoding",
+      "properties": "((\"CATEGORY\" . \"20230620150305-positional_encoding\") (\"ID\" . \"ad46a4dd-a61e-41be-991f-53d4c8770fad\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620150305-positional_encoding.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c8ae9ae7-7cd1-4c2f-b70d-9540bc803295",
+      "file": "/roam_notes/20230620141741-ssim_loss.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "SSIM Loss",
+      "properties": "((\"CATEGORY\" . \"20230620141741-ssim_loss\") (\"ID\" . \"c8ae9ae7-7cd1-4c2f-b70d-9540bc803295\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620141741-ssim_loss.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "1581ecac-4714-483a-bf8b-47c41d2cec41",
+      "file": "/roam_notes/20230620141448-l1.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "L1 Loss",
+      "properties": "((\"CATEGORY\" . \"20230620141448-l1\") (\"ID\" . \"1581ecac-4714-483a-bf8b-47c41d2cec41\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620141448-l1.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "bbc81a0d-726f-49f5-9b33-a6dd175b8543",
+      "file": "/roam_notes/20230620114131-pixelshuffling.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "PixelShuffling",
+      "properties": "((\"CATEGORY\" . \"20230620114131-pixelshuffling\") (\"ID\" . \"bbc81a0d-726f-49f5-9b33-a6dd175b8543\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230620114131-pixelshuffling.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "8fdce2c8-5d4a-4bb7-a1e5-24a98e84a621",
+      "file": "/roam_notes/20230619171012-ideas.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Ideas",
+      "properties": "((\"CATEGORY\" . \"20230619171012-ideas\") (\"ID\" . \"8fdce2c8-5d4a-4bb7-a1e5-24a98e84a621\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "26dc5182-737e-4854-855c-7b00102603bf",
+      "file": "/roam_notes/20230619171012-ideas.org",
+      "level": 2,
+      "pos": 144,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Improve Task aware model compression",
+      "properties": "((\"CATEGORY\" . \"20230619171012-ideas\") (\"ID\" . \"26dc5182-737e-4854-855c-7b00102603bf\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"Improve Task aware model compression\"))",
+      "olp": "(\"Some ideas I come up with as I am doing literature survey\")"
+    },
+    {
+      "id": "de23e439-bb45-4427-90f6-3c99c3e14006",
+      "file": "/roam_notes/20230619171012-ideas.org",
+      "level": 2,
+      "pos": 507,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "NeRF for three cameras of three views.",
+      "properties": "((\"CATEGORY\" . \"20230619171012-ideas\") (\"ID\" . \"de23e439-bb45-4427-90f6-3c99c3e14006\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"NeRF for three cameras of three views.\"))",
+      "olp": "(\"Some ideas I come up with as I am doing literature survey\")"
+    },
+    {
+      "id": "fa245386-9651-4657-8206-86dba19115ca",
+      "file": "/roam_notes/20230619171012-ideas.org",
+      "level": 2,
+      "pos": 827,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Translate neural radiance to video",
+      "properties": "((\"CATEGORY\" . \"20230619171012-ideas\") (\"ID\" . \"fa245386-9651-4657-8206-86dba19115ca\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"Translate neural radiance to video\"))",
+      "olp": "(\"Some ideas I come up with as I am doing literature survey\")"
+    },
+    {
+      "id": "9980c345-b9af-4330-a79e-d5811222c993",
+      "file": "/roam_notes/20230619155136-nerf.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "NeRF",
+      "properties": "((\"CATEGORY\" . \"20230619155136-nerf\") (\"ID\" . \"9980c345-b9af-4330-a79e-d5811222c993\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230619155136-nerf.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "file": "/roam_notes/20230619154858-nerv.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "NeRV",
+      "properties": "((\"CATEGORY\" . \"20230619154858-nerv\") (\"ROAM_ALIASES\" . \"\\\"Huffman Coding\\\"\") (\"ID\" . \"3917dd60-1390-45b1-8f8a-850194ccbdff\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230619154858-nerv.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "b24a11a3-3079-4bb1-ae67-5858a1df97f2",
+      "file": "/roam_notes/20230324194947-aviris.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "AVIRIS",
+      "properties": "((\"CATEGORY\" . \"20230324194947-aviris\") (\"ID\" . \"b24a11a3-3079-4bb1-ae67-5858a1df97f2\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230324194947-aviris.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "223b0b56-d40f-4a63-88b8-557921f1a44b",
+      "file": "/roam_notes/20230323154233-talk.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Alim Karimi - Remote Sensing",
+      "properties": "((\"CATEGORY\" . \"20230323154233-talk\") (\"ID\" . \"223b0b56-d40f-4a63-88b8-557921f1a44b\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230323154233-talk.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "2b0eab57-ff4c-4705-b9a6-4fcdd5298eb7",
+      "file": "/roam_notes/20230323043108-h265.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "High Efficiency Video Coding",
+      "properties": "((\"CATEGORY\" . \"20230323043108-h265\") (\"ID\" . \"2b0eab57-ff4c-4705-b9a6-4fcdd5298eb7\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230323043108-h265.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "19c8d3f9-130a-496c-ac71-0fdf84345be6",
+      "file": "/roam_notes/20230314135831-3d_geometry.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "3d geometry",
+      "properties": "((\"CATEGORY\" . \"20230314135831-3d_geometry\") (\"ID\" . \"19c8d3f9-130a-496c-ac71-0fdf84345be6\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230314135831-3d_geometry.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "3f8fc6cd-e6a5-4e33-bdba-7d52ba2c8504",
+      "file": "/roam_notes/20230314040112-electromagnetic_spectrum.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "electromagnetic spectrum",
+      "properties": "((\"CATEGORY\" . \"20230314040112-electromagnetic_spectrum\") (\"ID\" . \"3f8fc6cd-e6a5-4e33-bdba-7d52ba2c8504\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230314040112-electromagnetic_spectrum.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "3a79fe34-0625-4f21-8ec7-f9ecc1adfe3a",
+      "file": "/roam_notes/20230314012635-diffraction_grating.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "diffraction grating",
+      "properties": "((\"CATEGORY\" . \"20230314012635-diffraction_grating\") (\"ID\" . \"3a79fe34-0625-4f21-8ec7-f9ecc1adfe3a\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230314012635-diffraction_grating.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "4e186440-b91c-46fd-b4f1-33ddc001a70e",
+      "file": "/roam_notes/20230313231231-spectral_band.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "spectral band",
+      "properties": "((\"CATEGORY\" . \"20230313231231-spectral_band\") (\"ID\" . \"4e186440-b91c-46fd-b4f1-33ddc001a70e\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230313231231-spectral_band.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "file": "/roam_notes/20230313225632-hyperspectral.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Hyperspectral Imaging",
+      "properties": "((\"CATEGORY\" . \"20230313225632-hyperspectral\") (\"ID\" . \"eecb0d7a-038a-458e-bc1f-fb6f476c32bf\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230313225632-hyperspectral.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "4ff8deab-03a9-4780-8f20-d44e06c4b792",
+      "file": "/roam_notes/20230313225632-hyperspectral.org",
+      "level": 2,
+      "pos": 617,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Introduction",
+      "properties": "((\"CATEGORY\" . \"20230313225632-hyperspectral\") (\"ID\" . \"4ff8deab-03a9-4780-8f20-d44e06c4b792\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230313225632-hyperspectral.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"Introduction\"))",
+      "olp": "(\"Diagnostc procedures\")"
+    },
+    {
+      "id": "3863c10b-7486-4509-9244-09dbc6604577",
+      "file": "/roam_notes/20230313225632-hyperspectral.org",
+      "level": 2,
+      "pos": 1107,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Working",
+      "properties": "((\"CATEGORY\" . \"20230313225632-hyperspectral\") (\"ID\" . \"3863c10b-7486-4509-9244-09dbc6604577\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230313225632-hyperspectral.org\") (\"PRIORITY\" . \"B\") (\"ITEM\" . \"Working\"))",
+      "olp": "(\"Diagnostc procedures\")"
+    },
+    {
+      "id": "f3b10261-19f6-4f86-8227-71351fc0c19e",
+      "file": "/roam_notes/20230221150340-caliberation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Calibration",
+      "properties": "((\"CATEGORY\" . \"20230221150340-caliberation\") (\"ID\" . \"f3b10261-19f6-4f86-8227-71351fc0c19e\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230221150340-caliberation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "29b2b1ab-6294-4a04-83b3-c259b118a906",
+      "file": "/roam_notes/20230221100310-filters.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Filters",
+      "properties": "((\"CATEGORY\" . \"20230221100310-filters\") (\"ID\" . \"29b2b1ab-6294-4a04-83b3-c259b118a906\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230221100310-filters.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "6b04ba7c-b917-477e-b405-27de98d34adc",
+      "file": "/roam_notes/20230127170209-depth_estimation.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Depth Estimation",
+      "properties": "((\"CATEGORY\" . \"20230127170209-depth_estimation\") (\"ID\" . \"6b04ba7c-b917-477e-b405-27de98d34adc\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230127170209-depth_estimation.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "b99a4f11-3238-4920-b0ac-f9dbc39200d3",
+      "file": "/roam_notes/20230127170010-dairybarn.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Dairybarn",
+      "properties": "((\"CATEGORY\" . \"20230127170010-dairybarn\") (\"ID\" . \"b99a4f11-3238-4920-b0ac-f9dbc39200d3\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20230127170010-dairybarn.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "c61832a1-43fe-483f-b38c-417e45d9a0a8",
+      "file": "/roam_notes/20221208005324-ideas.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Duck",
+      "properties": "((\"CATEGORY\" . \"20221208005324-ideas\") (\"ID\" . \"c61832a1-43fe-483f-b38c-417e45d9a0a8\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20221208005324-ideas.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "0519d579-6318-4d07-a8db-21d5f0aeadaa",
+      "file": "/roam_notes/20210728135037-neural_tts.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Neural TTS",
+      "properties": "((\"CATEGORY\" . \"20210728135037-neural_tts\") (\"ID\" . \"0519d579-6318-4d07-a8db-21d5f0aeadaa\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20210728135037-neural_tts.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "44f22ebc-1bb8-456e-8a30-406e688e1714",
+      "file": "/roam_notes/20210728135019-parametric_tts.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Parametric TTS",
+      "properties": "((\"CATEGORY\" . \"20210728135019-parametric_tts\") (\"ID\" . \"44f22ebc-1bb8-456e-8a30-406e688e1714\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20210728135019-parametric_tts.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    },
+    {
+      "id": "dd973fb6-d8a1-4c83-866c-cf4497663a69",
+      "file": "/roam_notes/20210728134139-text_to_speech.org",
+      "level": 0,
+      "pos": 1,
+      "todo": null,
+      "priority": null,
+      "scheduled": null,
+      "deadline": null,
+      "title": "Text to Speech",
+      "properties": "((\"CATEGORY\" . \"20210728134139-text_to_speech\") (\"ID\" . \"dd973fb6-d8a1-4c83-866c-cf4497663a69\") (\"BLOCKED\" . \"\") (\"FILE\" . \"/home/prajwaljpj/Dropbox/org/roam/20210728134139-text_to_speech.org\") (\"PRIORITY\" . \"B\"))",
+      "olp": null
+    }
+  ],
+  "aliases": [
+    {
+      "node_id": "8497575c-7733-44b0-8861-fb2afbd1a04a",
+      "alias": "Nucleus Sampling"
+    },
+    {
+      "node_id": "1935b171-ce9f-48d6-9e3e-d14e71f0fc88",
+      "alias": "LoRA"
+    },
+    {
+      "node_id": "b7730a00-10fc-44cd-ad54-05b549a0ee8f",
+      "alias": "RLHF"
+    },
+    {
+      "node_id": "88a541e6-c3b0-4134-a603-474c805ffb3b",
+      "alias": "sentence_transformers"
+    },
+    {
+      "node_id": "88a541e6-c3b0-4134-a603-474c805ffb3b",
+      "alias": "sentence-transformers"
+    },
+    {
+      "node_id": "00041fbf-1f1b-4214-9310-1b49955d8564",
+      "alias": "TF-IDF"
+    },
+    {
+      "node_id": "e38dc05e-0b8c-4f67-9b6e-60f8319f1f82",
+      "alias": "CLIP"
+    },
+    {
+      "node_id": "a3d16bc6-98d3-4499-9338-7bcbeaf16e13",
+      "alias": "GLoVe"
+    },
+    {
+      "node_id": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "alias": "RAG"
+    },
+    {
+      "node_id": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "alias": "ROUGE"
+    },
+    {
+      "node_id": "7bfa61aa-7f1e-4c27-9a69-03881f048b37",
+      "alias": "BLEU"
+    },
+    {
+      "node_id": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "alias": "Huffman Coding"
+    }
+  ],
+  "citations": [],
+  "refs": [],
+  "tags": [
+    {
+      "node_id": "1e8e06c3-79e0-4320-a70c-355a75190bb7",
+      "tag": "Agents"
+    },
+    {
+      "node_id": "1e8e06c3-79e0-4320-a70c-355a75190bb7",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "1e8e06c3-79e0-4320-a70c-355a75190bb7",
+      "tag": "paper"
+    },
+    {
+      "node_id": "c6c4e1d4-6dc2-42c5-8213-c5118f8a7442",
+      "tag": "definition"
+    },
+    {
+      "node_id": "c6c4e1d4-6dc2-42c5-8213-c5118f8a7442",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "7db77a35-bd1c-4d78-9a0d-c746d1e613ec",
+      "tag": "definition"
+    },
+    {
+      "node_id": "7db77a35-bd1c-4d78-9a0d-c746d1e613ec",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "8497575c-7733-44b0-8861-fb2afbd1a04a",
+      "tag": "python-example"
+    },
+    {
+      "node_id": "8497575c-7733-44b0-8861-fb2afbd1a04a",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "8497575c-7733-44b0-8861-fb2afbd1a04a",
+      "tag": "definition"
+    },
+    {
+      "node_id": "b628101b-b4e9-4ece-9467-4255851c6ba3",
+      "tag": "python-example"
+    },
+    {
+      "node_id": "b628101b-b4e9-4ece-9467-4255851c6ba3",
+      "tag": "definition"
+    },
+    {
+      "node_id": "b628101b-b4e9-4ece-9467-4255851c6ba3",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "1935b171-ce9f-48d6-9e3e-d14e71f0fc88",
+      "tag": "paper"
+    },
+    {
+      "node_id": "72f69d1a-877b-41ae-959a-3585c6eb0d96",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "72f69d1a-877b-41ae-959a-3585c6eb0d96",
+      "tag": "definition"
+    },
+    {
+      "node_id": "dbf76f0f-4f7f-46d4-a90e-4ec543988f54",
+      "tag": "definition"
+    },
+    {
+      "node_id": "dbf76f0f-4f7f-46d4-a90e-4ec543988f54",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "2442391a-fd69-4a8d-b48e-0c8a8ff28c9d",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "2442391a-fd69-4a8d-b48e-0c8a8ff28c9d",
+      "tag": "definition"
+    },
+    {
+      "node_id": "b7730a00-10fc-44cd-ad54-05b549a0ee8f",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "88a541e6-c3b0-4134-a603-474c805ffb3b",
+      "tag": "python-example"
+    },
+    {
+      "node_id": "88a541e6-c3b0-4134-a603-474c805ffb3b",
+      "tag": "library"
+    },
+    {
+      "node_id": "88a541e6-c3b0-4134-a603-474c805ffb3b",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "d221a813-ea39-465d-bc5c-0ff1d04740e6",
+      "tag": "library"
+    },
+    {
+      "node_id": "c85d09c5-cfbd-4892-ab12-1cccad4acef3",
+      "tag": "python-example"
+    },
+    {
+      "node_id": "c85d09c5-cfbd-4892-ab12-1cccad4acef3",
+      "tag": "definition"
+    },
+    {
+      "node_id": "c85d09c5-cfbd-4892-ab12-1cccad4acef3",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "705c6c81-45a0-4b00-88b7-449890ec54fb",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "705c6c81-45a0-4b00-88b7-449890ec54fb",
+      "tag": "paper"
+    },
+    {
+      "node_id": "e38dc05e-0b8c-4f67-9b6e-60f8319f1f82",
+      "tag": "paper"
+    },
+    {
+      "node_id": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "tag": "paper"
+    },
+    {
+      "node_id": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "tag": "python-example"
+    },
+    {
+      "node_id": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "tag": "definition"
+    },
+    {
+      "node_id": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "tag": "ATTACH"
+    },
+    {
+      "node_id": "350d847f-601a-4eef-9451-2408143870bb",
+      "tag": "ATTACH"
+    },
+    {
+      "node_id": "0b98eebb-0a83-4547-8181-680c73847dc2",
+      "tag": "definition"
+    },
+    {
+      "node_id": "0b98eebb-0a83-4547-8181-680c73847dc2",
+      "tag": "python-example"
+    },
+    {
+      "node_id": "a7e25472-0dc7-4ab1-8471-51cebf47e006",
+      "tag": "LLM"
+    },
+    {
+      "node_id": "a7e25472-0dc7-4ab1-8471-51cebf47e006",
+      "tag": "definition"
+    }
+  ],
+  "links": [
+    {
+      "pos": 212,
+      "source": "1e8e06c3-79e0-4320-a70c-355a75190bb7",
+      "dest": "//arxiv.org/pdf/2502.05352",
+      "type": "https",
+      "properties": "(:outline (\"ITBench: Evaluating AI Agents across Diverse Real-World IT Automation Tasks\"))"
+    },
+    {
+      "pos": 181,
+      "source": "5622771a-9be1-4e5f-91fd-47a0693ef616",
+      "dest": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "type": "id",
+      "properties": "(:outline (\"Papers\"))"
+    },
+    {
+      "pos": 237,
+      "source": "5622771a-9be1-4e5f-91fd-47a0693ef616",
+      "dest": "705c6c81-45a0-4b00-88b7-449890ec54fb",
+      "type": "id",
+      "properties": "(:outline (\"Papers\"))"
+    },
+    {
+      "pos": 289,
+      "source": "5622771a-9be1-4e5f-91fd-47a0693ef616",
+      "dest": "1935b171-ce9f-48d6-9e3e-d14e71f0fc88",
+      "type": "id",
+      "properties": "(:outline (\"Papers\"))"
+    },
+    {
+      "pos": 341,
+      "source": "5622771a-9be1-4e5f-91fd-47a0693ef616",
+      "dest": "e38dc05e-0b8c-4f67-9b6e-60f8319f1f82",
+      "type": "id",
+      "properties": "(:outline (\"Papers\"))"
+    },
+    {
+      "pos": 458,
+      "source": "5622771a-9be1-4e5f-91fd-47a0693ef616",
+      "dest": "1e8e06c3-79e0-4320-a70c-355a75190bb7",
+      "type": "id",
+      "properties": "(:outline (\"Papers\"))"
+    },
+    {
+      "pos": 657,
+      "source": "0c03755a-298f-4445-8b1d-595e4a306de5",
+      "dest": "//pandas.pydata.org/docs/user_guide/10min.html",
+      "type": "https",
+      "properties": "(:outline (\"Some pandas Examples (source)\"))"
+    },
+    {
+      "pos": 138,
+      "source": "1935b171-ce9f-48d6-9e3e-d14e71f0fc88",
+      "dest": "//arxiv.org/abs/2106.09685",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 191,
+      "source": "1935b171-ce9f-48d6-9e3e-d14e71f0fc88",
+      "dest": "_20241126_093017lora.jpg",
+      "type": "attachment",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 157,
+      "source": "72f69d1a-877b-41ae-959a-3585c6eb0d96",
+      "dest": "93ea77e2-be22-4912-be2a-e327ee53998b",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 224,
+      "source": "72f69d1a-877b-41ae-959a-3585c6eb0d96",
+      "dest": "a7e25472-0dc7-4ab1-8471-51cebf47e006",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 638,
+      "source": "bf75dde7-3981-408a-92bd-c09a24e1f0db",
+      "dest": "_20241125_194101prefix.jpg",
+      "type": "attachment",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 422,
+      "source": "88a541e6-c3b0-4134-a603-474c805ffb3b",
+      "dest": "705c6c81-45a0-4b00-88b7-449890ec54fb",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1165,
+      "source": "c85d09c5-cfbd-4892-ab12-1cccad4acef3",
+      "dest": "d221a813-ea39-465d-bc5c-0ff1d04740e6",
+      "type": "id",
+      "properties": "(:outline (\"Python Example using =faiss= for Vector Store\"))"
+    },
+    {
+      "pos": 188,
+      "source": "e38dc05e-0b8c-4f67-9b6e-60f8319f1f82",
+      "dest": "//arxiv.org/abs/2103.00020",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1451,
+      "source": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "dest": "0b98eebb-0a83-4547-8181-680c73847dc2",
+      "type": "id",
+      "properties": "(:outline (\"Key Concepts:\"))"
+    },
+    {
+      "pos": 1815,
+      "source": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "dest": "95fca8e7-de01-4056-8682-1ba683dc2a88",
+      "type": "id",
+      "properties": "(:outline (\"Key Concepts:\"))"
+    },
+    {
+      "pos": 2436,
+      "source": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "dest": "//arxiv.org/abs/1310.4546",
+      "type": "https",
+      "properties": "(:outline (\"Resources:\"))"
+    },
+    {
+      "pos": 2646,
+      "source": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "dest": "//towardsdatascience.com/introduction-to-word2vec-5f4e9b1a063",
+      "type": "https",
+      "properties": "(:outline (\"Resources:\"))"
+    },
+    {
+      "pos": 2775,
+      "source": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "dest": "//machinelearningmastery.com/develop-word-embeddings-python-gensim/",
+      "type": "https",
+      "properties": "(:outline (\"Resources:\"))"
+    },
+    {
+      "pos": 2937,
+      "source": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "dest": "//radimrehurek.com/gensim/",
+      "type": "https",
+      "properties": "(:outline (\"Resources:\"))"
+    },
+    {
+      "pos": 520,
+      "source": "2b4383b2-7341-4cf2-a1d1-2747c1548ab5",
+      "dest": "//huggingface.co/spaces/mteb/leaderboard",
+      "type": "https",
+      "properties": "(:outline (\"Scoring text embeddings\"))"
+    },
+    {
+      "pos": 876,
+      "source": "2b4383b2-7341-4cf2-a1d1-2747c1548ab5",
+      "dest": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "type": "id",
+      "properties": "(:outline (\"Mathematical Concept\"))"
+    },
+    {
+      "pos": 1446,
+      "source": "2b4383b2-7341-4cf2-a1d1-2747c1548ab5",
+      "dest": "a3d16bc6-98d3-4499-9338-7bcbeaf16e13",
+      "type": "id",
+      "properties": "(:outline (\"Mathematical Concept\"))"
+    },
+    {
+      "pos": 473,
+      "source": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "dest": "_20241124_180938NVIDIA-RAG-diagram-scaled.jpg",
+      "type": "attachment",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 589,
+      "source": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "dest": "//blog.langchain.dev/tutorial-chatgpt-over-your-data/",
+      "type": "https",
+      "properties": "(:outline (\"Steps of RAG (source)\"))"
+    },
+    {
+      "pos": 692,
+      "source": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "dest": "_20241124_181549ingest.png",
+      "type": "attachment",
+      "properties": "(:outline (\"Steps of RAG (source)\" \"Data ingestion\"))"
+    },
+    {
+      "pos": 802,
+      "source": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "dest": "c85d09c5-cfbd-4892-ab12-1cccad4acef3",
+      "type": "id",
+      "properties": "(:outline (\"Steps of RAG (source)\" \"Data ingestion\"))"
+    },
+    {
+      "pos": 891,
+      "source": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "dest": "_20241124_182030query.png",
+      "type": "attachment",
+      "properties": "(:outline (\"Steps of RAG (source)\" \"Querying of Data\"))"
+    },
+    {
+      "pos": 1292,
+      "source": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "dest": "00041fbf-1f1b-4214-9310-1b49955d8564",
+      "type": "id",
+      "properties": "(:outline (\"Key Components of RAG\"))"
+    },
+    {
+      "pos": 84,
+      "source": "41472758-9d91-457f-b71e-7df4e5ec7503",
+      "dest": "//arxiv.org/abs/2305.14314",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 804,
+      "source": "41472758-9d91-457f-b71e-7df4e5ec7503",
+      "dest": "75d4d845-b5fc-4eff-bd9b-a98e3a728ef5",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1057,
+      "source": "41472758-9d91-457f-b71e-7df4e5ec7503",
+      "dest": "_20241126_093515qlora.jpg",
+      "type": "attachment",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 85,
+      "source": "54d32d07-b79f-41a6-97bd-4ae70afc89a8",
+      "dest": "//arxiv.org/abs/2306.05685",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 888,
+      "source": "39027cbd-76b5-4024-ba32-1f67f66077dd",
+      "dest": "75d4d845-b5fc-4eff-bd9b-a98e3a728ef5",
+      "type": "id",
+      "properties": "(:outline (\"2. Spearman's Rank Correlation\"))"
+    },
+    {
+      "pos": 130,
+      "source": "c5e92229-ad39-4815-ae36-8be0335cf9bc",
+      "dest": "6facd405-fe26-43ad-85be-4bee6b28f48c",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 738,
+      "source": "c5e92229-ad39-4815-ae36-8be0335cf9bc",
+      "dest": "75d4d845-b5fc-4eff-bd9b-a98e3a728ef5",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 861,
+      "source": "c5e92229-ad39-4815-ae36-8be0335cf9bc",
+      "dest": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1146,
+      "source": "c5e92229-ad39-4815-ae36-8be0335cf9bc",
+      "dest": "_20241120_211409geval.jpg",
+      "type": "attachment",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1188,
+      "source": "c5e92229-ad39-4815-ae36-8be0335cf9bc",
+      "dest": "//arxiv.org/abs/2303.16634",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 90,
+      "source": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "dest": "_20241119_193132mover-score.jpg",
+      "type": "attachment",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 990,
+      "source": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "dest": "7bfa61aa-7f1e-4c27-9a69-03881f048b37",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1041,
+      "source": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "dest": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1113,
+      "source": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "dest": "//arxiv.org/abs/2008.12009",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1315,
+      "source": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "dest": "//arxiv.org/abs/2303.16634",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 2030,
+      "source": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "dest": "//arxiv.org/abs/2008.12009",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 2223,
+      "source": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "dest": "//aclanthology.org/2023.acl-long.107/",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 2474,
+      "source": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "dest": "//huggingface.co/blog/open-llm-leaderboard-mmlu",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 282,
+      "source": "5f279d07-e629-43ca-a1e7-e5aa7b655d6c",
+      "dest": "292e173b-42e6-4341-b37a-4e28035a66cc",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 444,
+      "source": "5f279d07-e629-43ca-a1e7-e5aa7b655d6c",
+      "dest": "d7c585eb-a3ae-45e5-956e-253987f3fdaf",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 609,
+      "source": "5f279d07-e629-43ca-a1e7-e5aa7b655d6c",
+      "dest": "276a4433-a404-456b-bbc9-7f5544275676",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1177,
+      "source": "5f279d07-e629-43ca-a1e7-e5aa7b655d6c",
+      "dest": "7bfa61aa-7f1e-4c27-9a69-03881f048b37",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1231,
+      "source": "5f279d07-e629-43ca-a1e7-e5aa7b655d6c",
+      "dest": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 164,
+      "source": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "dest": "7bfa61aa-7f1e-4c27-9a69-03881f048b37",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 752,
+      "source": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "dest": "3748cffc-1579-4ab7-832d-636909caf8c4",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1065,
+      "source": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "dest": "7225de6c-ac61-456c-b69a-a260d35d8c91",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 848,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "3336d49f-db30-4b0e-a4eb-c69021a33d6c",
+      "type": "id",
+      "properties": "(:outline (\"Evaluation Benchmarks\"))"
+    },
+    {
+      "pos": 4017,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "7bfa61aa-7f1e-4c27-9a69-03881f048b37",
+      "type": "id",
+      "properties": "(:outline (\"Some common evaluation metrics\"))"
+    },
+    {
+      "pos": 4133,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "type": "id",
+      "properties": "(:outline (\"Some common evaluation metrics\"))"
+    },
+    {
+      "pos": 4252,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "5f279d07-e629-43ca-a1e7-e5aa7b655d6c",
+      "type": "id",
+      "properties": "(:outline (\"Some common evaluation metrics\"))"
+    },
+    {
+      "pos": 4478,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "type": "id",
+      "properties": "(:outline (\"Some common evaluation metrics\"))"
+    },
+    {
+      "pos": 4592,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "6869b305-ecc2-4afb-acfe-979dfaf461c7",
+      "type": "id",
+      "properties": "(:outline (\"Some common evaluation metrics\"))"
+    },
+    {
+      "pos": 4708,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "6869b305-ecc2-4afb-acfe-979dfaf461c7",
+      "type": "id",
+      "properties": "(:outline (\"Some common evaluation metrics\"))"
+    },
+    {
+      "pos": 5047,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "c5e92229-ad39-4815-ae36-8be0335cf9bc",
+      "type": "id",
+      "properties": "(:outline (\"Use LLM for evaluation??\"))"
+    },
+    {
+      "pos": 5192,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "54d32d07-b79f-41a6-97bd-4ae70afc89a8",
+      "type": "id",
+      "properties": "(:outline (\"Use LLM for evaluation??\"))"
+    },
+    {
+      "pos": 5314,
+      "source": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "dest": "41472758-9d91-457f-b71e-7df4e5ec7503",
+      "type": "id",
+      "properties": "(:outline (\"Use LLM for evaluation??\"))"
+    },
+    {
+      "pos": 1447,
+      "source": "541da77c-62ba-4651-85f8-bc324abc07c5",
+      "dest": "2e9dddd3-d359-44f8-8768-dc7abc285edc",
+      "type": "id",
+      "properties": "(:outline (\"Assumptions of Linear Regression\"))"
+    },
+    {
+      "pos": 96,
+      "source": "c98a7326-fc4f-4c45-899b-8e00e60e6483",
+      "dest": "//eugeneyan.com/writing/llm-patterns/",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 173,
+      "source": "c98a7326-fc4f-4c45-899b-8e00e60e6483",
+      "dest": "~/Dropbox/org/roam/llm-patterns-og.png",
+      "type": "file",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 365,
+      "source": "c98a7326-fc4f-4c45-899b-8e00e60e6483",
+      "dest": "93ea77e2-be22-4912-be2a-e327ee53998b",
+      "type": "id",
+      "properties": "(:outline (\"Patterns for building LLM-based systems\"))"
+    },
+    {
+      "pos": 3328,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "7f423f52-b952-47aa-9f97-f1a530af853f",
+      "type": "id",
+      "properties": "(:outline (\"Evals\"))"
+    },
+    {
+      "pos": 3515,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "541da77c-62ba-4651-85f8-bc324abc07c5",
+      "type": "id",
+      "properties": "(:outline (\"Evals\"))"
+    },
+    {
+      "pos": 4439,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "292e173b-42e6-4341-b37a-4e28035a66cc",
+      "type": "id",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\"))"
+    },
+    {
+      "pos": 4492,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "d7c585eb-a3ae-45e5-956e-253987f3fdaf",
+      "type": "id",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\"))"
+    },
+    {
+      "pos": 4548,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "7bf2d14a-73d0-4e8c-87d8-12b1d6d6b7c5",
+      "type": "id",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\"))"
+    },
+    {
+      "pos": 4771,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "7bfa61aa-7f1e-4c27-9a69-03881f048b37",
+      "type": "id",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\"))"
+    },
+    {
+      "pos": 4822,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "5b3513d2-47dc-4945-a022-426541fbc889",
+      "type": "id",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\"))"
+    },
+    {
+      "pos": 4898,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "5f279d07-e629-43ca-a1e7-e5aa7b655d6c",
+      "type": "id",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\"))"
+    },
+    {
+      "pos": 4954,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "c2c2a982-3390-4cc3-b70c-ed78424f6a51",
+      "type": "id",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\"))"
+    },
+    {
+      "pos": 5974,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "//arxiv.org/abs/2306.05685",
+      "type": "https",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\" \"Different biases:\"))"
+    },
+    {
+      "pos": 6407,
+      "source": "7be2913f-1ed7-4942-91e3-645cd2a09956",
+      "dest": "//www.latent.space/p/mosaic-mpt-7b#details",
+      "type": "https",
+      "properties": "(:outline (\"Evals\" \"Which metric to use?\" \"Different biases:\"))"
+    },
+    {
+      "pos": 6592,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "4e3ba750-1d16-4028-96ed-8432f14f57d4",
+      "type": "id",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\"))"
+    },
+    {
+      "pos": 6769,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "_20241124_180920NVIDIA-RAG-diagram-scaled.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\"))"
+    },
+    {
+      "pos": 7287,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "2b4383b2-7341-4cf2-a1d1-2747c1548ab5",
+      "type": "id",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"More about RAG (Text Embeddings)\"))"
+    },
+    {
+      "pos": 7360,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "_20241124_190512rag.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"More about RAG (Text Embeddings)\"))"
+    },
+    {
+      "pos": 7726,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "e38dc05e-0b8c-4f67-9b6e-60f8319f1f82",
+      "type": "id",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"More about RAG (Text Embeddings)\"))"
+    },
+    {
+      "pos": 7957,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "//eugeneyan.com/writing/search-query-matching/#self-supervised-techniques-no-need-for-labels",
+      "type": "https",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"More about RAG (Text Embeddings)\"))"
+    },
+    {
+      "pos": 8117,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "00041fbf-1f1b-4214-9310-1b49955d8564",
+      "type": "id",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"More about RAG (Text Embeddings)\"))"
+    },
+    {
+      "pos": 8220,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "705c6c81-45a0-4b00-88b7-449890ec54fb",
+      "type": "id",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"More about RAG (Text Embeddings)\"))"
+    },
+    {
+      "pos": 9748,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "//arxiv.org/abs/2007.01282",
+      "type": "https",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"Other RAG techniques\"))"
+    },
+    {
+      "pos": 9796,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "_20241124_191148fid.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"Other RAG techniques\"))"
+    },
+    {
+      "pos": 9877,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "//arxiv.org/abs/2112.04426",
+      "type": "https",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"Other RAG techniques\"))"
+    },
+    {
+      "pos": 9925,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "_20241124_191220retro.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"Other RAG techniques\"))"
+    },
+    {
+      "pos": 9992,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "//arxiv.org/abs/2203.05115",
+      "type": "https",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"Other RAG techniques\"))"
+    },
+    {
+      "pos": 10040,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "_20241124_191456internet-llm.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"Other RAG techniques\"))"
+    },
+    {
+      "pos": 10859,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "7a0dd215-4e03-49b7-93e3-d9b7a5df939b",
+      "type": "id",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"How to apply RAG\"))"
+    },
+    {
+      "pos": 10917,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "e1f26a50-9b9f-4c3f-b3cb-ca51c5d6b9e1",
+      "type": "id",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"How to apply RAG\"))"
+    },
+    {
+      "pos": 10992,
+      "source": "f7d193cc-3542-45d6-82b9-4ff1caa9163e",
+      "dest": "88a541e6-c3b0-4134-a603-474c805ffb3b",
+      "type": "id",
+      "properties": "(:outline (\"Retrieval-Augmented Generation (RAG): To add Knowledge\" \"How to apply RAG\"))"
+    },
+    {
+      "pos": 12302,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "b7730a00-10fc-44cd-ad54-05b549a0ee8f",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\"))"
+    },
+    {
+      "pos": 13231,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "2442391a-fd69-4a8d-b48e-0c8a8ff28c9d",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 13764,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "2442391a-fd69-4a8d-b48e-0c8a8ff28c9d",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 14148,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "09576efd-771c-480c-9edd-b22efa5ffafd",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 14371,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "//arxiv.org/abs/1801.06",
+      "type": "https",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 14507,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "_20241125_190145ulmfit.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 14552,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "705c6c81-45a0-4b00-88b7-449890ec54fb",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 14616,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "//arxiv.org/abs/1810.04805",
+      "type": "https",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 14950,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "_20241125_191405bert.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 14993,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "//arxiv.org/abs/2305.10435",
+      "type": "https",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 15428,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "_20241125_191503gpt.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 15470,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "//arxiv.org/abs/1910.10683",
+      "type": "https",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 15881,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "_20241125_192550t5.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 16072,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "//arxiv.org/abs/2203.02155",
+      "type": "https",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 16631,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "_20241125_193031instructgpt.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Why fine-tune?\"))"
+    },
+    {
+      "pos": 16707,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "dbf76f0f-4f7f-46d4-a90e-4ec543988f54",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Fine-tuning techniques\"))"
+    },
+    {
+      "pos": 17054,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "bf75dde7-3981-408a-92bd-c09a24e1f0db",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Fine-tuning techniques\"))"
+    },
+    {
+      "pos": 17357,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "//arxiv.org/abs/2101.00190",
+      "type": "https",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Fine-tuning techniques\"))"
+    },
+    {
+      "pos": 17703,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "5e88eee3-0c35-46f9-a45e-716b9211bab0",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Fine-tuning techniques\"))"
+    },
+    {
+      "pos": 17807,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "72f69d1a-877b-41ae-959a-3585c6eb0d96",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Fine-tuning techniques\"))"
+    },
+    {
+      "pos": 18144,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "1935b171-ce9f-48d6-9e3e-d14e71f0fc88",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Fine-tuning techniques\"))"
+    },
+    {
+      "pos": 18908,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "5e88eee3-0c35-46f9-a45e-716b9211bab0",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Fine-tuning techniques\"))"
+    },
+    {
+      "pos": 18969,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "41472758-9d91-457f-b71e-7df4e5ec7503",
+      "type": "id",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"Fine-tuning techniques\"))"
+    },
+    {
+      "pos": 19909,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "//eugeneyan.com/writing/labeling-guidelines/",
+      "type": "https",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"How to apply fine-tuning?\"))"
+    },
+    {
+      "pos": 20586,
+      "source": "4c0b0f1c-3b57-4d95-af26-48360244f080",
+      "dest": "//cims.nyu.edu/~sbowman/multinli/",
+      "type": "https",
+      "properties": "(:outline (\"Fine-tuning LLM\" \"How to apply fine-tuning?\"))"
+    },
+    {
+      "pos": 20897,
+      "source": "350d847f-601a-4eef-9451-2408143870bb",
+      "dest": "_20241126_094405gptcache.jpg",
+      "type": "attachment",
+      "properties": "(:outline (\"Caching\"))"
+    },
+    {
+      "pos": 21273,
+      "source": "350d847f-601a-4eef-9451-2408143870bb",
+      "dest": "//aws.amazon.com/caching/",
+      "type": "https",
+      "properties": "(:outline (\"Caching\"))"
+    },
+    {
+      "pos": 21322,
+      "source": "350d847f-601a-4eef-9451-2408143870bb",
+      "dest": "//aws.amazon.com/caching/best-practices/",
+      "type": "https",
+      "properties": "(:outline (\"Caching\"))"
+    },
+    {
+      "pos": 21412,
+      "source": "350d847f-601a-4eef-9451-2408143870bb",
+      "dest": "//github.com/zilliztech/GPTCache",
+      "type": "https",
+      "properties": "(:outline (\"Caching\"))"
+    },
+    {
+      "pos": 22190,
+      "source": "350d847f-601a-4eef-9451-2408143870bb",
+      "dest": "//www.youtube.com/live/9VgpXcfJYvw?feature=share&t=1517",
+      "type": "https",
+      "properties": "(:outline (\"Caching\" \"Procedure for caching\"))"
+    },
+    {
+      "pos": 24807,
+      "source": "c98a7326-fc4f-4c45-899b-8e00e60e6483",
+      "dest": "b628101b-b4e9-4ece-9467-4255851c6ba3",
+      "type": "id",
+      "properties": "(:outline (\"Generation Control\"))"
+    },
+    {
+      "pos": 24868,
+      "source": "c98a7326-fc4f-4c45-899b-8e00e60e6483",
+      "dest": "8497575c-7733-44b0-8861-fb2afbd1a04a",
+      "type": "id",
+      "properties": "(:outline (\"Generation Control\"))"
+    },
+    {
+      "pos": 24993,
+      "source": "c98a7326-fc4f-4c45-899b-8e00e60e6483",
+      "dest": "6facd405-fe26-43ad-85be-4bee6b28f48c",
+      "type": "id",
+      "properties": "(:outline (\"Generation Control\"))"
+    },
+    {
+      "pos": 615,
+      "source": "f68f8b72-f241-4483-b789-6a9a9e1176f4",
+      "dest": "~/Dropbox/org/roam/kernel_trick.webp",
+      "type": "file",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 229,
+      "source": "a7e25472-0dc7-4ab1-8471-51cebf47e006",
+      "dest": "f30eb2c2-1358-4406-9279-a6ac348a04bf",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 405,
+      "source": "a7e25472-0dc7-4ab1-8471-51cebf47e006",
+      "dest": "6f17a9e2-0f32-441f-9e7d-b3df44add35f",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 496,
+      "source": "3336d49f-db30-4b0e-a4eb-c69021a33d6c",
+      "dest": "a7e25472-0dc7-4ab1-8471-51cebf47e006",
+      "type": "id",
+      "properties": "(:outline (\"What is it comprised of?\"))"
+    },
+    {
+      "pos": 265,
+      "source": "f8b06bc1-5df0-48b7-b71c-108a91e84d6e",
+      "dest": "5e88eee3-0c35-46f9-a45e-716b9211bab0",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 678,
+      "source": "f8b06bc1-5df0-48b7-b71c-108a91e84d6e",
+      "dest": "5e88eee3-0c35-46f9-a45e-716b9211bab0",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1091,
+      "source": "f8b06bc1-5df0-48b7-b71c-108a91e84d6e",
+      "dest": "1d8522c9-b39a-480b-89c5-6c0e40fa2a6e",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 2923,
+      "source": "bcb392a9-435c-4e1a-9db6-d4110592dfc3",
+      "dest": "98, 99",
+      "type": "fuzzy",
+      "properties": "(:outline (\"Example of an RNN in Python using TensorFlow/Keras\"))"
+    },
+    {
+      "pos": 155,
+      "source": "276a4433-a404-456b-bbc9-7f5544275676",
+      "dest": "d7c585eb-a3ae-45e5-956e-253987f3fdaf",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 214,
+      "source": "276a4433-a404-456b-bbc9-7f5544275676",
+      "dest": "292e173b-42e6-4341-b37a-4e28035a66cc",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 374,
+      "source": "276a4433-a404-456b-bbc9-7f5544275676",
+      "dest": "d7c585eb-a3ae-45e5-956e-253987f3fdaf",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 450,
+      "source": "276a4433-a404-456b-bbc9-7f5544275676",
+      "dest": "292e173b-42e6-4341-b37a-4e28035a66cc",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 182,
+      "source": "5f39b412-124f-4f98-b853-db98175a0fd4",
+      "dest": "1258128e-6b29-414b-b1ff-f7d99fffcf4e",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 180,
+      "source": "95fca8e7-de01-4056-8682-1ba683dc2a88",
+      "dest": "1258128e-6b29-414b-b1ff-f7d99fffcf4e",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 610,
+      "source": "2b51432e-3811-4f9d-b61e-0fde393e78c5",
+      "dest": "_20241114_184754no_slider_data.png",
+      "type": "attachment",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 402,
+      "source": "dfbf116f-0b5c-4eb5-b364-e81beee8c92d",
+      "dest": "2b51432e-3811-4f9d-b61e-0fde393e78c5",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 620,
+      "source": "dfbf116f-0b5c-4eb5-b364-e81beee8c92d",
+      "dest": "_20241114_184725auc_1-0.png",
+      "type": "attachment",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 461,
+      "source": "f30eb2c2-1358-4406-9279-a6ac348a04bf",
+      "dest": "ca85123a-a20b-40dd-b06d-c6e585f95b9d",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 608,
+      "source": "f30eb2c2-1358-4406-9279-a6ac348a04bf",
+      "dest": "93ea77e2-be22-4912-be2a-e327ee53998b",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 1759,
+      "source": "f30eb2c2-1358-4406-9279-a6ac348a04bf",
+      "dest": "0b98eebb-0a83-4547-8181-680c73847dc2",
+      "type": "id",
+      "properties": "(:outline (\"Math\"))"
+    },
+    {
+      "pos": 2676,
+      "source": "98972da7-2026-4417-a7c8-bf0c37c76155",
+      "dest": "7db77a35-bd1c-4d78-9a0d-c746d1e613ec",
+      "type": "id",
+      "properties": "(:outline (\"Types of Attention:\"))"
+    },
+    {
+      "pos": 2793,
+      "source": "98972da7-2026-4417-a7c8-bf0c37c76155",
+      "dest": "c6c4e1d4-6dc2-42c5-8213-c5118f8a7442",
+      "type": "id",
+      "properties": "(:outline (\"Types of Attention:\"))"
+    },
+    {
+      "pos": 4330,
+      "source": "a96569f1-4ebf-4fbc-af13-0f0e24a38a1c",
+      "dest": "SVM.png",
+      "type": "file",
+      "properties": "(:outline (\"Example in Python:\"))"
+    },
+    {
+      "pos": 4973,
+      "source": "a96569f1-4ebf-4fbc-af13-0f0e24a38a1c",
+      "dest": "f68f8b72-f241-4483-b789-6a9a9e1176f4",
+      "type": "id",
+      "properties": "(:outline (\"Other concepts\"))"
+    },
+    {
+      "pos": 242,
+      "source": "1d8522c9-b39a-480b-89c5-6c0e40fa2a6e",
+      "dest": "aded448a-7bab-43a8-985f-02425d1a99a0",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 471,
+      "source": "1d8522c9-b39a-480b-89c5-6c0e40fa2a6e",
+      "dest": "76d4caa8-ac46-47f0-b10a-869f5766e70e",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 535,
+      "source": "1d8522c9-b39a-480b-89c5-6c0e40fa2a6e",
+      "dest": "f8b06bc1-5df0-48b7-b71c-108a91e84d6e",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 739,
+      "source": "1d8522c9-b39a-480b-89c5-6c0e40fa2a6e",
+      "dest": "5e88eee3-0c35-46f9-a45e-716b9211bab0",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 2818,
+      "source": "1d8522c9-b39a-480b-89c5-6c0e40fa2a6e",
+      "dest": "bias-var-tradeoff.png",
+      "type": "file",
+      "properties": "(:outline (\"Python Example\"))"
+    },
+    {
+      "pos": 343,
+      "source": "dfa9aa4d-697d-48f9-8854-95f939e6ad92",
+      "dest": "f111e7c5-2e7e-4c06-a977-fb174cdeb8d7",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 396,
+      "source": "dfa9aa4d-697d-48f9-8854-95f939e6ad92",
+      "dest": "cf72f762-147e-4e6b-ac4b-5453cd882b7d",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 219,
+      "source": "bba17c71-d84c-43e7-81a4-60cecfa3e3e1",
+      "dest": "//brilliant.org/wiki/markov-chains/#:~:text=A%20Markov%20chain%20is%20a,possible%20future%20states%20are%20fixed.",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 726,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "1318dd77-4418-4132-a887-40ae59d1020b",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 780,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "4d0e7b83-b4a4-4967-b7d5-83c2a7dc0fe2",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 1272,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "8c47dcc4-f2a5-4f81-bcd7-577307b58291",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 1377,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 1565,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "bba17c71-d84c-43e7-81a4-60cecfa3e3e1",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 2532,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 2679,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 3879,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "fig:r_vs_c_coding",
+      "type": "ref",
+      "properties": "(:outline (\"Motivation\"))"
+    },
+    {
+      "pos": 3981,
+      "source": "fcc0720d-5988-4002-bb15-579d810ea9bb",
+      "dest": "/Users/prajwaljpj/Library/CloudStorage/Dropbox/org/images/residual_vs_conditional_coding.png",
+      "type": "file",
+      "properties": "(:outline (\"Motivation\"))"
+    },
+    {
+      "pos": 311,
+      "source": "5c8cf4e7-219a-4cc5-8d92-a69d80156f82",
+      "dest": "67fdd00e-b992-4c28-b532-8a3a5180b003",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 176,
+      "source": "1f06ff48-84ff-4242-9e51-190ee76c39fc",
+      "dest": "4aa1f2ab-014e-473d-897f-99def275b1ed",
+      "type": "id",
+      "properties": "(:outline (\"Packages\"))"
+    },
+    {
+      "pos": 149,
+      "source": "c76921af-9251-4f38-ac4d-fa45e6cfd28a",
+      "dest": "//arxiv.org/pdf/1711.10925.pdf",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 121,
+      "source": "27120758-d3c7-4406-a6df-863ce5ccc343",
+      "dest": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 204,
+      "source": "27243154-7e0f-4c8f-9121-744350768fbc",
+      "dest": "408af1cc-58f7-4e57-a711-c5f085d69ea1",
+      "type": "id",
+      "properties": "(:outline (\"Libraries\"))"
+    },
+    {
+      "pos": 269,
+      "source": "27243154-7e0f-4c8f-9121-744350768fbc",
+      "dest": "0c03755a-298f-4445-8b1d-595e4a306de5",
+      "type": "id",
+      "properties": "(:outline (\"Libraries\"))"
+    },
+    {
+      "pos": 106,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "//arxiv.org/pdf/2304.02633.pdf",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 167,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "type": "id",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 889,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "4de864ba-e5e8-484f-9413-7c40c242b556",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 1286,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "27120758-d3c7-4406-a6df-863ce5ccc343",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 1359,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 1433,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 2057,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "ad46a4dd-a61e-41be-991f-53d4c8770fad",
+      "type": "id",
+      "properties": "(:outline (\"Introduction\"))"
+    },
+    {
+      "pos": 3129,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "fig:architecture",
+      "type": "ref",
+      "properties": "(:outline (\"Related work\" \"Neural representation\"))"
+    },
+    {
+      "pos": 3213,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "~/Dropbox/org/images/hnerv-stages.png",
+      "type": "file",
+      "properties": "(:outline (\"Related work\" \"Neural representation\"))"
+    },
+    {
+      "pos": 4074,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "c76921af-9251-4f38-ac4d-fa45e6cfd28a",
+      "type": "id",
+      "properties": "(:outline (\"Related work\" \"Video Inpainting and Internal Learning\"))"
+    },
+    {
+      "pos": 4185,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "7d12afea-96b4-4a49-af9c-7bd63897a327",
+      "type": "id",
+      "properties": "(:outline (\"Method\" \"HNeRV Overview\"))"
+    },
+    {
+      "pos": 4810,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "type": "id",
+      "properties": "(:outline (\"Method\" \"HNeRV Overview\" \"Model Architecture\"))"
+    },
+    {
+      "pos": 5408,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "1581ecac-4714-483a-bf8b-47c41d2cec41",
+      "type": "id",
+      "properties": "(:outline (\"Method\" \"HNeRV Overview\" \"Loss function\"))"
+    },
+    {
+      "pos": 5469,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "c8ae9ae7-7cd1-4c2f-b70d-9540bc803295",
+      "type": "id",
+      "properties": "(:outline (\"Method\" \"HNeRV Overview\" \"Loss function\"))"
+    },
+    {
+      "pos": 6645,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "c8ae9ae7-7cd1-4c2f-b70d-9540bc803295",
+      "type": "id",
+      "properties": "(:outline (\"Experiments\" \"Dataset and Implementation\"))"
+    },
+    {
+      "pos": 7339,
+      "source": "5fe2e988-a5ef-4a52-8eda-ecfc7513bb50",
+      "dest": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "type": "id",
+      "properties": "(:outline (\"Experiments\" \"Results\"))"
+    },
+    {
+      "pos": 103,
+      "source": "c37f0cb8-b51c-4edb-81e4-bba749e514d7",
+      "dest": "//en.wikipedia.org/wiki/Multiview_Video_Coding",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 107,
+      "source": "bbc81a0d-726f-49f5-9b33-a6dd175b8543",
+      "dest": "//paperswithcode.com/method/pixelshuffle",
+      "type": "https",
+      "properties": "(:outline (\"Resources\"))"
+    },
+    {
+      "pos": 259,
+      "source": "26dc5182-737e-4854-855c-7b00102603bf",
+      "dest": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "type": "id",
+      "properties": "(:outline (\"Some ideas I come up with as I am doing literature survey\" \"Improve Task aware model compression\"))"
+    },
+    {
+      "pos": 664,
+      "source": "9980c345-b9af-4330-a79e-d5811222c993",
+      "dest": "de23e439-bb45-4427-90f6-3c99c3e14006",
+      "type": "id",
+      "properties": "(:outline (\"Neural Radiance Fields for Viewing Synthesis\" \"Introduction\"))"
+    },
+    {
+      "pos": 818,
+      "source": "9980c345-b9af-4330-a79e-d5811222c993",
+      "dest": "69860a13-1206-4b0f-9a75-78533cdde787",
+      "type": "id",
+      "properties": "(:outline (\"Neural Radiance Fields for Viewing Synthesis\" \"Introduction\"))"
+    },
+    {
+      "pos": 3371,
+      "source": "9980c345-b9af-4330-a79e-d5811222c993",
+      "dest": "68453cdb-c1fc-4b6b-9cff-fb2fa9b1baaa",
+      "type": "id",
+      "properties": "(:outline (\"Neural Radiance Fields for Viewing Synthesis\" \"Volume rendering with Radiance Fields\"))"
+    },
+    {
+      "pos": 117,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "papers/neural_representation/NeRV.pdf",
+      "type": "file",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\"))"
+    },
+    {
+      "pos": 540,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "//github.com/haochen-rye/NeRV.git",
+      "type": "https",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Encoding-decoding of neural networks\"))"
+    },
+    {
+      "pos": 1812,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "papers/neural_representation/NERF.pdf",
+      "type": "file",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Related work\"))"
+    },
+    {
+      "pos": 2030,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "26dc5182-737e-4854-855c-7b00102603bf",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Related work\"))"
+    },
+    {
+      "pos": 2156,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "fig:architecture",
+      "type": "ref",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Working\"))"
+    },
+    {
+      "pos": 2240,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "nerv-architecture.png",
+      "type": "fuzzy",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Working\"))"
+    },
+    {
+      "pos": 2592,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "ad46a4dd-a61e-41be-991f-53d4c8770fad",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Working\" \"Input Embedding\"))"
+    },
+    {
+      "pos": 3001,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "bbc81a0d-726f-49f5-9b33-a6dd175b8543",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Working\" \"Network architecture:\"))"
+    },
+    {
+      "pos": 3117,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "1581ecac-4714-483a-bf8b-47c41d2cec41",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Working\" \"Loss Objective\"))"
+    },
+    {
+      "pos": 3169,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "c8ae9ae7-7cd1-4c2f-b70d-9540bc803295",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Working\" \"Loss Objective\"))"
+    },
+    {
+      "pos": 3405,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "77a0e91e-73b8-43f3-adb4-ed43cd98249a",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Compression\"))"
+    },
+    {
+      "pos": 3503,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "73a9326d-92b9-4c8c-b65b-d9da1410515c",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Compression\"))"
+    },
+    {
+      "pos": 3613,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "0f22bf6c-0c1d-4fc5-9839-adb1fa707afb",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Compression\"))"
+    },
+    {
+      "pos": 3815,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "e09861ea-b0ad-4c50-bb0d-19c05f3a2125",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Experimentation\"))"
+    },
+    {
+      "pos": 3877,
+      "source": "3917dd60-1390-45b1-8f8a-850194ccbdff",
+      "dest": "d42d95d4-5926-4069-8e11-0a80f8595da8",
+      "type": "id",
+      "properties": "(:outline (\"NeRV - Neural Representation for Videos\" \"Experimentation\"))"
+    },
+    {
+      "pos": 270,
+      "source": "223b0b56-d40f-4a63-88b8-557921f1a44b",
+      "dest": "/Users/prajwaljpj/Library/CloudStorage/Dropbox/org/images/papers_in_HSI_domain.jpeg",
+      "type": "file",
+      "properties": "(:outline (\"HSI - Alim Karimi\" \"Object detection\"))"
+    },
+    {
+      "pos": 97,
+      "source": "19c8d3f9-130a-496c-ac71-0fdf84345be6",
+      "dest": "//www.nagwa.com/en/explainers/373101390857/#:~:text=Definition%3A%20General%20Form%20of%20the,vector%20parallel%20to%20the%20plane.",
+      "type": "https",
+      "properties": "(:outline (\"Plane\"))"
+    },
+    {
+      "pos": 101,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "//en.wikipedia.org/wiki/Hyperspectral_imaging",
+      "type": "https",
+      "properties": "(:outline (\"Wiki\"))"
+    },
+    {
+      "pos": 252,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "3f8fc6cd-e6a5-4e33-bdba-7d52ba2c8504",
+      "type": "id",
+      "properties": "(:outline (\"Wiki\" \"Introduction\"))"
+    },
+    {
+      "pos": 520,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "//www.sciencedirect.com/science/article/pii/B9780128032305000051",
+      "type": "https",
+      "properties": "(:outline (\"Diagnostc procedures\"))"
+    },
+    {
+      "pos": 850,
+      "source": "4ff8deab-03a9-4780-8f20-d44e06c4b792",
+      "dest": "4e186440-b91c-46fd-b4f1-33ddc001a70e",
+      "type": "id",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Introduction\"))"
+    },
+    {
+      "pos": 1338,
+      "source": "3863c10b-7486-4509-9244-09dbc6604577",
+      "dest": "3a79fe34-0625-4f21-8ec7-f9ecc1adfe3a",
+      "type": "id",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Working\"))"
+    },
+    {
+      "pos": 1670,
+      "source": "3863c10b-7486-4509-9244-09dbc6604577",
+      "dest": "/Users/prajwaljpj/Library/CloudStorage/Dropbox/hyperspectral_imaging/HSI_camera.jpeg",
+      "type": "file",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Working\"))"
+    },
+    {
+      "pos": 2149,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "//arxiv.org/pdf/2206.02327v2.pdf",
+      "type": "https",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Papers\"))"
+    },
+    {
+      "pos": 2913,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "//arxiv.org/pdf/2104.00341v1.pdf",
+      "type": "https",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Papers\"))"
+    },
+    {
+      "pos": 3112,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "/Users/prajwaljpj/projects/dairybarn_project/research/figures/Spectralnet1.png",
+      "type": "file",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Papers\"))"
+    },
+    {
+      "pos": 3261,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "/Users/prajwaljpj/projects/dairybarn_project/research/figures/Spectralnet2.png",
+      "type": "file",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Papers\"))"
+    },
+    {
+      "pos": 3346,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "/Users/prajwaljpj/Library/CloudStorage/Dropbox/papers/Hyperspectral_remote_sensing_in_precision_agriculture.pdf",
+      "type": "file",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Papers\"))"
+    },
+    {
+      "pos": 3576,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "//github.com/spectralpython/spectral",
+      "type": "https",
+      "properties": "(:outline (\"Diagnostc procedures\" \"GitHub\"))"
+    },
+    {
+      "pos": 3754,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "//www.spectralpython.net/",
+      "type": "http",
+      "properties": "(:outline (\"Diagnostc procedures\" \"GitHub\"))"
+    },
+    {
+      "pos": 3800,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "//github.com/nshaud/DeepHyperX",
+      "type": "https",
+      "properties": "(:outline (\"Diagnostc procedures\" \"GitHub\"))"
+    },
+    {
+      "pos": 3954,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "b24a11a3-3079-4bb1-ae67-5858a1df97f2",
+      "type": "id",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Datasets\"))"
+    },
+    {
+      "pos": 4111,
+      "source": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "dest": "//towardsdatascience.com/what-are-hyper-spectral-images-a5de5d9fa91",
+      "type": "https",
+      "properties": "(:outline (\"Diagnostc procedures\" \"Important Notes\"))"
+    },
+    {
+      "pos": 150,
+      "source": "b99a4f11-3238-4920-b0ac-f9dbc39200d3",
+      "dest": "//purdue.app.box.com/folder/196715541685",
+      "type": "https",
+      "properties": "(:outline nil)"
+    },
+    {
+      "pos": 262,
+      "source": "b99a4f11-3238-4920-b0ac-f9dbc39200d3",
+      "dest": "6b04ba7c-b917-477e-b405-27de98d34adc",
+      "type": "id",
+      "properties": "(:outline (\"Using Depth Camera\" \"Depth Estimation\"))"
+    },
+    {
+      "pos": 386,
+      "source": "b99a4f11-3238-4920-b0ac-f9dbc39200d3",
+      "dest": "eecb0d7a-038a-458e-bc1f-fb6f476c32bf",
+      "type": "id",
+      "properties": "(:outline (\"Using Hyperspectral Imaging\"))"
+    },
+    {
+      "pos": 99,
+      "source": "dd973fb6-d8a1-4c83-866c-cf4497663a69",
+      "dest": "44f22ebc-1bb8-456e-8a30-406e688e1714",
+      "type": "id",
+      "properties": "(:outline (\"Parametric TTS\"))"
+    },
+    {
+      "pos": 197,
+      "source": "dd973fb6-d8a1-4c83-866c-cf4497663a69",
+      "dest": "0519d579-6318-4d07-a8db-21d5f0aeadaa",
+      "type": "id",
+      "properties": "(:outline (\"Neural TTS\"))"
+    }
+  ]
+}

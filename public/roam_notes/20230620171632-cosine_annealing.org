@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       d42d95d4-5926-4069-8e11-0a80f8595da8
+:END:
+#+title: Cosine annealing

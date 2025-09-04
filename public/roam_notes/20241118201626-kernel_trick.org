@@ -1,0 +1,77 @@
+:PROPERTIES:
+:ID:       f68f8b72-f241-4483-b789-6a9a9e1176f4
+:END:
+#+title: Kernel Trick
+
+
+The kernel trick is a technique used in Support Vector Machines (SVM) to enable the algorithm to learn in a high-dimensional feature space without explicitly transforming the data into that space. Instead of mapping the original input features into a higher-dimensional space (which can be computationally expensive), the kernel trick allows the SVM to operate directly in the original space by using kernel functions that compute the inner product between the images of the input features in the higher-dimensional space.
+[[~/Dropbox/org/roam/kernel_trick.webp]]
+*** Mathematical Explanation
+
+In SVM, the goal is to find a hyperplane that maximizes the margin between two classes. The decision function for a trained SVM can be expressed as:
+
+\[
+f(x) = \text{sign}\left(\sum_{i=1}^{m} \alpha_i y_i K(x_i, x) + b\right)
+\]
+
+where:
+- \(x_i\) are the training samples,
+- \(y_i\) are the labels (either +1 or -1),
+- \(K\) is the kernel function,
+- \(\alpha_i\) are weights found during training,
+- \(b\) is the bias term, and
+- \(m\) is the number of support vectors.
+
+Common kernel functions include:
+1. *Linear Kernel*: \(K(x_i, x) = x_i^T x\)
+2. *Polynomial Kernel*: \(K(x_i, x) = (x_i^T x + c)^d\)
+3. *Gaussian (RBF) Kernel*: \(K(x_i, x) = \exp\left(-\frac{\|x_i - x\|^2}{2\sigma^2}\right)\)
+
+*** Python Example
+
+Here's how to implement SVM with a kernel trick using the =scikit-learn= library in Python:
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn import svm
+from sklearn.model_selection import train_test_split
+
+# Load dataset (e.g., irises)
+iris = datasets.load_iris()
+X = iris.data[:, :2]  # Take two features for visualization
+y = iris.target
+
+# Filter to two classes for binary SVC
+X = X[y != 2]
+y = y[y != 2]
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create and train the SVM model using the RBF kernel
+clf = svm.SVC(kernel='rbf', C=1.0, gamma='scale')
+clf.fit(X_train, y_train)
+
+# Evaluate the model
+accuracy = clf.score(X_test, y_test)
+print(f'Accuracy: {accuracy:.2f}')
+
+# Plotting decision boundary
+xx, yy = np.meshgrid(np.linspace(X[:, 0].min()-1, X[:, 0].max()+1, 100),
+                     np.linspace(X[:, 1].min()-1, X[:, 1].max()+1, 100))
+Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
+Z = Z.reshape(xx.shape)
+
+plt.contourf(xx, yy, Z, levels=[-1, 0, 1], alpha=0.5, cmap='coolwarm')
+plt.scatter(X_train[:, 0], X_train[:, 1], c=y_train, edgecolors='k')
+plt.scatter(X_test[:, 0], X_test[:, 1], c=y_test, edgecolors='k', marker='*')
+plt.title('SVM with RBF Kernel')
+plt.xlabel('Feature 1')
+plt.ylabel('Feature 2')
+plt.show()
+#+end_src
+
+*** Summary
+The kernel trick allows SVMs to find complex decision boundaries in high-dimensional spaces while operating in the original feature space efficiency. By utilizing kernel functions, SVMs can effectively separate classes with non-linear relationships.

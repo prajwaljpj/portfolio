@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       c5e92229-ad39-4815-ae36-8be0335cf9bc
+:END:
+#+title: G-Eval
+
+G-Eval is a framework that applies LLMs with [[id:6facd405-fe26-43ad-85be-4bee6b28f48c][Chain-of-Though (CoT)]] and a form-filling paradigm to evaluate LLM outputs. First, they provide a task introduction and evaluation criteria to an LLM and ask it to generate a CoT of evaluation steps. Then, to evaluate coherence in news summarization, they concatenate the prompt, CoT, news article, and summary and ask the LLM to output a score between 1 to 5. Finally, they use the probabilities of the output tokens from the LLM to normalize the score and take their weighted summation as the final result.
+
+The paper found that GPT-4 as an evaluator has a high [[id:75d4d845-b5fc-4eff-bd9b-a98e3a728ef5][Spearman correlation]] with human judgements (0.514), outperforming traditional [[id:7f423f52-b952-47aa-9f97-f1a530af853f][evaluation]] methods in all aspects (coherence, consistency, fluency, and relevance). On topical chat, it did better than ROUGE-L, BLEU-4 and BERTScore across several criterias such as naturalness, coherence, engagingness, and groundedness.
+
+[[attachment:_20241120_211409geval.jpg]]
+
+[[https://arxiv.org/abs/2303.16634][Paper source]]

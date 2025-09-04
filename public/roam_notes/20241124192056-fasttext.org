@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       e1f26a50-9b9f-4c3f-b3cb-ca51c5d6b9e1
+:END:
+#+title: fastText
+
+FastText is an open-source, lightweight library that enables users to leverage pre-trained embeddings or train new embedding models. It comes with pre-trained embeddings for 157 languages and is extremely fast, even without a GPU.
+
+*ADD MORE INFORMATION*

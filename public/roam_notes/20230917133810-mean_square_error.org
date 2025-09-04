@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       cf72f762-147e-4e6b-ac4b-5453cd882b7d
+:END:
+#+title: Mean Square Error
+
+Mean square error, often abbreviated as MSE, is a commonly used measure of the average squared difference between the predicted and actual values in a regression problem. It is calculated by taking the average of the squared differences between the predicted and actual values. 
+
+The formula for MSE is:
+MSE = (1/n) * Σ(yᵢ - ȳ)²
+
+Where:
+- n is the total number of data points
+- yᵢ represents the actual value of the i-th data point
+- ȳ represents the predicted value of the i-th data point
+
+MSE provides a measure of how well the regression model is performing. A lower MSE indicates a better fit between the predicted and actual values, while a higher MSE indicates a larger average difference between them.

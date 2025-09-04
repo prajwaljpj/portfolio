@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       27120758-d3c7-4406-a6df-863ce5ccc343
+:END:
+#+title: COIN
+
+#TODO Read about COIN (reference 8 in [[id:5fe2e988-a5ef-4a52-8eda-ecfc7513bb50][HNeRV]])

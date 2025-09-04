@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       76d4caa8-ac46-47f0-b10a-869f5766e70e
+:END:
+#+title: Underfitting
+
+Underfitting occurs when a machine learning model is too simple to capture the underlying patterns in the data, resulting in poor performance on both the training and test sets.
+
+Here's a Python example using a linear regression model on non-linear data to demonstrate underfitting:
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Generate synthetic non-linear data
+np.random.seed(0)
+X = np.linspace(0, 10, 100)
+y = np.sin(X) + np.random.normal(0, 0.1, X.shape)
+
+# Reshape input for sklearn
+X = X.reshape(-1, 1)
+
+# Create and fit a linear regression model
+model = LinearRegression()
+model.fit(X, y)
+
+# Make predictions
+y_pred = model.predict(X)
+
+# Plot the results
+plt.scatter(X, y, color='blue', label='Data')
+plt.plot(X, y_pred, color='red', label='Linear Model')
+plt.title('Underfitting Example')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.legend()
+plt.show()
+#+end_src
+
+*** Explanation:
+- The data generated has a sine wave pattern (non-linear) with some noise.
+- A linear regression model is fitted to this data, which is likely too simple to capture the sinusoidal relationship, resulting in underfitting. The red line will not reflect the underlying trend well.

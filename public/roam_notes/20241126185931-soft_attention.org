@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       7db77a35-bd1c-4d78-9a0d-c746d1e613ec
+:END:
+#+title: Soft Attention
+#+filetags: :definition:LLM:
+
+Soft attention is a mechanism used in neural networks, particularly in natural language processing and computer vision, to enable models to focus selectively on different parts of the input while making predictions. Unlike hard attention, where the model makes a discrete choice about where to focus, soft attention computes a weighted average of all input parts, allowing for a smoother and differentiable computation.
+
+*** Key Components of Soft Attention:
+
+1. *Contextualization*: Each input element is assigned an attention score based on its relevance to the task. This score is computed through a function (often neural network-based) that takes into account the current state of the model.
+
+2. *Weighting*: The computed scores are normalized (usually through a softmax function) to create attention weights that sum up to one. This normalization allows the model to weigh the importance of each input element in a continuous manner.
+
+3. *Aggregation*: The input elements are then combined using the attention weights to produce a context vector, which summarizes the information from all inputs based on their relevance.
+
+*** Example:
+
+Consider a machine translation task where input sentences in English are translated to French. Using soft attention, the model might follow these steps:
+
+- *Encoding*: The input sentence "The cat sat on the mat" is encoded into a sequence of hidden states (vector representations) by an encoder.
+
+- *Decoding with Attention*:
+    - At each decoding step (translating to French), the model calculates an attention score for each hidden state based on its current state (e.g., the already generated French words).
+    - For instance, when translating "The", it may focus more on the hidden state encoding "The cat" than on "on the mat".
+
+- *Calculating Weights*: The scores are passed through a softmax function to produce attention weights, such as:
+    - "The cat": 0.6
+    - "sat": 0.1
+    - "on the mat": 0.3
+
+- *Context Vector*: The context vector is computed as a weighted sum of all hidden states. The decoder then uses this context vector to generate the next words in the sentence.
+
+*** Benefits:
+
+- *Context Sensitivity*: It allows the model to incorporate relevant information from different parts of the input.
+- *Differentiability*: Since soft attention is continuous, it can be easily optimized using gradient descent.
+
+Soft attention is crucial in tasks requiring contextual understanding, enabling better performance in applications like translation, summarization, image captioning, and more.

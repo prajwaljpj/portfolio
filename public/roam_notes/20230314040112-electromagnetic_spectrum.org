@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       3f8fc6cd-e6a5-4e33-bdba-7d52ba2c8504
+:END:
+#+title: electromagnetic spectrum
+Electromagnetic spectrum ranges from $1Hz \rightarrow 10^{25}Hz$.

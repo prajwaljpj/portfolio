@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       e38dc05e-0b8c-4f67-9b6e-60f8319f1f82
+:ROAM_ALIASES: CLIP
+:END:
+#+title: Learning Transferable Visual Models from Natural Language Supervision
+#+filetags: :paper:
+
+[[https://arxiv.org/abs/2103.00020][CLIP source]]

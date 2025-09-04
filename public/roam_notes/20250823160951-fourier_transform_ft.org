@@ -1,0 +1,90 @@
+:PROPERTIES:
+:ID:       26c864d9-e156-4011-ad51-e4c0adf688b6
+:END:
+#+title: Fourier Transform (FT)
+
+
+
+The Fourier Transform is a mathematical transformation that converts a time-domain signal into its frequency-domain representation. It expresses a function as a sum of sinusoids, which allows for the analysis of the signal's frequency content.
+
+*** Definition
+
+The Fourier Transform \( F(\omega) \) of a function \( f(t) \) is defined as:
+
+\[
+F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i \omega t} \, dt
+\]
+
+where:
+- \( f(t) \) is the time-domain function,
+- \( \omega \) is the angular frequency,
+- \( i \) is the imaginary unit.
+
+*** Inverse Fourier Transform
+
+The inverse Fourier Transform allows us to recover the original time-domain function from its frequency-domain representation:
+
+\[
+f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{i \omega t} \, d\omega
+\]
+
+*** Properties
+
+1. *Linearity*: If \( f(t) \) and \( g(t) \) are functions with Fourier Transforms \( F(\omega) \) and \( G(\omega) \), then:
+    \[
+    a f(t) + b g(t) \xleftrightarrow{\mathcal{F}} a F(\omega) + b G(\omega)
+    \]
+
+2. *Time Shift*: If \( f(t - t_0) \) shifts the function in time:
+    \[
+    f(t - t_0) \xleftrightarrow{\mathcal{F}} e^{-i \omega t_0} F(\omega)
+    \]
+
+3. *Frequency Shift*: If we multiply by a complex exponential:
+    \[
+    e^{i \omega_0 t} f(t) \xleftrightarrow{\mathcal{F}} F(\omega - \omega_0)
+    \]
+
+4. *Duality*: The Fourier transform of a Fourier transform recovers the original function, up to a scaling factor.
+
+*** Example
+
+Let’s calculate the Fourier Transform of a simple function, e.g., a rectangular pulse:
+
+**** Rectangular Pulse
+
+Define \( f(t) \) as:
+
+\[
+f(t) =
+\begin{cases}
+1 & \text{if } |t| \leq T/2 \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+The Fourier Transform is computed as:
+
+\[
+F(\omega) = \int_{-T/2}^{T/2} 1 \cdot e^{-i \omega t} \, dt
+\]
+
+Calculating the integral:
+
+\[
+F(\omega) = \left[ \frac{e^{-i \omega t}}{-i \omega} \right]_{-T/2}^{T/2} = \frac{1}{-i \omega} \left( e^{-i \omega T/2} - e^{i \omega T/2} \right)
+\]
+
+This simplifies using Euler's formula:
+
+\[
+F(\omega) = \frac{1}{-i \omega} \left( -2i \sin\left(\frac{\omega T}{2}\right) \right) = \frac{2 \sin\left(\frac{\omega T}{2}\right)}{\omega}
+\]
+
+*** Result Interpretations
+
+The result \( F(\omega) \) gives the frequency content of the rectangular pulse. The function \( \frac{2 \sin(\frac{\omega T}{2})}{\omega} \) is known as the *sinc function*, and represents the main lobe of the frequency response with side lobes.
+
+*** Conclusion
+
+The Fourier Transform is a powerful tool in signal processing, allowing the analysis and manipulation of signals in the frequency domain. Its properties make it essential in various applications such as communications, control systems, and audio processing.

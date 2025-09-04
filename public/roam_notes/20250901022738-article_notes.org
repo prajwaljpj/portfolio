@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       5622771a-9be1-4e5f-91fd-47a0693ef616
+:END:
+#+title: Article notes
+
+This node displays all the read article links, paper links, etc.
+
+* Article
+-
+* Papers
+- [[id:7a0dd215-4e03-49b7-93e3-d9b7a5df939b][Word2Vec]]
+- [[id:705c6c81-45a0-4b00-88b7-449890ec54fb][BERT]]
+- [[id:1935b171-ce9f-48d6-9e3e-d14e71f0fc88][LoRA]]
+- [[id:e38dc05e-0b8c-4f67-9b6e-60f8319f1f82][Learning Transferable Visual Models from Natural Language Supervision]]
+- [[id:1e8e06c3-79e0-4320-a70c-355a75190bb7][ITBench]]

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       8c47dcc4-f2a5-4f81-bcd7-577307b58291
+:END:
+#+title: intra-coding
+#+ROAM_TAGS: intra-frame coding
+
+* Introduction
+Intra-frame means all toe compression is done within that single frame. then generates something called the I-frame

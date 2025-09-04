@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       bbc81a0d-726f-49f5-9b33-a6dd175b8543
+:END:
+#+title: PixelShuffling
+
+* Resources
+- [[https://paperswithcode.com/method/pixelshuffle][paperswithcode]]
+* Information
+- PixelShuffle is an operation used in super-resolution models to implement efficient sub-pixel convolutions with a stride of $1/r$. Specifically it rearranges elements in a tensor of shape $\left( *, C \times r^{2}, H, W \right)$ to a tensor of shape $\left( *, C, H \times r, W \times r \right)$

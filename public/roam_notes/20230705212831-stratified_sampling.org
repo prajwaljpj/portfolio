@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       68453cdb-c1fc-4b6b-9cff-fb2fa9b1baaa
+:END:
+#+title: stratified sampling
+
+Stratified sampling is a sampling technique used in statistics to select a representative sample from a population with different subgroups or strata. In this method, the population is divided into distinct groups or strata based on certain characteristics that are of interest to the researcher. 
+
+The goal of stratified sampling is to ensure that each stratum is represented in the sample in proportion to its size in the population. This is done by selecting a random sample from each stratum, where the size of the sample from each stratum is proportional to the size of the stratum in the population. 
+
+By using stratified sampling, researchers can improve the accuracy and reliability of the results by ensuring that the sample is representative of the population as a whole. It helps to take into account the variability and diversity within the population and ensures that important subgroups are adequately represented in the sample. 
+
+This sampling technique is commonly used when the population has distinct characteristics or when there is a desire to specifically examine a certain subgroup within the population. For example, if a researcher wants to study the income distribution among different age groups within a city, they can divide the population into age-based strata and select random samples from each stratum to get a representative sample.

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6147a933-8d2a-4ad2-afd2-5b86c6447942
+:END:
+#+title: Causal Inference
+
+Causal inference is the process of drawing conclusions about causation from data. It seeks to determine whether a change in one variable (the cause) directly leads to a change in another variable (the effect), as opposed to mere correlation.
+
+*Example:*
+Suppose you want to determine if a new educational program increases student test scores. You could conduct an experiment where one group of students participates in the program (treatment group) while another similar group does not (control group). After the program, if the treatment group shows significantly higher test scores than the control group, you could infer that the program likely caused the improvement in scores, assuming other variables are controlled for.

@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       beb67fc9-8430-4b90-8532-d1100665cad5
+:END:
+#+title: Convex Optimization
+
+Convex optimization is a subset of mathematical optimization problems where the objective function is convex, and the feasible region is a convex set. This ensures that any local minimum is also a global minimum, making it easier to solve.
+
+*** Example in Python
+
+Let's consider a simple example where we minimize the function \( f(x) = (x - 3)^2 + 2 \). This function is convex, and our goal is to find the value of \( x \) that minimizes \( f(x) \).
+
+We'll use =scipy.optimize.minimize= from the SciPy library to perform this optimization.
+
+#+begin_src python
+import numpy as np
+from scipy.optimize import minimize
+
+# Define the objective function
+def objective_function(x):
+    return (x - 3)**2 + 2
+
+# Initial guess
+x0 = 0
+
+# Perform the optimization
+result = minimize(objective_function, x0)
+
+# Print the results
+print("Optimal value of x:", result.x[0])
+print("Minimum value of the objective function:", result.fun)
+#+end_src
+
+#+RESULTS:
+
+*** Explanation:
+1. *Objective Function*: We define =objective_function=, which represents the convex function we want to minimize.
+2. *Initial Guess*: We start our optimization with an initial guess (=x0 = 0=).
+3. *Optimization*: We use =minimize= to find the optimal value of \( x \) that minimizes the objective function.
+4. *Results*: Finally, we print the optimal \( x \) and the minimum value of the function.
+
+This example demonstrates the basic principles of convex optimization using Python.

@@ -1,0 +1,99 @@
+:PROPERTIES:
+:ID:       a72d0d57-157a-4eb1-82db-7843066cba48
+:END:
+#+title: Weights initialization
+
+Techniques to initialize weights for deep neural networks:
+
+Weight initialization is crucial for training deep neural networks effectively. It helps in breaking symmetry and accelerating convergence. Here’s an overview of common weight initialization techniques along with their advantages and disadvantages:
+
+| Technique                       | Advantages                                                                                     | Disadvantages                                                                              |
+|---------------------------------+------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------|
+| /Zero Initialization/           | Simple to implement.                                                                           | All neurons in a layer learn the same features (symmetry breaking issue).                  |
+| /Random Initialization/         | Breaks symmetry; introduces randomness.                                                        | Might cause slow convergence if weights are too small or too large.                        |
+| /Xavier/Glorot Initialization/  | Suitable for sigmoid/tanh activations; maintains variance across layers.                       | Can be less effective for very deep networks (vanishing/exploding gradients).              |
+| /He Initialization/             | Designed for ReLU activations; helps in training deeper networks.                              | May not perform well with non-ReLU activations.                                            |
+| /Orthogonal Initialization/     | Can improve performance for certain architectures; maintains stability in forward propagation. | More complex to implement; not always necessary.                                           |
+| /Uniform/Normal Initialization/ | Provides flexibility; can set ranges and tune for specific architectures.                      | Depending on chosen scale, it might still lead to issues similar to random initialization. |
+
+*** Mathematical Explanation of Different Initialization Techniques
+
+1. *Zero Initialization*:
+   Every weight is initialized to zero, leading to uniform outputs for all neurons in a layer, making learning ineffective due to symmetry.
+
+2. *Random Initialization*:
+   Weights are initialized randomly from a uniform or normal distribution. For example, if \( w \sim \mathcal{U}(-\epsilon, \epsilon) \) where \( \epsilon \) is a small positive number, it helps break symmetry.
+
+3. *Xavier/Glorot Initialization*:
+   Weights are initialized using:
+   \[
+   w \sim \mathcal{N}(0, \sqrt{\frac{2}{n_{in} + n_{out}}})
+   \]
+   where \( n_{in} \) and \( n_{out} \) are the number of input and output units, respectively. This helps in maintaining the variance of weights across layers for sigmoid/tanh activations.
+
+4. *He Initialization*:
+   Similar to Xavier but designed for ReLU activations:
+   \[
+   w \sim \mathcal{N}(0, \sqrt{\frac{2}{n_{in}}})
+   \]
+   This ensures that the scale of weights is appropriate for layers with ReLU activation functions.
+
+5. *Orthogonal Initialization*:
+   Weights are initialized as an orthogonal matrix. If \( A \) is a random matrix, then the orthogonal matrix can be obtained via Singular Value Decomposition (SVD):
+   \[
+   A = U \Sigma V^T \rightarrow W = U \text{ (or } V \text{)}
+   \]
+   This maintains the orthogonality which helps in stabilizing the training.
+
+6. *Uniform Initialization*:
+   Weights are initialized uniformly within a specified range:
+   \[
+   w \sim \mathcal{U}(a, b)
+   \]
+
+** Python Examples
+
+1. /Zero Initialization:/
+   #+begin_src python
+   import numpy as np
+
+   weights = np.zeros((3, 2))  # 3 inputs, 2 outputs
+   #+end_src
+
+2. /Random Initialization:/
+   #+begin_src python
+   weights = np.random.rand(3, 2) * 0.01  # Small random weights
+   #+end_src
+
+3. /Xavier/Glorot Initialization:/
+   #+begin_src python
+   def xavier_initialization(shape):
+       return np.random.randn(*shape) * np.sqrt(2. / (shape[0] + shape[1]))
+
+   weights = xavier_initialization((3, 2))  # 3 inputs, 2 outputs
+   #+end_src
+
+4. /He Initialization:/
+   #+begin_src python
+   def he_initialization(shape):
+       return np.random.randn(*shape) * np.sqrt(2. / shape[0])
+
+   weights = he_initialization((3, 2))  # 3 inputs, 2 outputs
+   #+end_src
+
+5. /Orthogonal Initialization:/
+   #+begin_src python
+   def orthogonal_initialization(shape):
+       a = np.random.randn(*shape)
+       u, _, _ = np.linalg.svd(a)
+       return u[:shape[0]].T
+
+   weights = orthogonal_initialization((3, 2))  # 3 inputs, 2 outputs
+   #+end_src
+
+6. /Uniform Initialization:/
+   #+begin_src python
+   weights = np.random.uniform(low=-0.05, high=0.05, size=(3, 2))  # 3 inputs, 2 outputs
+   #+end_src
+
+By choosing the appropriate weight initialization technique, you can significantly influence the training dynamics of deep learning models.

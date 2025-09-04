@@ -1,0 +1,134 @@
+:PROPERTIES:
+:ID:       39027cbd-76b5-4024-ba32-1f67f66077dd
+:END:
+#+title: Correlation Metrics
+
+Correlation metrics assess the relationship between two variables. Here are a few common correlation metrics along with their mathematical explanation and Python examples:
+
+*** 1. Pearson Correlation Coefficient
+
+*Math:*
+The Pearson correlation coefficient \( r \) is defined as:
+
+\[
+r = \frac{cov(X, Y)}{\sigma_X \sigma_Y}
+\]
+
+Where:
+- \( cov(X, Y) \) is the covariance of the variables \( X \) and \( Y \).
+- \( \sigma_X \) and \( \sigma_Y \) are the standard deviations of \( X \) and \( Y \).
+
+*Python Example:*
+#+begin_src python
+import numpy as np
+from scipy.stats import pearsonr
+
+# Sample data
+X = np.array([1, 2, 3, 4, 5])
+Y = np.array([2, 3, 4, 5, 6])
+
+# Calculate Pearson correlation
+correlation, _ = pearsonr(X, Y)
+print(f'Pearson correlation: {correlation}')
+#+end_src
+
+*** 2. [[id:75d4d845-b5fc-4eff-bd9b-a98e3a728ef5][Spearman's Rank Correlation]]
+There is no difference; Spearman's rank correlation coefficient and Spearman's correlation refer to the same statistical measure of rank correlation.
+*Math:*
+Spearman's rank correlation coefficient \( \rho \) is given by the Pearson correlation of the ranked variables:
+
+\[
+\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+\]
+
+Where \( d_i \) is the difference between ranks, and \( n \) is the number of observations.
+
+*Python Example:*
+#+begin_src python
+from scipy.stats import spearmanr
+
+# Sample data
+X = np.array([1, 2, 3, 4, 5])
+Y = np.array([2, 1, 4, 3, 5])
+
+# Calculate Spearman correlation
+correlation, _ = spearmanr(X, Y)
+print(f'Spearman correlation: {correlation}')
+#+end_src
+
+*** 3. Kendall's Tau
+
+*Math:*
+Kendall's Tau \( \tau \) is defined as:
+
+\[
+\tau = \frac{(P - Q)}{\frac{1}{2} n(n-1)}
+\]
+
+Where:
+- \( P \) is the number of concordant pairs.
+- \( Q \) is the number of discordant pairs.
+- \( n \) is the number of observations.
+
+*Python Example:*
+#+begin_src python
+from scipy.stats import kendalltau
+
+# Sample data
+X = np.array([1, 2, 3, 4, 5])
+Y = np.array([2, 1, 4, 3, 5])
+
+# Calculate Kendall's Tau correlation
+correlation, _ = kendalltau(X, Y)
+print(f'Kendall Tau correlation: {correlation}')
+#+end_src
+
+*** 4. Point Biserial Correlation
+
+*Math:*
+The point biserial correlation \( r_{pb} \) is used when one variable is binary:
+
+\[
+r_{pb} = \frac{M_1 - M_0}{s} \cdot \sqrt{\frac{pq}{n}}
+\]
+
+Where:
+- \( M_1 \) and \( M_0 \) are the means of each group.
+- \( s \) is the standard deviation of the total sample.
+- \( p \) and \( q \) are the proportions of the binary groups.
+
+*Python Example:*
+#+begin_src python
+from scipy.stats import pointbiserialr
+
+# Sample binary data
+X = np.array([0, 0, 1, 1, 0])
+Y = np.array([1, 2, 3, 4, 5])
+
+# Calculate Point Biserial correlation
+correlation, _ = pointbiserialr(X, Y)
+print(f'Point Biserial correlation: {correlation}')
+#+end_src
+
+These examples show how to compute different types of correlation in Python using the =scipy= library. Adjust sample data according to your requirements to see how correlations vary.
+
+* Comparison
+
+Here's a concise table summarizing the advantages and disadvantages of different correlation metrics:
+
+| *Metric*              | *Advantages*                                     | *Disadvantages*                                   |
+|-----------------------+--------------------------------------------------+---------------------------------------------------|
+| *Pearson Correlation* | - Measures linear relationships.                 | - Sensitive to outliers.                          |
+|                       | - Easy to interpret and widely used.             | - Assumes normal distribution of data.            |
+|                       | - Computes a single value for any dataset size.  | - Not suitable for non-linear relationships.      |
+| *Spearman's Rank*     | - Robust against outliers.                       | - Only captures monotonic relationships.          |
+|                       | - Suitable for ordinal data.                     | - Less powerful than Pearson with large datasets. |
+|                       | - Does not assume normal distribution.           |                                                   |
+| *Kendall's Tau*       | - Robust against outliers.                       | - Computationally intensive for large datasets.   |
+|                       | - Suitable for ordinal data.                     | - Less sensitive than Pearson or Spearman.        |
+|                       | - Provides direct interpretation of concordance. |                                                   |
+| *Point Biserial*      | - Suitable for binary and continuous data.       | - Assumes linear relationship between variables.  |
+|                       | - Simple interpretation.                         | - Sensitive to distributions of groups.           |
+|                       | - Provides useful insights in specific contexts. |                                                   |
+
+This table provides a quick overview of the characteristics of each correlation metric, helping you choose the most appropriate one for your data analysis needs.

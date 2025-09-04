@@ -1,0 +1,609 @@
+{
+  "nodes": [
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20250824153335-nyquist_shannon_theorem.org",
+      "title": "Nyquist Shannon Theorem"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20250823160951-fourier_transform_ft.org",
+      "title": "Fourier Transform (FT)"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20250822004512-hidden_markov_models_hmm.org",
+      "title": "Hidden Markov Models (HMM)"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241211233612-ai_design_tips.org",
+      "title": "AI design tips"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241126190823-pandas.org",
+      "title": "Pandas"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241126190113-hard_attention.org",
+      "title": "Hard Attention"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241126185931-soft_attention.org",
+      "title": "Soft Attention"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241126182148-top_p_sampling.org",
+      "title": "Top-p Sampling"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241126181948-temperature.org",
+      "title": "Temperature"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241126092936-low_rank_adaptation.org",
+      "title": "Low-Rank Adaptation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241125195554-adapter.org",
+      "title": "adapter"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241125193612-prefix_tuning.org",
+      "title": "prefix tuning"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241125193445-soft_prompt_tuning.org",
+      "title": "Soft prompt tuning"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241125185604-transfer_learning.org",
+      "title": "transfer learning"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241125174659-alignment_tax.org",
+      "title": "Alignment Tax"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241125173118-reinforcement_learning_with_human_feedback.org",
+      "title": "Reinforcement learning with human feedback"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124192348-sentence_transformers.org",
+      "title": "Sentence Transformers"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124192056-fasttext.org",
+      "title": "fastText"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124181821-faiss_library.org",
+      "title": "Faiss library"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124181625-vectorstore.org",
+      "title": "vectorstore"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124173302-term_frequence_inverse_document_frequency.org",
+      "title": "Term Frequence-Inverse Document Frequency"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124173119-bert.org",
+      "title": "BERT"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124172428-learning_transferable_visual_models_from_natural_language_supervision.org",
+      "title": "Learning Transferable Visual Models from Natural Language Supervision"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124035410-speech_quality_evaluation_metrics.org",
+      "title": "Speech quality evaluation metrics"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124033837-plp_features.org",
+      "title": "PLP Features"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241124033044-beam_forming.org",
+      "title": "Beam forming"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241123231446-global_vectors_for_word_representation.org",
+      "title": "Global Vectors for Word Representation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241123225127-word2vec.org",
+      "title": "Word2Vec"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241123224953-text_embeddings.org",
+      "title": "Text Embeddings"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241122203017-retrieval_augmented_generation.org",
+      "title": "Retrieval-Augmented Generation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241122194944-prauc.org",
+      "title": "Precision-Recall Area Under the Curve"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241121212527-qlora.org",
+      "title": "QLoRA"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241121211753-vicuna.org",
+      "title": "Vicuna"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241121192911-weights_initialization.org",
+      "title": "Weights initialization"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241120213129-correlation_metrics.org",
+      "title": "Correlation Metrics"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241120212711-spearman_correlation.org",
+      "title": "Spearman correlation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241120211141-chain_of_though.org",
+      "title": "Chain-of-Thought"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241120211121-g_eval.org",
+      "title": "G-Eval"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241120143633-hard_and_soft_alignment.org",
+      "title": "Hard and Soft Alignment"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241120135412-adam_optimizer.org",
+      "title": "Adam optimizer"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119193044-moverscore.org",
+      "title": "MoverScore"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119191942-bertscore.org",
+      "title": "BERTScore"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119191835-skip_bigrams.org",
+      "title": "Skip-bigrams"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119191608-longest_common_subsequence.org",
+      "title": "longest common subsequence"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119191144-recall_oriented_understudy_for_gisting_evaluation.org",
+      "title": "Recall oriented understudy for gisting evaluation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119185410-bilingual_evaluation_understudy.org",
+      "title": "Bilingual Evaluation Understudy"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119183951-llm_evaluation.org",
+      "title": "LLM Evaluation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119164647-homoscedasticity.org",
+      "title": "Homoscedasticity"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119164419-regression.org",
+      "title": "Regression"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org",
+      "title": "LLM System Design"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org",
+      "title": "Evals"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org",
+      "title": "Retrieval-Augmented Generation (RAG): To add Knowledge"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org",
+      "title": "Fine-tuning LLM"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org",
+      "title": "Caching"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241119131603-llm_system_design.org",
+      "title": "Guardrails"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118201626-kernel_trick.org",
+      "title": "Kernel Trick"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118201405-softmax.org",
+      "title": "Softmax"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118174907-prompt_engineering.org",
+      "title": "Prompt Engineering"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118171309-linear_regression.org",
+      "title": "Linear Regression"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118170619-naive_bayes.org",
+      "title": "Naive Bayes"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118170346-k_nearest_neighbors.org",
+      "title": "K Nearest Neighbors"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118161841-tokens.org",
+      "title": "tokens"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118161737-transformers.org",
+      "title": "Transformers"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241118161608-large_language_model.org",
+      "title": "Large Language Model"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241116200727-variance.org",
+      "title": "Variance"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241116200614-bias.org",
+      "title": "Bias"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114201545-ipython.org",
+      "title": "Ipython"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114193544-recurrent_neural_networks.org",
+      "title": "Recurrent Neural Networks"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114190017-model_loss.org",
+      "title": "Model Loss"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114184459-f1_score.org",
+      "title": "F1 Score"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114184212-recall.org",
+      "title": "Recall"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114184008-precision.org",
+      "title": "Precision"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114183813-data_augmentation.org",
+      "title": "Data Augmentation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114181957-long_tailed_data.org",
+      "title": "Long Tailed Data"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114175355-vanishing_gradients.org",
+      "title": "Vanishing Gradients"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114174658-gradient_descent.org",
+      "title": "Gradient Descent"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114174603-area_under_the_curve.org",
+      "title": "Area Under the Curve"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114174452-roc_curve.org",
+      "title": "ROC curve"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114174313-attention_mechanism.org",
+      "title": "Attention Mechanism"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114174313-attention_mechanism.org",
+      "title": "Types of Attention:"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114174020-causal_inference.org",
+      "title": "Causal Inference"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114173234-linearly_separable.org",
+      "title": "Linearly Separable"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114172930-support_vector_machines.org",
+      "title": "Support Vector Machines"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114171134-underfitting.org",
+      "title": "Underfitting"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114170944-overfitting.org",
+      "title": "Overfitting"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114165317-bias_variance_tradeoff.org",
+      "title": "Bias Variance Tradeoff"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241114163331-convex_optimization.org",
+      "title": "Convex Optimization"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241113222756-types_of_losses.org",
+      "title": "Types of Losses"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241113222529-logistic_regression.org",
+      "title": "Logistic Regression"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20241113161943-star_method.org",
+      "title": "STAR Method"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230917133810-mean_square_error.org",
+      "title": "Mean Square Error"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230917133654-mean_absolute_error.org",
+      "title": "Mean Absolute Error"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230917123134-computer_vision_system_for_measuring_individual_cow_feed_intake_using_t_rgb_d_camera_and_deep_learning_algorithms.org",
+      "title": "Computer vision system for measuring individual cow feed intake using T RGB-D camera and deep learning algorithms"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230821164515-markov_chain.org",
+      "title": "Markov chain"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230821163120-inter_frame_coding.org",
+      "title": "inter-frame coding"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230821162951-intra_coding.org",
+      "title": "intra-coding"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230821160850-vvc.org",
+      "title": "VVC"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230821160606-hevc.org",
+      "title": "HEVC"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230816125440-learned_scalable_video_coding_for_humans_and_machines.org",
+      "title": "Learned Scalable Video Coding for Humans and Machines"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230814182620-telemetry.org",
+      "title": "telemetry"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230814135321-machine_to_machine.org",
+      "title": "machine-to-machine"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230810011240-finetuning.org",
+      "title": "finetuning"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230810011200-knowledge_distillation.org",
+      "title": "knowledge distillation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230808130922-org.org",
+      "title": "Org"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230808130752-emacs.org",
+      "title": "emacs"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230808112948-convnext.org",
+      "title": "ConvNeXt"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230808023602-deep_image_prior.org",
+      "title": "Deep image prior"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230807185522-coin.org",
+      "title": "COIN"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230803032142-mongodb.org",
+      "title": "MongoDB"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230803032023-python.org",
+      "title": "python"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230721013453-decimation_filter.org",
+      "title": "decimation filter"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230721013415-threshold_filter.org",
+      "title": "threshold filter"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230721013326-temporal_filter.org",
+      "title": "temporal filter"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230721013237-spatial_filter.org",
+      "title": "spatial filter"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230720012249-discrete_cosine_transform.org",
+      "title": "discrete cosine transform"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230719235121-hnerv.org",
+      "title": "HNeRV"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230705212831-stratified_sampling.org",
+      "title": "stratified sampling"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230621170020-discretized_voxel_grids.org",
+      "title": "discretized voxel grids"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620180007-multiview_coding.org",
+      "title": "Multiview coding"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620171632-cosine_annealing.org",
+      "title": "Cosine annealing"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620161027-entropy_encoding.org",
+      "title": "Entropy Encoding"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620153838-model_pruning.org",
+      "title": "Model Pruning"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620152921-model_quantization.org",
+      "title": "Model Quantization"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620150305-positional_encoding.org",
+      "title": "Positional Encoding"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620141741-ssim_loss.org",
+      "title": "SSIM Loss"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620141448-l1.org",
+      "title": "L1 Loss"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230620114131-pixelshuffling.org",
+      "title": "PixelShuffling"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org",
+      "title": "Ideas"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org",
+      "title": "Improve Task aware model compression"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org",
+      "title": "NeRF for three cameras of three views."
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230619171012-ideas.org",
+      "title": "Translate neural radiance to video"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230619155136-nerf.org",
+      "title": "NeRF"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230619154858-nerv.org",
+      "title": "NeRV"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230324194947-aviris.org",
+      "title": "AVIRIS"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230323154233-talk.org",
+      "title": "Alim Karimi - Remote Sensing"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230323043108-h265.org",
+      "title": "High Efficiency Video Coding"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230314135831-3d_geometry.org",
+      "title": "3d geometry"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230314040112-electromagnetic_spectrum.org",
+      "title": "electromagnetic spectrum"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230314012635-diffraction_grating.org",
+      "title": "diffraction grating"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230313231231-spectral_band.org",
+      "title": "spectral band"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230313225632-hyperspectral.org",
+      "title": "Hyperspectral Imaging"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230313225632-hyperspectral.org",
+      "title": "Introduction"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230313225632-hyperspectral.org",
+      "title": "Working"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230221150340-caliberation.org",
+      "title": "Calibration"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230221100310-filters.org",
+      "title": "Filters"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230127170209-depth_estimation.org",
+      "title": "Depth Estimation"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20230127170010-dairybarn.org",
+      "title": "Dairybarn"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20221208005324-ideas.org",
+      "title": "Duck"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20210728135037-neural_tts.org",
+      "title": "Neural TTS"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20210728135019-parametric_tts.org",
+      "title": "Parametric TTS"
+    },
+    {
+      "id": "/home/prajwaljpj/Dropbox/org/roam/20210728134139-text_to_speech.org",
+      "title": "Text to Speech"
+    }
+  ],
+  "links": []
+}

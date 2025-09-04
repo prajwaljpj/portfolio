@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       dfa9aa4d-697d-48f9-8854-95f939e6ad92
+:END:
+#+title: Computer vision system for measuring individual cow feed intake using T RGB-D camera and deep learning algorithms
+
+* Introduction
+- CNN along with RGB-D to generate volume
+- Depth camera placed above the feeding area
+- Cow identification - 93.65% accuracy
+- 0.127kg [[id:f111e7c5-2e7e-4c06-a977-fb174cdeb8d7][MAE]] and [[id:cf72f762-147e-4e6b-ac4b-5453cd882b7d][MSE]] is 0.034kg^2
+- Model with only depth is better than model with RGB-D (Maybe because lighting comes into play)
+- open cowshed condition under sunlight
+- Two systems
+  1) Detection and identification of individual cows using CNN
+     a. Cow id is done with collar with numbers
+     b. Numbers are detected and classified
+     c. resulting in the specific cow
+  2) Monitoring individual cow feed intake
+- The camera was placed 140cm above the feed table
+* Methods
+- They use RESNET architecture
+- _CLAIM:_ The model was initially trained on depth data which was captured and placed at a height of 92cm from the object - they are talking about the pretrained RESNET model
+- Uderstanding of the realtime system can be donw from fig 9 of the paper
+  1) get frame
+  2) preprocess
+  3) subtract from prev frame  (only varaice)
+  4) Threshold
+  5) If there is information left --> There is motion
+  6) no info --> no motion
+* Results
+- Fig 12 graph 5 shows that for smaller weights theres more error for outdoor direct sun conditions
+- _Note:_ Did not understand graph 13
+-
+* Some research questions, takeaways
+- Good start for an overall methodology
+- The graphs presented and its corresponding results are questionable

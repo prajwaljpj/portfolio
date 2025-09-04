@@ -1,0 +1,67 @@
+:PROPERTIES:
+:ID:       6c3cc58e-77ee-4b85-8dde-1026c2510865
+:END:
+#+title: Hidden Markov Models (HMM)
+
+* Intro
+A Hidden Markov Model (HMM) is a statistical model that represents systems which are assumed to be a Markov process with hidden states. HMMs are widely used in time series analysis and are applicable in various fields, such as speech recognition, bioinformatics, and more.
+
+1. **States**:
+   - Let \( S = \{S_1, S_2, \ldots, S_N\} \) be a set of hidden states.
+
+2. **Observations**:
+   - Let \( O = \{O_1, O_2, \ldots, O_T\} \) be a sequence of observations from the observable space.
+
+3. **Transition Probabilities**:
+   - Define the state transition probability matrix \( A \) where
+     \( A_{ij} = P(S_t = S_j | S_{t-1} = S_i) \).
+     This matrix describes the probability of transitioning from state \( S_i \) to state \( S_j \).
+
+4. **Emission Probabilities**:
+   - Define the emission probability matrix \( B \) where
+     \( B_{ij} = P(O_t = O_j | S_t = S_i) \).
+     This matrix provides the probabilities of generating observation \( O_j \) from state \( S_i \).
+
+5. **Initial State Distribution**:
+   - Let \( \pi \) be the initial state distribution where \( \pi_i = P(S_1 = S_i) \).
+
+** Mathematical Formalism**
+
+An HMM is defined by the triplet \( \lambda = (A, B, \pi) \).
+
+1. **Forward Algorithm**:
+   To compute the probability of an observed sequence \( O \):
+
+   \[
+   \alpha_t(i) = \sum_{j=1}^{N} \alpha_{t-1}(j) A_{ji} B_{iO_t}
+   \]
+   Where \( \alpha_t(i) \) is the probability of observing the first \( t \) observations and being in state \( S_i \) at time \( t \).
+
+   The probability of the observation sequence \( O \) is given by:
+
+   \[
+   P(O | \lambda) = \sum_{i=1}^{N} \alpha_T(i)
+   \]
+
+2. **Viterbi Algorithm**:
+   To find the most likely sequence of hidden states \( S \):
+
+   \[
+   \delta_t(i) = \max_{j} (\delta_{t-1}(j) A_{ji}) \times B_{iO_t}
+   \]
+   Where \( \delta_t(i) \) is the maximum probability of the state sequence leading to state \( S_i \).
+
+3. **Baum-Welch Algorithm**:
+   To estimate the parameters \( A \), \( B \), and \( \pi \) given a set of observed sequences.
+
+   - This is an Expectation-Maximization method that iteratively optimizes the parameters to maximize the likelihood of the observed sequences.
+
+** Applications of HMM**
+
+- **Speech Recognition**: Modeling phonemes.
+- **Bioinformatics**: Gene prediction.
+- **Finance**: Modeling hidden market states.
+
+** Conclusion**
+
+HMMs provide a powerful framework for modeling temporal sequences where the underlying processes are hidden. Understanding how to implement and apply these models can yield insights across various disciplines.

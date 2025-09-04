@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       c2c2a982-3390-4cc3-b70c-ed78424f6a51
+:END:
+#+title: MoverScore
+
+
+[[attachment:_20241119_193132mover-score.jpg]]
+
+MoverScore also uses contextualized embeddings to compute the distance between tokens in the generated output and reference. But unlike BERTScore, which is based on one-to-one matching (or “hard alignment”) of tokens, MoverScore allows for *many-to-one matching* (or “soft alignment”).
+
+MoverScore enables the mapping of semantically related words in one sequence to their counterparts in another sequence. It does this by solving a constrained optimization problem that finds the minimum effort to transform one text into another. The idea is to measure the distance that words would have to move to convert one sequence to another.
+
+However, there are several pitfalls to using these conventional benchmarks and metrics.
+
+- Advantages of MoverScore over other metrics
+  1. First, there’s *poor correlation between these metrics and human judgments*. [[id:7bfa61aa-7f1e-4c27-9a69-03881f048b37][BLEU]], [[id:5b3513d2-47dc-4945-a022-426541fbc889][ROUGE]], and others have had [[https://arxiv.org/abs/2008.12009][negative correlation with how humans evaluate fluency]]. They also showed moderate to less correlation with human adequacy scores. In particular, BLEU and ROUGE have [[https://arxiv.org/abs/2303.16634][low correlation with tasks that require creativity and diversity]].
+  2. Second, these metrics often have *poor adaptability to a wider variety of tasks*. Adopting a metric proposed for one task to another is not always prudent. For example, exact match metrics such as BLEU and ROUGE are a poor fit for tasks like abstractive summarization or dialogue. Since they’re based on n-gram overlap between output and reference, they don’t make sense for a dialogue task where a wide variety of responses are possible. An output can have zero n-gram overlap with the reference but yet be a good response.
+  3. Third, these metrics have *poor reproducibility*. Even for the same metric, [[https://arxiv.org/abs/2008.12009][high variance is reported across different studies]], possibly due to variations in human judgment collection or metric parameter settings. Another study of [[https://aclanthology.org/2023.acl-long.107/][ROUGE scores]] across 2,000 studies found that scores were hard to reproduce, difficult to compare, and often incorrect because evals were often conducted with untested, incorrect ROUGE implementations. ([[https://huggingface.co/blog/open-llm-leaderboard-mmlu][source]])

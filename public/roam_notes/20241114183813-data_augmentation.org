@@ -1,0 +1,54 @@
+:PROPERTIES:
+:ID:       48b2f18d-07b2-49e5-a698-0fa6f8428f7e
+:END:
+#+title: Data Augmentation
+
+Data augmentation is a technique used in machine learning and computer vision to artificially expand the size of a training dataset by applying various transformations to the existing data. This helps improve model generalization and robustness by exposing it to a wider range of variations.
+
+*** Types of Data Augmentation:
+
+1. *Geometric Transformations:*
+   - *Rotation:* Rotating an image by a certain angle (e.g., 10°, 30°).
+   - *Flipping:* Horizontally or vertically flipping an image.
+   - *Scaling:* Resizing the image up or down.
+   - *Cropping:* Randomly selecting a sub-region of the image.
+
+   /Example:* Rotating a cat image by 15°.
+
+2. *Color Space Transformations:*
+   - *Brightness Adjustment:* Altering the brightness of images.
+   - *Contrast Adjustment:* Changing the contrast levels.
+   - *Saturation Adjustment:* Modifying the color saturation.
+   - *Hue Shift:* Changing the hue of the colors.
+
+   /Example:* Increasing the brightness of a photo to simulate different lighting conditions.
+
+3. *Noise Injection:*
+   - *Gaussian Noise:* Adding random noise to images to simulate real-world conditions.
+   - *Speckle Noise:* Introducing multiplicative noise.
+
+   /Example:* Adding Gaussian noise to an image to make the model robust to blurred images.
+
+4. *Cutout or Occlusion:*
+   - *Cutout:* Randomly masking out sections of the image to simulate occlusion.
+   - *Random Erasing:* Randomly erasing parts of the image.
+
+   /Example:* Masking a square area in an image of a dog to simulate obstruction.
+
+5. *Elastic Transformations:*
+   - Distorting the image using elastic deformations to simulate geometric variations.
+
+   /Example:* Stretching and squashing features in handwritten digits.
+
+6. *Mixing Techniques:*
+   - *Mixup:* Combining two images and their labels into a single training sample.
+   - *CutMix:* Cutting sections from different images and combining them.
+
+   /Example:* Blending two images of different flowers to create a hybrid.
+
+7. *Text Augmentation:*
+   - Techniques for augmenting textual data, such as synonym replacement, random insertion, or back-translation.
+
+   /Example:* Replacing "happy" with its synonym "joyful" in a sentence.
+
+Data augmentation helps models learn more generalized features and can significantly improve performance, especially when the training dataset is small.

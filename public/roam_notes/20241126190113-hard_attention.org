@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       c6c4e1d4-6dc2-42c5-8213-c5118f8a7442
+:END:
+#+title: Hard Attention
+#+filetags: :definition:LLM:
+
+Hard attention is a mechanism used in various machine learning models, particularly in tasks involving image and text processing, where the focus is specifically on certain parts of the input data to make predictions or decisions. Unlike soft attention, which assigns varying weights to all parts of the input and allows the model to consider all parts simultaneously, hard attention involves making discrete selections, focusing on only a specific subset of the input data at any given time.
+
+*** Key Characteristics of Hard Attention:
+
+1. *Discrete Selection*: Hard attention chooses specific locations or elements in the input, leading to a binary decision about what to focus on. For example, in an image, it may choose to highlight only a single object rather than distributing attention across the entire scene.
+
+2. *Stochastic Nature*: The selection process in hard attention is often stochastic, meaning it involves randomness. This randomness can help the model explore different parts of the input during training.
+
+3. *Non-Differentiable*: Since hard attention involves sampling and making discrete decisions, it is typically non-differentiable. This poses challenges for gradient-based optimization methods, leading to the use of techniques like reinforcement learning for training.
+
+4. *Efficiency*: Hard attention can be computationally more efficient because it reduces the focus to a smaller portion of the input, which can be particularly useful in tasks with high-dimensional data (like images).
+
+*** Example of Hard Attention:
+
+Consider a visual question-answering task where a model is given an image and a question about the image. For example, the image might show a group of animals, and the question could be, "How many dogs are in the picture?"
+
+- *Step 1*: The model applies hard attention to identify the regions of the image that potentially contain dogs. Instead of analyzing the entire image at once, it might select specific bounding boxes where a dog could be present.
+
+- *Step 2*: The model then focuses only on these selected regions, analyzing the features within them to count the dogs. If the algorithm selects box A (which contains a dog) and disregards box B (which contains a cat), this decision is made based on the learned criteria.
+
+- *Step 3*: After processing the selected regions, the model can answer the question based on its focus, resulting in a more targeted and efficient analysis.
+
+*** Conclusion:
+
+Hard attention is particularly valuable in scenarios where selective focus can improve performance by concentrating computational resources on the most relevant parts of the input data, despite the challenges it poses for training due to its non-differentiability.

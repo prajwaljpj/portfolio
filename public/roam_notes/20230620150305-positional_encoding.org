@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       ad46a4dd-a61e-41be-991f-53d4c8770fad
+:END:
+#+title: Positional Encoding
+
+Positional encoding is a technique used in the field of natural language processing (NLP) to encode the positional information of tokens in a sequence. It is used in conjunction with other encoding techniques like word embeddings to convey the position of each word in a sentence.
+
+In simple terms, positional encoding is a way to add information about the position of a word or token in a sentence to its corresponding embedding vector. This is done by adding a fixed vector to the embedding vector to represent the position of the word in the sequence. The position is encoded as a vector of sine and cosine waves, which is added to the original embedding vector.
+
+By adding positional encoding to word embeddings, a neural network can better understand the order of words in a sentence and discern the meaning from the sequence of words. This is particularly important in tasks like machine translation, where the order of words can drastically change the meaning of the sentence.
+
+Overall, positional encoding is a useful technique in NLP that allows for better understanding of the sequential nature of language.
+
+The formula for positional encoding is:
+
+\begin{align*}
+PE_{(pos,2i)} &= \sin(pos / 10000^{2i/d_{model}}) \\
+PE_{(pos,2i+1)} &= \cos(pos / 10000^{2i/d_{model}})
+\end{align*}
+
+where $pos$ is the position of the token in the sequence, $i$ is the position of the encoding vector in the embedding, $d_{model}$ is the dimensionality of the embedding space, and $PE_{(pos,i)}$ is the value of the encoding vector at position $(pos,i)$.

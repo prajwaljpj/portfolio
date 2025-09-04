@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       d12598b7-21fc-4cee-8d39-7d68e48bb548
+:END:
+#+title: PLP Features
+
+PLP (Perceptual Linear Prediction) is a method used in audio processing, particularly in speech analysis. It emphasizes modeling the human auditory system's perception of sound. PLP features capture the spectral properties of sound by applying a series of transformations to the Mel frequency scale. The key steps include:
+
+1. *Pre-emphasis*: Boosting higher frequencies.
+2. *Short-time Fourier Transform (STFT)*: Converting time-domain signals to the frequency domain.
+3. *Mel filter bank*: Mapping frequencies to the Mel scale, which approximates human ear response.
+4. *Logarithm*: Taking the logarithm of the Mel-spectrum to compress the dynamic range.
+5. *Linear Prediction Coding (LPC)*: Computing the LPC coefficients from the log Mel spectrum.
+6. *Cepstral coefficients*: Transforming the LPC coefficients to obtain the final PLP features.
+
+The mathematical representation generally involves linear prediction error calculation, taking the form:
+
+\[
+P(z) = \sum_{k=0}^{p} a_k z^{-k}
+\]
+
+where \( P(z) \) is the linear prediction polynomial and \( a_k \) are the LPC coefficients.
+
+*** Python Example
+
+Here's a simple illustration of calculating PLP features using Python, assuming =librosa= and =scipy= libraries:
+
+#+begin_src python
+import numpy as np
+import librosa
+
+def plp_features(audio_path, sr=16000, frame_length=2048, hop_length=512, num_filters=20):
+    # Load audio file
+    y, sr = librosa.load(audio_path, sr=sr)
+
+    # Pre-emphasis filter
+    y_preemph = np.append(y[0], y[1:] - 0.97 * y[:-1])
+
+    # Short-time Fourier transform (STFT)
+    stft = np.abs(librosa.stft(y_preemph, n_fft=frame_length, hop_length=hop_length))
+
+    # Mel filter bank
+    mel_filters = librosa.filters.mel(sr, n_fft=frame_length, n_mels=num_filters)
+    mel_spectrum = np.dot(mel_filters, stft**2)  # Power spectrum
+
+    # Logarithm of Mel spectrum
+    log_mel = np.log(mel_spectrum + 1e-6)  # Adding a small value to avoid log(0)
+
+    # Linear prediction
+    # LPC calculation can be done using scipy, here we apply a simple method
+    from scipy.signal import lfilter, lpc
+    a = lpc(log_mel.mean(axis=1), 12)  # LPC for each frame
+
+    return a
+
+# Example usage
+audio_file = 'path_to_audio_file.wav'
+plp = plp_features(audio_file)
+print(plp)
+#+end_src
+
+This code loads an audio file, applies the PLP steps, and extracts PLP features. Adapt the parameters and filename as necessary for your specific application.

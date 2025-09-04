@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       1b1b6e05-7b49-4956-8423-faf7af9a8aca
+:END:
+#+title: Linearly Separable
+
+Linearly separable refers to a situation in a classification problem where two classes can be separated by a single straight line (in two dimensions), a plane (in three dimensions), or a hyperplane (in higher dimensions). This means there exists a linear decision boundary that can completely differentiate the classes without any overlap.
+
+*Example:*
+Consider a simple binary classification problem with two features (x1 and x2):
+
+- Class A: Points (1, 2), (2, 3)
+- Class B: Points (4, 5), (5, 6)
+
+In this case, a line can be drawn to separate Class A from Class B.
+
+*Difference from Non-Linearly Separable:*
+In contrast, points are non-linearly separable if no straight line can be drawn to separate the classes. For example:
+
+- Class A: Points (1, 2), (1, 3)
+- Class B: Points (2, 1), (2, 2)
+
+Here, any line you draw will not be able to perfectly separate Class A from Class B, as they will always overlap.
+
+In summary, linearly separable classes can be divided by a straight line, while non-linearly separable classes cannot.

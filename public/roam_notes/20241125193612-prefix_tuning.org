@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       bf75dde7-3981-408a-92bd-c09a24e1f0db
+:END:
+#+title: prefix tuning
+
+Prefix tuning is a lightweight approach to fine-tuning pretrained language models, primarily used in scenarios where computational resources are limited or when working with domain-specific data. Instead of adjusting the entire model's parameters, prefix tuning introduces a small set of additional parameters, known as prefix tokens, that are prepended to the inputs of the model during training and inference. This method retains the original model's structure and weights, allowing it to adapt to specific tasks without extensive retraining.
+
+[[attachment:_20241125_194101prefix.jpg]]
+
+
+*** Key Features of Prefix Tuning
+
+1. *Efficient Parameterization*: Only a small number of parameters (related to the prefix) are trained instead of the entire model, making this method more computationally efficient.
+
+2. *Parameter Sharing*: The main architecture of the pretrained model remains unchanged, facilitating knowledge transfer and making it easier to apply to various tasks.
+
+3. *Flexibility*: Different task-specific prefixes can be created and swapped out, allowing rapid adaptation to new tasks without retraining the entire model.
+
+4. *Reduced Overfitting Risk*: By limiting the number of parameters updated, prefix tuning reduces the risk of overfitting compared to traditional full fine-tuning methods.
+
+*** Example of Prefix Tuning
+
+Imagine training a large language model like GPT to generate job descriptions. Instead of fine-tuning the entire model, a prefix tuning approach would involve:
+
+1. *Create Prefix Tokens*: Introduce a small set of trainable embedding vectors (e.g., 10-100 tokens specific to the job description task) that represent the context of this domain.
+
+2. *Training*: During training, these prefix tokens are prepended to the input text (e.g., user input related to the job) and only the parameters associated with these tokens are updated while the main model parameters remain frozen.
+
+3. *Inference*: When generating job descriptions, the model receives input with the learned prefix tokens. The generated output is adapted to the job description task thanks to the contextual cues provided by the prefix.
+
+*** Summary
+
+Prefix tuning offers a resource-efficient way to leverage large language models for specific tasks by incorporating a small set of additional parameters while retaining the overall knowledge and structure of the original model. This method is especially advantageous in applications requiring quick adaptations with limited computational resources.

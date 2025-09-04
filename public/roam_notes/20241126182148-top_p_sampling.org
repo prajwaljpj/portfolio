@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:       8497575c-7733-44b0-8861-fb2afbd1a04a
+:ROAM_ALIASES: "Nucleus Sampling"
+:END:
+#+title: Top-p Sampling
+#+filetags: :python-example:LLM:definition:
+
+Top-p sampling, also known as nucleus sampling, is a technique used in natural language generation to select the next word from a probability distribution over words. Instead of choosing from all possible words, it restricts the selection to a subset (the "nucleus") of words whose cumulative probability exceeds a certain threshold \( p \).
+
+*** How it Works:
+1. *Compute probabilities*: Generate probabilities for all candidate words from the model.
+2. *Sort words*: Sort these words based on their probabilities in descending order.
+3. *Cumulative probabilities*: Compute cumulative probabilities until the sum reaches or exceeds \( p \).
+4. *Select candidates*: Select the subset of words within this cumulative threshold.
+5. *Sample from subset*: Randomly sample from this reduced set of candidate words.
+
+*** Math Explanation:
+1. Let the probabilities of the words be \( p(w_1), p(w_2), \ldots, p(w_n) \).
+2. Sort the words such that \( p(w_1) \geq p(w_2) \geq \ldots \geq p(w_n) \).
+3. Compute the cumulative distribution:
+   \[
+   P_k = \sum_{i=1}^{k} p(w_i)
+   \]
+   where we find the smallest \( k \) such that \( P_k \geq p \).
+4. Sample from \( \{ w_1, w_2, \ldots, w_k \} \).
+
+*** Python Example:
+Here's how you might implement top-p sampling in Python:
+
+#+begin_src python
+import numpy as np
+
+def top_p_sampling(logits, p=0.9):
+    # Convert logits to probabilities
+    probs = np.exp(logits) / np.sum(np.exp(logits))
+
+    # Sort probabilities and corresponding indices
+    sorted_indices = np.argsort(probs)[::-1]
+    sorted_probs = probs[sorted_indices]
+
+    # Calculate cumulative probabilities
+    cumulative_probs = np.cumsum(sorted_probs)
+
+    # Find the cutoff for top-p
+    cutoff_index = np.searchsorted(cumulative_probs, p, side='right')
+
+    # Select the corresponding words and their probabilities
+    selected_indices = sorted_indices[:cutoff_index]
+    selected_probs = sorted_probs[:cutoff_index]
+
+    # Sample from selected candidates
+    sampled_index = np.random.choice(selected_indices, p=selected_probs/selected_probs.sum())
+
+    return sampled_index
+
+# Example usage:
+logits = np.array([1.2, 0.9, 0.4, 0.3])  # Example logits from model
+p = 0.9  # Top-p threshold
+sampled_word_index = top_p_sampling(logits, p)
+print("Sampled word index:", sampled_word_index)
+#+end_src
+
+In this example, =logits= represents the model's output scores for words, and the function =top_p_sampling= implements the top-p sampling mechanism. Adjust =p= to modify the cut-off for the nucleus of probabilities you wish to consider.

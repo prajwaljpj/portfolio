@@ -1,0 +1,134 @@
+:PROPERTIES:
+:ID:       f30eb2c2-1358-4406-9279-a6ac348a04bf
+:END:
+#+title: Attention Mechanism
+
+The attention mechanism is a technique in neural networks that allows models to focus on specific parts of the input sequence when making predictions or generating outputs. It helps improve performance in tasks such as natural language processing, image captioning, and more, by weighing the importance of different input elements.
+Using the attention mechanism, [[id:ca85123a-a20b-40dd-b06d-c6e585f95b9d][prompt engineering]] can be used to give better predictions from the model mitigating the high costs of [[id:93ea77e2-be22-4912-be2a-e327ee53998b][fine-tuning]]
+
+*** Key Concepts:
+1. *Attention Scores:* Calculate how much focus to place on each part of the input.
+2. *Context Vector:* A weighted sum of the input representations based on the attention scores.
+
+*** Math
+The attention mechanism, primarily used in neural networks, particularly in natural language processing and computer vision, allows models to focus on specific parts of the input. Here's a concise explanation of the key mathematical components:
+
+1. *Input Vectors*: We have a set of input vectors \( X = \{x_1, x_2, ..., x_n\} \) where \( x_i \in \mathbb{R}^d \) represents feature embeddings of tokens.
+
+2. *Queries, Keys, and Values*:
+   - *Queries* \( Q \): A vector representing what we are looking for.
+   - *Keys* \( K \): Vectors representing the input tokens (features).
+   - *Values* \( V \): Vectors containing the actual information to be retrieved, often identical to the input vectors.
+
+3. *Dot-Product Attention*:
+   The attention score between a query \( q \) and a key \( k_i \) is computed using the dot product:
+   \[
+   \text{score}(q, k_i) = q \cdot k_i
+   \]
+
+4. *[[id:0b98eebb-0a83-4547-8181-680c73847dc2][Softmax]] Normalization*:
+   To convert scores to probabilities:
+   \[
+   \alpha_i = \frac{\exp(\text{score}(q, k_i))}{\sum_{j=1}^n \exp(\text{score}(q, k_j))}
+   \]
+   Here, \( \alpha_i \) is the attention weight for the \( i \)-th input.
+
+5. *Output Calculation*:
+   The output of the attention mechanism, which is a weighted sum of the values, is computed as:
+   \[
+   \text{Attention}(Q, K, V) = \sum_{i=1}^n \alpha_i v_i
+   \]
+
+In the Context of Multi-Head Attention:
+Multiple sets of \( Q \), \( K \), and \( V \) (heads) allow the model to attend to different aspects of the input simultaneously. The outputs of all heads are concatenated and linearly transformed.
+
+This mechanism enables the model to learn relationships between different parts of the input dynamically.
+
+*** Types of Attention:
+:PROPERTIES:
+:ID:       98972da7-2026-4417-a7c8-bf0c37c76155
+:END:
+- *[[id:7db77a35-bd1c-4d78-9a0d-c746d1e613ec][Soft Attention]]:* Computes a probability distribution over the input.
+- *[[id:c6c4e1d4-6dc2-42c5-8213-c5118f8a7442][Hard Attention]]:* Makes a discrete selection but is often non-differentiable.
+- Difference between soft and hard attention
+| Feature           | Soft Attention                                                | Hard Attention                                                                          |
+|-------------------+---------------------------------------------------------------+-----------------------------------------------------------------------------------------|
+| Definition        | Probabilistic weighting over all inputs                       | Discrete selection of specific inputs                                                   |
+| Differentiability | Differentiable, allows gradient-based optimization            | Non-differentiable, often requires special techniques (e.g., reinforcement learning)    |
+| Computation       | More computationally efficient, scales easily with input size | Can be less efficient due to discrete choices                                           |
+| Interpretability  | Easier to interpret weights and focus areas                   | Can provide clearer focus on specific parts, but harder to analyze overall behavior     |
+| Use Cases         | Common in transformer models, widespread applications         | Used in specific tasks like image captioning or text generation where focus is critical |
+
+*** Query key value
+In the attention mechanism, particularly in models like Transformers, the query, key, and value are vectors that represent the input data.
+
+- *Query (Q)*: A representation that is used to "ask" for information from the inputs.
+- *Key (K)*: A representation that corresponds to each input piece; it is used to determine how relevant any input is to a given query.
+- *Value (V)*: The actual data associated with each key, which gets weighted by the attention scores computed from the queries and keys.
+
+The attention score is calculated as a function of the query and key, typically using a dot product, which reflects the relevance. The result is used to weigh the values, producing a context-aware representation.
+*** Basic Implementation in Python:
+One common implementation uses NumPy. Below is a simplified version of dot-product attention:
+
+#+begin_src python
+import numpy as np
+
+def softmax(x):
+    exp_x = np.exp(x - np.max(x))
+    return exp_x / np.sum(exp_x)
+
+def attention(query, keys, values):
+    # Calculate attention scores
+    scores = np.dot(query, keys.T)  # (1, seq_length)
+    # Compute attention weights
+    weights = softmax(scores)  # (1, seq_length)
+    # Weighted sum of values
+    context_vector = np.dot(weights, values)  # (1, value_dim)
+    return context_vector, weights
+
+# Example usage
+query = np.array([1, 0, 0])  # (1, dim)
+keys = np.array([[1, 0, 1],
+                 [0, 1, 0],
+                 [1, 1, 0]])  # (seq_length, dim)
+values = np.array([[10, 0],
+                   [0, 20],
+                   [30, 40]])  # (seq_length, value_dim)
+
+context_vector, attention_weights = attention(query, keys, values)
+print("Context Vector:\n", context_vector)
+print("Attention Weights:\n", attention_weights)
+#+end_src
+
+*** Libraries:
+For more complex implementations, consider using libraries like TensorFlow or PyTorch. They provide built-in support for attention layers, allowing for more efficient and scalable development.
+
+**** Example with PyTorch:
+#+begin_src python
+import torch
+import torch.nn as nn
+
+class SimpleAttention(nn.Module):
+    def __init__(self):
+        super(SimpleAttention, self).__init__()
+
+    def forward(self, query, keys, values):
+        scores = torch.matmul(query, keys.transpose(-2, -1))  # (1, seq_length)
+        weights = torch.softmax(scores, dim=-1)  # (1, seq_length)
+        context_vector = torch.matmul(weights, values)  # (1, value_dim)
+        return context_vector, weights
+
+# Example usage
+query = torch.tensor([[1.0, 0.0, 0.0]])  # (1, dim)
+keys = torch.tensor([[[1.0, 0.0, 1.0],
+                      [0.0, 1.0, 0.0],
+                      [1.0, 1.0, 0.0]]])  # (1, seq_length, dim)
+values = torch.tensor([[[10.0, 0.0],
+                         [0.0, 20.0],
+                         [30.0, 40.0]]])  # (1, seq_length, value_dim)
+
+attention = SimpleAttention()
+context_vector, attention_weights = attention(query, keys, values)
+print("Context Vector:\n", context_vector)
+print("Attention Weights:\n", attention_weights)
+#+end_src

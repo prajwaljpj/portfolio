@@ -1,0 +1,82 @@
+:PROPERTIES:
+:ID:       92c25398-38b8-44d2-97bc-54f30e161fb7
+:END:
+#+title: Linear Regression
+
+* Linear Regression Overview
+
+Linear regression is a statistical method used to model the relationship between a dependent variable (often called the target) and one or more independent variables (features) by fitting a linear equation to observed data. The simplest form is simple linear regression, which involves one independent variable.
+
+The linear equation can be expressed as:
+\[ Y = b_0 + b_1X \]
+where:
+- \( Y \) is the dependent variable.
+- \( b_0 \) is the y-intercept.
+- \( b_1 \) is the slope of the line (coefficient for the independent variable \( X \)).
+- \( X \) is the independent variable.
+
+* Mathematical Formulation
+
+The coefficients \( b_0 \) and \( b_1 \) can be estimated using the method of least squares, which minimizes the sum of the squares of the residuals (the differences between the observed and predicted values).
+
+The formulas for the coefficients in simple linear regression are:
+1. Slope (\( b_1 \)):
+   \[
+   b_1 = \frac{n(\sum XY) - (\sum X)(\sum Y)}{n(\sum X^2) - (\sum X)^2}
+   \]
+2. Intercept (\( b_0 \)):
+   \[
+   b_0 = \frac{\sum Y - b_1(\sum X)}{n}
+   \]
+Where:
+- \( n \) = number of observations
+- \( \sum XY \) = sum of the product of pairs
+- \( \sum X \) = sum of the values of \( X \)
+- \( \sum Y \) = sum of the values of \( Y \)
+- \( \sum X^2 \) = sum of the squares of \( X \)
+
+* Python Example
+
+Here's a simple Python example using NumPy and Matplotlib to perform linear regression and visualize the results:
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Sample data
+X = np.array([[1], [2], [3], [4], [5]])  # Independent variable
+Y = np.array([2, 3, 5, 7, 11])            # Dependent variable
+
+# Create and fit the model
+model = LinearRegression()
+model.fit(X, Y)
+
+# Make predictions
+Y_pred = model.predict(X)
+
+# Get the coefficients
+b0 = model.intercept_
+b1 = model.coef_[0]
+
+print(f"Intercept: {b0}, Slope: {b1}")
+
+# Plotting the results
+plt.scatter(X, Y, color='blue', label='Data points')
+plt.plot(X, Y_pred, color='red', label='Linear regression line')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Linear Regression Example')
+plt.legend()
+plt.show()
+#+end_src
+
+** Explanation of the Code
+
+1. *Data Preparation*: We create sample independent (=X=) and dependent (=Y=) arrays.
+2. *Model Creation and Fitting*: We create a linear regression model and fit it to our data.
+3. *Prediction*: The model is used to predict =Y= values based on =X=.
+4. *Coefficient Extraction*: The intercept and slope are printed.
+5. *Visualization*: The scatter plot of the data points and the fitted linear regression line is shown.
+
+This example demonstrates the fundamental concepts of linear regression using Python.

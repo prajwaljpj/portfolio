@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       eecb0d7a-038a-458e-bc1f-fb6f476c32bf
+:END:
+#+title: Hyperspectral Imaging
+* [[https://en.wikipedia.org/wiki/Hyperspectral_imaging][Wiki]]
+** Introduction
+Hyperspectral imaging collects and processes information from across the [[id:3f8fc6cd-e6a5-4e33-bdba-7d52ba2c8504][electromagnetic spectrum]]. The sensors collect information as a set of images with dimentions \((x, y, \lambda)\) known as _*hyperspectral data cube*_.
+** Type
+- Push broom scanner
+- Whisk broom scanner (spacial scanning)
+* [[https://www.sciencedirect.com/science/article/pii/B9780128032305000051][Diagnostc procedures]]
+** Introduction
+:PROPERTIES:
+:ID:       4ff8deab-03a9-4780-8f20-d44e06c4b792
+:END:
+Analysis of a wide spectum of light instead of just assigning primary colours (RGB). The light striking each pixel is broken down into many different [[id:4e186440-b91c-46fd-b4f1-33ddc001a70e][spectral bands]] in order to provide more information on what is imaged. Used to identify targets against background clutter (Military research). In medical research, detection(distinguising) of malignant tissues.
+** Working
+:PROPERTIES:
+:ID:       3863c10b-7486-4509-9244-09dbc6604577
+:END:
+With a hyperspectral camera, the light is captured through a lens and split into different spectral lengths by a dispersive element such as a prism or a [[id:3a79fe34-0625-4f21-8ec7-f9ecc1adfe3a][diffraction grating]]. Also possible is a recording of different wavelengths at different positions in the FOV. The heart of the MHSI camera is a CCD or CMOS detector array that reads out the information inherent to the captured light.
+#+attr_html: :width 500px
+#+attr_latex: :width 500px
+[[/Users/prajwaljpj/Library/CloudStorage/Dropbox/hyperspectral_imaging/HSI_camera.jpeg]]
+** Advantages and Disadvantages
+- Technology very new? Check Introduction -> Diagnostic Procedures
+- Expensive, large, difficult to use
+- Low framerate (atleast the older cameras)
+
+** Parts
+*** CCD or CMOS Detector
+Detector that reads out the information inherent to the captured light
+*** EMCCD camera
+*** spectrograph
+*** Polarizer
+*** Toggling Mirror
+*** RGB Imager
+** Papers :ATTACH:
+- [[https://arxiv.org/pdf/2206.02327v2.pdf][JigsawHSI]]
+  This article describes Jigsaw, a convolutional neural network (CNN) used in geosciences and based on Inception but tailored for geoscientific analyses. Introduces JigsawHSI (based on Jigsaw) and uses it on the land-use land-cover (LULC) classification problem with the Indian Pines, Pavia University and Salinas hyperspectral image data sets. The network is compared against HybridSN , a spectral-spatial 3D-CNN followed by 2DCNN that achieves state-of-the-art results on the datasets. This short article proves that JigsawHSI is able to meet or exceed HybridSN’s performance in all three cases. Additionally, the use of jigsaw in geosciences is highlighted, while the code and toolkit are made available.
+- [[https://arxiv.org/pdf/2104.00341v1.pdf][SpectralNET: Exploring Spatial-Spectral WaveletCNN for Hyperspectral Image Classification]]
+    #+attr_html: :width 500px
+    #+attr_latex: :width 500px
+    [[/Users/prajwaljpj/projects/dairybarn_project/research/figures/Spectralnet1.png]]
+
+    #+attr_html: :width 500px
+    #+attr_latex: :width 500px
+    [[/Users/prajwaljpj/projects/dairybarn_project/research/figures/Spectralnet2.png]]
+- [[/Users/prajwaljpj/Library/CloudStorage/Dropbox/papers/Hyperspectral_remote_sensing_in_precision_agriculture.pdf][Hyperspectral remote sensing in precision agriculture: present status, challenges, and future trends]]
+** GitHub
+- [[https://github.com/spectralpython/spectral][Spectral]]: Pure python module for processing hyperspectral image data. /Reading/, /Displaying/, /Manipulating/, and /Classifying/. [[http://www.spectralpython.net/][Website]]
+- [[https://github.com/nshaud/DeepHyperX][DeepHyperX]]: A Python tool to perform deep learning experiments on various hyperspectral datasets.
+** Datasets
+- [[id:b24a11a3-3079-4bb1-ae67-5858a1df97f2][AVIRIS dataset]]
+
+** Important Notes
+- Accurate caliberation is crucial.
+- Camera is customizable (wavelenghts)
+- [[https://towardsdatascience.com/what-are-hyper-spectral-images-a5de5d9fa91][towardsdatascience resource for HSI]]

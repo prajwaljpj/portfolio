@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       7225de6c-ac61-456c-b69a-a260d35d8c91
+:END:
+#+title: Skip-bigrams
+
+Skip bigrams are a type of n-gram that allows for the inclusion of gaps or "skips" between words. In contrast to traditional bigrams, which consist of two consecutive words, skip bigrams can have one or more intervening words.
+
+*Example:*
+Suppose we have the sentence: "The quick brown fox jumps over the lazy dog."
+
+- Standard bigrams: ("The quick", "quick brown", "brown fox", ...)
+- Skip bigrams (with a skip of one word allowed):
+  - ("The brown", "The fox", "quick jumps", "quick over", ...)
+
+In this example, "The brown" is a skip bigram because there's one word ("quick") skipped between "The" and "brown". This captures more flexible relationships in the data compared to regular bigrams.

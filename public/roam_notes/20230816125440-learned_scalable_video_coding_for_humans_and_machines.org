@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       fcc0720d-5988-4002-bb15-579d810ea9bb
+:END:
+#+title: Learned Scalable Video Coding for Humans and Machines
+
+* Abstract
+- Video coding developed to support video streaming, videoconferencing, digital TV, etc
+- Used for human viewing
+- Advances of DNN have been used for video analysis such as vehicle detection, tracking, etc
+- A new video coding facilitating representation, and compression is required for both human viewing and machine use
+- In this paper, they propose a end to end learnable video codec system based on conditional coding that supports machine vision task in its base layer and additionally an enhancement layer that supports input reconstruction for human viewing
+* Introduction
+- [[id:1318dd77-4418-4132-a887-40ae59d1020b][HEVC]] and [[id:4d0e7b83-b4a4-4967-b7d5-83c2a7dc0fe2][VVC]] are used for compression in a conventional way
+- Some deeplearning methods for video coding is given in references 6-14 of the paper
+- These methods are for human viewing and DNNs are widely used for visual analytics
+- A new standard MPEG-VCM(*V* ideo *C* oding for *M* achines) is being developed in order to establish a standardized framework for video coding that caters to both human viewing and machine vision
+- DNN based compression for [[id:8c47dcc4-f2a5-4f81-bcd7-577307b58291][intra-coding]], and a combination of DNN and conventional for [[id:bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e][inter-frame coding]] reference 20, 21 of the paper
+- The process of analysis of decoded images by a machine vision model can be represented as a [[id:bba17c71-d84c-43e7-81a4-60cecfa3e3e1][Markov chain]] $\mathbb{X} \rightarrow \mathbb{Y} \rightarrow \mathbb{\hat{X}} \rightarrow \mathbb{V}$ where $\mathbb{Y}$ is the latent representation of $\mathbb{X}$ and $\mathbb{\hat{X}}$ is the reconstructed image.
+- Data processing inequality ( #TODO What is this) results in $\mathbb{I}(\mathbb{Y};\mathbb{\hat{X}}) \ge \mathbb{I}(\mathbb{Y};\mathbb{V})$ where $\mathbb{I}(\cdot;\cdot)$ represents the mutual information
+- This representation suggests that mutual information require fewer bits
+- For example YOLO, a well known object detection model works well for machine vision tasks. In terms of compression, the system is constructed based on conditional coding which is theoretically more efficient than residual coding
+- The system presented in this paper differs in several ways in comparison to reference 20:
+  1. Is an end-to-end learnable codec while 20 uses hand-crafted video coding tools
+  2. System uses [[id:bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e][inter-frame coding]] in the base layer and the enhancement layer
+  3. 20 employed conventional residual [[id:bdfc8fba-a2ec-41a8-a6fa-4b2165710b4e][inter-frame coding]] in the enhancement layer, while our proposed codec is built upon conditional coding
+  4. 20 uses YOLOv3 while their system uses YOLOv5 (looks like its not a fair comparison)
+- Experiments are run on 4 standard video datasets.
+- The paper first provides the motivation for the use of conditional coding, and then proposed system is demonstrated, and finally, experimental results are presented
+* Motivation
+- Analysis of conditional coding vs residual coding from a rate distortion point of view.
+- Conditional coding has been argued to offer better compression in comparison to residual coding but, the arguments are done only on lossless compression.
+- $\mathbb{H}(\mathbb{X}|\mathbb{Y}) \le \mathbb{H}(\mathbb{X} - \mathbb{Y})$ where $\mathbb{H}(\cdot)$ is the entropy and $\mathbb{H}(\cdot | \cdot)$ is the conditional entropy for input RV $\mathbb{X}$ and output predictor $\mathbb{Y}$. This shows that conditional coding is better than residual coding since entropy is the limit for lossless compression. However, for practical lossy codecs, rate-distortion theory is employed for analysis.
+- The coding techniques are shown below ref:fig:r_vs_c_coding
+    #+NAME: fig:r_vs_c_coding
+    #+CAPTION: Residual vs Conditional Coding
+    [[/Users/prajwaljpj/Library/CloudStorage/Dropbox/org/images/residual_vs_conditional_coding.png]]
+- $\mathbb{E}[d(\mathbf{X},\mathbf{\hat{X}})] = \sum_{x,\hat{x}} p_{\mathbf{X}}(x) \cdot p_{\mathbf{\hat{X}}|\mathbf{X}}(\hat{x}|x) \cdot d(x,\hat{x})$ where $d(x,\hat{x})$ is the distortion measure
+- after deriving (refer paper) they claim that the same rate distortion is achieved when $\mathbf{X} \rightarrow \mathbf{Y}$ and when $\mathbf{Z} \rightarrow \mathbf{Y}$. Therfore $R_{c}(D) \le R_{r}(D)$ hence, for any given distortion level $D \gt 0$, conditional coding achieves the rate no higher than residual coding.
+* Proposed method
+** Problem Statement
+- Let $x_{1:T} \in \mathbb{R}^{T \times 3 \times H \times W}$ denote raw RGB video sequence with $T$ frames.
+- The goal is to build an end-to-end learnable system to code the input video that caters to both machine vision and human viewing.
+- Base layer facilitates object detection, whereas the enhancement layer along with the base layer facilitates system reconstruction for human viewing
+-

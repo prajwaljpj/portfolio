@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       4d0e7b83-b4a4-4967-b7d5-83c2a7dc0fe2
+:END:
+#+title: VVC
+#+ROAM_TAGS: gpt-ans
+
+* Versatile video coding
+VVC stands for Versatile Video Coding. It is a video compression standard developed by the Joint Video Experts Team (JVET) of the International Telecommunication Union (ITU-T) and the International Organization for Standardization (ISO/IEC). VVC is a successor to the High Efficiency Video Coding (HEVC) standard and aims to provide even higher compression efficiency, better video quality, and enhanced flexibility for various applications.
+
+VVC achieves higher compression efficiency by employing advanced video coding techniques such as entropy coding, motion compensation, and transformation. It also incorporates improved prediction methods that exploit correlations between different video frames. This enables more effective representation of the video content while reducing the size of the compressed video file.
+
+In addition to compression efficiency, VVC emphasizes versatility by offering a high level of flexibility for different use cases. It supports a wide range of video resolutions, from low resolution to ultra-high definition (UHD) and beyond. VVC also provides features for adaptive streaming, where video quality and bitrate can be adjusted based on network conditions and device capabilities.
+
+VVC has applications in various fields such as video streaming, video conferencing, digital television broadcasting, and video surveillance. It enables high-quality video delivery over limited bandwidth connections, reduces storage requirements for video archives, and enhances the overall video viewing experience.
+
+Overall, VVC is an advanced video compression standard that combines higher efficiency, improved video quality, and versatility to cater to the evolving needs of video applications in today's digital age.
