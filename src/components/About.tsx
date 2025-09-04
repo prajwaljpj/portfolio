@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 
 const About = () => {
@@ -13,17 +14,17 @@ const About = () => {
             className="rounded-2xl object-cover shadow-lg shadow-gray-800 dark:shadow-gray-300"
           />
         </div>
-        <div className="md:w-1/2 text-lg text-gray-300 dark:text-gray-700 text-center md:text-left">
+        <div className="md:w-1/2 text-lg text-gray-700 dark:text-gray-300 text-center md:text-left">
           <div className="flex flex-col md:flex-row gap-8 mb-8 justify-center">
-            <div className="border border-gray-700 bg-gray-800 dark:border-gray-300 dark:bg-white rounded-2xl p-6 text-center flex-1 hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors">
-              <h3 className="text-xl font-bold mb-2">Experience</h3>
-              <p>5+ years</p>
-              <p>Machine Learning</p>
+            <div className="border border-gray-700 bg-gray-800 dark:border-gray-300 dark:bg-gray-800 rounded-2xl p-6 text-center flex-1 hover:bg-gray-700 dark:hover:bg-gray-700 transition-colors">
+              <h3 className="text-xl font-bold mb-2 text-white dark:text-white">Experience</h3>
+              <p className="text-gray-300 dark:text-gray-300">5+ years</p>
+              <p className="text-gray-300 dark:text-gray-300">Machine Learning</p>
             </div>
-            <div className="border border-gray-700 bg-gray-800 dark:border-gray-300 dark:bg-white rounded-2xl p-6 text-center flex-1 hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors">
-              <h3 className="text-xl font-bold mb-2">Education</h3>
-              <p>Masters Degree</p>
-              <p>Electrical & Computer Engineering</p>
+            <div className="border border-gray-700 bg-gray-800 dark:border-gray-300 dark:bg-gray-800 rounded-2xl p-6 text-center flex-1 hover:bg-gray-700 dark:hover:bg-gray-700 transition-colors">
+              <h3 className="text-xl font-bold mb-2 text-white dark:text-white">Education</h3>
+              <p className="text-gray-300 dark:text-gray-300">Masters Degree</p>
+              <p className="text-gray-300 dark:text-gray-300">Electrical & Computer Engineering</p>
             </div>
           </div>
           <p className="leading-relaxed">

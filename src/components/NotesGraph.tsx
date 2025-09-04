@@ -57,9 +57,9 @@ const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) 
 
   useEffect(() => {
     if (fgRef.current) {
-      fgRef.current.d3Force('charge').strength(-1200);
-      fgRef.current.d3Force('link').strength(0.08).distance(200);
-      fgRef.current.d3Force('cluster', (forceCluster as any)().strength(0.1));
+      fgRef.current.d3Force('charge').strength(-800);
+      fgRef.current.d3Force('link').strength(0.08).distance(150);
+      fgRef.current.d3Force('cluster', (forceCluster as any)().strength(0.05));
     }
   }, [fgRef, graphData]);
 
@@ -73,10 +73,10 @@ const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) 
           
           if (nodesToFocus.length > 0) {
             const bbox = {
-              x1: Math.min(...nodesToFocus.map((n: any) => n.x)),
-              y1: Math.min(...nodesToFocus.map((n: any) => n.y)),
-              x2: Math.max(...nodesToFocus.map((n: any) => n.x)),
-              y2: Math.max(...nodesToFocus.map((n: any) => n.y)),
+              x1: Math.min(...nodesToFocus.map((n: any) => n.x || 0)),
+              y1: Math.min(...nodesToFocus.map((n: any) => n.y || 0)),
+              x2: Math.max(...nodesToFocus.map((n: any) => n.x || 0)),
+              y2: Math.max(...nodesToFocus.map((n: any) => n.y || 0)),
             };
 
             const width = 800;
@@ -93,7 +93,7 @@ const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) 
         fgRef.current.zoomToFit(400, 50);
       }
     }
-  }, [focusedNodeId, graphData.nodes, neighbors, fgRef]);
+  }, [focusedNodeId, graphData, neighbors, fgRef]);
 
   return (
     <div className="border rounded-lg overflow-hidden dark:border-gray-700 flex justify-center h-[600px] w-full">
@@ -102,8 +102,36 @@ const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) 
         graphData={graphData}
         nodeVal="val"
         onNodeClick={handleNodeClick}
-        cooldownTicks={300}
-        onEngineStop={() => fgRef.current.zoomToFit(400, 50)}
+        cooldownTicks={200}
+        onEngineStop={() => {
+          if (focusedNodeId) {
+            const node = graphData.nodes.find(n => n.id === focusedNodeId);
+            if (node) {
+              const neighborIds = neighbors.get(focusedNodeId) || new Set();
+              const nodesToFocus = [node, ...Array.from(neighborIds).map(id => graphData.nodes.find(n => n.id === id)).filter(Boolean)];
+              
+              if (nodesToFocus.length > 0) {
+                const bbox = {
+                  x1: Math.min(...nodesToFocus.map((n: any) => n.x || 0)),
+                  y1: Math.min(...nodesToFocus.map((n: any) => n.y || 0)),
+                  x2: Math.max(...nodesToFocus.map((n: any) => n.x || 0)),
+                  y2: Math.max(...nodesToFocus.map((n: any) => n.y || 0)),
+                };
+    
+                const width = 800;
+                const height = 600;
+                const scale = 0.8 / Math.max((bbox.x2 - bbox.x1) / width, (bbox.y2 - bbox.y1) / height);
+                const x = (bbox.x1 + bbox.x2) / 2;
+                const y = (bbox.y1 + bbox.y2) / 2;
+    
+                fgRef.current.centerAt(x, y, 0);
+                fgRef.current.zoom(scale, 0);
+              }
+            }
+          } else {
+            fgRef.current.zoomToFit(400, 50);
+          }
+        }}
         linkDirectionalArrowLength={3.5}
         linkDirectionalArrowRelPos={1}
         linkWidth={link => (focusedNodeId && (link.source.id === focusedNodeId || link.target.id === focusedNodeId)) ? 2 : 1}

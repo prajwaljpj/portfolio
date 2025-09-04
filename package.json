@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run notes:build && next dev",
+    "dev": "next dev",
     "notes:build": "python3 export_notes.py",
-    "build": "npm run notes:build && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,9 +16,6 @@
   "type": "commonjs",
   "dependencies": {
     "@agentofuser/rehype-section": "^1.0.5",
-    "@chakra-ui/icons": "^2.2.4",
-    "@chakra-ui/react": "^3.26.0",
-    "@chakra-ui/theme-tools": "^2.2.6",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@lilib/hooks": "^1.1.0",
@@ -43,6 +40,7 @@
     "highlight.js": "^11.11.1",
     "jlouvain.js": "^1.0.0",
     "katex": "^0.16.22",
+    "lucide-react": "^0.542.0",
     "next": "^15.5.2",
     "orga": "^4.5.1",
     "orgast-util-to-string": "^1.1.0",

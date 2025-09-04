@@ -1,3 +1,4 @@
+
 import About from '@/components/About';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
@@ -16,17 +17,17 @@ export default function Home() {
             src="/assets/cropped-profile.png"
             alt="Prajwal Rao profile picture"
             fill
-            className="rounded-full object-cover border-4 border-gray-700"
+            className="rounded-full object-cover border-4 border-gray-700 dark:border-gray-200"
           />
         </div>
-        <p className="text-xl text-gray-400">Hello, I'm</p>
+        <p className="text-xl text-gray-500 dark:text-gray-400">Hello, I'm</p>
         <h1 className="text-5xl md:text-6xl font-bold mt-2">Prajwal Rao</h1>
-        <p className="text-2xl text-gray-300 mt-4">AI Engineer</p>
+        <p className="text-2xl text-gray-600 dark:text-gray-300 mt-4">AI Engineer</p>
         <div className="mt-8 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-          <a href="/assets/RESUME-Prajwal.pdf" target="_blank" className="bg-white text-gray-900 font-bold py-3 px-6 rounded-full hover:bg-gray-300 transition-transform transform hover:scale-105 w-full md:w-auto">
+          <a href="/assets/RESUME-Prajwal.pdf" target="_blank" className="bg-gray-800 text-white font-bold py-3 px-6 rounded-full hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300 transition-transform transform hover:scale-105 w-full md:w-auto">
             Download CV
           </a>
-          <Link href="#contact" className="border border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-gray-900 transition-transform transform hover:scale-105 w-full md:w-auto">
+          <Link href="#contact" className="border border-gray-800 text-gray-800 font-bold py-3 px-6 rounded-full hover:bg-gray-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-transform transform hover:scale-105 w-full md:w-auto">
             Contact Info
           </Link>
         </div>

@@ -1,6 +1,12 @@
+
 import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import { processOrgFile } from '../../utils/org-processor';
+import dynamic from 'next/dynamic';
+
+const NotesGraph = dynamic(() => import('../../components/NotesGraph'), {
+  ssr: false,
+});
 
 interface NoteNode {
   id: string;
@@ -13,7 +19,7 @@ interface NoteNode {
 
 interface RoamDB {
   nodes: NoteNode[];
-  links: any[];
+  links: { source: string; dest: string; pos: number }[];
   tags: { node_id: string; tag: string }[];
   refs: any[];
 }
@@ -40,39 +46,53 @@ const NotePage = ({ note, content, db }: NotePageProps) => {
 
   return (
     <div className="container mx-auto p-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      <h1 className="text-4xl font-bold mb-2">{note.title}</h1>
-      
-      {fileTags.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-8">
-          {fileTags.map(({ tag }) => (
-            <span key={tag} className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-medium mr-2 px-2.5 py-0.5 rounded">
-              {tag}
-            </span>
-          ))}
+      <div className="flex flex-row gap-8">
+        {/* Left Column */}
+        <div className="w-2/3">
+          <h1 className="text-4xl font-bold mb-2">{note.title}</h1>
+          
+          {fileTags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-8">
+              {fileTags.map(({ tag }) => (
+                <span key={tag} className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-medium mr-2 px-2.5 py-0.5 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          <div className="prose dark:prose-invert max-w-none">{body}</div>
+
+          {backlinks.length > 0 && (
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold mb-4">Backlinks</h2>
+              <ul className="space-y-2">
+                {backlinks.map((backlink) => (
+                  <li key={backlink.id} className="p-2 border rounded hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800">
+                    <Link href={`/notes/${backlink.id}`} className="text-blue-500 hover:underline">
+                      {backlink.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div className="mt-8">
+            <Link href="/notes" className="text-blue-500 hover:underline">
+              Back to all notes
+            </Link>
+          </div>
         </div>
-      )}
 
-      <div className="prose dark:prose-invert max-w-none">{body}</div>
-
-      {backlinks.length > 0 && (
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold mb-4">Backlinks</h2>
-          <ul className="space-y-2">
-            {backlinks.map((backlink) => (
-              <li key={backlink.id} className="p-2 border rounded hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800">
-                <Link href={`/notes/${backlink.id}`} className="text-blue-500 hover:underline">
-                  {backlink.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* Right Column */}
+        <div className="w-1/3 relative z-10">
+          {db && (
+            <div className="sticky top-24">
+              <NotesGraph nodes={db.nodes} links={db.links} focusedNodeId={note.id} />
+            </div>
+          )}
         </div>
-      )}
-
-      <div className="mt-8">
-        <Link href="/notes" className="text-blue-500 hover:underline">
-          Back to all notes
-        </Link>
       </div>
     </div>
   );
