@@ -79,9 +79,9 @@ const NotesPage = () => {
   return (
     <div className="container mx-auto p-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <h1 className="text-4xl font-bold mb-4">Notes</h1>
-      <div className="flex flex-row gap-8">
+      <div className="flex flex-col-reverse md:flex-row gap-8">
         {/* Left Column */}
-        <div className="w-1/3">
+        <div className="w-full md:w-1/3">
           <div className="relative z-20">
             <input
               type="text"
@@ -135,7 +135,7 @@ const NotesPage = () => {
         </div>
 
         {/* Right Column */}
-        <div className="w-2/3 relative z-10">
+        <div className="w-full md:w-2/3 relative z-10">
           {db && (
             <NotesGraph nodes={db.nodes} links={db.links} focusedNodeId={focusedNodeId} />
           )}

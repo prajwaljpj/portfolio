@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useMemo } from 'react';
+import React, { useRef, useEffect, useMemo, useState } from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
 import { useRouter } from 'next/router';
 import * as d3 from 'd3';
@@ -23,8 +23,25 @@ interface NotesGraphProps {
 
 const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) => {
   const fgRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
   const router = useRouter();
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (containerRef.current) {
+        setDimensions({
+          width: containerRef.current.offsetWidth,
+          height: containerRef.current.offsetHeight,
+        });
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   const { graphData, neighbors } = useMemo(() => {
     const nodeIds = new Set(nodes.map(n => n.id));
     const filteredLinks = links.filter(l => nodeIds.has(l.source) && nodeIds.has(l.dest));
@@ -79,8 +96,8 @@ const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) 
               y2: Math.max(...nodesToFocus.map((n: any) => n.y || 0)),
             };
 
-            const width = 800;
-            const height = 600;
+            const width = dimensions.width;
+            const height = dimensions.height;
             const scale = 0.8 / Math.max((bbox.x2 - bbox.x1) / width, (bbox.y2 - bbox.y1) / height);
             const x = (bbox.x1 + bbox.x2) / 2;
             const y = (bbox.y1 + bbox.y2) / 2;
@@ -93,10 +110,10 @@ const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) 
         fgRef.current.zoomToFit(400, 50);
       }
     }
-  }, [focusedNodeId, graphData, neighbors, fgRef]);
+  }, [focusedNodeId, graphData, neighbors, fgRef, dimensions]);
 
   return (
-    <div className="border rounded-lg overflow-hidden dark:border-gray-700 flex justify-center h-[600px] w-full">
+    <div ref={containerRef} className="border rounded-lg overflow-hidden dark:border-gray-700 flex justify-center h-[600px] w-full">
       <ForceGraph2D
         ref={fgRef}
         graphData={graphData}
@@ -118,8 +135,8 @@ const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) 
                   y2: Math.max(...nodesToFocus.map((n: any) => n.y || 0)),
                 };
     
-                const width = 800;
-                const height = 600;
+                const width = dimensions.width;
+                const height = dimensions.height;
                 const scale = 0.8 / Math.max((bbox.x2 - bbox.x1) / width, (bbox.y2 - bbox.y1) / height);
                 const x = (bbox.x1 + bbox.x2) / 2;
                 const y = (bbox.y1 + bbox.y2) / 2;
@@ -164,8 +181,8 @@ const NotesGraph: React.FC<NotesGraphProps> = ({ nodes, links, focusedNodeId }) 
           ctx.fillStyle = textColor;
           ctx.fillText(label, node.x, node.y + node.val + fontSize);
         }}
-        width={800}
-        height={600}
+        width={dimensions.width}
+        height={dimensions.height}
       />
     </div>
   );
